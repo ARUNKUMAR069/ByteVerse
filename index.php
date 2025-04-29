@@ -22,7 +22,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <!-- Custom cursor -->
@@ -213,7 +213,7 @@
     </div>
     
     <!-- Custom JS -->
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
 
     <script id="vertexShader" type="x-shader/x-vertex">
       varying vec2 vUv;
