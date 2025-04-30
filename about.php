@@ -1,0 +1,1044 @@
+<?php
+// Page-specific variables
+$pageTitle = 'About | ByteVerse 1.0';
+$loaderPrefix = 'ByteVerse Origins';
+$loaderText = 'Loading mission data...';
+$currentPage = 'about';
+
+// Additional styles specific to the about page
+$additionalStyles = '
+/* About Cards Layout */
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.about-card {
+    position: relative;
+    height: 100%;
+    min-height: 250px;
+    transition: transform 0.3s ease;
+    perspective: 1000px;
+}
+
+.about-card-inner {
+    position: relative;
+    background: rgba(0, 215, 254, 0.05);
+    border: 1px solid var(--primary-accent);
+    padding: 2rem;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+    box-shadow: 0 0 20px rgba(0, 215, 254, 0.1);
+    overflow: hidden;
+}
+
+.about-card:hover .about-card-inner {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 215, 254, 0.2);
+}
+
+.about-card-inner::before {
+    content: \'\';
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-accent);
+    z-index: 2;
+}
+
+.about-card-inner::after {
+    content: \'\';
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+    width: 8px;
+    height: 8px;
+    background: var(--primary-accent);
+    z-index: 2;
+}
+
+/* Circuit background for cards */
+.circuit-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        linear-gradient(to right, rgba(0, 215, 254, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 215, 254, 0.05) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+/* Text Styling */
+.tech-text {
+    color: var(--text-dim, #c5c5c5);
+    line-height: 1.7;
+    font-family: \'Rajdhani\', sans-serif;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.gradient-text-small {
+    background: linear-gradient(90deg, var(--primary-accent, #00D7FE) 0%, var(--neon-purple, #BD00FF) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: \'Orbitron\', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Design Elements */
+.cyber-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-accent, #00D7FE), var(--neon-purple, #BD00FF), transparent);
+    margin: 0 auto;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.cyber-line::before {
+    content: \'\';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-accent, #00D7FE);
+    top: -4px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+/* Animation for cards */
+@keyframes cardPulse {
+    0% { box-shadow: 0 0 10px rgba(0, 215, 254, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(0, 215, 254, 0.5); }
+    100% { box-shadow: 0 0 10px rgba(0, 215, 254, 0.3); }
+}
+
+.about-card-inner {
+    animation: cardPulse 3s infinite ease-in-out;
+}
+
+/* Each card gets different animation delay */
+.about-content .about-card:nth-child(1) .about-card-inner {
+    animation-delay: 0s;
+}
+
+.about-content .about-card:nth-child(2) .about-card-inner {
+    animation-delay: 0.5s;
+}
+
+.about-content .about-card:nth-child(3) .about-card-inner {
+    animation-delay: 1s;
+}
+
+/* Stats styling */
+.stats-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.stat-item {
+    position: relative;
+    min-width: 120px;
+    padding: 1.5rem;
+    border: 1px solid rgba(0, 215, 254, 0.2);
+    background: rgba(0, 215, 254, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-accent);
+}
+
+.stat-item::before {
+    content: \'\';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--primary-accent, #00D7FE), transparent);
+    animation: scanner 2s linear infinite;
+}
+
+@keyframes scanner {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Team members section */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.team-member {
+    position: relative;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    border: 2px solid var(--primary-accent, #00D7FE);
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    background: rgba(0, 215, 254, 0.1);
+}
+
+.team-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter 0.3s ease;
+}
+
+.team-member:hover .team-photo img {
+    filter: grayscale(0%) brightness(1.2);
+}
+
+.team-photo::before {
+    content: \'\';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 215, 254, 0.1) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.team-details {
+    margin-top: 1rem;
+}
+
+.team-name {
+    font-family: \'Orbitron\', sans-serif;
+    font-weight: 600;
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    font-family: \'Rajdhani\', sans-serif;
+    color: var(--primary-accent, #00D7FE);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.team-social a {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-accent, #00D7FE);
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    transition: all 0.3s ease;
+}
+
+.team-social a:hover {
+    background: var(--primary-accent, #00D7FE);
+    color: #0a1428;
+    transform: scale(1.1);
+}
+
+/* Timeline styles */
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 0 20px;
+}
+
+.timeline::before {
+    content: \'\';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background: linear-gradient(to bottom, transparent, var(--primary-accent, #00D7FE), transparent);
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 50%;
+    padding: 20px;
+}
+
+.timeline-item:nth-child(even) {
+    margin-left: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+    text-align: right;
+}
+
+.timeline-content {
+    position: relative;
+    padding: 30px;
+    background: rgba(0, 215, 254, 0.05);
+    border: 1px solid var(--primary-accent, #00D7FE);
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 215, 254, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 215, 254, 0.3);
+}
+
+.timeline-date {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    background: linear-gradient(90deg, var(--primary-accent, #00D7FE), var(--neon-purple, #BD00FF));
+    color: white;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-family: \'Rajdhani\', sans-serif;
+    box-shadow: 0 0 10px rgba(0, 215, 254, 0.3);
+}
+
+.timeline-item:nth-child(odd) .timeline-date {
+    right: -85px;
+}
+
+.timeline-item:nth-child(even) .timeline-date {
+    left: -85px;
+}
+
+.timeline-title {
+    font-family: \'Orbitron\', sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--primary-accent, #00D7FE);
+}
+
+/* Testimonials */
+.testimonials-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+.testimonials-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.testimonial {
+    min-width: 100%;
+    padding: 2rem;
+    position: relative;
+    background: rgba(0, 215, 254, 0.03);
+    border: 1px solid rgba(0, 215, 254, 0.2);
+    border-radius: 5px;
+}
+
+.testimonial-content {
+    position: relative;
+    font-family: \'Rajdhani\', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #c5c5c5;
+    margin-bottom: 1.5rem;
+    padding: 0 20px;
+}
+
+.testimonial-content::before {
+    content: \'"\';
+    position: absolute;
+    top: -20px;
+    left: -10px;
+    font-size: 4rem;
+    color: rgba(0, 215, 254, 0.2);
+    font-family: serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.testimonial-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid var(--primary-accent, #00D7FE);
+    margin-right: 15px;
+}
+
+.testimonial-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-info {
+    font-family: \'Chakra Petch\', sans-serif;
+}
+
+.testimonial-name {
+    font-weight: 600;
+    color: white;
+    font-size: 1rem;
+}
+
+.testimonial-role {
+    color: var(--primary-accent, #00D7FE);
+    font-size: 0.9rem;
+}
+
+.testimonial-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.testimonial-nav button {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--primary-accent, #00D7FE);
+    background: transparent;
+    color: var(--primary-accent, #00D7FE);
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.testimonial-nav button:hover {
+    background: var(--primary-accent, #00D7FE);
+    color: #0a1428;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.testimonial-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(0, 215, 254, 0.2);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background: var(--primary-accent, #00D7FE);
+    transform: scale(1.2);
+}
+
+/* CTA section */
+.cta-section {
+    position: relative;
+    margin-top: 5rem;
+    padding: 3rem;
+    background: rgba(0, 215, 254, 0.05);
+    border: 1px solid var(--primary-accent, #00D7FE);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 10% 20%, rgba(0, 215, 254, 0.1) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(189, 0, 255, 0.1) 0%, transparent 20%);
+    z-index: 0;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.cta-title {
+    font-family: \'Orbitron\', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.cta-text {
+    font-family: \'Rajdhani\', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #c5c5c5;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-container {
+        gap: 1rem;
+    }
+    
+    .stat-item {
+        min-width: 100px;
+        padding: 1rem;
+    }
+    
+    .gradient-text-small {
+        font-size: 1.5rem;
+    }
+    
+    .timeline::before {
+        left: 0;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-left: 0 !important;
+        text-align: left !important;
+        padding-left: 30px;
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        left: 0;
+        top: -40px;
+    }
+    
+    .team-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+';
+
+// Additional scripts for the about page
+$additionalScripts = '
+// Counter animation
+const counters = document.querySelectorAll(".counter");
+counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute("data-target"));
+    const duration = 2000; // ms
+    const step = target / (duration / 16); // 60fps
+    
+    let current = 0;
+    const updateCounter = () => {
+        current += step;
+        if (current < target) {
+            counter.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+        } else {
+            counter.textContent = target;
+        }
+    };
+    
+    // Start counting when element is in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                updateCounter();
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    observer.observe(counter);
+});
+
+// Testimonial slider
+const track = document.querySelector(".testimonials-track");
+const slides = document.querySelectorAll(".testimonial");
+const dots = document.querySelectorAll(".testimonial-dot");
+const prevBtn = document.querySelector(".testimonial-prev");
+const nextBtn = document.querySelector(".testimonial-next");
+
+let currentIndex = 0;
+
+function goToSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+    
+    track.style.transform = `translateX(${-index * 100}%)`;
+    
+    // Update dots
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+    
+    currentIndex = index;
+}
+
+// Event listeners
+if (prevBtn) {
+    prevBtn.addEventListener("click", () => goToSlide(currentIndex - 1));
+}
+
+if (nextBtn) {
+    nextBtn.addEventListener("click", () => goToSlide(currentIndex + 1));
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => goToSlide(index));
+});
+
+// Auto slide every 5 seconds
+let slideInterval = setInterval(() => goToSlide(currentIndex + 1), 5000);
+
+// Pause auto slide on hover
+const testimonialSlider = document.querySelector(".testimonials-slider");
+if (testimonialSlider) {
+    testimonialSlider.addEventListener("mouseenter", () => clearInterval(slideInterval));
+    testimonialSlider.addEventListener("mouseleave", () => {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => goToSlide(currentIndex + 1), 5000);
+    });
+}
+
+// Initialize
+goToSlide(0);
+
+// Add hover effect to timeline items
+const timelineItems = document.querySelectorAll(".timeline-item");
+timelineItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        item.style.zIndex = "10";
+    });
+    
+    item.addEventListener("mouseleave", () => {
+        item.style.zIndex = "1";
+    });
+});
+
+// Parallax effect for floating elements
+document.addEventListener("mousemove", (e) => {
+    const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
+    const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
+    
+    document.querySelectorAll(".floating-cube").forEach((cube, index) => {
+        const factor = (index + 1) * 0.5;
+        cube.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px) rotate(${moveX}deg)`;
+    });
+    
+    document.querySelector(".floating-sphere").style.transform = 
+        `translate(${-moveX * 1.5}px, ${-moveY * 1.5}px)`;
+});
+';
+
+// Include header
+require_once('components/header.php');
+
+// Include navbar
+require_once('components/navbar.php');
+?>
+
+<!-- About Hero Section -->
+<section class="min-h-[50vh] relative overflow-hidden flex items-center justify-center pt-24">
+    <div class="container mx-auto px-4 py-20 relative z-10 text-center">
+        <div class="grid-lines"></div>
+        
+        <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="About ByteVerse">About ByteVerse</h1>
+        <div class="max-w-3xl mx-auto">
+            <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
+                Discover the story behind ByteVerse, our mission, and the team that makes it all possible.
+                We're building more than just a hackathon—we're creating a community.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-20 relative">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Our <span class="text-cyan-400">Mission</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-card">
+                <div class="about-card-inner">
+                    <div class="circuit-bg"></div>
+                    <h3 class="gradient-text-small mb-4">Innovation Hub</h3>
+                    <p class="tech-text">
+                        ByteVerse is where innovation meets opportunity. We're a high-energy, 48-hour coding sprint that transforms bold ideas into reality. Our mission? To spark creativity and empower students from all disciplines—computer science, design, business, and beyond—to collaborate and build tech-based solutions for real-world challenges.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="about-card">
+                <div class="about-card-inner">
+                    <div class="circuit-bg"></div>
+                    <h3 class="gradient-text-small mb-4">Diverse Community</h3>
+                    <p class="tech-text">
+                        ByteVerse celebrates diversity in thought and background. Whether you're a coding veteran or a curious newcomer, our hackathon is your playground. We believe breakthrough innovation happens when different perspectives converge—where designers meet developers, entrepreneurs meet engineers, and creativity meets code.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="about-card">
+                <div class="about-card-inner">
+                    <div class="circuit-bg"></div>
+                    <h3 class="gradient-text-small mb-4">Student-Powered</h3>
+                    <p class="tech-text">
+                        Created by students, for students, ByteVerse is powered by a passionate team of undergraduate leaders and mentors who believe in the potential of their peers. We've crafted an experience that balances rigorous problem-solving with genuine fun—because we're convinced learning thrives in an atmosphere of excitement, collaboration, and inclusivity.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-16">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-value counter" data-target="500">0</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value counter" data-target="48">0</div>
+                    <div class="stat-label">Hours</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value counter" data-target="50">0</div>
+                    <div class="stat-label">Teams</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value counter" data-target="20">0</div>
+                    <div class="stat-label">Mentors</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Our Journey Timeline -->
+<section class="py-20 relative bg-gradient-to-b from-transparent to-gray-900/30">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Our <span class="text-cyan-400">Journey</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            <p class="text-gray-300 mt-6 max-w-2xl mx-auto">
+                From a small campus event to a major tech gathering—explore the evolution of ByteVerse
+            </p>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2019</span>
+                    <h3 class="timeline-title">The Beginning</h3>
+                    <p class="tech-text">What started as a small gathering of 50 students in a computer lab grew into something special. The first ByteVerse focused on web technologies and attracted students from 3 departments.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2020</span>
+                    <h3 class="timeline-title">Virtual Shift</h3>
+                    <p class="tech-text">When the world went remote, so did we. ByteVerse 2020 became our first fully virtual hackathon, with 150 participants from across the country building pandemic solutions.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2021</span>
+                    <h3 class="timeline-title">Growing Impact</h3>
+                    <p class="tech-text">Our community tripled in size, reaching 300 hackers. We partnered with 10 tech companies and expanded our focus to include AI and sustainability challenges.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2022</span>
+                    <h3 class="timeline-title">International</h3>
+                    <p class="tech-text">ByteVerse went global, bringing together 400 participants from 15 countries. We introduced specialized tracks: Fintech, Healthtech, and Climate Solutions.</p>
+                </div>
+            </div>
+            
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <span class="timeline-date">2023</span>
+                    <h3 class="timeline-title">ByteVerse 1.0</h3>
+                    <p class="tech-text">Today's ByteVerse represents our vision fully realized. With 500+ participants, industry-leading sponsors, and a commitment to technological innovation that shapes the future.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-20 relative">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Meet Our <span class="text-cyan-400">Team</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            <p class="text-gray-300 mt-6 max-w-2xl mx-auto">
+                The dedicated individuals working tirelessly behind the scenes to make ByteVerse an unforgettable experience
+            </p>
+        </div>
+        
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Arjun Sharma</h3>
+                    <p class="team-role">Lead Organizer</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Priya Patel</h3>
+                    <p class="team-role">Technology Lead</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Rahul Verma</h3>
+                    <p class="team-role">Design Lead</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 4 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Neha Gupta</h3>
+                    <p class="team-role">Sponsor Relations</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 5 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Vikram Singh</h3>
+                    <p class="team-role">Marketing Lead</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Team Member 6 -->
+            <div class="team-member">
+                <div class="team-photo">
+                    <img src="assets/images/team/placeholder.jpg" alt="Team Member">
+                </div>
+                <div class="team-details">
+                    <h3 class="team-name">Ananya Reddy</h3>
+                    <p class="team-role">Operations</p>
+                    <div class="team-social">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 relative bg-gradient-to-b from-gray-900/30 to-transparent">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Hacker <span class="text-cyan-400">Stories</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            <p class="text-gray-300 mt-6 max-w-2xl mx-auto">
+                Hear from previous participants about their ByteVerse experiences
+            </p>
+        </div>
+        
+        <div class="testimonials-slider">
+            <div class="testimonials-track">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        ByteVerse was the catalyst for my tech career. I came in with basic coding skills and left with a job offer! My team built a climate change visualization tool that won the sustainability track. The mentors were invaluable—they pushed our thinking but let us find our own solutions.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/testimonials/placeholder.jpg" alt="Testimonial Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Aditya Mehta</div>
+                            <div class="testimonial-role">ByteVerse 2022 Winner</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        As a non-CS major, I was intimidated at first, but the ByteVerse community welcomed me completely. I handled the user research and UI design while my teammates coded. We created an accessibility app that's now being used by over 500 people! This experience showed me that tech innovation needs diverse perspectives.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/testimonials/placeholder.jpg" alt="Testimonial Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Meera Krishnan</div>
+                            <div class="testimonial-role">Design Student, NIFT</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        ByteVerse wasn't just about coding—it was about connecting. I met my co-founder here! The energy is unmatched; people coding through the night, impromptu mentoring sessions, and that moment when your project finally works after hours of debugging. We're now running our startup full-time and still use skills we learned at ByteVerse.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/testimonials/placeholder.jpg" alt="Testimonial Avatar">
+                        </div>
+                        <div class="testimonial-info">
+                            <div class="testimonial-name">Rohan Kapoor</div>
+                            <div class="testimonial-role">Founder, TechSprint</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="testimonial-dot active"></span>
+                <span class="testimonial-dot"></span>
+                <span class="testimonial-dot"></span>
+            </div>
+            
+            <div class="testimonial-nav">
+                <button class="testimonial-prev">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="testimonial-next">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 relative">
+    <div class="container mx-auto px-4">
+        <div class="cta-section">
+            <div class="cta-bg"></div>
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to join the <span class="text-cyan-400">ByteVerse</span>?</h2>
+                <p class="cta-text">
+                    Whether you're a coding wizard or just starting out, ByteVerse has a place for you. 
+                    Join hundreds of passionate innovators for a weekend of creation, learning, and fun.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                    <a href="register.php" class="cyber-button primary">
+                        <span>Register Now</span>
+                        <i></i>
+                    </a>
+                    <a href="sponsor.php" class="cyber-button secondary">
+                        <span>Become a Sponsor</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Include terminal and footer -->
+<?php 
+require_once('components/terminal.php');
+require_once('components/footer.php');
+?>
