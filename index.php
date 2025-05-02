@@ -60,14 +60,14 @@ require_once('components/navbar.php');
         </div>
 
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-12">
-            <button class="cyber-button primary">
+            <a href="registration.php" class="cyber-button primary w-full sm:w-auto">
                 <span>Register Now</span>
                 <i></i>
-            </button>
-            <button class="cyber-button secondary">
+            </a>
+            <a href="challenges.php" class="cyber-button secondary w-full sm:w-auto">
                 <span>Explore Challenges</span>
                 <i></i>
-            </button>
+            </a>
         </div>
 
         <div class="mt-24 flex items-center justify-center">

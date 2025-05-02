@@ -87,5 +87,39 @@
         <?php echo $additionalScripts; ?>
     </script>
     <?php endif; ?>
+
+    <script>
+    // Add this after the existing script tags and before the closing body tag
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if the animation exists in script.js
+        const originalAnimFunction = window.startLanguageAnimation;
+        
+        // For mobile view - animate the Byte and Verse separately
+        if (window.innerWidth < 768) {
+            // If GSAP is loaded and has TextPlugin
+            if (typeof gsap !== 'undefined' && gsap.plugins.TextPlugin) {
+                setTimeout(() => {
+                    gsap.to("#logo-text-mobile-byte", {
+                        duration: 0.5,
+                        text: "Byte",
+                        ease: "none"
+                    });
+                    
+                    gsap.to("#logo-text-mobile-verse", {
+                        duration: 0.5,
+                        delay: 0.5,
+                        text: "Verse",
+                        ease: "none",
+                        onComplete: () => {
+                            if (typeof window.startLanguageAnimation === 'function') {
+                                window.startLanguageAnimation();
+                            }
+                        }
+                    });
+                }, 500);
+            }
+        }
+    });
+    </script>
 </body>
 </html>

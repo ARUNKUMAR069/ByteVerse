@@ -499,8 +499,8 @@ function initTerminal() {
                     ⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀
                     ⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀
                     ⠀⢸⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠀⠀
-                    ⠀⣾⣿⣿⣿⠋⣿⣿⣿⣏⠹⣿⣿⣿⡏⣿⣿⣿⣿⣿⡇⠀
-                    ⠀⣿⣿⣿⣿⠀⣿⣿⣿⣿⠀⣿⣿⣿⡇⣿⣿⣿⣿⣿⡇⠀
+                    ⠀⣾⣿⣿⣿⠋⣿⣿⣿⣏⠹⣿⣿⣿⡏⢿⣿⣿⣿⣿⡇⠀
+                    ⠀⣿⣿⣿⣿⠀⣿⣿⣿⣿⠀⣿⣿⣿⡇⢸⣿⣿⣿⣿⡇⠀
                     ⠀⣿⣿⣿⣿⣷⣿⣿⣿⣿⣷⣿⣿⣿⣷⣿⣿⣿⣿⣿⡇⠀
                     ⠀⢻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡿⠀⠀
                     ⠀⠀⠻⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠟⠁⠀⠀
@@ -701,3 +701,51 @@ function initSoundEffects() {
         }
     });
 }
+
+// Add mobile typewriter animation
+document.addEventListener('DOMContentLoaded', function() {
+    // Only apply for mobile devices
+    if (window.innerWidth <= 768) {
+        const byteEl = document.querySelector('.mobile-logo-text .byte');
+        const verseEl = document.querySelector('.mobile-logo-text .verse');
+        
+        if (byteEl && verseEl) {
+            // Clear initial text and add typewriter effect
+            byteEl.textContent = '';
+            verseEl.textContent = '';
+            
+            // Type Byte first
+            setTimeout(() => {
+                typeWriter(byteEl, 'Byte', 0, 150, function() {
+                    // After Byte is complete, type Verse
+                    setTimeout(() => {
+                        typeWriter(verseEl, 'Verse', 0, 150, function() {
+                            // Remove cursor after typing is complete
+                            setTimeout(() => {
+                                const cursor = byteEl.querySelector('::after');
+                                if (cursor) cursor.style.display = 'none';
+                            }, 500);
+                            
+                            // Continue with any other animations
+                            if (typeof startLanguageAnimation === 'function') {
+                                startLanguageAnimation();
+                            }
+                        });
+                    }, 300);
+                });
+            }, 500);
+        }
+    }
+    
+    // Typewriter function
+    function typeWriter(element, text, index, speed, callback) {
+        if (index < text.length) {
+            element.textContent = text.substring(0, index + 1);
+            setTimeout(function() {
+                typeWriter(element, text, index + 1, speed, callback);
+            }, speed);
+        } else if (callback) {
+            callback();
+        }
+    }
+});
