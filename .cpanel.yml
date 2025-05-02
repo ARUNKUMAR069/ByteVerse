@@ -1,0 +1,14 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/username/public_html/
+    - /bin/cp -R assets $DEPLOYPATH
+    - /bin/cp -R components $DEPLOYPATH
+    - /bin/cp *.php $DEPLOYPATH
+    - /bin/cp .htaccess $DEPLOYPATH
+    - /bin/mkdir -p $DEPLOYPATH/logs
+    - /bin/chmod 755 $DEPLOYPATH/assets
+    - /bin/chmod 755 $DEPLOYPATH/components
+    - /bin/chmod 644 $DEPLOYPATH/*.php
+    - /bin/chmod 644 $DEPLOYPATH/.htaccess
+    - /bin/chmod 755 $DEPLOYPATH/logs

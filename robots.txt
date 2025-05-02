@@ -1,0 +1,52 @@
+# Robots.txt file for ByteVerse Hackathon
+# http://byteverse.ctgroup.co.in/
+
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /challenges
+Allow: /schedule
+Allow: /sponsor
+Allow: /faq
+Allow: /contact
+Allow: /registration
+
+# Disallow admin areas
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /wp-admin/
+Disallow: /dashboard/
+
+# Disallow temporary or development files
+Disallow: /temp/
+Disallow: /test/
+Disallow: /dev/
+Disallow: /.git/
+Disallow: /*.sql$
+Disallow: /*.log$
+Disallow: /*.bak$
+
+# Disallow specific sensitive files
+Disallow: /config.php
+Disallow: /credentials.php
+Disallow: /db-config.php
+
+# Disallow file types that don't need indexing
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.md$
+Disallow: /*.yml$
+Disallow: /*.yaml$
+
+# Allow scripts and assets
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+Allow: /assets/fonts/
+
+# Sitemap location
+Sitemap: http://byteverse.ctgroup.co.in/sitemap.xml
+
+# Crawl delay (optional - adjust based on server capacity)
+Crawl-delay: 5
