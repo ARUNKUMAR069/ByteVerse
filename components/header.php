@@ -24,6 +24,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
     
+    <!-- Registration CSS -->
+    <link rel="stylesheet" href="assets/css/registration.css">
+    
     <!-- Additional styling for mobile responsive loader -->
     <style>
         /* Mobile-specific styling for ByteVerse text */
@@ -138,6 +141,8 @@
         100% { opacity: 1; transform: scale(1); }
     }
     </style>
+    
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
     
     <?php if (isset($additionalStyles)): ?>
     <style>
