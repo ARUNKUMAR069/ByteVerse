@@ -20,14 +20,27 @@ require_once('components/navbar.php');
     </div>
 </div>
 
+<!-- Mobile Menu Toggle Button -->
+<button id="mobile-menu-toggle" class="fixed bottom-4 right-4 z-40 rounded-full bg-cyan-600 text-white p-3 shadow-lg md:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+</button>
+
 <!-- Mentor Dashboard -->
 <div id="mentor-content" class="hidden flex min-h-screen pt-24">
     <!-- Sidebar -->
-    <div class="w-64 bg-opacity-10 backdrop-filter backdrop-blur-lg bg-gray-800 border-r border-cyan-900/30 fixed h-screen z-10">
+    <div id="sidebar" class="w-64 bg-opacity-10 backdrop-filter backdrop-blur-lg bg-gray-800 border-r border-cyan-900/30 fixed h-screen z-20 transition-transform duration-300 ease-in-out transform md:translate-x-0 -translate-x-full">
         <div class="p-4 border-b border-cyan-900/30">
             <h2 class="text-xl text-cyan-400 font-bold">Mentor Panel</h2>
             <p class="text-gray-400 text-sm" id="sidebar-mentor-name">Loading...</p>
         </div>
+        <!-- Close button for mobile -->
+        <button id="close-sidebar" class="absolute top-4 right-4 text-gray-400 md:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+            </svg>
+        </button>
         <nav class="mt-4">
             <ul class="space-y-2 px-2">
                 <li>
@@ -79,11 +92,14 @@ require_once('components/navbar.php');
         </nav>
     </div>
 
+    <!-- Sidebar Overlay for Mobile -->
+    <div id="sidebar-overlay" class="fixed inset-0 bg-black bg-opacity-50 z-10 hidden md:hidden"></div>
+
     <!-- Main Content -->
-    <div class="flex-1 ml-64 px-6 py-8">
+    <div class="flex-1 md:ml-64 px-2 md:px-6 py-8 transition-all duration-300 ease-in-out">
         <!-- Dashboard Tab -->
         <div id="dashboard" class="tab-content active">
-            <h1 class="glitch-text text-4xl mb-6" data-text="Dashboard">Dashboard</h1>
+            <h1 class="glitch-text text-3xl md:text-4xl mb-6" data-text="Dashboard">Dashboard</h1>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
                 <div class="p-4 border border-cyan-900/30 rounded-lg bg-black/20 backdrop-blur-md relative overflow-hidden">
@@ -108,7 +124,7 @@ require_once('components/navbar.php');
                 </div>
             </div>
             
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 mb-8">
+            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-3 md:p-6 mb-8">
                 <h2 class="text-xl text-cyan-400 mb-4">All Evaluations</h2>
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-opacity-20 bg-black">
@@ -136,9 +152,9 @@ require_once('components/navbar.php');
         
         <!-- Round 1 Tab -->
         <div id="round1" class="tab-content hidden">
-            <h1 class="glitch-text text-4xl mb-6" data-text="Round 1 Evaluations">Round 1 Evaluations</h1>
+            <h1 class="glitch-text text-3xl md:text-4xl mb-6" data-text="Round 1 Evaluations">Round 1 Evaluations</h1>
             
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6">
+            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-3 md:p-6">
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-opacity-20 bg-black">
                         <thead>
@@ -164,9 +180,9 @@ require_once('components/navbar.php');
         
         <!-- Round 2 Tab -->
         <div id="round2" class="tab-content hidden">
-            <h1 class="glitch-text text-4xl mb-6" data-text="Round 2 Evaluations">Round 2 Evaluations</h1>
+            <h1 class="glitch-text text-3xl md:text-4xl mb-6" data-text="Round 2 Evaluations">Round 2 Evaluations</h1>
             
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6">
+            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-3 md:p-6">
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-opacity-20 bg-black">
                         <thead>
@@ -192,9 +208,9 @@ require_once('components/navbar.php');
         
         <!-- Round 3 Tab -->
         <div id="round3" class="tab-content hidden">
-            <h1 class="glitch-text text-4xl mb-6" data-text="Round 3 Evaluations">Round 3 Evaluations</h1>
+            <h1 class="glitch-text text-3xl md:text-4xl mb-6" data-text="Round 3 Evaluations">Round 3 Evaluations</h1>
             
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6">
+            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-3 md:p-6">
                 <div class="overflow-x-auto">
                     <table class="min-w-full bg-opacity-20 bg-black">
                         <thead>
@@ -220,9 +236,9 @@ require_once('components/navbar.php');
 
         <!-- Evaluation Form Tab -->
         <div id="evaluation" class="tab-content hidden">
-            <h1 class="glitch-text text-4xl mb-6" data-text="Evaluate Team">Evaluate Team</h1>
+            <h1 class="glitch-text text-3xl md:text-4xl mb-6" data-text="Evaluate Team">Evaluate Team</h1>
             
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6">
+            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-3 md:p-6">
                 <form id="evaluation-form" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div class="form-group">
@@ -366,12 +382,50 @@ require_once('components/navbar.php');
     const evaluationForm = document.getElementById('evaluation-form');
     const navLinks = document.querySelectorAll('.nav-link');
     const tabContents = document.querySelectorAll('.tab-content');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('close-sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
     
     // Check if all required elements exist
     if (!authChecking || !mentorContent || !sidebarMentorName || 
         !sidebarLogoutBtn || !teamLocksButton || !evaluationForm) {
         console.error("Required DOM elements are missing");
     }
+    
+    // Mobile menu toggle functionality
+    if (mobileMenuToggle && sidebar) {
+      mobileMenuToggle.addEventListener('click', function() {
+        sidebar.classList.remove('-translate-x-full');
+        if (sidebarOverlay) sidebarOverlay.classList.remove('hidden');
+      });
+    }
+
+    // Close sidebar on mobile
+    if (closeSidebar && sidebar) {
+      closeSidebar.addEventListener('click', function() {
+        sidebar.classList.add('-translate-x-full');
+        if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
+      });
+    }
+
+    // Close sidebar when overlay is clicked
+    if (sidebarOverlay && sidebar) {
+      sidebarOverlay.addEventListener('click', function() {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.add('hidden');
+      });
+    }
+
+    // Close sidebar after clicking a navigation link on mobile
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        if (window.innerWidth < 768) { // md breakpoint is typically 768px
+          sidebar.classList.add('-translate-x-full');
+          if (sidebarOverlay) sidebarOverlay.classList.add('hidden');
+        }
+      });
+    });
     
     console.log("Mentor page loaded, checking authentication");
     
@@ -924,24 +978,53 @@ require_once('components/navbar.php');
     display: block;
 }
 
-/* Responsive adjustments */
+/* Tables responsive */
+.overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Mobile menu toggle button animation */
+#mobile-menu-toggle {
+    transition: all 0.2s ease-in-out;
+}
+
+#mobile-menu-toggle:hover {
+    transform: scale(1.05);
+    background-color: rgba(6, 182, 212, 0.9);
+}
+
+#mobile-menu-toggle:active {
+    transform: scale(0.95);
+}
+
+/* Improved responsive adjustments */
 @media (max-width: 768px) {
     #mentor-content {
         flex-direction: column;
     }
     
-    .w-64 {
+    .table-responsive {
+        display: block;
         width: 100%;
-        position: static;
-        height: auto;
+        overflow-x: auto;
     }
     
-    .ml-64 {
-        margin-left: 0;
+    /* Make table headers stick to top on small screens */
+    thead th {
+        position: sticky;
+        top: 0;
+        background-color: rgba(17, 24, 39, 0.9);
+        z-index: 1;
     }
     
-    .grid-cols-3 {
-        grid-template-columns: 1fr;
+    /* Adjust form layout on small screens */
+    .form-group {
+        margin-bottom: 1rem;
+    }
+    
+    /* Make buttons easier to tap on mobile */
+    button, select, input[type="submit"] {
+        min-height: 44px;
     }
 }
 
@@ -954,6 +1037,16 @@ require_once('components/navbar.php');
     
     h1 {
         font-size: 1.875rem;
+    }
+    
+    /* Improve tap targets for mobile */
+    .lock-team-btn, .nav-link {
+        padding: 8px 12px;
+    }
+    
+    /* Stack grid items on small screens */
+    .grid {
+        grid-template-columns: 1fr;
     }
 }
 
