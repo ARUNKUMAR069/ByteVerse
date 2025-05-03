@@ -72,6 +72,73 @@
         }
     </style>
     
+    <!-- Global button animation fix -->
+    <style>
+    /* Fix animation issues with cyber buttons */
+    .cyber-button {
+        animation: none !important;
+        transition: background-color 0.2s ease !important;
+    }
+
+    .cyber-button i {
+        animation: none !important;
+        position: absolute !important;
+        inset: 0 !important;
+        display: block !important;
+        opacity: 0.3 !important; /* Keep slight visual effect without animation */
+        background: linear-gradient(90deg, var(--primary-accent-dark) 0%, var(--primary-accent) 100%) !important;
+    }
+
+    .cyber-button:hover {
+        box-shadow: 0 0 5px var(--primary-accent) !important;
+        background-color: rgba(0, 215, 254, 0.1) !important;
+    }
+
+    .cyber-button:hover i {
+        opacity: 0.5 !important; /* Slightly increase opacity on hover for visual feedback */
+    }
+
+    .cyber-button.secondary i {
+        background: linear-gradient(90deg, var(--neon-pink) 0%, var(--neon-purple) 100%) !important;
+    }
+
+    /* Fix login button animation */
+    #login-form .cyber-button {
+        position: relative !important;
+        overflow: hidden !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* Fix for loader dots on login button */
+    .loader-dots {
+        display: flex !important;
+        gap: 4px !important;
+    }
+
+    .loader-dots .dot {
+        width: 6px !important;
+        height: 6px !important;
+        background-color: white !important;
+        border-radius: 50% !important;
+        animation: loader-dot-pulse 1s infinite alternate ease-in-out !important;
+    }
+
+    .loader-dots .dot:nth-child(2) {
+        animation-delay: 0.2s !important;
+    }
+
+    .loader-dots .dot:nth-child(3) {
+        animation-delay: 0.4s !important;
+    }
+
+    @keyframes loader-dot-pulse {
+        0% { opacity: 0.4; transform: scale(0.8); }
+        100% { opacity: 1; transform: scale(1); }
+    }
+    </style>
+    
     <?php if (isset($additionalStyles)): ?>
     <style>
         <?php echo $additionalStyles; ?>

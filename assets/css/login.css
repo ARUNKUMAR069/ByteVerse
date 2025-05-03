@@ -1,0 +1,137 @@
+/* Login Page Specific Styles */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-accent);
+    font-size: 1rem;
+}
+
+.input-wrapper {
+    position: relative;
+}
+
+.form-control {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    border-radius: 4px;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 1rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 2px rgba(0, 215, 254, 0.2);
+}
+
+.input-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--primary-accent);
+    transition: all 0.3s ease;
+}
+
+.form-control:focus + label {
+    transform: translateY(-20px);
+    font-size: 0.8rem;
+    color: var(--primary-accent);
+}
+
+.form-control:focus ~ .input-line {
+    width: 100%;
+}
+
+.form-control:not(:placeholder-shown) + label {
+    transform: translateY(-20px);
+    font-size: 0.8rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-control {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    position: relative;
+}
+
+.checkbox-control:checked {
+    background: var(--primary-accent);
+    border-color: var(--primary-accent);
+}
+
+.checkbox-control:checked::after {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 6px;
+    width: 5px;
+    height: 10px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+}
+
+.checkbox-label {
+    margin-left: 8px;
+    font-family: "Rajdhani", sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    cursor: pointer;
+}
+
+/* Login Page Loader Styles */
+.loader-dots {
+    display: inline-flex;
+    gap: 0.3rem;
+    margin-right: 0.5rem;
+}
+
+.loader-dots .dot {
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    border-radius: 50%;
+    animation: pulse 1s infinite ease-in-out;
+}
+
+.loader-dots .dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loader-dots .dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(0.5); opacity: 0.5; }
+    50% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  10%, 90% { transform: translateX(-1px); }
+  20%, 80% { transform: translateX(2px); }
+  30%, 50%, 70% { transform: translateX(-4px); }
+  40%, 60% { transform: translateX(4px); }
+}

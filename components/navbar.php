@@ -17,9 +17,9 @@
         </div>
         
         <div class="flex items-center">
-            <button class="hidden md:block cyber-button">
+            <button class="hidden md:block cyber-button" onclick="window.location.href='registration.php'">
                 <span>Register Now</span>
-                <i></i>
+                <i style="opacity: 0.3;"></i>
             </button>
             
             <button class="md:hidden text-white" id="mobile-menu-btn">
@@ -58,9 +58,9 @@
         <a href="faq.php" class="text-xl text-white hover:text-cyan-400 transition-colors">FAQ</a>
         <a href="contact.php" class="text-xl text-white hover:text-cyan-400 transition-colors">Contact Us</a>
         
-        <button class="cyber-button primary mt-6">
+        <button class="cyber-button primary mt-6" onclick="window.location.href='registration.php'">
             <span>Register Now</span>
-            <i></i>
+            <i style="opacity: 0.3;"></i>
         </button>
         
         <!-- Mobile Theme Switcher -->
