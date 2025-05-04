@@ -6,7 +6,7 @@
     <title><?php echo isset($pageTitle) ? $pageTitle : 'ByteVerse 1.0 | The Ultimate Coding Universe'; ?></title>
     
     <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./src/output.css" rel="stylesheet">
     
     <!-- Animation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
