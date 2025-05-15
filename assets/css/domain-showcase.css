@@ -1,0 +1,346 @@
+/* Domain Showcase Section */
+.domain-showcase-section {
+    position: relative;
+    padding: 80px 0;
+    background-color: rgba(5, 10, 24, 0.8);
+}
+
+.cyber-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-image: 
+        linear-gradient(to right, rgba(0, 215, 254, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 215, 254, 0.03) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+.section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-accent, #00D7FE);
+    text-shadow: 0 0 10px rgba(0, 215, 254, 0.5);
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.domains-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 3rem;
+}
+
+/* Domain Card Styles */
+.domain-card {
+    position: relative;
+    background: rgba(10, 20, 30, 0.6);
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    border-radius: 10px;
+    padding: 30px 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+    height: 240px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.domain-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(0, 215, 254, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.domain-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-accent, #00D7FE);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 15px rgba(0, 215, 254, 0.3);
+}
+
+.domain-card:hover::before {
+    opacity: 1;
+}
+
+.domain-icon {
+    width: 50px;
+    height: 50px;
+    color: var(--primary-accent, #00D7FE);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.domain-card:hover .domain-icon {
+    transform: scale(1.1);
+}
+
+.domain-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-bright, #fff);
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.domain-card:hover .domain-title {
+    color: var(--primary-accent, #00D7FE);
+}
+
+.domain-preview {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-dim, #a0a0a0);
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.domain-hover-content {
+    position: absolute;
+    inset: 0;
+    background: rgba(5, 15, 25, 0.95);
+    padding: 25px;
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.domain-card:hover .domain-hover-content {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.problem-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary-accent, #00D7FE);
+    margin-bottom: 15px;
+}
+
+.problem-list {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.85rem;
+    color: var(--text-bright, #fff);
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.problem-list li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.problem-list li::before {
+    content: '⌁';
+    position: absolute;
+    left: 0;
+    color: var(--primary-accent, #00D7FE);
+}
+
+.domain-link {
+    display: inline-block;
+    font-family: 'Chakra Petch', sans-serif;
+    color: var(--primary-accent, #00D7FE);
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: auto;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.domain-link:hover {
+    border-color: var(--primary-accent, #00D7FE);
+    text-shadow: 0 0 5px rgba(0, 215, 254, 0.5);
+}
+
+.domain-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 215, 254, 0.2);
+    color: var(--primary-accent, #00D7FE);
+    font-size: 0.7rem;
+    padding: 4px 8px;
+    border-radius: 20px;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Domain Modal */
+.domain-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.domain-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    background: rgba(10, 20, 30, 0.95);
+    border: 1px solid var(--primary-accent, #00D7FE);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 215, 254, 0.3);
+    animation: modalAppear 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalAppear {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.domain-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    background-color: rgba(0, 215, 254, 0.1);
+    border-bottom: 1px solid rgba(0, 215, 254, 0.3);
+}
+
+.modal-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary-accent, #00D7FE);
+    margin: 0;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: var(--text-bright, #fff);
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    opacity: 1;
+    color: var(--primary-accent, #00D7FE);
+}
+
+.domain-modal-body {
+    padding: 25px;
+}
+
+.modal-description {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1rem;
+    color: var(--text-dim, #a0a0a0);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.modal-problems h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.1rem;
+    color: var(--primary-accent, #00D7FE);
+    margin-bottom: 15px;
+}
+
+.modal-problem-list {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 0.95rem;
+    color: var(--text-bright, #fff);
+    padding-left: 25px;
+}
+
+.modal-problem-list li {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.modal-problem-list li::marker {
+    color: var(--primary-accent, #00D7FE);
+}
+
+.domain-modal-footer {
+    padding: 20px 25px;
+    border-top: 1px solid rgba(0, 215, 254, 0.3);
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .domains-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .domain-card {
+        padding: 25px 18px;
+        height: 220px;
+    }
+    
+    .domain-title {
+        font-size: 1.2rem;
+    }
+    
+    .domain-icon {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .domains-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .domain-card {
+        height: auto;
+        min-height: 200px;
+    }
+    
+    .domain-hover-content {
+        padding: 20px;
+    }
+    
+    .domain-modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+}

@@ -23,10 +23,16 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/countdown.css">
+    <!-- <link rel="stylesheet" href="assets/css/countdown.css"> -->
+    <link rel="stylesheet" href="assets/css/enhanced-home.css">
     
     <!-- Registration CSS -->
     <link rel="stylesheet" href="assets/css/registration.css">
+
+    <!-- Domain and Sponsor Showcase CSS -->
+    <link rel="stylesheet" href="assets/css/domain-showcase.css">
+    <link rel="stylesheet" href="assets/css/terminal.css">
+    <link rel="stylesheet" href="assets/css/sponsors-showcase.css">
     
     <!-- Additional styling for mobile responsive loader -->
     <style>
@@ -133,6 +139,11 @@
         <?php echo $additionalStyles; ?>
     </style>
     <?php endif; ?>
+
+    <!-- Add at the end, before closing </head> tag -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
+    <script src="assets/js/domain-showcase.js"></script>
+    <script src="assets/js/sponsors-showcase.js"></script>
 </head>
 <body>
     <!-- Custom cursor -->

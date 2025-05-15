@@ -19,7 +19,7 @@ require_once('components/navbar.php');
 
         <div class="mb-3 inline-block mx-auto">
             <span class="date-badge">
-                August 22-23, 2025 • Virtual & In-Person
+                August 22-23, 2025
             </span>
         </div>
 
@@ -73,15 +73,15 @@ require_once('components/navbar.php');
         <div class="mt-24 flex items-center justify-center">
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-value" data-value="500">0</div>
-                    <div class="stat-label">Hackers</div>
+                    <div class="stat-value" data-value="500+">0</div>
+                    <div class="stat-label">Participants</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value" data-value="48">0</div>
+                    <div class="stat-value" data-value="24">0</div>
                     <div class="stat-label">Hours</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value" data-value="25">0</div>
+                    <div class="stat-value" data-value="5">0</div>
                     <div class="stat-label">Challenges</div>
                 </div>
                 <div class="stat-item">
@@ -100,9 +100,11 @@ require_once('components/navbar.php');
         </div>
     </div>
 </section>
-<?php require_once('components/cyber-hacker.php'); ?>
-<?php require_once('components/algorithm-arena.php'); ?>
+
+
 <?php
+require_once('components/domain-showcase.php');
+require_once('components/sponsors-showcase.php');
 // Include terminal
 require_once('components/terminal.php');
 
