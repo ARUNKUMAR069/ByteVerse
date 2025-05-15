@@ -191,3 +191,125 @@
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* Mobile Responsiveness Improvements */
+@media (max-width: 768px) {
+    .sponsor-tier {
+        padding: 1.5rem !important;
+    }
+    
+    .sponsor-tier:hover {
+        transform: translateY(-5px);
+    }
+    
+    .tier-title, .sponsor-package-title {
+        font-size: 1.2rem !important;
+    }
+    
+    .sponsor-logo-container {
+        height: 100px !important;
+    }
+    
+    .sponsor-form input,
+    .sponsor-form textarea,
+    .sponsor-form select {
+        font-size: 0.95rem;
+        padding: 0.75rem !important;
+    }
+    
+    /* Improve form layout on mobile */
+    .form-group.md\:col-span-2,
+    .form-group.md\:col-span-1 {
+        margin-bottom: 1rem;
+    }
+    
+    /* Fix grid issues on small screens */
+    .grid.grid-cols-1.md\:grid-cols-2.gap-6 {
+        gap: 1rem;
+    }
+    
+    .grid.grid-cols-1.md\:grid-cols-3.gap-8,
+    .grid.grid-cols-1.md\:grid-cols-4.gap-8 {
+        gap: 1.5rem;
+    }
+    
+    /* Better button sizing on mobile */
+    .cyber-button {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-tier {
+        padding: 1.25rem !important;
+    }
+    
+    /* Improve legibility of small text */
+    .text-sm {
+        font-size: 0.8rem !important;
+    }
+    
+    .sponsor-logo-container {
+        height: 80px !important;
+        padding: 0.75rem !important;
+    }
+    
+    /* Single column layout for very small screens */
+    .grid.grid-cols-2.md\:grid-cols-4.gap-6.md\:gap-8 {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.75rem;
+    }
+    
+    /* Form improvements for very small screens */
+    .sponsor-form label {
+        margin-bottom: 0.25rem !important;
+    }
+    
+    /* Smaller headings */
+    h2.text-3xl.md\:text-4xl {
+        font-size: 1.75rem !important;
+    }
+}
+
+/* Form Submission Animation */
+@keyframes formSubmit {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+
+.form-submitting {
+    animation: formSubmit 1s infinite;
+}
+
+/* Enhanced form field focus states */
+.sponsor-form input:focus,
+.sponsor-form textarea:focus,
+.sponsor-form select:focus {
+    background: rgba(10, 20, 40, 0.5);
+    border: 1px solid var(--primary-accent);
+    box-shadow: 0 0 15px rgba(0, 215, 254, 0.4);
+    outline: none;
+}
+
+/* Form validation styling */
+.sponsor-form input.invalid,
+.sponsor-form textarea.invalid,
+.sponsor-form select.invalid {
+    border-color: #FF5F56;
+    box-shadow: 0 0 10px rgba(255, 95, 86, 0.3);
+}
+
+.form-error-message {
+    color: #FF5F56;
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.sponsor-form input.invalid + .form-error-message,
+.sponsor-form textarea.invalid + .form-error-message,
+.sponsor-form select.invalid + .form-error-message {
+    display: block;
+}
