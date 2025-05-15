@@ -19,7 +19,7 @@ require_once('components/navbar.php');
 
         <div class="mb-3 inline-block mx-auto">
             <span class="date-badge">
-                April 28-30, 2025 • Virtual & In-Person
+                August 22-23, 2025 • Virtual & In-Person
             </span>
         </div>
 

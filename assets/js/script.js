@@ -267,124 +267,7 @@ function initializeMatrixEffect() {
 }
 
 // Three.js background effect
-function initThreeJsBackground() {
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 0.1, 1000);
-    
-    const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
-    renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.setPixelRatio(window.devicePixelRatio);
-    document.getElementById('particles-container').appendChild(renderer.domElement);
-    
-    // Add ambient light
-    const ambientLight = new THREE.AmbientLight(0x404040);
-    scene.add(ambientLight);
-    
-    // Add directional light
-    const directionalLight = new THREE.DirectionalLight(0x00d7fe, 0.5);
-    directionalLight.position.set(0, 1, 1);
-    scene.add(directionalLight);
-    
-    // Create a group for all objects
-    const objectsGroup = new THREE.Group();
-    scene.add(objectsGroup);
-    
-    // Add geometric objects
-    const geometries = [
-        new THREE.IcosahedronGeometry(1, 0),
-        new THREE.OctahedronGeometry(1, 0),
-        new THREE.TetrahedronGeometry(1, 0)
-    ];
-    
-    const colors = [0x00d7fe, 0xbd00ff, 0xff00e5];
-    
-    for (let i = 0; i < 15; i++) {
-        const geometry = geometries[Math.floor(Math.random() * geometries.length)];
-        const material = new THREE.MeshPhongMaterial({
-            color: colors[Math.floor(Math.random() * colors.length)],
-            transparent: true,
-            opacity: 0.7,
-            wireframe: Math.random() > 0.5
-        });
-        
-        const mesh = new THREE.Mesh(geometry, material);
-        
-        // Random position
-        mesh.position.x = (Math.random() - 0.5) * 20;
-        mesh.position.y = (Math.random() - 0.5) * 20;
-        mesh.position.z = (Math.random() - 0.5) * 10 - 5;
-        
-        // Random size
-        const scale = Math.random() * 0.5 + 0.2;
-        mesh.scale.set(scale, scale, scale);
-        
-        // Random rotation
-        mesh.rotation.x = Math.random() * Math.PI;
-        mesh.rotation.y = Math.random() * Math.PI;
-        
-        objectsGroup.add(mesh);
-    }
-    
-    // Add shader-based holographic circle
-    const circleGeometry = new THREE.PlaneGeometry(8, 8);
-    const shaderMaterial = new THREE.ShaderMaterial({
-        uniforms: {
-            time: { value: 0.0 },
-            color: { value: new THREE.Color(0x00d7fe) }
-        },
-        vertexShader: document.getElementById('vertexShader').textContent,
-        fragmentShader: document.getElementById('fragmentShader').textContent,
-        transparent: true,
-        side: THREE.DoubleSide
-    });
-    
-    const circle = new THREE.Mesh(circleGeometry, shaderMaterial);
-    circle.position.z = -10;
-    scene.add(circle);
-    
-    // Position camera
-    camera.position.z = 5;
-    
-    // Interactive mouse movement
-    const mouse = new THREE.Vector2();
-    
-    window.addEventListener('mousemove', (event) => {
-        mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-        mouse.y = -(event.clientY / window.innerHeight) * 2 + 1;
-    });
-    
-    // Handle window resize
-    window.addEventListener('resize', () => {
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-        renderer.setSize(window.innerWidth, window.innerHeight);
-    });
-    
-    // Animation loop
-    function animate() {
-        requestAnimationFrame(animate);
-        
-        // Update objects
-        objectsGroup.children.forEach((mesh, i) => {
-            mesh.rotation.x += 0.003;
-            mesh.rotation.y += 0.004;
-            
-            // Subtle movement based on mouse position
-            mesh.position.x += (mouse.x * 0.1 - mesh.position.x * 0.05) * 0.02;
-            mesh.position.y += (mouse.y * 0.1 - mesh.position.y * 0.05) * 0.02;
-        });
-        
-        // Rotate the entire group slowly
-        objectsGroup.rotation.y += 0.001;
-        
-        // Update shader uniforms
-        shaderMaterial.uniforms.time.value += 0.01;
-        
-        renderer.render(scene, camera);
-    }
-    
-    animate();
-}
+
 
 // Theme switcher
 function initThemeSwitcher() {
@@ -543,8 +426,8 @@ function initTerminal() {
 
 // Add to script.js
 function initCountdown() {
-    // Hackathon date: April 28, 2025
-    const hackathonDate = new Date('April 28, 2025 09:00:00').getTime();
+    // Hackathon date: August 22, 2025
+    const hackathonDate = new Date('August 22, 2025 09:00:00').getTime();
     
     // Update countdown every second
     const countdownInterval = setInterval(function() {
@@ -768,5 +651,310 @@ document.addEventListener('DOMContentLoaded', function() {
         
         if (navLogo) navLogo.style.opacity = "1";
         if (mobileLogo) mobileLogo.style.opacity = "1";
+    });
+});
+
+/**
+ * ByteVerse Custom Background
+ * A unique cyberpunk-themed grid animation with techno elements
+ */
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Remove any existing Three.js container elements
+    const oldContainer = document.getElementById('particles-container');
+    if (oldContainer) {
+        oldContainer.innerHTML = '';
+    }
+    
+    // Create canvas for the cyberpunk grid
+    const canvas = document.createElement('canvas');
+    canvas.id = 'cyberpunk-grid';
+    canvas.className = 'fixed inset-0 z-0';
+    canvas.style.opacity = '0.4';
+    
+    // Add to container
+    oldContainer.appendChild(canvas);
+    
+    // Initialize canvas
+    const ctx = canvas.getContext('2d');
+    
+    // Set canvas size
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+    
+    // Configuration
+    const config = {
+        gridSize: 60,
+        lineColor: 'rgba(0, 215, 254, 0.2)',
+        lineColorAlt: 'rgba(189, 0, 255, 0.15)',
+        highlightColor: 'rgba(0, 215, 254, 0.5)',
+        highlightColorAlt: 'rgba(255, 0, 128, 0.4)',
+        glowIntensity: 20,
+        pulseSpeed: 0.02,
+        moveSpeed: 0.5,
+        perspective: 800,
+        floatingElements: []
+    };
+    
+    // Create floating tech elements
+    function createFloatingElements() {
+        const elements = [];
+        const shapes = [drawCircuit, drawCodeBlock, drawDataNode];
+        
+        // Add 15-25 elements based on screen size
+        const count = Math.floor(window.innerWidth / 100);
+        
+        for (let i = 0; i < count; i++) {
+            elements.push({
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height,
+                size: Math.random() * 40 + 20,
+                opacity: Math.random() * 0.5 + 0.2,
+                speed: Math.random() * 0.4 + 0.1,
+                direction: Math.random() * Math.PI * 2,
+                rotation: Math.random() * Math.PI * 2,
+                rotationSpeed: (Math.random() - 0.5) * 0.01,
+                shape: shapes[Math.floor(Math.random() * shapes.length)]
+            });
+        }
+        
+        return elements;
+    }
+    
+    // Drawing functions for different tech elements
+    function drawCircuit(ctx, x, y, size, rotation, opacity) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.globalAlpha = opacity;
+        
+        // Circuit board pattern
+        ctx.beginPath();
+        ctx.moveTo(-size/2, -size/4);
+        ctx.lineTo(size/2, -size/4);
+        ctx.moveTo(-size/4, -size/2);
+        ctx.lineTo(-size/4, size/2);
+        ctx.moveTo(size/4, -size/2);
+        ctx.lineTo(size/4, 0);
+        ctx.moveTo(0, size/4);
+        ctx.lineTo(size/2, size/4);
+        
+        // Draw lines
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = config.highlightColor;
+        ctx.stroke();
+        
+        // Draw nodes
+        for (let i = 0; i < 3; i++) {
+            const nodeX = (Math.random() - 0.5) * size * 0.8;
+            const nodeY = (Math.random() - 0.5) * size * 0.8;
+            ctx.beginPath();
+            ctx.arc(nodeX, nodeY, size/10, 0, Math.PI * 2);
+            ctx.fillStyle = i % 2 === 0 ? config.highlightColor : config.highlightColorAlt;
+            ctx.fill();
+        }
+        
+        ctx.restore();
+    }
+    
+    function drawCodeBlock(ctx, x, y, size, rotation, opacity) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.globalAlpha = opacity;
+        
+        // Code block background
+        ctx.fillStyle = 'rgba(10, 20, 30, 0.7)';
+        ctx.fillRect(-size/2, -size/2, size, size);
+        
+        // Code lines
+        const lineHeight = size / 6;
+        ctx.fillStyle = config.highlightColor;
+        
+        for (let i = 0; i < 4; i++) {
+            const lineY = -size/2 + (i+1) * lineHeight;
+            const lineWidth = Math.random() * (size * 0.7) + (size * 0.3);
+            ctx.fillRect(-size/2 + size * 0.1, lineY, lineWidth, lineHeight/3);
+        }
+        
+        // Border
+        ctx.strokeStyle = config.highlightColorAlt;
+        ctx.lineWidth = 1;
+        ctx.strokeRect(-size/2, -size/2, size, size);
+        
+        ctx.restore();
+    }
+    
+    function drawDataNode(ctx, x, y, size, rotation, opacity) {
+        ctx.save();
+        ctx.translate(x, y);
+        ctx.rotate(rotation);
+        ctx.globalAlpha = opacity;
+        
+        // Data node center
+        ctx.beginPath();
+        ctx.arc(0, 0, size/3, 0, Math.PI * 2);
+        ctx.fillStyle = config.highlightColorAlt;
+        ctx.fill();
+        
+        // Outer ring
+        ctx.beginPath();
+        ctx.arc(0, 0, size/2, 0, Math.PI * 2);
+        ctx.strokeStyle = config.highlightColor;
+        ctx.lineWidth = 2;
+        ctx.stroke();
+        
+        // Connection lines
+        const lineCount = Math.floor(Math.random() * 3) + 3;
+        for (let i = 0; i < lineCount; i++) {
+            const angle = (Math.PI * 2 / lineCount) * i;
+            const endX = Math.cos(angle) * size;
+            const endY = Math.sin(angle) * size;
+            
+            ctx.beginPath();
+            ctx.moveTo(Math.cos(angle) * (size/2), Math.sin(angle) * (size/2));
+            ctx.lineTo(endX, endY);
+            ctx.strokeStyle = i % 2 === 0 ? config.highlightColor : config.highlightColorAlt;
+            ctx.stroke();
+            
+            // Data packets
+            if (Math.random() > 0.5) {
+                ctx.beginPath();
+                ctx.arc(Math.cos(angle) * (size*0.75), Math.sin(angle) * (size*0.75), size/10, 0, Math.PI * 2);
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                ctx.fill();
+            }
+        }
+        
+        ctx.restore();
+    }
+    
+    // Create initial elements
+    config.floatingElements = createFloatingElements();
+    
+    // Animation variables
+    let phase = 0;
+    let gridOffset = 0;
+    
+    // Draw grid with perspective effect
+    function drawGrid() {
+        // Perspective grid effect
+        let gridSize = config.gridSize;
+        
+        // Clear canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw horizontal lines with perspective
+        for (let y = 0; y < canvas.height + gridSize; y += gridSize) {
+            const perspectiveOffset = (y - canvas.height / 2) / config.perspective;
+            const distanceFactor = Math.abs(perspectiveOffset);
+            
+            // Calculate starting and ending x based on perspective
+            const startX = canvas.width * perspectiveOffset;
+            const endX = canvas.width - startX;
+            
+            ctx.beginPath();
+            ctx.moveTo(startX, y + gridOffset % gridSize);
+            ctx.lineTo(endX, y + gridOffset % gridSize);
+            
+            // Lines get brighter as they approach the center of the screen
+            const opacity = 0.7 - distanceFactor;
+            ctx.strokeStyle = y % (gridSize * 2) === 0 ? 
+                `rgba(0, 215, 254, ${opacity})` : 
+                `rgba(189, 0, 255, ${opacity * 0.7})`;
+            
+            ctx.lineWidth = Math.max(0.5, 1 - distanceFactor);
+            ctx.stroke();
+        }
+        
+        // Draw vertical lines with glow effect
+        for (let x = 0; x < canvas.width + gridSize; x += gridSize) {
+            // Pulse effect with sine wave
+            const pulse = Math.sin(phase + x / 100) * 0.5 + 0.5;
+            
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, canvas.height);
+            
+            // Different colors for alternating lines
+            if (x % (gridSize * 2) === 0) {
+                ctx.strokeStyle = `rgba(0, 215, 254, ${0.2 + pulse * 0.3})`;
+            } else {
+                ctx.strokeStyle = `rgba(189, 0, 255, ${0.15 + pulse * 0.2})`;
+            }
+            
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            
+            // Add glow effect to some lines
+            if (Math.random() < 0.1) {
+                ctx.shadowColor = x % (gridSize * 2) === 0 ? 'rgba(0, 215, 254, 0.8)' : 'rgba(189, 0, 255, 0.8)';
+                ctx.shadowBlur = config.glowIntensity * pulse;
+                ctx.stroke();
+                ctx.shadowBlur = 0;
+            }
+        }
+        
+        // Draw floating elements
+        config.floatingElements.forEach(element => {
+            // Draw based on element's shape function
+            element.shape(
+                ctx, 
+                element.x, 
+                element.y, 
+                element.size, 
+                element.rotation, 
+                element.opacity
+            );
+            
+            // Update element position
+            element.x += Math.cos(element.direction) * element.speed;
+            element.y += Math.sin(element.direction) * element.speed;
+            element.rotation += element.rotationSpeed;
+            
+            // Wrap around screen
+            if (element.x < -element.size) element.x = canvas.width + element.size;
+            if (element.x > canvas.width + element.size) element.x = -element.size;
+            if (element.y < -element.size) element.y = canvas.height + element.size;
+            if (element.y > canvas.height + element.size) element.y = -element.size;
+        });
+        
+        // Update animation parameters
+        phase += config.pulseSpeed;
+        gridOffset += config.moveSpeed;
+        
+        // Request next frame
+        requestAnimationFrame(drawGrid);
+    }
+    
+    // Start animation
+    drawGrid();
+    
+    // Add mouse interaction
+    let mouseX = 0;
+    let mouseY = 0;
+    
+    window.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        
+        // Affect nearby elements
+        config.floatingElements.forEach(element => {
+            const dx = mouseX - element.x;
+            const dy = mouseY - element.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            
+            // If cursor is close to the element, push it away slightly
+            if (distance < 150) {
+                const angle = Math.atan2(dy, dx);
+                element.direction = angle + Math.PI; // Move away from cursor
+                element.speed = Math.max(element.speed, 0.8); // Increase speed temporarily
+            }
+        });
     });
 });

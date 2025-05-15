@@ -23,6 +23,7 @@
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/countdown.css">
     
     <!-- Registration CSS -->
     <link rel="stylesheet" href="assets/css/registration.css">
@@ -44,18 +45,6 @@
                 position: relative;
             }
             
-            .mobile-logo-text .byte::after {
-                content: '';
-                position: absolute;
-                right: -4px;
-                top: 50%;
-                transform: translateY(-50%);
-                width: 2px;
-                height: 70%;
-                background-color: var(--primary-accent);
-                animation: cursor-blink 0.8s infinite;
-            }
-            
             .mobile-logo-text .verse {
                 color: var(--neon-purple);
             }
@@ -66,11 +55,6 @@
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
                 background-clip: text;
-            }
-            
-            @keyframes cursor-blink {
-                0%, 100% { opacity: 1; }
-                50% { opacity: 0; }
             }
         }
     </style>
