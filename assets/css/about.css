@@ -1,0 +1,440 @@
+/* About page custom styles - Gen Z modern design */
+
+/* College Leaders section */
+.leaders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.leader-card {
+    flex: 0 1 320px;
+    max-width: 320px;
+    margin: 0 1rem 2rem;
+    background-color: rgba(0, 30, 60, 0.7);
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    width: 300px;
+    height: 380px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px);
+    margin-bottom: 2rem;
+}
+
+.leader-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.leader-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(233, 184, 114, 0.1), transparent 70%);
+    z-index: 0;
+}
+
+.leader-image-container {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+}
+
+.leader-image-inner {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #e9b872;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.leader-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.leader-card:hover .leader-image {
+    transform: scale(1.08);
+}
+
+/* Social links orbit */
+.social-orbit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    animation: orbit-rotate 20s linear infinite;
+}
+
+@keyframes orbit-rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.social-orbit:before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px dashed rgba(233, 184, 114, 0.4);
+    border-radius: 50%;
+}
+
+.social-link {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #501010;
+    border: 2px solid #e9b872;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #e9b872;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 3;
+    animation: anti-orbit 20s linear infinite;
+}
+
+@keyframes anti-orbit {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+.social-link:hover {
+    background: #e9b872;
+    color: #501010;
+    transform: scale(1.2) rotate(-360deg);
+}
+
+.social-link.github {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.social-link.linkedin {
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.leader-details {
+    padding: 1.5rem 1rem 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.leader-name {
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.leader-role {
+    color: #e9b872;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: "Rajdhani", sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Faculty Slider styles */
+.faculty-slider-outer {
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 12px;
+    background: rgba(0, 215, 254, 0.03);
+    padding: 2rem 0;
+    position: relative;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.faculty-slider-outer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, 
+        transparent 0%, 
+        rgba(0, 215, 254, 0.05) 40%, 
+        rgba(0, 215, 254, 0.05) 60%, 
+        transparent 100%
+    );
+    pointer-events: none;
+}
+
+.faculty-card {
+    position: relative;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    padding: 1.5rem;
+    max-width: 350px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 215, 254, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 215, 254, 0.15);
+}
+
+.faculty-image-wrapper {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid rgba(0, 215, 254, 0.3);
+    position: relative;
+}
+
+.faculty-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.8), transparent 50%);
+    pointer-events: none;
+}
+
+.faculty-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.faculty-card:hover .faculty-image-wrapper img {
+    transform: scale(1.1);
+}
+
+.faculty-info {
+    text-align: center;
+}
+
+.faculty-name {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.faculty-title {
+    color: var(--primary-accent, #00D7FE);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    font-family: 'Rajdhani', sans-serif;
+    letter-spacing: 1px;
+}
+
+.faculty-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.faculty-socials a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(0, 215, 254, 0.15);
+    color: white;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.faculty-socials a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(0, 215, 254, 0.8), rgba(189, 0, 255, 0.8));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.faculty-socials a:hover::before {
+    opacity: 1;
+}
+
+.faculty-socials a i {
+    position: relative;
+    z-index: 1;
+}
+
+.faculty-socials a:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 8px 15px rgba(0, 215, 254, 0.3);
+}
+
+.slider-indicators {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.slide-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slide-indicator.active {
+    background: var(--primary-accent, #00D7FE);
+    transform: scale(1.2);
+}
+
+.slide-indicator:hover {
+    background: rgba(0, 215, 254, 0.6);
+}
+
+/* Make sure icons are properly displayed in leader cards */
+.leaders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.leader-card {
+    flex: 0 1 320px;
+    max-width: 320px;
+    margin: 0 1rem 2rem;
+    background-color: rgba(0, 30, 60, 0.7);
+    border: 1px solid rgba(0, 215, 254, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.leader-socials .fab {
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+/* Ensure all icons are visible */
+.fa, .fab, .fas {
+    display: inline-block !important;
+    vertical-align: middle;
+}
+
+/* Make social icons visible */
+.leader-socials .social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-accent, #00D7FE);
+    background: rgba(0, 215, 254, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.leader-socials .social-link i {
+    font-size: 16px;
+    line-height: 1;
+    display: block !important;
+    z-index: 10;
+}
+
+.leader-socials .social-link:hover {
+    background: var(--primary-accent, #00D7FE);
+    color: #0a1428;
+    transform: translateY(-3px);
+}
+
+/* Fix counter display */
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-accent, #00D7FE);
+    font-family: 'Orbitron', sans-serif;
+}
+
+.stat-label {
+    margin-top: 0.5rem;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .faculty-slide {
+        min-width: 100%;
+    }
+    
+    .faculty-card {
+        padding: 1.2rem;
+    }
+    
+    .faculty-image-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .leader-card {
+        width: 280px;
+        height: 350px;
+        padding: 1.5rem;
+    }
+    
+    .leader-image-inner {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .social-link {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.tech-text, p, .team-name, .testimonial-content, .cta-text {
+    color: white !important;
+}

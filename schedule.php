@@ -68,7 +68,7 @@ $additionalStyles = '
     font-family: "Chakra Petch", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
 }
 
 .events-grid {
@@ -110,12 +110,45 @@ $additionalStyles = '
     position: relative;
     transition: all 0.3s ease;
     margin-bottom: 1.5rem;
+    overflow: hidden; /* Prevent text overflow */
 }
 
-.event-content:hover {
-    border-color: var(--primary-accent);
-    box-shadow: 0 5px 15px rgba(0, 215, 254, 0.1);
-    transform: translateX(5px);
+/* Event Status Indicators */
+.event-status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 5;
+}
+
+.status-upcoming {
+    background: rgba(0, 215, 254, 0.1);
+    color: var(--primary-accent);
+    border: 1px solid var(--primary-accent);
+}
+
+.status-live {
+    background: rgba(255, 79, 79, 0.1);
+    color: #FF5F56;
+    border: 1px solid #FF5F56;
+    animation: pulse-status 1.5s infinite;
+}
+
+.status-completed {
+    background: rgba(39, 201, 63, 0.1);
+    color: #27C93F;
+    border: 1px solid #27C93F;
+}
+
+@keyframes pulse-status {
+    0% { opacity: 1; }
+    50% { opacity: 0.6; }
+    100% { opacity: 1; }
 }
 
 .event-title {
@@ -127,7 +160,7 @@ $additionalStyles = '
 
 .event-description {
     font-family: "Rajdhani", sans-serif;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     margin-bottom: 0.75rem;
     line-height: 1.5;
 }
@@ -235,7 +268,7 @@ $additionalStyles = '
     padding: 0.5rem 1.25rem;
     border: 1px solid rgba(0, 215, 254, 0.3);
     background: rgba(10, 20, 40, 0.3);
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     border-radius: 30px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -245,6 +278,104 @@ $additionalStyles = '
     background: rgba(0, 215, 254, 0.1);
     color: var(--primary-accent);
     border-color: var(--primary-accent);
+}
+
+/* Enhanced responsive styles to prevent text clashes */
+@media (max-width: 768px) {
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-time {
+        text-align: left;
+        border-right: none;
+        border-bottom: 1px dashed rgba(0, 215, 254, 0.3);
+        padding-bottom: 0.5rem;
+        margin-bottom: 0.5rem;
+        padding-right: 0;
+    }
+    
+    .event-time::after {
+        right: auto;
+        left: 0;
+        top: auto;
+        bottom: -6px;
+        transform: none;
+    }
+    
+    .timeline-event::before,
+    .timeline-event::after {
+        font-size: 0.65rem;
+        max-width: 80px;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .timeline-event::before {
+        top: -35px;
+    }
+    
+    .timeline-event::after {
+        bottom: -35px;
+    }
+    
+    .event-navigation {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .event-title {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .event-description {
+        font-size: 0.9rem;
+    }
+    
+    .event-location {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-visualization {
+        height: 3px;
+        margin: 2rem 0 3rem;
+    }
+    
+    .timeline-event {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-event::before,
+    .timeline-event::after {
+        font-size: 0.6rem;
+    }
+    
+    .current-time-indicator {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .cyber-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .filter-button {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .event-status {
+        top: 5px;
+        right: 5px;
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
 }
 
 /* Timeline Visualization */
@@ -289,7 +420,7 @@ $additionalStyles = '
     transform: translateX(-50%);
     font-family: "Chakra Petch", sans-serif;
     font-size: 0.75rem;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     white-space: nowrap;
 }
 
@@ -358,7 +489,7 @@ $additionalStyles = '
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     cursor: pointer;
 }
 
@@ -424,12 +555,76 @@ $additionalStyles = '
     
     .timeline-event::before,
     .timeline-event::after {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        max-width: 80px;
+        white-space: normal;
+        text-align: center;
+    }
+    
+    .timeline-event::before {
+        top: -35px;
+    }
+    
+    .timeline-event::after {
+        bottom: -35px;
     }
     
     .event-navigation {
         flex-direction: column;
         gap: 1rem;
+    }
+    
+    .event-title {
+        font-size: 1.1rem;
+        word-wrap: break-word;
+        hyphens: auto;
+    }
+    
+    .event-description {
+        font-size: 0.9rem;
+    }
+    
+    .event-location {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .timeline-visualization {
+        height: 3px;
+        margin: 2rem 0 3rem;
+    }
+    
+    .timeline-event {
+        width: 10px;
+        height: 10px;
+    }
+    
+    .timeline-event::before,
+    .timeline-event::after {
+        font-size: 0.6rem;
+    }
+    
+    .current-time-indicator {
+        width: 15px;
+        height: 15px;
+    }
+    
+    .cyber-tab {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .filter-button {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+    
+    .event-status {
+        top: 5px;
+        right: 5px;
+        font-size: 0.65rem;
+        padding: 3px 8px;
     }
 }
 
@@ -488,6 +683,7 @@ $additionalStyles = '
 $additionalScripts = '
 // Initialize tabs functionality
 document.addEventListener("DOMContentLoaded", function() {
+    // Existing tab functionality
     const tabButtons = document.querySelectorAll(".cyber-tab");
     const dayContainers = document.querySelectorAll(".schedule-day");
     
@@ -577,27 +773,6 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
     
-    // Timeline visualization functionality
-    const timelineEvents = document.querySelectorAll(".timeline-event");
-    
-    timelineEvents.forEach(event => {
-        event.addEventListener("click", function() {
-            const eventId = this.getAttribute("data-event-id");
-            const targetEvent = document.getElementById(eventId);
-            
-            if (targetEvent) {
-                // Scroll to event
-                targetEvent.scrollIntoView({ behavior: "smooth" });
-                
-                // Highlight event
-                targetEvent.classList.add("highlighted");
-                setTimeout(() => {
-                    targetEvent.classList.remove("highlighted");
-                }, 2000);
-            }
-        });
-    });
-    
     // Add animation for events as they come into view
     const eventObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -612,11 +787,8 @@ document.addEventListener("DOMContentLoaded", function() {
         eventObserver.observe(event);
     });
     
-    // Add download calendar functionality
-    document.getElementById("download-calendar").addEventListener("click", function() {
-        // In a real implementation, this would generate and download an .ics file
-        alert("Calendar download functionality would be implemented here to generate an .ics file with all ByteVerse events.");
-    });
+    // Determine event status (upcoming, live, completed)
+    updateEventStatus();
 });
 
 // Add custom CSS animation for elements coming into view
@@ -636,7 +808,7 @@ document.addEventListener("DOMContentLoaded", function() {
     `;
     document.head.appendChild(style);
     
-    // Simulate the current time indicator position based on current time
+    // Simulate the current time indicator based on current time
     updateCurrentTimeIndicator();
 });
 
@@ -672,6 +844,100 @@ function updateCurrentTimeIndicator() {
         indicator.style.left = `${position}%`;
     }
 }
+
+// Function to update event status based on current time
+function updateEventStatus() {
+    const now = new Date();
+    const events = document.querySelectorAll(".event-content");
+    
+    // Get current year (assuming current year for the events if not specified)
+    const currentYear = now.getFullYear();
+    
+    // Get month indexes (0-based)
+    const augustIndex = 7; // August is month 7 (0-based)
+    
+    events.forEach(event => {
+        // Get the parent for the time element
+        const timeElement = event.closest(".events-grid").querySelector(".event-time");
+        if (!timeElement) return;
+        
+        // Get the time text (format: "HH:MM - HH:MM")
+        const timeText = timeElement.textContent.trim();
+        
+        // Extract time parts
+        const timeParts = timeText.split(" - ");
+        if (timeParts.length !== 2) return;
+        
+        // Get day container to determine the date
+        const dayContainer = event.closest(".schedule-day");
+        if (!dayContainer) return;
+        
+        const dayHeader = dayContainer.querySelector(".day-date");
+        if (!dayHeader) return;
+        
+        // Extract date from the header (format: "August 23 - Day 1" or "August 24 - Day 2")
+        const dateText = dayHeader.textContent.trim();
+        const dateMatch = dateText.match(/August (\d+)/);
+        if (!dateMatch) return;
+        
+        const day = parseInt(dateMatch[1], 10);
+        const month = augustIndex;
+        
+        // Parse event times
+        const startTimeParts = timeParts[0].split(":");
+        const endTimeParts = timeParts[1].split(":");
+        
+        let startHour = parseInt(startTimeParts[0], 10);
+        const startMinute = parseInt(startTimeParts[1] || "0", 10);
+        
+        let endHour = parseInt(endTimeParts[0], 10);
+        const endMinute = parseInt(endTimeParts[1] || "0", 10);
+        
+        // Handle day transition for events that continue after midnight
+        let endDay = day;
+        if (endHour < startHour) {
+            endDay = day + 1;
+        }
+        
+        // Create Date objects for the event start and end times
+        const eventStart = new Date(currentYear, month, day, startHour, startMinute);
+        const eventEnd = new Date(currentYear, month, endDay, endHour, endMinute);
+        
+        // Remove any existing status elements
+        const existingStatus = event.querySelector(".event-status");
+        if (existingStatus) {
+            existingStatus.remove();
+        }
+        
+        // Remove existing live-now class if it exists
+        event.classList.remove("live-now");
+        
+        // Remove existing live indicator if it exists
+        const existingLiveIndicator = event.querySelector(".live-indicator");
+        if (existingLiveIndicator) {
+            existingLiveIndicator.remove();
+        }
+        
+        // Create status element
+        const statusElement = document.createElement("div");
+        statusElement.className = "event-status";
+        
+        // Determine status based on current time
+        if (now < eventStart) {
+            statusElement.textContent = "Upcoming";
+            statusElement.classList.add("status-upcoming");
+        } else if (now >= eventStart && now <= eventEnd) {
+            statusElement.textContent = "Live Now";
+            statusElement.classList.add("status-live");
+        } else {
+            statusElement.textContent = "Completed";
+            statusElement.classList.add("status-completed");
+        }
+        
+        // Add status element to event
+        event.appendChild(statusElement);
+    });
+}
 ';
 
 // Include header
@@ -688,23 +954,19 @@ require_once('components/navbar.php');
         
         <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="Schedule">Schedule</h1>
         <div class="max-w-3xl mx-auto">
-            <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
-                Explore the ByteVerse 1.0 event timeline. From the opening ceremony to the final projects showcase, navigate through three action-packed days of innovation, learning, and collaboration.
+            <p class="text-lg md:text-xl mb-10 text-white leading-relaxed">
+                Explore the ByteVerse 1.0 event timeline. From registration and inaugural ceremony to the final project showcase, join us for two intensive days of innovation, coding, and collaboration.
             </p>
         </div>
         
         <!-- Schedule Finder -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <a href="#day1" class="cyber-button secondary-sm">
-                <span>April 28 - Day 1</span>
+                <span>August 23 - Day 1</span>
                 <i></i>
             </a>
             <a href="#day2" class="cyber-button secondary-sm">
-                <span>April 29 - Day 2</span>
-                <i></i>
-            </a>
-            <a href="#day3" class="cyber-button secondary-sm">
-                <span>April 30 - Day 3</span>
+                <span>August 24 - Day 2</span>
                 <i></i>
             </a>
         </div>
@@ -715,57 +977,32 @@ require_once('components/navbar.php');
 <section class="py-6 relative">
     <div class="container mx-auto px-4">
         <div class="event-navigation">
-            <div class="flex gap-2">
+            <div class="flex gap-2 flex-wrap">
                 <button class="cyber-tab active" data-day="day1">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    Day 1: Kick-off
+                    Day 1: Registration & Development
                 </button>
                 <button class="cyber-tab" data-day="day2">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                     </svg>
-                    Day 2: Build
-                </button>
-                <button class="cyber-tab" data-day="day3">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    Day 3: Showcase
+                    Day 2: Finals & Showcase
                 </button>
             </div>
-            
-            <button id="download-calendar" class="download-button">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                </svg>
-                Add to Calendar
-            </button>
         </div>
         
         <!-- Event Filters -->
         <div class="schedule-filters">
             <button class="filter-button active" data-filter="all">All Events</button>
-            <button class="filter-button" data-filter="workshop">Workshops</button>
+            <button class="filter-button" data-filter="round">Competition Rounds</button>
             <button class="filter-button" data-filter="activity">Activities</button>
             <button class="filter-button" data-filter="important">Main Events</button>
             <button class="filter-button" data-filter="food">Food & Breaks</button>
         </div>
         
-        <!-- Timeline Visualization -->
-        <div class="timeline-visualization">
-            <div class="timeline-event" style="left: 10%;" data-time="09:00" data-title="Registration" data-event-id="event-registration"></div>
-            <div class="timeline-event important" style="left: 20%;" data-time="10:30" data-title="Opening" data-event-id="event-opening"></div>
-            <div class="timeline-event" style="left: 30%;" data-time="12:00" data-title="Team Formation" data-event-id="event-team-formation"></div>
-            <div class="timeline-event food" style="left: 40%;" data-time="13:00" data-title="Lunch" data-event-id="event-lunch1"></div>
-            <div class="timeline-event" style="left: 55%;" data-time="15:00" data-title="Workshops" data-event-id="event-workshops"></div>
-            <div class="timeline-event food" style="left: 70%;" data-time="18:00" data-title="Dinner" data-event-id="event-dinner1"></div>
-            <div class="timeline-event" style="left: 85%;" data-time="20:00" data-title="Networking" data-event-id="event-networking"></div>
-            
-            <!-- Current time indicator (would be dynamically positioned in real implementation) -->
-            <div class="current-time-indicator" style="left: 30%;"></div>
-        </div>
+        <!-- Timeline visualization removed as requested -->
     </div>
 </section>
 
@@ -778,24 +1015,24 @@ require_once('components/navbar.php');
             <div id="day1" class="schedule-day" data-day="day1">
                 <div class="day-header">
                     <div class="day-title">
-                        <div class="day-date">April 28, 2025</div>
-                        <div class="day-name">Monday - DAY 1</div>
+                        <div class="day-date">August 23 - Day 1</div>
+                        <div class="day-name">Registration, Inauguration & Ideation Pitch</div>
                     </div>
                     <div class="scanner-line"></div>
                 </div>
                 
                 <div class="events-grid">
                     <!-- Event 1 -->
-                    <div class="event-time">09:00 - 10:30</div>
+                    <div class="event-time">09:00 - 12:00</div>
                     <div id="event-registration" class="event-content">
-                        <h3 class="event-title">Registration & Check-in</h3>
-                        <p class="event-description">Participants arrive, collect their ByteVerse badges, swag bags, and set up their gear. Coffee and light refreshments will be available.</p>
+                        <h3 class="event-title">Registration + Attendance & ID Card Distribution</h3>
+                        <p class="event-description">Teams arrive, collect their ByteVerse badges, ID cards, and register for the hackathon. Volunteers will be available at counters to assist with the registration process.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Main Lobby, Tech Building
+                            Main Lobby/Hall
                         </div>
                         <div class="event-tags">
                             <span class="event-tag important" data-category="important">Important</span>
@@ -803,16 +1040,16 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="event-time">10:30 - 12:00</div>
-                    <div id="event-opening" class="event-content featured">
-                        <h3 class="event-title">Opening Ceremony</h3>
-                        <p class="event-description">Welcome address, introduction to the ByteVerse hackathon, mentor presentations, and announcement of this year's challenges and prizes.</p>
+                    <div class="event-time">12:00 - 14:00</div>
+                    <div id="event-inauguration" class="event-content featured">
+                        <h3 class="event-title">Inauguration Ceremony</h3>
+                        <p class="event-description">Official opening of ByteVerse 1.0 with chief guests, dignitaries, and all teams seated. Introduction to the hackathon, rules explanation, and motivational keynotes.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Main Auditorium
+                            Auditorium
                         </div>
                         <div class="event-tags">
                             <span class="event-tag important" data-category="important">Main Event</span>
@@ -821,33 +1058,33 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 3 -->
-                    <div class="event-time">12:00 - 13:00</div>
-                    <div id="event-team-formation" class="event-content">
-                        <h3 class="event-title">Team Formation & Ideation</h3>
-                        <p class="event-description">Solo participants can find team members, and all teams begin brainstorming their hackathon projects. Mentors will be available to help with idea validation.</p>
+                    <div class="event-time">14:00 - 17:00</div>
+                    <div id="event-round1" class="event-content">
+                        <h3 class="event-title">Round 1: Ideation Pitch & Tech Stack Evaluation (PPT)</h3>
+                        <p class="event-description">Teams present their project ideas and planned technology stack through PowerPoint presentations. Judges will evaluate based on innovation, feasibility, and technical merit.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Hackathon Floor, Innovation Hall
+                            Labs/Classrooms
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag" data-category="activity">Activity</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 4 -->
-                    <div class="event-time">13:00 - 14:00</div>
-                    <div id="event-lunch1" class="event-content">
-                        <h3 class="event-title">Lunch Break</h3>
-                        <p class="event-description">Catered lunch with vegetarian, vegan, and gluten-free options available. Network with other participants and mentors during this time.</p>
+                    <div class="event-time">17:00 - 17:30</div>
+                    <div id="event-tea-break" class="event-content">
+                        <h3 class="event-title">Tea Break</h3>
+                        <p class="event-description">Refresh with light snacks and beverages before moving into the prototype development phase.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Dining Hall
+                            Cafeteria Area
                         </div>
                         <div class="event-tags">
                             <span class="event-tag food" data-category="food">Food</span>
@@ -855,85 +1092,88 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 5 -->
-                    <div class="event-time">14:00 - 15:00</div>
-                    <div class="event-content live-now">
-                        <h3 class="event-title">Hackathon Begins</h3>
-                        <p class="event-description">Official start of the coding marathon! Teams start working on their projects. The 48-hour countdown begins now.</p>
+                    <div class="event-time">17:30 - 21:00</div>
+                    <div id="event-round2-1" class="event-content">
+                        <h3 class="event-title">Round 2 - Phase 1: Prototype Development (Coding Begins)</h3>
+                        <p class="event-description">Coding begins! Teams start developing their prototypes with development environments set up and technical volunteers available to assist with any issues.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Hackathon Floor, Innovation Hall
+                            Labs/Coding Rooms
                         </div>
-                        <div class="live-indicator">Happening now</div>
                         <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Main Event</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 6 -->
-                    <div class="event-time">15:00 - 17:00</div>
-                    <div id="event-workshops" class="event-content">
-                        <h3 class="event-title">Tech Workshops (Parallel Sessions)</h3>
-                        <p class="event-description">Concurrent workshops on AI/ML, Web3, Mobile Development, and Cloud Computing. Choose the one that best suits your project needs.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Workshop Rooms A, B, C, D
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag workshop" data-category="workshop">Workshop</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 7 -->
-                    <div class="event-time">18:00 - 19:00</div>
+                    <div class="event-time">21:00 - 22:00</div>
                     <div id="event-dinner1" class="event-content">
                         <h3 class="event-title">Dinner</h3>
-                        <p class="event-description">Catered dinner with a variety of options. Take a break and refuel for the long night ahead.</p>
+                        <p class="event-description">Organized batch-wise for smooth flow. Nutritious meal to sustain participants through the late-night coding session.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Dining Hall
+                            Mess/Cafeteria
                         </div>
                         <div class="event-tags">
                             <span class="event-tag food" data-category="food">Food</span>
                         </div>
                     </div>
                     
-                    <!-- Event 8 -->
-                    <div class="event-time">20:00 - 22:00</div>
-                    <div id="event-networking" class="event-content">
-                        <h3 class="event-title">Networking Mixer & Game Night</h3>
-                        <p class="event-description">Take a break from coding to network with industry professionals, play tech-themed games, and win small prizes. Refreshments will be served.</p>
+                    <!-- Event 7 -->
+                    <div class="event-time">22:00 - 01:00</div>
+                    <div id="event-round2-2" class="event-content">
+                        <h3 class="event-title">Round 2 - Phase 2: Continued Development</h3>
+                        <p class="event-description">Late-night development continues with energy drinks and snacks available. Teams push forward with their prototype implementation.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Lounge Area
+                            Same venues
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag" data-category="activity">Activity</span>
+                            <span class="event-tag" data-category="round">Competition</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 8 -->
+                    <div class="event-time">01:00 - 02:00</div>
+                    <div id="event-round2-judging" class="event-content">
+                        <h3 class="event-title">Round 2 Judgement By Jury Panel</h3>
+                        <p class="event-description">Evaluation based on working prototype/code and progress. The jury panel will assess the current state of development.</p>
+                        <div class="event-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                            </svg>
+                            Jury Rooms
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag important" data-category="important">Judging</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 9 -->
-                    <div class="event-time">22:00 - 08:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Late-Night Hacking</h3>
-                        <p class="event-description">Coding continues through the night. Quiet rooms available for those who need rest. Energy drinks, snacks, and support staff available 24/7.</p>
+                    <div class="event-time">02:00 - 03:00</div>
+                    <div id="event-fun" class="event-content">
+                        <h3 class="event-title">Fun Activities (DJ Night) OR Bedtime for participants</h3>
+                        <p class="event-description">Participants can choose to join DJ night and other fun activities, or they can rest in the chill zone and sleeping area.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Hackathon Floor, Innovation Hall
+                            Open Lawn/Recreation Hall
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag" data-category="activity">Activity</span>
                         </div>
                     </div>
                 </div>
@@ -943,304 +1183,97 @@ require_once('components/navbar.php');
             <div id="day2" class="schedule-day" data-day="day2">
                 <div class="day-header">
                     <div class="day-title">
-                        <div class="day-date">April 29, 2025</div>
-                        <div class="day-name">Tuesday - DAY 2</div>
+                        <div class="day-date">August 24 - Day 2</div>
+                        <div class="day-name">Finals & Showcase</div>
                     </div>
                     <div class="scanner-line"></div>
                 </div>
                 
                 <div class="events-grid">
                     <!-- Event 1 -->
-                    <div class="event-time">08:00 - 09:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Breakfast</h3>
-                        <p class="event-description">Start your day with a hearty breakfast. Coffee, tea, and energizing options available.</p>
+                    <div class="event-time">03:00 - 07:00</div>
+                    <div id="event-round3-1" class="event-content">
+                        <h3 class="event-title">Round 3 - Phase 1: Final Dev & PPT Prep</h3>
+                        <p class="event-description">Teams finalize their product and start building their pitch deck for the final presentation.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Dining Hall
+                            Same labs
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag food" data-category="food">Food</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="event-time">09:00 - 10:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Progress Check-in</h3>
-                        <p class="event-description">Teams provide a brief update on their progress. Mentors available for guidance and feedback.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Team Pods, Innovation Hall
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag" data-category="important">Check-in</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 3 -->
-                    <div class="event-time">10:00 - 12:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Advanced Technical Workshops</h3>
-                        <p class="event-description">Deep-dive sessions on advanced topics like GPU Optimization, Blockchain Development, and Cybersecurity Implementation.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Workshop Rooms A, B, C
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag workshop" data-category="workshop">Workshop</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 4 -->
-                    <div class="event-time">12:00 - 13:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Lunch Break</h3>
-                        <p class="event-description">Catered lunch. Take a break, refresh, and connect with other participants.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Dining Hall
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag food" data-category="food">Food</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 5 -->
-                    <div class="event-time">14:00 - 16:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Sponsor Tech Talks</h3>
-                        <p class="event-description">Industry leaders share insights on emerging technologies and career opportunities in tech. Great networking opportunity.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Conference Room
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag" data-category="activity">Talk</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 6 -->
-                    <div class="event-time">16:00 - 17:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Mid-Hackathon Review</h3>
-                        <p class="event-description">Halfway point check-in. Teams can request specific help from mentors or discuss challenges they're facing.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Hackathon Floor, Innovation Hall
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Check-in</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 7 -->
-                    <div class="event-time">18:00 - 19:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Dinner</h3>
-                        <p class="event-description">Catered dinner with international cuisine options. Take a break and recharge.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Dining Hall
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag food" data-category="food">Food</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 8 -->
-                    <div class="event-time">20:00 - 21:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Pitch Workshop</h3>
-                        <p class="event-description">Learn how to effectively present your project in preparation for final demonstrations. Presentation tips and strategies.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Workshop Room A
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag workshop" data-category="workshop">Workshop</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 9 -->
-                    <div class="event-time">21:00 - 08:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Overnight Hacking</h3>
-                        <p class="event-description">Continue working on your projects through the night. Support staff, snacks, and resting areas available.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Hackathon Floor, Innovation Hall
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Day 3 Schedule -->
-            <div id="day3" class="schedule-day" data-day="day3">
-                <div class="day-header">
-                    <div class="day-title">
-                        <div class="day-date">April 30, 2025</div>
-                        <div class="day-name">Wednesday - DAY 3</div>
-                    </div>
-                    <div class="scanner-line"></div>
-                </div>
-                
-                <div class="events-grid">
-                    <!-- Event 1 -->
-                    <div class="event-time">08:00 - 09:00</div>
-                    <div class="event-content">
+                    <div class="event-time">07:00 - 08:00</div>
+                    <div id="event-breakfast" class="event-content">
                         <h3 class="event-title">Breakfast</h3>
-                        <p class="event-description">Final day breakfast. Fuel up for the last push before project submission.</p>
+                        <p class="event-description">Healthy breakfast options and hydration to energize participants for the final stretch.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Dining Hall
+                            Cafeteria
                         </div>
                         <div class="event-tags">
                             <span class="event-tag food" data-category="food">Food</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 2 -->
-                    <div class="event-time">09:00 - 11:30</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Final Sprint</h3>
-                        <p class="event-description">Last hours of development. Mentors will circulate to help teams polish their projects and prepare for submission.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Hackathon Floor, Innovation Hall
                         </div>
                     </div>
                     
                     <!-- Event 3 -->
-                    <div class="event-time">11:30 - 12:00</div>
-                    <div class="event-content featured">
-                        <h3 class="event-title">Code Freeze</h3>
-                        <p class="event-description">All development stops. Teams must submit their projects to the ByteVerse platform by this deadline.</p>
+                    <div class="event-time">08:00 - 11:00</div>
+                    <div id="event-round3-2" class="event-content">
+                        <h3 class="event-title">Round 3 - Phase 2: Final Dev Touches + PPT Finishing</h3>
+                        <p class="event-description">Teams polish their tech solution and refine their presentation for the final evaluation.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Hackathon Floor, Innovation Hall
+                            Same venues
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Deadline</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 4 -->
-                    <div class="event-time">12:00 - 13:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Lunch & Presentation Prep</h3>
-                        <p class="event-description">Lunch served while teams prepare their presentations and demos for the judges.</p>
+                    <div class="event-time">11:00 - 12:00</div>
+                    <div class="event-content featured">
+                        <h3 class="event-title">Final Evaluation by Panel (Shortlisting Top 20 Teams)</h3>
+                        <p class="event-description">Expert judges select the top 20 teams from 100 participants based on their completed solutions and presentations.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Dining Hall
+                            Jury Rooms
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag food" data-category="food">Food</span>
+                            <span class="event-tag important" data-category="important">Judging</span>
+                            <span class="event-tag" data-category="round">Competition</span>
                         </div>
                     </div>
                     
                     <!-- Event 5 -->
-                    <div class="event-time">13:30 - 16:30</div>
-                    <div class="event-content featured">
-                        <h3 class="event-title">Project Presentations</h3>
-                        <p class="event-description">Teams present their projects to judges and other participants. Each team has 5 minutes to present and 2 minutes for Q&A.</p>
+                    <div class="event-time">12:00 - 14:00</div>
+                    <div id="event-final" class="event-content featured">
+                        <h3 class="event-title">Final Presentations by Top 20 Teams + Result Declaration</h3>
+                        <p class="event-description">The shortlisted teams present their solutions to all participants and judges. Each team gets 3-4 minutes to showcase their work, followed by the announcement of winners by 1 PM.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                             </svg>
-                            Main Auditorium
+                            Auditorium
                         </div>
                         <div class="event-tags">
                             <span class="event-tag important" data-category="important">Main Event</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 6 -->
-                    <div class="event-time">16:30 - 17:30</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Judging Deliberation</h3>
-                        <p class="event-description">Judges deliberate while participants network and explore other teams' projects.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Innovation Hall
-                        </div>
-                    </div>
-                    
-                    <!-- Event 7 -->
-                    <div class="event-time">17:30 - 19:00</div>
-                    <div class="event-content featured">
-                        <h3 class="event-title">Awards Ceremony & Closing</h3>
-                        <p class="event-description">Announcement of winners, prize distribution, and closing remarks. Celebrate the achievements of all participants!</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Main Auditorium
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Main Event</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 8 -->
-                    <div class="event-time">19:00 - 21:00</div>
-                    <div class="event-content">
-                        <h3 class="event-title">Celebration Party</h3>
-                        <p class="event-description">Wind down with food, music, and celebration. Network with sponsors, judges, and fellow hackers.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Rooftop Lounge
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag food" data-category="food">Food</span>
-                            <span class="event-tag" data-category="activity">Activity</span>
+                            <span class="event-tag" data-category="round">Finals</span>
                         </div>
                     </div>
                 </div>

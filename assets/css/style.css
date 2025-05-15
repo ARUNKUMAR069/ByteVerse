@@ -235,7 +235,7 @@ body {
     font-size: 0.9rem;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--text-dim);
+    color: white;
     transition: all 0.3s ease;
     position: relative;
     padding-bottom: 5px;
@@ -295,6 +295,13 @@ body {
     background: linear-gradient(90deg, var(--primary-accent-dark) 0%, var(--primary-accent) 100%);
     opacity: 0;
     transition: all 0.3s ease;
+}
+
+/* Hide navbar register button on mobile screens */
+@media screen and (max-width: 1023px) {
+    nav .cyber-button.primary {
+        display: none !important;
+    }
 }
 
 .cyber-button::before,

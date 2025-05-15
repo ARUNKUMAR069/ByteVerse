@@ -53,13 +53,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const progressBar = document.querySelector('.loader-progress-bar');
     const statusText = document.querySelector('.loader-status');
     
-    // Show ByteVerse with typing animation
-    gsap.to(logoText, {
-        duration: 1,
-        text: "ByteVerse",
-        ease: "none",
-        onComplete: () => startLanguageAnimation()
-    });
+    // Show ByteVerse with typing animation but without scroll effects
+    if (logoText) {
+        logoText.style.opacity = "1"; // Ensure logo is always visible
+        gsap.to(logoText, {
+            duration: 1,
+            text: "ByteVerse",
+            ease: "none",
+            onComplete: () => startLanguageAnimation()
+        });
+    }
     
     // Progress bar animation
     gsap.to(progressBar, {
@@ -150,12 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Main content animations
 function initializeMainAnimations() {
-    // Animate hero elements
+    // Remove animations that might hide elements during scroll
+    
+    // Animate hero elements without affecting visibility on scroll
     gsap.from(".glitch-text", {
         y: 50,
         opacity: 0,
         duration: 1,
-        ease: "power3.out"
+        ease: "power3.out",
+        clearProps: "all" // Clear properties after animation to prevent scroll issues
     });
     
     gsap.from(".hero-subtitle", {
@@ -183,13 +189,14 @@ function initializeMainAnimations() {
         ease: "power3.out"
     });
     
-    // Navbar animation
+    // Navbar animation - ensure it stays visible
     gsap.from("nav", {
         y: -100,
         opacity: 0,
         duration: 1,
         delay: 0.2,
-        ease: "power3.out"
+        ease: "power3.out",
+        clearProps: "all" // Clear animation properties after completion
     });
     
     // Animate stat counters
@@ -494,7 +501,7 @@ function initTerminal() {
                 appendToTerminal(`<div class="ascii-art">
                     ⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
                     ⠀⠀⠀⠀⠀⠀⣠⣶⣿⣿⣿⣿⣿⣶⣤⡀⠀⠀⠀⠀⠀⠀
-                    ⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀
+                    ⠀⠀⠀⠀⢀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣷⠀⠀⠀⠀⠀
                     ⠀⠀⠀⢠⣿⣿⣿⡟⢡⣾⣿⣿⣷⡜⢿⣿⣿⣧⠀⠀⠀⠀
                     ⠀⠀⢠⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀
                     ⠀⠀⣾⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⡆⠀⠀
@@ -710,6 +717,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const verseEl = document.querySelector('.mobile-logo-text .verse');
         
         if (byteEl && verseEl) {
+            // Ensure elements stay visible during and after animation
+            byteEl.style.opacity = "1";
+            verseEl.style.opacity = "1";
+            
             // Clear initial text and add typewriter effect
             byteEl.textContent = '';
             verseEl.textContent = '';
@@ -748,4 +759,14 @@ document.addEventListener('DOMContentLoaded', function() {
             callback();
         }
     }
+    
+    // Prevent hiding on scroll by setting a scroll event handler
+    window.addEventListener('scroll', function() {
+        // Keep ByteVerse visible in both desktop and mobile views
+        const navLogo = document.querySelector('.text-2xl.font-bold.tracking-wider.font-orbitron');
+        const mobileLogo = document.querySelector('.mobile-logo-text');
+        
+        if (navLogo) navLogo.style.opacity = "1";
+        if (mobileLogo) mobileLogo.style.opacity = "1";
+    });
 });

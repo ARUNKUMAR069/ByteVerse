@@ -95,7 +95,7 @@ $additionalStyles = '
 
 .faq-answer {
     font-family: "Rajdhani", sans-serif;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     line-height: 1.6;
     padding: 0 1.25rem;
     max-height: 0;
@@ -166,7 +166,7 @@ $additionalStyles = '
     text-align: center;
     padding: 2rem;
     font-family: "Rajdhani", sans-serif;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
 }
 
 .faq-tags {
@@ -193,6 +193,10 @@ $additionalStyles = '
     border: 1px solid var(--neon-purple);
     border-radius: 8px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact-cta h3 {
@@ -203,8 +207,14 @@ $additionalStyles = '
 
 .contact-cta p {
     font-family: "Rajdhani", sans-serif;
-    color: var(--text-dim);
+    color: white; /* Changed from var(--text-dim) to white for better visibility */
     margin-bottom: 1.5rem;
+}
+
+/* Center the contact button properly */
+.contact-cta .cyber-button {
+    display: inline-flex;
+    margin: 0 auto;
 }
 
 /* Circuit board aesthetics for FAQ */
@@ -356,10 +366,10 @@ require_once('components/navbar.php');
     <div class="container mx-auto px-4 py-16 relative z-10 text-center">
         <div class="grid-lines"></div>
         
-        <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="FAQ">FAQ</h1>
+        <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="FAQs">FAQs</h1>
         <div class="max-w-3xl mx-auto">
-            <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
-                Find answers to frequently asked questions about ByteVerse 1.0. If you can't find what you're looking for, reach out to our support team.
+            <p class="text-lg md:text-xl mb-10 text-white leading-relaxed">
+                Find answers to frequently asked questions about ByteVerse 1.0, our 24-hour National Level Hackathon for students.
             </p>
         </div>
     </div>
@@ -398,7 +408,8 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">What is ByteVerse 1.0?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 is a 48-hour hackathon where participants (individually or in teams) create innovative tech solutions to real-world problems. It brings together coders, designers, and tech enthusiasts from across the region to collaborate, learn, and build projects that push the boundaries of technology.</p>
+                        <p>ByteVerse 1.0 is a <span class="highlight">24-hour National Level Hackathon</span> designed exclusively for students. It's an intensive coding experience where participants collaborate to solve real-world problems through technology.</p>
+                        <p>The event will be held on <span class="highlight">August 23-24, 2023</span> with continuous coding, mentorship sessions, and exciting activities throughout.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">About</span>
                             <span class="faq-tag">Event</span>
@@ -409,7 +420,7 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">When and where is ByteVerse 1.0 taking place?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 will take place from April 28-30, 2025, at the Tech Innovation Center. The event will run for a full 48 hours, with opening ceremonies beginning at 10:30 AM on April 28th and closing ceremonies ending at 7:00 PM on April 30th. Check out our <a href="schedule.php">complete schedule</a> for more details.</p>
+                        <p>ByteVerse 1.0 will take place from <span class="highlight">August 23-24, 2023</span>. The event will run for a full 24 hours, starting with registration at 9:00 AM on August 23rd and concluding with the announcement of winners at 2:00 PM on August 24th. Check our <a href="schedule.php">complete schedule</a> for more details.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Location</span>
                             <span class="faq-tag">Date</span>
@@ -420,7 +431,8 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">Who can participate in ByteVerse 1.0?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 is open to students, professionals, and tech enthusiasts of all skill levels. Whether you're a seasoned developer or just starting your coding journey, you're welcome to join! Participants must be at least 18 years old or have parental consent. We especially encourage underrepresented groups in tech to apply.</p>
+                        <p>ByteVerse 1.0 is open to all college students from across India. Whether you're pursuing engineering, arts, commerce, or any other degree, if you have a passion for coding and innovation, you're welcome to join!</p>
+                        <p>We encourage diversity in participation and welcome students from all backgrounds and skill levels.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Eligibility</span>
                             <span class="faq-tag">Registration</span>
@@ -431,7 +443,15 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">Is there a registration fee?</div>
                     <div class="faq-answer">
-                        <p>No, ByteVerse 1.0 is completely free to attend, thanks to our generous sponsors. However, registration is required and space is limited, so make sure to secure your spot early. Registration includes access to the venue, meals, snacks, swag, workshops, and networking events.</p>
+                        <p>Yes, there is a participation fee of <span class="highlight">₹500 per team</span> (not per individual). This fee covers:</p>
+                        <ul>
+                            <li>Three complete meals during the 24-hour event</li>
+                            <li>Two tea/refreshment breaks</li>
+                            <li>Access to DJ night and fun activities</li>
+                            <li>Participation certificate</li>
+                            <li>ByteVerse swag</li>
+                        </ul>
+                        <p>This fee ensures we can provide quality services throughout the hackathon.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Registration</span>
                             <span class="faq-tag">Costs</span>
@@ -440,12 +460,13 @@ require_once('components/navbar.php');
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">How do I register for the event?</div>
+                    <div class="faq-question">Do I need to have a team before registering?</div>
                     <div class="faq-answer">
-                        <p>Registration is available through our website. Click the "Register" button in the navigation menu and fill out the required information. You'll receive a confirmation email once your registration is complete. Early registration is encouraged as spots are limited.</p>
+                        <p>Yes, you need to have a team formed before registering for ByteVerse 1.0. Each team must have <span class="highlight">3-5 members</span>. Solo participation is not permitted.</p>
+                        <p>We recommend forming teams with diverse skills (development, design, presentation, etc.) to maximize your chances of success.</p>
                         <div class="faq-tags">
+                            <span class="faq-tag">Teams</span>
                             <span class="faq-tag">Registration</span>
-                            <span class="faq-tag">Process</span>
                         </div>
                     </div>
                 </div>
@@ -465,7 +486,14 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">What is the format of ByteVerse 1.0?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 is a 48-hour continuous hackathon where participants form teams and build tech projects from scratch. The event includes workshops, mentoring sessions, networking opportunities, and a final showcase where teams present their projects to judges. Prizes will be awarded in various categories.</p>
+                        <p>ByteVerse 1.0 is structured as a 24-hour continuous hackathon divided into several rounds:</p>
+                        <ul>
+                            <li><span class="highlight">Round 1:</span> Ideation Pitch & Tech Stack Evaluation</li>
+                            <li><span class="highlight">Round 2:</span> Prototype Development (in two phases)</li>
+                            <li><span class="highlight">Round 3:</span> Final Development & Presentation Preparation</li>
+                            <li><span class="highlight">Finals:</span> Top 20 teams present their solutions</li>
+                        </ul>
+                        <p>Teams will work on their projects through all rounds, with judging at key milestones.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Format</span>
                             <span class="faq-tag">Structure</span>
@@ -474,20 +502,10 @@ require_once('components/navbar.php');
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">Do I need to have a team before registering?</div>
-                    <div class="faq-answer">
-                        <p>No, you can register individually and find teammates at the event. We'll have a team formation session on the first day where you can pitch your ideas and connect with potential teammates. If you already have a team, you can also register together (maximum team size is 4 members).</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Teams</span>
-                            <span class="faq-tag">Registration</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
                     <div class="faq-question">What's the maximum team size?</div>
                     <div class="faq-answer">
-                        <p>Teams can have up to 4 members. We recommend having a diverse team with a mix of developers, designers, and business/domain experts to create well-rounded solutions.</p>
+                        <p>Teams must have a <span class="highlight">minimum of 3 members</span> and a <span class="highlight">maximum of 5 members</span>. This team size requirement is strictly enforced.</p>
+                        <p>We recommend having a diverse team with members having different skill sets (coding, design, presentation, domain knowledge) to maximize your chances of success.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Teams</span>
                             <span class="faq-tag">Rules</span>
@@ -498,89 +516,11 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">What kind of projects can we build?</div>
                     <div class="faq-answer">
-                        <p>You can build any tech project that addresses one of our challenge categories, which will be announced at the opening ceremony. Projects can include web apps, mobile apps, hardware solutions, games, AI/ML applications, blockchain applications, and more. All code must be written during the hackathon - you can use open-source libraries and APIs, but the core project should be created during the event.</p>
+                        <p>You can build any tech project that solves a real-world problem. Projects can include web applications, mobile apps, AI/ML solutions, blockchain applications, IoT implementations, and more.</p>
+                        <p>All code must be written during the hackathon. You can use open-source libraries and APIs, but the core implementation must be developed during the event.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Projects</span>
                             <span class="faq-tag">Ideas</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Will there be specific challenges or themes?</div>
-                    <div class="faq-answer">
-                        <p>Yes, ByteVerse 1.0 will feature multiple challenge tracks that participants can choose from. These will be announced during the opening ceremony. Each track will have specific criteria and prizes. Teams are free to choose any challenge track that interests them.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Challenges</span>
-                            <span class="faq-tag">Themes</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Logistics Category -->
-            <div class="faq-category">
-                <div class="category-header">
-                    <h2 class="category-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                        Logistics & Accommodations
-                    </h2>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Do I need to bring my own laptop/equipment?</div>
-                    <div class="faq-answer">
-                        <p>Yes, participants should bring their own laptops and any specific equipment needed for their projects. Basic hardware components will be available for those working on hardware hacks, and we'll have a limited number of monitors, keyboards, and mice available on a first-come, first-served basis.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Equipment</span>
-                            <span class="faq-tag">Preparation</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Will food be provided during the hackathon?</div>
-                    <div class="faq-answer">
-                        <p>Yes, we'll provide meals, snacks, and beverages throughout the entire 48-hour event. This includes breakfast, lunch, and dinner each day, as well as midnight snacks for those hacking through the night. Vegetarian, vegan, and gluten-free options will be available. If you have specific dietary restrictions, please note them during registration.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Food</span>
-                            <span class="faq-tag">Accommodations</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Can I stay overnight at the venue?</div>
-                    <div class="faq-answer">
-                        <p>Yes, the venue will be open 24/7 during the hackathon. We'll have designated quiet areas with bean bags and mats for those who want to rest. However, we recommend bringing sleeping bags or blankets for comfort. Shower facilities will be available for participants staying overnight.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Accommodations</span>
-                            <span class="faq-tag">Venue</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Is there a dress code for the event?</div>
-                    <div class="faq-answer">
-                        <p>There's no formal dress code - wear what's comfortable for coding and creating! Many participants wear casual attire like t-shirts, jeans, and comfortable shoes. We recommend bringing layers as temperature can vary in the venue. All participants will receive a ByteVerse t-shirt as part of their swag.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Preparation</span>
-                            <span class="faq-tag">Attire</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">Will there be Wi-Fi and power outlets?</div>
-                    <div class="faq-answer">
-                        <p>Yes, high-speed Wi-Fi will be available throughout the venue. We'll provide the network information during check-in. Power strips will be set up at each team table, but we recommend bringing extension cords and power strips if you have specific power needs or multiple devices.</p>
-                        <div class="faq-tags">
-                            <span class="faq-tag">Technical</span>
-                            <span class="faq-tag">Facilities</span>
                         </div>
                     </div>
                 </div>
@@ -600,7 +540,13 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">What prizes can we win?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 features a prize pool worth over $15,000, including cash prizes, tech gadgets, software subscriptions, and opportunities for internships and mentorships with our sponsor companies. Prizes will be awarded for the top overall projects, as well as category winners in each challenge track. There will also be special recognition for innovation, design, technical difficulty, and social impact.</p>
+                        <p>ByteVerse 1.0 offers prizes worth up to <span class="highlight">₹100,000</span>, distributed among the top-performing teams:</p>
+                        <ul>
+                            <li><span class="highlight">1st Place:</span> Cash prizes, internship opportunities, and gadgets</li>
+                            <li><span class="highlight">2nd Place:</span> Cash prizes and sponsored goodies</li>
+                            <li><span class="highlight">3rd Place:</span> Cash prizes and sponsored goodies</li>
+                            <li>Special recognition for innovation, design, and technical implementation</li>
+                        </ul>
                         <div class="faq-tags">
                             <span class="faq-tag">Prizes</span>
                             <span class="faq-tag">Rewards</span>
@@ -611,17 +557,16 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">How will projects be judged?</div>
                     <div class="faq-answer">
-                        <p>Projects will be evaluated by a panel of judges from the tech industry, academia, and our sponsor organizations. Judging criteria include:</p>
-                        <ul class="list-disc pl-6 mt-2 mb-2">
+                        <p>Projects will be evaluated by a panel of industry experts and academics based on:</p>
+                        <ul>
                             <li>Innovation and creativity</li>
                             <li>Technical complexity and execution</li>
                             <li>Completeness and functionality</li>
                             <li>User experience and design</li>
-                            <li>Potential impact and practicality</li>
-                            <li>Adherence to challenge themes</li>
+                            <li>Problem-solving capability and impact</li>
                             <li>Presentation quality</li>
                         </ul>
-                        <p>Each team will have 5 minutes to present their project and 2 minutes for Q&A with the judges.</p>
+                        <p>Each round has specific evaluation criteria that will be explained at the beginning of the hackathon.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Judging</span>
                             <span class="faq-tag">Criteria</span>
@@ -632,7 +577,7 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">When will winners be announced?</div>
                     <div class="faq-answer">
-                        <p>Winners will be announced during the closing ceremony on April 30th at 5:30 PM. All participants are expected to attend the closing ceremony, where prizes will be distributed immediately following the announcements.</p>
+                        <p>Winners will be announced on <span class="highlight">August 24th at 2:00 PM</span> during the closing ceremony. All participants are expected to attend the final presentations and closing ceremony where prizes will be distributed.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Schedule</span>
                             <span class="faq-tag">Prizes</span>
@@ -641,10 +586,60 @@ require_once('components/navbar.php');
                 </div>
             </div>
             
-            <!-- Can't find what you're looking for? -->
+            <!-- Logistics Category -->
+            <div class="faq-category">
+                <div class="category-header">
+                    <h2 class="category-title">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        Logistics & Accommodations
+                    </h2>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What should I bring to the hackathon?</div>
+                    <div class="faq-answer">
+                        <p>Essential items to bring:</p>
+                        <ul>
+                            <li>Laptop and charger</li>
+                            <li>Student ID card</li>
+                            <li>Personal hygiene items</li>
+                            <li>A change of clothes</li>
+                            <li>Any medications you might need</li>
+                            <li>Your enthusiasm and creative spirit!</li>
+                        </ul>
+                        <p>We'll provide mattresses for those who need to rest during the night.</p>
+                        <div class="faq-tags">
+                            <span class="faq-tag">Preparation</span>
+                            <span class="faq-tag">Materials</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Will food be provided during the hackathon?</div>
+                    <div class="faq-answer">
+                        <p>Yes! Your team registration fee covers:</p>
+                        <ul>
+                            <li>Three complete meals during the 24-hour event</li>
+                            <li>Two tea/coffee breaks with light snacks</li>
+                            <li>Energy drinks and refreshments available throughout</li>
+                        </ul>
+                        <p>If you have specific dietary restrictions, please mention them during registration.</p>
+                        <div class="faq-tags">
+                            <span class="faq-tag">Food</span>
+                            <span class="faq-tag">Facilities</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact CTA -->
             <div class="contact-cta">
-                <h3>Can't find what you're looking for?</h3>
-                <p>If you have any other questions that aren't covered here, feel free to reach out to our team. We're here to help!</p>
+                <h3>Still have questions?</h3>
+                <p>If you couldn't find the answer to your question, please feel free to contact our team.</p>
                 <a href="contact.php" class="cyber-button primary">
                     <span>Contact Us</span>
                     <i></i>
