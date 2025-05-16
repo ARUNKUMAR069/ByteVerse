@@ -1,5 +1,5 @@
 # Robots.txt file for ByteVerse Hackathon
-# http://byteverse.ctgroup.co.in/
+# http://byteverse.net.in/
 
 User-agent: *
 Allow: /
@@ -46,7 +46,7 @@ Allow: /assets/images/
 Allow: /assets/fonts/
 
 # Sitemap location
-Sitemap: http://byteverse.ctgroup.co.in/sitemap.xml
+Sitemap: http://byteverse.net.in/sitemap.xml
 
 # Crawl delay (optional - adjust based on server capacity)
 Crawl-delay: 5
