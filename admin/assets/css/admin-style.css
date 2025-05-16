@@ -1668,3 +1668,33 @@ button, input, textarea, select {
     justify-content: flex-end;
   }
 }
+
+/* Add global sidebar toggle button styles */
+.header-flex {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sidebar-control-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: #1a2035;
+    border: 1px solid #2e374a;
+    color: #00d7fe;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.sidebar-control-btn:hover {
+    background: #2e374a;
+    color: #ffffff;
+    border-color: #00d7fe;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 215, 254, 0.2);
+}

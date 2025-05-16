@@ -27,36 +27,11 @@
     <!-- Make sure Modal Backdrop exists for sidebar toggle -->
     <div class="modal-backdrop" id="modal-backdrop"></div>
     
+    <!-- Global Sidebar Toggle Script -->
+    <script src="assets/js/sidebar-toggle.js"></script>
+    
     <!-- Admin scripts -->
     <script src="assets/js/admin-script.js"></script>
-    <!-- Debug script for sidebar toggle -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Log sidebar elements to console for debugging
-        console.log('Sidebar:', document.getElementById('sidebar'));
-        console.log('Sidebar Toggle:', document.getElementById('sidebar-toggle'));
-        console.log('Main Content:', document.querySelector('.main-content'));
-        
-        // Add manual sidebar toggle functionality if needed
-        const debugToggle = function() {
-            const sidebar = document.getElementById('sidebar');
-            const mainContent = document.querySelector('.main-content');
-            
-            if (window.innerWidth <= 992) {
-                sidebar.classList.toggle('show');
-                document.getElementById('modal-backdrop').classList.toggle('show');
-            } else {
-                sidebar.classList.toggle('collapsed');
-                mainContent.classList.toggle('expanded');
-            }
-            
-            console.log('Manual toggle clicked');
-        };
-        
-        // Add a global function for debugging from browser console if needed
-        window.toggleSidebar = debugToggle;
-    });
-    </script>
 </body>
 </html>
 <?php 
