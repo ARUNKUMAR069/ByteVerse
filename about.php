@@ -758,7 +758,7 @@ require_once('components/navbar.php');
             <!-- Chairman -->
             <div class="leader-card">
                 <div class="leader-image-container">
-                    <img src="assets/images/about/Chairman.webp" alt="Chairman" class="leader-image">
+                    <img src="assets/Images/about/Chairman.webp" alt="Chairman" class="leader-image" loading="lazy">
                 </div>
                 <div class="leader-details">
                     <h3 class="leader-name">S. Charanjit Singh Channi</h3>

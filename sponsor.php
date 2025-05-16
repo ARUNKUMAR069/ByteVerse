@@ -676,8 +676,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
-<!-- Interactive Game Section -->
-<?php require_once('components/circuit-game.php'); ?>
+
 
 <?php 
 // Include terminal
