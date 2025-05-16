@@ -1094,7 +1094,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 dot.style.left = `${Math.random() * 100}%`;
                 dot.style.width = `${Math.random() * 3 + 2}px`;
                 dot.style.height = `${Math.random() * 3 + 2}px`;
-                card.appendChild(dot);
+                card.appendChild(dot); arguments
+                
             }
         }
         

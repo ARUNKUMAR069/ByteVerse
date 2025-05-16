@@ -789,7 +789,7 @@ require_once('components/navbar.php');
             <!-- Vice Chairman -->
             <div class="leader-card">
                 <div class="leader-image-container">
-                    <img src="assets/images/about/vc.webp" alt="Vice Chairman" class="leader-image">
+                    <img src="assets/Images/about/vc.webp" alt="Vice Chairman" class="leader-image" loading="lazy">
                 </div>
                 <div class="leader-details">
                     <h3 class="leader-name">Mr. Harpreet Singh</h3>
@@ -820,7 +820,7 @@ require_once('components/navbar.php');
             <!-- Managing Director -->
             <div class="leader-card">
                 <div class="leader-image-container">
-                    <img src="assets/images/about/MD.webp" alt="Managing Director" class="leader-image">
+                    <img src="assets/Images/about/MD.webp" alt="Managing Director" class="leader-image" loading="lazy">
                 </div>
                 <div class="leader-details">
                     <h3 class="leader-name">Dr. Manbir Singh</h3>
