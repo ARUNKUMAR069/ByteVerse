@@ -76,7 +76,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <div class="content">
     <div class="card-header">
-        <h2><i class="fas fa-plus-circle"></i> Add New Registration</h2>
+        <div class="header-flex">
+            <button type="button" class="sidebar-control-btn" onclick="toggleSidebar()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h2><i class="fas fa-plus-circle"></i> Add New Registration</h2>
+        </div>
     </div>
     
     <div class="content-card">

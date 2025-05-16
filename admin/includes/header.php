@@ -216,7 +216,7 @@ if ($pending_sponsor_result && $pending_sponsor_result->num_rows > 0) {
                     <div class="logo-text">Byte<span>Verse</span></div>
                     <div class="admin-label">Admin Panel</div>
                 </div>
-                <!-- Fix toggle button - remove tooltip text and fix icon -->
+                <!-- Clear, simple toggle button with appropriate tooltip -->
                 <button id="sidebar-toggle" class="sidebar-toggle" title="Toggle Sidebar">
                     <i class="fas fa-bars"></i>
                 </button>
