@@ -1,0 +1,56 @@
+/* Alert styles for admin panel */
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  gap: 12px;
+}
+
+.alert i {
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+.alert p {
+  margin: 0 0 5px 0;
+}
+
+.alert p:last-child {
+  margin-bottom: 0;
+}
+
+.alert a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.alert a:hover {
+  text-decoration: none;
+}
+
+.alert-warning {
+  background-color: rgba(255, 204, 0, 0.15);
+  border: 1px solid rgba(255, 204, 0, 0.3);
+  color: var(--warning);
+}
+
+.alert-danger {
+  background-color: rgba(255, 95, 86, 0.15);
+  border: 1px solid rgba(255, 95, 86, 0.3);
+  color: var(--danger);
+}
+
+.alert-info {
+  background-color: rgba(59, 130, 246, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: var(--info);
+}
+
+.alert-success {
+  background-color: rgba(39, 201, 63, 0.15);
+  border: 1px solid rgba(39, 201, 63, 0.3);
+  color: var(--success);
+}
