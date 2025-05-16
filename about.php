@@ -719,23 +719,23 @@ require_once('components/navbar.php');
             </div>
         </div>
 
-        <div class="text-center mt-16">
+          <div class="mt-24 flex items-center justify-center">
             <div class="stats-container">
                 <div class="stat-item">
-                    <div class="stat-value counter" data-target="500">0</div>
-                    <div class="stat-label">Participants</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value counter" data-target="24">0</div>
-                    <div class="stat-label">Hours</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value counter" data-target="50">0</div>
+                    <div class="stat-value" data-value="200">0</div>
                     <div class="stat-label">Teams</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-value counter" data-target="20">0</div>
-                    <div class="stat-label">Mentors</div>
+                    <div class="stat-value" data-value="700">0</div>
+                    <div class="stat-label">Participants</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-value="5">0</div>
+                    <div class="stat-label">Challenges</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" data-value="24">0</div>
+                    <div class="stat-label">Hours</div>
                 </div>
             </div>
         </div>
