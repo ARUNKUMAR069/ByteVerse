@@ -192,6 +192,519 @@
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Payment Details Section Styling */
+
+.payment-details-container {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 1rem 1.25rem !important;
+}
+
+.payment-details-container:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 215, 254, 0.2);
+}
+
+.payment-details-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #00d7fe, #bd00ff);
+}
+
+.payment-info-box {
+    background: rgba(15, 30, 50, 0.7);
+    border-radius: 8px; /* Smaller radius for mobile */
+    padding: 1rem 1.25rem !important; /* Reduced padding for mobile */
+    border: 1px solid rgba(0, 215, 254, 0.2);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.payment-info-box:hover {
+    border-color: rgba(0, 215, 254, 0.4);
+}
+
+.payment-info-item {
+    display: block; /* Change to block for better mobile stacking */
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.payment-info-item:last-child {
+    border-bottom: none;
+}
+
+.payment-info-item:hover {
+    transform: translateX(2px);
+    border-color: rgba(0, 215, 254, 0.3);
+}
+
+.payment-info-label {
+    display: block;
+    width: 100%;
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    color: var(--primary-accent);
+}
+
+.payment-info-value {
+    display: block;
+    width: 100%;
+    font-size: 0.95rem;
+    word-break: break-all;
+    background: rgba(15, 25, 40, 0.5);
+    padding: 0.4rem 0.5rem;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 215, 254, 0.1);
+}
+
+.payment-info-value.select-all {
+    cursor: pointer;
+    position: relative;
+    background: rgba(0, 215, 254, 0.05);
+    border: 1px dashed rgba(0, 215, 254, 0.3);
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.25rem 0;
+}
+
+.payment-info-value.select-all:hover::after {
+    content: 'Click to copy';
+    position: absolute;
+    right: 0;
+    top: -18px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #00d7fe;
+    font-size: 10px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    opacity: 0.8;
+}
+
+.payment-info-value.select-all:active::after {
+    content: 'Copied!';
+}
+
+.payment-info-value.select-all::after {
+    content: '(Tap to copy)';
+    display: block;
+    font-size: 0.7rem;
+    opacity: 0.7;
+    margin-top: 0.2rem;
+    color: rgba(0, 215, 254, 0.8);
+}
+
+.payment-info-note {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    font-size: 0.8rem;
+    line-height: 1.5;
+    background: rgba(15, 25, 40, 0.5);
+    border-radius: 4px;
+}
+
+.payment-info-note p {
+    margin-bottom: 0.5rem;
+}
+
+.payment-info-note a {
+    padding: 0.1rem 0.3rem;
+    display: inline-block;
+    background: rgba(0, 215, 254, 0.1);
+    border-radius: 3px;
+}
+
+.payment-info-note {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.payment-info-note p {
+    margin-bottom: 10px;
+}
+
+/* Sponsorship FAQ Styling */
+.sponsor-faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.sponsor-faq-item {
+    background: rgba(15, 30, 50, 0.7);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 215, 254, 0.2);
+    padding: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sponsor-faq-item:hover {
+    border-color: rgba(0, 215, 254, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+.sponsor-faq-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #00d7fe, transparent);
+}
+
+.sponsor-faq-question {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sponsor-faq-answer {
+    color: #d1d5db;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Enhanced List Styling in Sponsor Tiers */
+.sponsor-tier ul li {
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.sponsor-tier ul li:hover {
+    transform: translateX(3px);
+    color: #ffffff;
+}
+
+.sponsor-tier ul li svg {
+    transition: all 0.2s ease;
+}
+
+.sponsor-tier ul li:hover svg {
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 3px rgba(0, 215, 254, 0.5));
+}
+
+/* Enhanced Sponsorship Tiers Styling */
+
+.sponsor-tiers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.sponsor-tier {
+    background: rgba(15, 25, 40, 0.7);
+    border-radius: 12px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.sponsor-tier::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.sponsor-tier:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.sponsor-tier:hover::after {
+    opacity: 1;
+}
+
+/* Tier header styling */
+.tier-header {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tier-name {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tier-price {
+    font-family: 'Chakra Petch', sans-serif;
+    font-size: 1.4rem;
+    opacity: 0.9;
+}
+
+.tier-description {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+/* Tier benefits list */
+.tier-benefits {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px 0;
+    flex-grow: 1;
+}
+
+.tier-benefits li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.tier-benefits li svg {
+    flex-shrink: 0;
+}
+
+/* Call to action button */
+.tier-cta {
+    margin-top: auto;
+}
+
+.tier-btn {
+    display: inline-block;
+    width: 100%;
+    padding: 12px 24px;
+    text-align: center;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.tier-btn::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.1) 30%, rgba(255, 255, 255, 0.4) 50%, rgba(255, 255, 255, 0.1) 70%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    transform: translateX(-100%);
+}
+
+.tier-btn:hover::after {
+    opacity: 1;
+    transform: translateX(100%);
+}
+
+/* Tier badge (limited quantity) */
+.tier-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Title Sponsor Tier */
+.title-tier {
+    border-color: rgba(255, 94, 98, 0.3);
+}
+
+.title-tier::after {
+    background: linear-gradient(to right, #ff5e62, #ff9966);
+}
+
+.title-tier .tier-name {
+    color: #ff7e82;
+}
+
+.title-tier .tier-badge {
+    background: rgba(255, 94, 98, 0.2);
+    color: #ff9999;
+}
+
+.title-btn {
+    border: 1px solid rgba(255, 94, 98, 0.5);
+    color: #ff7e82;
+}
+
+.title-btn:hover {
+    background: rgba(255, 94, 98, 0.2);
+}
+
+/* Gold Sponsor Tier */
+.gold-tier {
+    border-color: rgba(255, 215, 0, 0.3);
+}
+
+.gold-tier::after {
+    background: linear-gradient(to right, #ffd700, #ffaa00);
+}
+
+.gold-tier .tier-name {
+    color: #ffd700;
+}
+
+.gold-tier .tier-badge {
+    background: rgba(255, 215, 0, 0.2);
+    color: #ffdd55;
+}
+
+.gold-btn {
+    border: 1px solid rgba(255, 215, 0, 0.5);
+    color: #ffd700;
+}
+
+.gold-btn:hover {
+    background: rgba(255, 215, 0, 0.2);
+}
+
+/* Silver Sponsor Tier */
+.silver-tier {
+    border-color: rgba(192, 192, 192, 0.3);
+}
+
+.silver-tier::after {
+    background: linear-gradient(to right, #c0c0c0, #a0a0a0);
+}
+
+.silver-tier .tier-name {
+    color: #c0c0c0;
+}
+
+.silver-tier .tier-badge {
+    background: rgba(192, 192, 192, 0.2);
+    color: #d5d5d5;
+}
+
+.silver-btn {
+    border: 1px solid rgba(192, 192, 192, 0.5);
+    color: #c0c0c0;
+}
+
+.silver-btn:hover {
+    background: rgba(192, 192, 192, 0.2);
+}
+
+/* Supporter Tier */
+.supporter-tier {
+    border-color: rgba(159, 168, 218, 0.3);
+}
+
+.supporter-tier::after {
+    background: linear-gradient(to right, #9fa8da, #7986cb);
+}
+
+.supporter-tier .tier-name {
+    color: #9fa8da;
+}
+
+.supporter-tier .tier-badge {
+    background: rgba(159, 168, 218, 0.2);
+    color: #b4bbde;
+}
+
+.supporter-btn {
+    border: 1px solid rgba(159, 168, 218, 0.5);
+    color: #9fa8da;
+}
+
+.supporter-btn:hover {
+    background: rgba(159, 168, 218, 0.2);
+}
+
+/* Green Sponsor Tier */
+.green-tier {
+    border-color: rgba(102, 187, 106, 0.3);
+}
+
+.green-tier::after {
+    background: linear-gradient(to right, #66bb6a, #4caf50);
+}
+
+.green-tier .tier-name {
+    color: #66bb6a;
+}
+
+.green-tier .tier-badge {
+    background: rgba(102, 187, 106, 0.2);
+    color: #81c784;
+}
+
+.green-btn {
+    border: 1px solid rgba(102, 187, 106, 0.5);
+    color: #66bb6a;
+}
+
+.green-btn:hover {
+    background: rgba(102, 187, 106, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .sponsor-tiers-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .sponsor-tier {
+        padding: 25px 20px;
+    }
+    
+    .tier-name {
+        font-size: 1.6rem;
+    }
+    
+    .tier-price {
+        font-size: 1.2rem;
+    }
+    
+    .tier-badge {
+        top: 15px;
+        right: 15px;
+        font-size: 0.75rem;
+    }
+}
+
 /* Mobile Responsiveness Improvements */
 @media (max-width: 768px) {
     .sponsor-tier {
@@ -238,6 +751,72 @@
         width: 100%;
         margin-bottom: 0.5rem;
     }
+
+    .payment-info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+    
+    .payment-info-label {
+        margin-bottom: 5px;
+    }
+    
+    .payment-info-value.select-all {
+        padding: 3px;
+        border-radius: 4px;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .cyber-button.primary-sm {
+        padding: 8px 16px;
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        touch-action: manipulation;
+    }
+    
+    .sponsor-faq-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    /* Make account number and IFSC code more visible */
+    .payment-info-value.select-all {
+        background: rgba(0, 215, 254, 0.05);
+        border: 1px dashed rgba(0, 215, 254, 0.3);
+        text-align: center;
+        padding: 0.5rem;
+        margin: 0.25rem 0;
+        position: relative;
+    }
+    
+    /* Add a tap indication */
+    .payment-info-value.select-all::after {
+        content: '(Tap to copy)';
+        display: block;
+        font-size: 0.7rem;
+        opacity: 0.7;
+        margin-top: 0.2rem;
+        color: rgba(0, 215, 254, 0.8);
+    }
+    
+    .payment-info-note a {
+        padding: 0.1rem 0.3rem;
+        display: inline-block;
+        background: rgba(0, 215, 254, 0.1);
+        border-radius: 3px;
+    }
+    
+    /* Make the contact button larger for touch */
+    .cyber-button.primary-sm {
+        min-height: 44px;
+        font-size: 0.9rem;
+        width: 100%;
+        margin-top: 0.75rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -269,6 +848,54 @@
     /* Smaller headings */
     h2.text-3xl.md\:text-4xl {
         font-size: 1.75rem !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .sponsor-tiers-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 350px) {
+    .payment-details-container {
+        padding: 0.75rem !important;
+    }
+    
+    .payment-info-box {
+        padding: 0.75rem !important;
+    }
+    
+    .payment-info-label {
+        font-size: 0.8rem;
+    }
+    
+    .payment-info-value {
+        font-size: 0.85rem;
+    }
+    
+    .payment-info-note {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+    }
+    
+    .payment-info-note a {
+        display: block;
+        margin: 0.25rem 0;
+    }
+    
+    .payment-info-label, 
+    .payment-info-value {
+        font-size: 12px;
+    }
+    
+    .payment-info-note {
+        font-size: 11px;
+    }
+    
+    .container {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }
 
@@ -312,4 +939,84 @@
 .sponsor-form textarea.invalid + .form-error-message,
 .sponsor-form select.invalid + .form-error-message {
     display: block;
+}
+
+/* Make form elements more attractive */
+.sponsor-form input::placeholder,
+.sponsor-form textarea::placeholder,
+.sponsor-form select::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.sponsor-form input,
+.sponsor-form textarea,
+.sponsor-form select {
+    /* Enhanced styling */
+    background: rgba(15, 25, 40, 0.7) !important;
+    color: white !important;
+    font-family: 'Chakra Petch', sans-serif;
+    letter-spacing: 0.5px;
+}
+
+/* Enhance focus effects */
+.sponsor-form input:focus,
+.sponsor-form textarea:focus,
+.sponsor-form select:focus {
+    background: rgba(20, 35, 55, 0.9) !important;
+    outline: none;
+}
+
+/* Improved responsiveness for different screen sizes */
+@media (min-width: 640px) {
+    .payment-details-container {
+        padding: 1.5rem !important;
+    }
+    
+    .payment-info-box {
+        padding: 1.5rem !important;
+    }
+    
+    .payment-info-item {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .payment-info-label {
+        flex: 0 0 140px;
+        font-size: 0.9rem;
+    }
+    
+    .payment-info-value {
+        flex: 1;
+        font-size: 1rem;
+    }
+    
+    .payment-info-note {
+        font-size: 0.85rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .payment-details-container {
+        padding: 2rem !important;
+    }
+    
+    .payment-info-box {
+        padding: 1.75rem !important;
+        border-radius: 10px;
+    }
+    
+    .payment-info-label {
+        flex: 0 0 160px;
+        font-size: 1rem;
+    }
+    
+    .payment-info-value {
+        font-size: 1.1rem;
+    }
+    
+    .payment-info-note {
+        font-size: 0.9rem;
+        padding: 1rem;
+    }
 }
