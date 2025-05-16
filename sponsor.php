@@ -89,160 +89,136 @@ require_once('components/navbar.php');
             <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Sponsorship <span class="text-cyan-400">Packages</span></h2>
             <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-12"></div>
             <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-10">
-                Choose the sponsorship package that aligns with your goals and budget. Custom packages are also available.
+                Join ByteVerse as a sponsor and connect with the brightest tech talent. Choose a tier that aligns with your goals.
             </p>
         </div>
         
         <!-- Sponsor tiers grid -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Alpha Partner Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-purple-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
+            <!-- Title Sponsor Tier -->
+            <div class="sponsor-tier p-6 rounded-lg border border-red-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
                 <div>
                     <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-purple-400">Alpha Partner</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹1,00,000+</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+                        <h3 class="text-2xl font-orbitron font-bold text-rose-400">Title Sponsor</h3>
+                        <div class="text-xl mt-2 mb-4 font-chakra">₹50,000+</div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-rose-400 to-red-600 mx-auto"></div>
                     </div>
                     
                     <ul class="mt-6 space-y-3 text-gray-300">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Premium booth in high-traffic area
+                            Highest level of visibility and branding
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Keynote speaking opportunity
+                            Logo on T-shirts, certificates, banners, posters
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Logo on event t-shirts & merchandise
+                            Stall space + speaking opportunity
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            10 VIP passes + 20 general passes
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Exclusive workshop branding
+                            Featured on social media, website & event stage mentions
                         </li>
                     </ul>
                 </div>
                 
                 <div class="mt-6">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
-                        <span>Become Alpha Partner</span>
+                        <span>Become Title Sponsor</span>
                         <i></i>
                     </a>
                 </div>
             </div>
             
-            <!-- Hype Sponsor Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-cyan-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
+            <!-- Gold Sponsor Tier -->
+            <div class="sponsor-tier p-6 rounded-lg border border-yellow-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
                 <div>
                     <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-cyan-400">Hype Sponsor</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹50,000</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+                        <h3 class="text-2xl font-orbitron font-bold text-yellow-400">Gold Sponsor</h3>
+                        <div class="text-xl mt-2 mb-4 font-chakra">₹25,000+</div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-yellow-400 to-amber-600 mx-auto"></div>
                     </div>
                     
                     <ul class="mt-6 space-y-3 text-gray-300">
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Standard booth in main hall
+                            Logo on website, flyers, banners, and certificates
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Panel participation opportunity
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on event banners & website
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            5 VIP passes + 10 general passes
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Branded hackathon category
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mt-6">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
-                        <span>Become Hype Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Boost Sponsor Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-blue-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-blue-400">Boost Sponsor</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹30,000</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-6 space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Table space for demos
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on event website
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Social media recognition
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            2 VIP passes + 5 general passes
+                            Medium-size logo on T-shirts
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-5 w-5 text-cyan-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Sponsored prize opportunity
+                            Option to provide goodies or branded merchandise
                         </li>
                     </ul>
                 </div>
                 
                 <div class="mt-6">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
-                        <span>Become Boost Sponsor</span>
+                        <span>Become Gold Sponsor</span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Silver Sponsor Tier -->
+            <div class="sponsor-tier p-6 rounded-lg border border-gray-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
+                <div>
+                    <div class="text-center mb-4">
+                        <h3 class="text-2xl font-orbitron font-bold text-gray-300">Silver Sponsor</h3>
+                        <div class="text-xl mt-2 mb-4 font-chakra">₹10,000+</div>
+                        <div class="w-16 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto"></div>
+                    </div>
+                    
+                    <ul class="mt-6 space-y-3 text-gray-300">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Logo on selected promotional material (flyers, banners)
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Small-size logo inclusion
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Verbal mention during event + digital certificate of appreciation
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="mt-6">
+                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
+                        <span>Become Silver Sponsor</span>
                         <i></i>
                     </a>
                 </div>
@@ -257,95 +233,55 @@ require_once('components/navbar.php');
             </p>
         </div>
 
-        <!-- Secondary Tier Packages - Add this right after your "Additional Sponsorship Options" header -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <!-- Vibe Sponsor Tier -->
-            <div class="sponsor-tier p-5 rounded-lg border border-gray-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
+        <!-- Secondary Tier Packages -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            <!-- Supporter Tier -->
+            <div class="sponsor-tier p-5 rounded-lg border border-indigo-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
                 <div>
                     <div class="text-center mb-4">
-                        <h3 class="text-xl font-orbitron font-bold text-gray-300">Vibe Sponsor</h3>
-                        <div class="text-sm text-gray-400 mt-1">(Silver Tier)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">₹20,000</div>
-                        <div class="w-12 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-4 space-y-2 text-gray-300 text-sm">
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on posters & website
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Social media shoutout
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Certificate of appreciation
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mt-6">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Select This Tier</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Crew Sponsor Tier -->
-            <div class="sponsor-tier p-5 rounded-lg border border-teal-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-xl font-orbitron font-bold text-teal-400">Crew Sponsor</h3>
+                        <h3 class="text-xl font-orbitron font-bold text-indigo-400">Supporter</h3>
                         <div class="text-sm text-gray-400 mt-1">(Community Tier)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">₹10,000</div>
-                        <div class="w-12 h-1 bg-gradient-to-r from-teal-400 to-teal-600 mx-auto"></div>
+                        <div class="text-lg mt-2 mb-3 font-chakra">Under ₹10,000</div>
+                        <div class="w-12 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto"></div>
                     </div>
                     
                     <ul class="mt-4 space-y-2 text-gray-300 text-sm">
                         <li class="flex items-start">
-                            <svg class="h-4 w-4 text-teal-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Logo/name listed as "Community Partner"
+                            Name/logo on digital flyers and website
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-4 w-4 text-teal-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Digital appreciation certificate
+                            Mention in post-event thank-you posts
                         </li>
                         <li class="flex items-start">
-                            <svg class="h-4 w-4 text-teal-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Mention in post-event newsletter
+                            Recognition in the closing ceremony
                         </li>
                     </ul>
                 </div>
                 
                 <div class="mt-6">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Select This Tier</span>
+                        <span>Become Supporter</span>
                         <i></i>
                     </a>
                 </div>
             </div>
             
-            <!-- Green Soul Sponsor Tier -->
+            <!-- Mission Go Green Sponsor Tier -->
             <div class="sponsor-tier p-5 rounded-lg border border-green-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
                 <div>
                     <div class="text-center mb-4">
-                        <h3 class="text-xl font-orbitron font-bold text-green-400">Green Soul</h3>
+                        <h3 class="text-xl font-orbitron font-bold text-green-400">Mission Go Green</h3>
                         <div class="text-sm text-gray-400 mt-1">(Eco Tier)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">₹7,000</div>
+                        <div class="text-lg mt-2 mb-3 font-chakra">Custom</div>
                         <div class="w-12 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
                     </div>
                     
@@ -354,69 +290,26 @@ require_once('components/navbar.php');
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Sponsor the plant distribution drive
+                            Contribution to our tree plantation initiative
                         </li>
                         <li class="flex items-start">
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Logo on Green Corner banner
+                            Name/logo featured on "Go Green" banner
                         </li>
                         <li class="flex items-start">
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Featured in Eco Awareness Post
+                            Certificate of appreciation + shout out
                         </li>
                     </ul>
                 </div>
                 
                 <div class="mt-6">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Select This Tier</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Mystery Drop Partner Tier -->
-            <div class="sponsor-tier p-5 rounded-lg border border-amber-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4 relative">
-                        <div class="absolute -top-3 -right-3 bg-amber-500 text-xs text-black px-2 py-1 rounded transform rotate-12 font-bold">
-                            Special
-                        </div>
-                        <h3 class="text-xl font-orbitron font-bold text-amber-400">Mystery Drop</h3>
-                        <div class="text-sm text-gray-400 mt-1">(Prize Contributor)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">Custom</div>
-                        <div class="w-12 h-1 bg-gradient-to-r from-amber-400 to-amber-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-4 space-y-2 text-gray-300 text-sm">
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-amber-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Mention as "Prize Pool Partner"
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-amber-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo under "Prize Powered By" on website
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-4 w-4 text-amber-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Recognition in winner reveal posts
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mt-6">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Become Prize Partner</span>
+                        <span>Become Green Sponsor</span>
                         <i></i>
                     </a>
                 </div>
@@ -428,8 +321,8 @@ require_once('components/navbar.php');
             <h3 class="text-2xl font-orbitron font-bold mb-10 text-center">Sponsor <span class="text-cyan-400">Categories</span></h3>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-4 border-t-2 border-purple-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-purple-400">Alpha Partners</h4>
+                <div class="p-4 border-t-2 border-rose-500">
+                    <h4 class="text-xl font-chakra font-bold mb-3 text-rose-400">Title Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
                         <div class="h-10 w-24 bg-gray-800 rounded"></div>
@@ -437,8 +330,8 @@ require_once('components/navbar.php');
                     </div>
                 </div>
                 
-                <div class="p-4 border-t-2 border-cyan-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-cyan-400">Hype Sponsors</h4>
+                <div class="p-4 border-t-2 border-yellow-500">
+                    <h4 class="text-xl font-chakra font-bold mb-3 text-yellow-400">Gold Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
                         <div class="h-10 w-24 bg-gray-800 rounded"></div>
@@ -446,8 +339,8 @@ require_once('components/navbar.php');
                     </div>
                 </div>
                 
-                <div class="p-4 border-t-2 border-blue-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-blue-400">Boost Sponsors</h4>
+                <div class="p-4 border-t-2 border-gray-500">
+                    <h4 class="text-xl font-chakra font-bold mb-3 text-gray-300">Silver Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
                         <div class="h-10 w-24 bg-gray-800 rounded"></div>
@@ -455,33 +348,18 @@ require_once('components/navbar.php');
                 </div>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mt-8">
-                <div class="p-3 border-t-2 border-gray-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-gray-300">Vibe Sponsors</h4>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+                <div class="p-3 border-t-2 border-indigo-500">
+                    <h4 class="text-lg font-chakra font-bold mb-2 text-indigo-400">Supporters</h4>
                     <div class="flex flex-wrap gap-3">
                         <div class="h-8 w-20 bg-gray-800 rounded"></div>
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
-                    </div>
-                </div>
-                
-                <div class="p-3 border-t-2 border-teal-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-teal-400">Crew Sponsors</h4>
-                    <div class="flex flex-wrap gap-3">
                         <div class="h-8 w-20 bg-gray-800 rounded"></div>
                     </div>
                 </div>
                 
                 <div class="p-3 border-t-2 border-green-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-green-400">Green Soul</h4>
+                    <h4 class="text-lg font-chakra font-bold mb-2 text-green-400">Mission Go Green Sponsors</h4>
                     <div class="flex flex-wrap gap-3">
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
-                    </div>
-                </div>
-                
-                <div class="p-3 border-t-2 border-amber-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-amber-400">Prize Partners</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
                         <div class="h-8 w-20 bg-gray-800 rounded"></div>
                     </div>
                 </div>
@@ -542,70 +420,109 @@ require_once('components/navbar.php');
     </div>
 </section>
 
-<!-- Sponsor Contact Form -->
-<section id="contact-form" class="py-20 relative">
-    <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto bg-gray-900/50 border border-cyan-400/20 rounded-xl p-8 backdrop-blur-sm">
-            <div class="text-center mb-10">
-                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Become a <span class="text-cyan-400">Sponsor</span></h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+<!-- Payment Details Section -->
+<section class="py-8 md:py-12 relative">
+    <div class="container mx-auto px-3 md:px-4">
+        <div class="max-w-4xl mx-auto bg-gray-900/50 border border-cyan-400/20 rounded-xl p-4 md:p-6 backdrop-blur-sm payment-details-container">
+            <div class="text-center mb-4 md:mb-8">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold mb-3 md:mb-4">Payment <span class="text-cyan-400">Details</span></h2>
+                <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-3 md:mb-4"></div>
+                <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto mb-4 md:mb-6">
+                    Secure your sponsorship by making a direct bank transfer using the details below.
+                </p>
             </div>
             
-            <form class="sponsor-form grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="payment-info-box bg-gray-800/40 rounded-lg p-3 md:p-5 border border-gray-700 hover:border-cyan-400/30 transition-all duration-300">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
+                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700">
+                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">Account Name</div>
+                        <div class="payment-info-value text-white text-sm md:text-base font-medium">CT Educational Society (CTES)</div>
+                    </div>
+                    
+                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700">
+                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">Account Number</div>
+                        <div class="payment-info-value text-white text-sm md:text-base font-medium select-all">6916000100000225</div>
+                    </div>
+                    
+                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700 sm:col-span-2">
+                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">IFSC Code</div>
+                        <div class="payment-info-value text-white text-sm md:text-base font-medium select-all">PUNB0691600</div>
+                    </div>
+                </div>
+                
+                <div class="payment-info-note bg-gray-800/40 p-3 rounded-md text-center text-xs md:text-sm">
+                    <p class="mb-2">Please mention <span class="text-cyan-400 font-medium">"ByteVerse Sponsorship"</span> and your company name in the payment reference.</p>
+                    <p>After making the payment, please notify us at <a href="mailto:sponsors@byteverse.net.in" class="text-cyan-400 hover:underline break-words">sponsors@byteverse.net.in</a> with your transaction details.</p>
+                </div>
+            </div>
+            
+          
+        </div>
+    </div>
+</section>
+
+<!-- Sponsor Contact Form -->
+<section id="contact-form" class="py-12 md:py-20 relative">
+    <div class="container mx-auto px-3 md:px-4">
+        <div class="max-w-4xl mx-auto bg-gray-900/50 border border-cyan-400/20 rounded-xl p-4 md:p-6 lg:p-8 backdrop-blur-sm">
+            <div class="text-center mb-6 md:mb-10">
+                <h2 class="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold mb-4 md:mb-6">Become a <span class="text-cyan-400">Sponsor</span></h2>
+                <div class="w-16 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+            </div>
+            
+            <form class="sponsor-form grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div class="form-group md:col-span-1">
-                    <label for="company" class="block text-sm font-chakra mb-2 text-cyan-400">Company Name *</label>
-                    <input type="text" id="company" name="company" required class="w-full p-3 rounded-lg">
+                    <label for="company" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Company Name *</label>
+                    <input type="text" id="company" name="company" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Your company name">
                 </div>
                 
                 <div class="form-group md:col-span-1">
-                    <label for="name" class="block text-sm font-chakra mb-2 text-cyan-400">Contact Person *</label>
-                    <input type="text" id="name" name="name" required class="w-full p-3 rounded-lg">
+                    <label for="name" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Contact Person *</label>
+                    <input type="text" id="name" name="name" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Full name">
                 </div>
                 
                 <div class="form-group md:col-span-1">
-                    <label for="email" class="block text-sm font-chakra mb-2 text-cyan-400">Email Address *</label>
-                    <input type="email" id="email" name="email" required class="w-full p-3 rounded-lg">
+                    <label for="email" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Email Address *</label>
+                    <input type="email" id="email" name="email" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="email@company.com">
                 </div>
                 
                 <div class="form-group md:col-span-1">
-                    <label for="phone" class="block text-sm font-chakra mb-2 text-cyan-400">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full p-3 rounded-lg">
+                    <label for="phone" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Your contact number">
                 </div>
                 
                 <div class="form-group md:col-span-2">
-                    <label for="sponsorship_tier" class="block text-sm font-chakra mb-2 text-cyan-400">Interested Sponsorship Tier *</label>
-                    <select id="sponsorship_tier" name="sponsorship_tier" required class="w-full p-3 rounded-lg">
+                    <label for="sponsorship_tier" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Interested Sponsorship Tier *</label>
+                    <select id="sponsorship_tier" name="sponsorship_tier" required class="w-full p-2 md:p-3 rounded-lg text-base">
                         <option value="">Select a tier</option>
-                        <option value="alpha_partner">Alpha Partner (₹1,00,000+)</option>
-                        <option value="hype_sponsor">Hype Sponsor (₹50,000)</option>
-                        <option value="boost_sponsor">Boost Sponsor (₹30,000)</option>
-                        <option value="vibe_sponsor">Vibe Sponsor (₹20,000)</option>
-                        <option value="crew_sponsor">Crew Sponsor (₹10,000)</option>
-                        <option value="green_soul">Green Soul Sponsor (₹7,000)</option>
-                        <option value="mystery_drop">Mystery Drop Partner (Prize Support)</option>
+                        <option value="title_sponsor">Title Sponsor (₹50,000+)</option>
+                        <option value="gold_sponsor">Gold Sponsor (₹25,000+)</option>
+                        <option value="silver_sponsor">Silver Sponsor (₹10,000+)</option>
+                        <option value="supporter">Supporter (Under ₹10,000)</option>
+                        <option value="green_soul">Mission Go Green Sponsor</option>
                         <option value="custom">Custom Package</option>
                     </select>
                 </div>
                 
                 <div class="form-group md:col-span-2">
-                    <label for="message" class="block text-sm font-chakra mb-2 text-cyan-400">Additional Information or Requirements</label>
-                    <textarea id="message" name="message" rows="5" class="w-full p-3 rounded-lg"></textarea>
+                    <label for="message" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Additional Information or Requirements</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Tell us about your sponsorship goals and any specific requirements"></textarea>
                 </div>
                 
-                <div class="form-group md:col-span-2 text-center">
-                    <button type="submit" class="cyber-button primary">
-                        <span>Submit Sponsorship Inquiry</span>
+                <div class="form-group md:col-span-2 text-center mt-2 md:mt-4">
+                    <button type="submit" class="cyber-button primary w-full md:w-auto py-3 md:py-2 px-3 md:px-6 text-base">
+                        <span>Submit</span>
                         <i></i>
                     </button>
                 </div>
             </form>
             
-            <div class="mt-8 text-center text-sm text-gray-400">
+            <div class="mt-6 md:mt-8 text-center text-xs md:text-sm text-gray-400">
                 <p>Our sponsorship team will get back to you within 48 hours to discuss your sponsorship opportunity.</p>
             </div>
 
             <!-- Form status message -->
-            <div id="formStatus" class="form-status mt-6 hidden"></div>
+            <div id="formStatus" class="form-status mt-4 md:mt-6 hidden"></div>
         </div>
     </div>
 </section>
