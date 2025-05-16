@@ -181,6 +181,14 @@ body {
     animation: glitch-anim-2 5s infinite linear alternate-reverse;
 }
 
+/* Fix glitch text size on small screens - change from min-width to max-width */
+@media (max-width: 400px) {
+    .glitch-text {
+        font-size: 3rem !important; /* More appropriate size for mobile */
+        letter-spacing: 2px; /* Reduce letter spacing on small screens */
+    }
+}
+
 @keyframes glitch-anim-1 {
     0% { clip: rect(22px, 9999px, 39px, 0); }
     5% { clip: rect(40px, 9999px, 72px, 0); }
