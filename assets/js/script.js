@@ -429,6 +429,17 @@ function initTerminal() {
 
 // Add to script.js
 function initCountdown() {
+    // First check if countdown elements exist on the current page
+    const daysElement = document.getElementById('countdown-days');
+    const hoursElement = document.getElementById('countdown-hours');
+    const minutesElement = document.getElementById('countdown-minutes');
+    const secondsElement = document.getElementById('countdown-seconds');
+    
+    // Exit the function if countdown elements don't exist on this page
+    if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
+        return;
+    }
+    
     // Hackathon date: August 22, 2025
     const hackathonDate = new Date('August 22, 2025 09:00:00').getTime();
     
@@ -443,10 +454,10 @@ function initCountdown() {
         // If the countdown is over
         if (distance < 0) {
             clearInterval(countdownInterval);
-            document.getElementById('countdown-days').textContent = '00';
-            document.getElementById('countdown-hours').textContent = '00';
-            document.getElementById('countdown-minutes').textContent = '00';
-            document.getElementById('countdown-seconds').textContent = '00';
+            daysElement.textContent = '00';
+            hoursElement.textContent = '00';
+            minutesElement.textContent = '00';
+            secondsElement.textContent = '00';
             return;
         }
         
@@ -456,11 +467,11 @@ function initCountdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-        // Display the results
-        document.getElementById('countdown-days').textContent = days.toString().padStart(2, '0');
-        document.getElementById('countdown-hours').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('countdown-minutes').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('countdown-seconds').textContent = seconds.toString().padStart(2, '0');
+        // Display the results (now using cached elements)
+        daysElement.textContent = days.toString().padStart(2, '0');
+        hoursElement.textContent = hours.toString().padStart(2, '0');
+        minutesElement.textContent = minutes.toString().padStart(2, '0');
+        secondsElement.textContent = seconds.toString().padStart(2, '0');
     }, 1000);
 }
 
