@@ -1,12 +1,14 @@
 <?php
-// Page-specific variables
+// Set this flag to true for the index page
+$isHomePage = true;
 $pageTitle = 'ByteVerse 1.0 | The Ultimate Coding Universe';
-$loaderPrefix = 'Welcome to';
-$loaderText = 'Loading assets...';
-$currentPage = 'home';
 
-// Include header
-require_once('components/header.php');
+// Optional loader customization
+$loaderPrefix = 'Welcome to'; 
+$loaderText = 'Loading assets...';
+
+// Include the header
+include 'components/header.php';
 
 // Include navbar
 require_once('components/navbar.php');
