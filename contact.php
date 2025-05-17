@@ -14,7 +14,9 @@ $additionalStyles = '
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 3rem;
-    margin: 2rem 0;
+    margin: 2rem auto;
+    max-width: 1200px;
+    position: relative;
 }
 
 /* Contact Info Section */
@@ -23,12 +25,14 @@ $additionalStyles = '
     background: rgba(22, 32, 53, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 215, 254, 0.3);
-    border-radius: 24px; /* More rounded corners for Gen Z */
+    border-radius: 24px;
     padding: 2.5rem;
     height: 100%;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-info:hover {
@@ -211,89 +215,366 @@ $additionalStyles = '
     background: rgba(22, 32, 53, 0.4);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(189, 0, 255, 0.3);
-    border-radius: 24px; /* More rounded corners for Gen Z */
+    border-radius: 24px;
     padding: 3rem;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.contact-form-container:hover {
-    box-shadow: 0 15px 40px rgba(189, 0, 255, 0.2);
-}
-
-.contact-form-container::before {
-    content: \'\';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg, rgba(189, 0, 255, 0.05) 0%, rgba(0, 215, 254, 0.05) 100%);
-    z-index: -1;
-}
-
-.contact-form {
-    position: relative;
-    z-index: 1;
-}
-
-/* Form Groups */
-.form-group {
-    position: relative;
-    margin-bottom: 2rem;
-    display: flex;
-    align-items: flex-start;
-}
-
+/* Enhanced Form Icons */
 .input-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(0, 215, 254, 0.1);
+    width: 55px;
+    height: 55px;
+    background: rgba(0, 215, 254, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 16px; /* Gen Z style */
+    border-radius: 18px;
     color: var(--primary-accent);
-    margin-right: 1rem;
+    margin-right: 1.5rem;
     transition: all 0.3s ease;
-    border: 2px solid rgba(0, 215, 254, 0.3);
+    border: 2px solid rgba(0, 215, 254, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 215, 254, 0.15);
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.input-icon::after {
+    content: \'\';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 0%, rgba(0, 215, 254, 0.2) 50%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.input-icon:hover::after {
+    opacity: 1;
 }
 
 .input-icon svg {
-    width: 22px;
-    height: 22px;
+    width: 26px;
+    height: 26px;
     fill: currentColor;
+    filter: drop-shadow(0 0 3px rgba(0, 215, 254, 0.5));
+    transition: all 0.3s ease;
 }
 
+.form-group:focus-within .input-icon {
+    background: var(--primary-accent);
+    color: var(--primary-dark);
+    box-shadow: 0 0 20px rgba(0, 215, 254, 0.5);
+    transform: translateY(-5px) rotate(10deg);
+    border-color: transparent;
+}
+
+.form-group:hover .input-icon:not(:focus-within) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 215, 254, 0.2);
+}
+
+/* Special styling for the message icon */
 .message-icon {
-    height: 50px;
+    height: 55px;
     align-self: flex-start;
+    margin-top: 0.6rem;
 }
 
-.input-wrapper {
-    flex: 1;
-    position: relative;
+@media (max-width: 1200px) {
+    .contact-container {
+        grid-template-columns: 1fr 1.2fr;
+        max-width: 90%;
+        gap: 2rem;
+    }
 }
 
-/* Input Styling */
+@media (max-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        max-width: 700px;
+    }
+    
+    .contact-info,
+    .contact-form-container {
+        width: 100%;
+        margin: 0 auto;
+    }
+    
+    /* Make contact methods display horizontally on medium screens */
+    .contact-methods {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .contact-method {
+        height: 100%;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        max-width: 100%;
+        padding: 0 1.5rem;
+    }
+    
+    .contact-form-container,
+    .contact-info {
+        padding: 2rem;
+    }
+    
+    .gradient-text-small {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .tech-text {
+        text-align: center;
+    }
+    
+    /* Return to vertical contact methods */
+    .contact-methods {
+        display: flex;
+        flex-direction: column;
+        max-width: 500px;
+        margin: 1.5rem auto 0;
+    }
+    
+    .contact-method {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Social icons */
+    .contact-social {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-container {
+        gap: 1.5rem;
+        margin: 1rem 0;
+        padding: 0 1rem;
+    }
+    
+    .contact-form-container,
+    .contact-info {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+    
+    /* Optimize contact section for small mobile */
+    .gradient-text-small {
+        font-size: 1.7rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Ensure icons and fields always stay in one line on all devices */
+    .form-group {
+        flex-direction: row !important; /* Force row layout */
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    
+    .input-icon {
+        width: 38px; /* Smaller icons on mobile */
+        height: 38px;
+        margin-right: 0.7rem;
+        flex-shrink: 0;
+        border-width: 1px; /* Thinner border to save space */
+    }
+    
+    .input-icon svg {
+        width: 18px;
+        height: 18px;
+    }
+    
+    /* Add proper spacing for labels to prevent overlap with icons */
+    .contact-form label {
+        left: 0.9rem;
+        top: 1.1rem;
+    }
+    
+    /* Message icon alignment with textarea */
+    .message-icon {
+        align-self: flex-start;
+        margin-top: 0.6rem;
+    }
+    
+    /* Make input padding smaller on mobile */
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 1rem;
+    }
+    
+    /* Contact method layout for mobile already exists */
+    .contact-method {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+        background: rgba(0, 215, 254, 0.03);
+        border-radius: 16px;
+        transition: all 0.3s ease;
+    }
+    
+    .contact-icon {
+        margin: 0 auto 1rem;
+    }
+    
+    .contact-method:hover {
+        transform: none;
+        background: rgba(0, 215, 254, 0.07);
+    }
+    
+    .contact-method:active {
+        transform: scale(0.98);
+    }
+    
+    /* Submit button adjustments */
+    .submit-button {
+        padding: 1.1rem 1rem;
+        font-size: 1rem;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 380px) {
+    .contact-form-container,
+    .contact-info {
+        padding: 1.2rem;
+        border-radius: 16px;
+    }
+    
+    /* Further optimize for very small screens */
+    .input-icon {
+        width: 34px;
+        height: 34px;
+        margin-right: 0.5rem;
+        border-radius: 12px;
+    }
+    
+    .input-icon svg {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .contact-form input, 
+    .contact-form textarea {
+        padding: 0.8rem 0.7rem;
+        border-radius: 12px;
+        font-size: 0.9rem;
+    }
+    
+    .contact-form label {
+        left: 0.7rem;
+        font-size: 0.85rem;
+    }
+    
+    .form-status {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+}
+
+/* Extra overrides for extremely small screens */
+@media (max-width: 320px) {
+    .contact-form .form-group {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+    }
+    
+    .input-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 0.4rem;
+        border-width: 1px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .input-icon svg {
+        width: 14px;
+        height: 14px;
+        position: static;
+    }
+}
+
+/* Global form styles to ensure consistency across all devices */
+.contact-form .form-group {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    margin-bottom: 1.5rem !important;
+    width: 100% !important;
+}
+
+.contact-form .input-wrapper {
+    flex: 1 !important;
+    min-width: 0 !important;
+    position: relative !important;
+}
+
+.contact-form .input-icon {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+}
+
+/* Ensure icons are properly centered in their containers */
+.contact-form .input-icon svg {
+    position: relative !important;
+    margin: 0 auto !important;
+}
+
+/* Optimize form fields for touch screens */
 .contact-form input, 
 .contact-form textarea {
-    width: 100%;
-    background: rgba(10, 20, 40, 0.2);
-    border: none;
-    border-radius: 16px; /* Gen Z style */
-    padding: 1.2rem;
-    font-family: \'Rajdhani\', sans-serif;
-    color: var(--text-bright);
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    font-size: 16px !important; /* Prevent zoom on focus in iOS */
 }
 
-.contact-form textarea {
-    min-height: 150px;
-    resize: vertical;
+/* Better alignment for the message icon with textarea */
+.contact-form .message-icon {
+    align-self: flex-start !important;
+    margin-top: 0.5rem !important;
+}
+
+/* Special media query for medium-small devices */
+@media (max-width: 480px) {
+    .contact-form-container {
+        padding: 1.2rem !important;
+    }
+    
+    .contact-form .form-group {
+        margin-bottom: 1.5rem !important;
+    }
+    
+    .contact-form label {
+        font-size: 0.9rem !important;
+    }
+    
+    .contact-form input:focus ~ label,
+    .contact-form textarea:focus ~ label,
+    .contact-form input:not(:placeholder-shown) ~ label,
+    .contact-form textarea:not(:placeholder-shown) ~ label {
+        top: -1.5rem !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Add for consistent button styles */
+.submit-button {
+    margin-top: 1rem !important;
+    padding: 1rem 1.5rem !important;
 }
 
 /* Floating Label */
@@ -316,7 +597,7 @@ $additionalStyles = '
     left: 0;
     color: var(--primary-accent);
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .contact-form input::placeholder,
@@ -415,19 +696,36 @@ $additionalStyles = '
 /* Form Status Message */
 .form-status {
     text-align: center;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
+    padding: 0.8rem 1rem;
     font-family: \'Chakra Petch\', sans-serif;
     font-size: 1rem;
-    height: 1.5rem;
-    font-weight: bold;
+    min-height: 1.5rem;
+    font-weight: 600;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.form-status:not(:empty) {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .form-status.success {
     color: #27C93F;
+    background: rgba(39, 201, 63, 0.1);
+    border: 1px solid rgba(39, 201, 63, 0.3);
 }
 
 .form-status.error {
     color: #FF5F56;
+    background: rgba(255, 95, 86, 0.1);
+    border: 1px solid rgba(255, 95, 86, 0.3);
 }
 
 /* Subtitle & Decorative Elements */
@@ -547,7 +845,8 @@ $additionalStyles = '
     100% { transform: translate(0, 0); }
 }
 
-/* Gen Z FAQ Button */
+/* Remove all FAQ button related styles */
+/* 
 .faq-button-wrapper {
     display: flex;
     justify-content: center;
@@ -611,77 +910,7 @@ $additionalStyles = '
 .cyber-button.secondary:hover i {
     transform: translateX(5px);
 }
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    
-    .contact-info,
-    .contact-form-container {
-        max-width: 700px;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 768px) {
-    .contact-form-container,
-    .contact-info {
-        padding: 2rem;
-    }
-    
-    .gradient-text-small {
-        font-size: 2rem;
-    }
-    
-    .glitch-text {
-        font-size: 2.5rem;
-    }
-    
-    .contact-method {
-        padding: 0.3rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .form-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .input-icon {
-        margin-right: 0;
-        margin-bottom: 1rem;
-    }
-    
-    .contact-method {
-        flex-direction: column;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    
-    .contact-icon {
-        margin-right: 0;
-        margin-bottom: 0.8rem;
-    }
-    
-    .contact-form-container,
-    .contact-info {
-        padding: 1.5rem;
-        border-radius: 20px;
-    }
-    
-    .submit-button {
-        padding: 1rem;
-    }
-    
-    .contact-social {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
+*/
 
 /* Data node styles added via JS */
 .data-node {
