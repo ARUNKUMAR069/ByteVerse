@@ -1,5 +1,3 @@
-
-<!-- filepath: c:\xampp\htdocs\new2\components\header.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +14,40 @@
     })(window,document,'script','dataLayer','GTM-NS87CQ5R');</script>
     <!-- End Google Tag Manager -->
 
-    <!-- Rest of your head content remains the same -->
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+
+    <!-- Tailwind CSS -->
+    <link href="./src/output.css" rel="stylesheet">
+
+    <!-- Animation Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+
+    <!-- Three.js for 3D effects -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Modern tech fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/countdown.css"> -->
+    <link rel="stylesheet" href="assets/css/enhanced-home.css">
+
+    <!-- Registration CSS -->
+    <link rel="stylesheet" href="assets/css/registration.css">
+
+    <!-- Domain and Sponsor Showcase CSS -->
+    <link rel="stylesheet" href="assets/css/domain-showcase.css">
+    <link rel="stylesheet" href="assets/css/terminal.css">
+    <link rel="stylesheet" href="assets/css/sponsors-showcase.css">
+
     <!-- Additional styling for mobile responsive loader -->
     <style>
         /* Mobile-specific styling for ByteVerse text */
@@ -49,7 +79,83 @@
         }
     </style>
 
-    <!-- Rest of your styles remain the same -->
+    <!-- Global button animation fix -->
+    <style>
+        /* Fix animation issues with cyber buttons */
+        .cyber-button {
+            animation: none !important;
+            transition: background-color 0.2s ease !important;
+        }
+
+        .cyber-button i {
+            animation: none !important;
+            position: absolute !important;
+            inset: 0 !important;
+            display: block !important;
+            opacity: 0.3 !important;
+            /* Keep slight visual effect without animation */
+            background: linear-gradient(90deg, var(--primary-accent-dark) 0%, var(--primary-accent) 100%) !important;
+        }
+
+        .cyber-button:hover {
+            box-shadow: 0 0 5px var(--primary-accent) !important;
+            background-color: rgba(0, 215, 254, 0.1) !important;
+        }
+
+        .cyber-button:hover i {
+            opacity: 0.5 !important;
+            /* Slightly increase opacity on hover for visual feedback */
+        }
+
+        .cyber-button.secondary i {
+            background: linear-gradient(90deg, var(--neon-pink) 0%, var(--neon-purple) 100%) !important;
+        }
+
+        /* Fix login button animation */
+        #login-form .cyber-button {
+            position: relative !important;
+            overflow: hidden !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+
+        /* Fix for loader dots on login button */
+        .loader-dots {
+            display: flex !important;
+            gap: 4px !important;
+        }
+
+        .loader-dots .dot {
+            width: 6px !important;
+            height: 6px !important;
+            background-color: white !important;
+            border-radius: 50% !important;
+            animation: loader-dot-pulse 1s infinite alternate ease-in-out !important;
+        }
+
+        .loader-dots .dot:nth-child(2) {
+            animation-delay: 0.2s !important;
+        }
+
+        .loader-dots .dot:nth-child(3) {
+            animation-delay: 0.4s !important;
+        }
+
+        @keyframes loader-dot-pulse {
+            0% {
+                opacity: 0.4;
+                transform: scale(0.8);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    </style>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 
     <?php if (isset($additionalStyles)): ?>
         <style>

@@ -1108,34 +1108,7 @@ require_once('components/navbar.php');
     </div>
 </section>
 
-<!-- FAQ Teaser Section -->
-<section class="py-20 relative bg-gradient-to-b from-transparent to-gray-900/30">
-    <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Frequently Asked <span class="text-cyan-400">Questions</span></h2>
-        <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-12"></div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div class="p-6 rounded-lg bg-opacity-10 backdrop-blur-sm bg-gray-800 border border-gray-700 text-left">
-                <h3 class="text-xl font-chakra font-bold mb-3 text-white">Can beginners participate? <span class="emoji-icon">🤔</span></h3>
-                <p class="text-gray-300">Absolutely! ByteVerse welcomes hackers of all skill levels. We have workshops, mentors, and a supportive community to help beginners thrive.</p>
-            </div>
-            
-            <div class="p-6 rounded-lg bg-opacity-10 backdrop-blur-sm bg-gray-800 border border-gray-700 text-left">
-                <h3 class="text-xl font-chakra font-bold mb-3 text-white">What should I bring? <span class="emoji-icon">🎒</span></h3>
-                <p class="text-gray-300">Bring your laptop, charger, any hardware you plan to use, and your enthusiasm! We'll provide food, drinks, and a comfortable hacking environment.</p>
-            </div>
-        </div>
-        
-        <div class="faq-button-wrapper mt-10">
-            <a href="faq.php" class="cyber-button secondary">
-                <span>View All FAQs</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="margin-left: 8px">
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
-                </svg>
-            </a>
-        </div>
-    </div>
-</section>
+
 
 <!-- Include terminal -->
 <?php 
