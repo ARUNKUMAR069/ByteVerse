@@ -1,3 +1,4 @@
+
 <?php
 // Page-specific variables
 $pageTitle = 'Registration | ByteVerse 1.0';
@@ -7,7 +8,6 @@ $currentPage = 'registration';
 
 // Additional scripts
 $additionalScripts = '
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script src="assets/js/registration.js"></script>
 ';
 
@@ -43,7 +43,8 @@ require_once('components/navbar.php');
                 <p>ByteVerse 1.0 will take place from April 28-30, 2025. Before registering, please note:</p>
                 <ul class="info-list">
                     <li>Team size must be between 3-5 members</li>
-                    <li>Registration fee is <span class="text-cyan-400 font-bold">₹500</span> per team</li>
+                    <li>Registration is free, but to confirm your participation you'll need to pay a fee of <span class="text-cyan-400 font-bold">₹500</span> per team member</li>
+                    <li>The fee includes all meals (3 per day), workshops, entry to games & DJ night</li>
                     <li>Each team must have a unique team name</li>
                     <li>All participants must be 18+ or have guardian consent</li>
                     <li>Each participant must bring their own laptop</li>
@@ -69,16 +70,11 @@ require_once('components/navbar.php');
                         <div class="step-circle">3</div>
                         <div class="step-label">Project</div>
                     </div>
-                    <div class="step-line"></div>
-                    <div class="step-item" data-step="4">
-                        <div class="step-circle">4</div>
-                        <div class="step-label">Payment</div>
-                    </div>
                 </div>
             </div>
             
             <!-- Registration Form -->
-            <form id="registration-form" class="registration-form">
+            <form id="registration-form" class="registration-form" action="backend/api/registration.php" method="POST">
                 <div class="scanner-line"></div>
                 
                 <!-- Step 1: Team Information -->
@@ -279,55 +275,7 @@ require_once('components/navbar.php');
                             Previous
                         </button>
                         
-                        <button type="button" class="form-nav-btn next-step" data-next="4">
-                            Next Step
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                
-                <!-- Step 4: Payment -->
-                <div class="step" id="step-4" style="display: none;">
-                    <h2 class="section-title">Registration Payment</h2>
-                    
-                    <div class="payment-summary mb-6 bg-gray-900/50 p-5 rounded-lg border border-cyan-900/30">
-                        <h3 class="text-xl text-white mb-3">Payment Summary</h3>
-                        <div class="flex justify-between items-center py-2 border-b border-gray-700">
-                            <span class="text-gray-300">Registration Fee</span>
-                            <span class="text-white font-mono">₹500.00</span>
-                        </div>
-                        <div class="flex justify-between items-center py-3 mt-2">
-                            <span class="text-lg text-cyan-400">Total Amount</span>
-                            <span class="text-xl text-cyan-400 font-mono">₹500.00</span>
-                        </div>
-                    </div>
-                    
-                    <div class="payment-info mb-6 p-5 rounded-lg text-center">
-                        <p class="text-gray-300 mb-4">Click the button below to proceed to our secure payment gateway.</p>
-                        <button type="button" id="razorpay-button" class="cyber-button primary w-full md:w-auto">
-                            <span>Pay Now ₹500</span>
-                            <i></i>
-                        </button>
-                        <div id="payment-status" class="mt-4 hidden">
-                            <!-- Payment status messages will appear here -->
-                        </div>
-                    </div>
-                    
-                    <!-- Hidden field for payment transaction ID -->
-                    <input type="hidden" id="payment_id" name="payment_id">
-                    <input type="hidden" id="payment_status" name="payment_status" value="pending">
-                    
-                    <div class="form-navigation">
-                        <button type="button" class="form-nav-btn prev-step" data-prev="3">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                            </svg>
-                            Previous
-                        </button>
-                        
-                        <button type="submit" id="submit-registration" class="cyber-button primary" disabled>
+                        <button type="submit" id="submit-registration" class="cyber-button primary">
                             <span>Complete Registration</span>
                             <i></i>
                         </button>
@@ -343,7 +291,23 @@ require_once('components/navbar.php');
                     </svg>
                 </div>
                 <h3>Registration Complete!</h3>
-                <p>Your team has been successfully registered for ByteVerse 1.0. Check your email for confirmation details and next steps.</p>
+                <p>Your team has been successfully registered for ByteVerse 1.0.</p>
+                
+                <div class="mt-6 mb-8 p-5 bg-gray-900/50 border border-cyan-900/30 rounded-lg">
+                    <h4 class="text-xl text-cyan-400 mb-3">Next Steps:</h4>
+                    <ol class="list-decimal list-inside text-left space-y-2">
+                        <li>Check your email for registration confirmation</li>
+                        <li><strong>Complete payment to confirm your seats</strong> - Payment includes admission, three meals per day, workshops, games and DJ night access</li>
+                        <li>After payment verification, you'll receive your team's official participation kit details</li>
+                    </ol>
+                    <div class="mt-6 text-center">
+                        <a href="payment.php" class="cyber-button primary">
+                            <span>Make Payment Now</span>
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+                
                 <a href="index.php" class="cyber-button">
                     <span>Return to Home</span>
                     <i></i>
@@ -352,6 +316,8 @@ require_once('components/navbar.php');
         </div>
     </div>
 </section>
+
+<script src="assets/js/registration.js"></script>
 
 <?php
 // Include footer

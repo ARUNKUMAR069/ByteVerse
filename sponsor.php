@@ -538,39 +538,30 @@ document.addEventListener("DOMContentLoaded", function() {
             e.preventDefault();
             
             // Get form data
-            const company = document.getElementById("company").value.trim();
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const phone = document.getElementById("phone").value.trim();
-            const tier = document.getElementById("sponsorship_tier").value;
+            const formData = new FormData(sponsorForm);
             
-            // Simple validation
-            if (!company || !name || !email || !phone || !tier) {
-                showStatus("Please fill in all required fields.", "error");
-                return;
-            }
-            
-            // Email validation
-            if (!validateEmail(email)) {
-                showStatus("Please enter a valid email address.", "error");
-                return;
-            }
-            
-            // Simulate form submission
+            // Show sending status
             showStatus("Sending your inquiry...", "pending");
             
-            // Simulate API call delay
-            setTimeout(() => {
-                showStatus("Thank you for your interest! Our team will contact you within 48 hours.", "success");
-                sponsorForm.reset();
-            }, 1500);
+            // Send data to the server - updated path to backend folder
+            fetch('backend/api/sponsor.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    showStatus(data.message, "success");
+                    sponsorForm.reset();
+                } else {
+                    showStatus(data.message, "error");
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                showStatus("An error occurred. Please try again later.", "error");
+            });
         });
-    }
-    
-    // Validate email format
-    function validateEmail(email) {
-        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        return re.test(email);
     }
     
     // Display status message

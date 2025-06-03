@@ -1108,7 +1108,8 @@ require_once('components/navbar.php');
     </div>
 </section>
 
-
+<!-- Add this at the end of the file, before including terminal.php -->
+<script src="assets/js/contact.js"></script>
 
 <!-- Include terminal -->
 <?php 
