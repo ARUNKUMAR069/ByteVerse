@@ -677,6 +677,115 @@ $additionalStyles = '
     background: linear-gradient(45deg, transparent, rgba(189, 0, 255, 0.1), transparent);
     z-index: -1;
 }
+
+
+/* Schedule H1 Responsive - IMPORTANT */
+@media (max-width: 320px) {
+    .glitch-text {
+        font-size: 1.75rem !important;
+        letter-spacing: 1px !important;
+        line-height: 1.1 !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 0.875rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 374px) {
+    .glitch-text {
+        font-size: 2rem !important;
+        letter-spacing: 1px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 0.9375rem !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .glitch-text {
+        font-size: 2.25rem !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 1rem !important;
+    }
+}
+
+@media (min-width: 425px) and (max-width: 639px) {
+    .glitch-text {
+        font-size: 2.5rem !important;
+        letter-spacing: 2px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 1.125rem !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+    .glitch-text {
+        font-size: 3rem !important;
+        letter-spacing: 3px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 1.25rem !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .glitch-text {
+        font-size: 3.5rem !important;
+        letter-spacing: 3px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 1.375rem !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    .glitch-text {
+        font-size: 4rem !important;
+        letter-spacing: 4px !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 1.5rem !important;
+    }
+}
+
+/* Mobile Landscape for Schedule */
+@media (max-height: 500px) and (orientation: landscape) and (max-width: 896px) {
+    .glitch-text {
+        font-size: 2rem !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .max-w-3xl p {
+        font-size: 0.875rem !important;
+        margin-bottom: 2rem !important;
+    }
+}
+
+/* Container padding adjustments for Schedule */
+@media (max-width: 640px) {
+    .container {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+    }
+    
+    .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
 ';
 
 // Additional scripts for the schedule page
