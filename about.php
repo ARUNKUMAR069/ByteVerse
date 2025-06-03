@@ -188,12 +188,36 @@ $additionalStyles = '
 /* College Leaders Section */
 .leaders-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 2rem;
+    margin: 2rem auto 0;
     max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    padding: 0 1rem;
+}
+
+/* Desktop - 3 columns */
+@media (min-width: 1025px) {
+    .leaders-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+/* Tablet - 2 columns */
+@media (min-width: 641px) and (max-width: 1024px) {
+    .leaders-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        max-width: 700px;
+    }
+}
+
+/* Mobile - 1 column */
+@media (max-width: 640px) {
+    .leaders-container {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        max-width: 400px;
+    }
 }
 
 .leader-card {
@@ -203,7 +227,9 @@ $additionalStyles = '
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
-    padding-top: 30px;
+    padding: 2rem 1.5rem 1.5rem;
+    width: 100%;
+    max-width: 100%;
 }
 
 .leader-card::before {
@@ -257,563 +283,145 @@ $additionalStyles = '
 }
 
 .leader-name {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: bold;
     color: white;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
 }
 
 .leader-title {
     color: var(--primary-accent, #00D7FE);
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-size: 1.1rem;
 }
 
-.leader-bio {
-    color: #c5c5c5;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-top: 0.75rem;
-    margin-bottom: 1rem;
+/* Adjust card height for simplified layout */
+.leader-card {
+    min-height: 300px;
 }
 
-.leader-socials {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1.5rem;
-}
-
-.social-link {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background: rgba(0, 215, 254, 0.1);
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 215, 254, 0.3);
-}
-
-.social-link:hover {
-    background: rgba(0, 215, 254, 0.2);
-    transform: translateY(-3px);
-}
-
-.social-link svg {
-    width: 20px;
-    height: 20px;
-}
-
-/* CTA section */
-.cta-section {
-    position: relative;
-    margin-top: 5rem;
-    padding: 3rem;
-    background: rgba(0, 215, 254, 0.05);
-    border: 1px solid var(--primary-accent, #00D7FE);
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.cta-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: 
-        radial-gradient(circle at 10% 20%, rgba(0, 215, 254, 0.1) 0%, transparent 20%),
-        radial-gradient(circle at 90% 80%, rgba(189, 0, 255, 0.1) 0%, transparent 20%);
-    z-index: 0;
-}
-
-.cta-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-}
-
-.cta-title {
-    font-family: \'Orbitron\', sans-serif;
-    font-weight: 700;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: white;
-}
-
-.cta-text {
-    font-family: \'Rajdhani\', sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    color: #c5c5c5;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Responsive styles */
 @media (max-width: 768px) {
-    .about-content {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-container {
-        gap: 1rem;
-    }
-    
-    .stat-item {
-        min-width: 100px;
-        padding: 1rem;
-    }
-    
-    .gradient-text-small {
-        font-size: 1.5rem;
-    }
-    
-    /* Leader section improvements */
-    .leaders-container {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-    }
-    
-    .leader-image-container {
-        width: 150px;
-        height: 150px;
-    }
-    
-    .leader-name {
-        font-size: 1.3rem;
-    }
-    
-    .leader-title {
-        font-size: 1rem;
-    }
-    
-    .leader-bio {
-        font-size: 0.9rem;
-    }
-    
-    .social-link {
-        width: 36px;
-        height: 36px;
-    }
-    
-    /* CTA section improvements */
-    .cta-section {
-        padding: 2rem 1.5rem;
-    }
-    
-    .cta-title {
-        font-size: 1.7rem;
-    }
-    
-    .cta-text {
-        font-size: 1.1rem;
-    }
-    
-    /* Other existing responsive code */
-    .timeline::before {
-        left: 0;
-    }
-    
-    .timeline-item {
-        width: 100%;
-        margin-left: 0 !important;
-        text-align: left !important;
-        padding-left: 30px;
-    }
-    
-    .timeline-item:nth-child(odd) .timeline-date,
-    .timeline-item:nth-child(even) .timeline-date {
-        left: 0;
-        top: -40px;
-    }
-    
-    .team-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    .leader-card {
+        min-height: 250px;
     }
 }
 
-/* Additional mobile breakpoint for smaller devices */
 @media (max-width: 480px) {
-    .leaders-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .leader-card {
+        min-height: 220px;
+    }
+}
+
+/* About ByteVerse H1 Responsive - IMPORTANT */
+@media (max-width: 320px) {
+    .glitch-text {
+        font-size: 1.75rem !important;
+        letter-spacing: 1px !important;
+        line-height: 1.1 !important;
     }
     
-    .leader-image-container {
-        width: 140px;
-        height: 140px;
+    .max-w-3xl p {
+        font-size: 0.875rem !important;
+        line-height: 1.4 !important;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 374px) {
+    .glitch-text {
+        font-size: 2rem !important;
+        letter-spacing: 1px !important;
     }
     
-    .stat-item {
-        min-width: 80px;
-        padding: 0.75rem;
+    .max-w-3xl p {
+        font-size: 0.9375rem !important;
+    }
+}
+
+@media (min-width: 375px) and (max-width: 424px) {
+    .glitch-text {
+        font-size: 2.25rem !important;
+        letter-spacing: 2px !important;
     }
     
-    .stat-value {
-        font-size: 1.8rem;
+    .max-w-3xl p {
+        font-size: 1rem !important;
     }
-    
-    .stat-label {
-        font-size: 0.8rem;
-    }
-    
+}
+
+@media (min-width: 425px) and (max-width: 639px) {
     .glitch-text {
         font-size: 2.5rem !important;
+        letter-spacing: 2px !important;
     }
     
-    .about-content {
-        gap: 1.5rem;
-    }
-    
-    .about-card-inner {
-        padding: 1.5rem;
-    }
-    
-    .tech-text {
-        font-size: 1rem;
-    }
-    
-    .cta-section {
-        padding: 1.5rem;
-        margin-top: 3rem;
-    }
-    
-    .cyber-button {
-        width: 100%;
-        margin-bottom: 1rem;
-    }
-}
-
-/* Specific breakpoint for headings on smaller screens */
-@media (max-width: 700px) {
-    .glitch-text {
-        font-size: 2.8rem !important;
-    }
-    
-    .text-3xl.md\\:text-4xl {
-        font-size: 2rem;
-    }
-    
-    .gradient-text-small {
-        font-size: 1.4rem;
-    }
-    
-    .leader-name {
-        font-size: 1.2rem;
-    }
-    
-    .cta-title {
-        font-size: 1.6rem;
-    }
-    
-    .mb-16 {
-        margin-bottom: 1.5rem !important;
-    }
-    
-    .mb-6 {
-        margin-bottom: 0.75rem !important;
-    }
-}
-
-/* Ensure all text is white */
-.tech-text, p, .team-name, .testimonial-content, .cta-text {
-    color: white !important;
-}
-
-/* Leaders Container Mobile Responsive - IMPORTANT */
-@media (max-width: 320px) {
-    .leaders-container {
-        grid-template-columns: 1fr !important;
-        gap: 1rem !important;
-        padding: 0 0.5rem !important;
-    }
-    
-    .leader-card {
-        padding: 1rem !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .leader-image-container {
-        width: 100px !important;
-        height: 100px !important;
-        margin: 0 auto 1rem !important;
-    }
-    
-    .leader-name {
-        font-size: 1rem !important;
-        margin-bottom: 0.25rem !important;
-    }
-    
-    .leader-title {
-        font-size: 0.875rem !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .leader-bio {
-        font-size: 0.8rem !important;
-        line-height: 1.4 !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .leader-details {
-        padding: 1rem 0.5rem !important;
-    }
-    
-    .social-link {
-        width: 32px !important;
-        height: 32px !important;
-    }
-    
-    .social-link svg {
-        width: 16px !important;
-        height: 16px !important;
-    }
-}
-
-@media (min-width: 321px) and (max-width: 480px) {
-    .leaders-container {
-        grid-template-columns: 1fr !important;
-        gap: 1.25rem !important;
-        padding: 0 0.75rem !important;
-    }
-    
-    .leader-card {
-        padding: 1.25rem !important;
-        max-width: 100% !important;
-    }
-    
-    .leader-image-container {
-        width: 120px !important;
-        height: 120px !important;
-        margin: 0 auto 1rem !important;
-    }
-    
-    .leader-name {
+    .max-w-3xl p {
         font-size: 1.125rem !important;
-        margin-bottom: 0.375rem !important;
-    }
-    
-    .leader-title {
-        font-size: 0.9375rem !important;
-        margin-bottom: 0.875rem !important;
-    }
-    
-    .leader-bio {
-        font-size: 0.875rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .leader-details {
-        padding: 1.25rem 0.75rem !important;
-    }
-    
-    .social-link {
-        width: 36px !important;
-        height: 36px !important;
-    }
-    
-    .social-link svg {
-        width: 18px !important;
-        height: 18px !important;
     }
 }
 
-@media (min-width: 481px) and (max-width: 640px) {
-    .leaders-container {
-        grid-template-columns: 1fr !important;
-        gap: 1.5rem !important;
-        max-width: 400px !important;
-        margin: 0 auto !important;
+@media (min-width: 640px) and (max-width: 767px) {
+    .glitch-text {
+        font-size: 3rem !important;
+        letter-spacing: 3px !important;
     }
     
-    .leader-card {
-        padding: 1.5rem !important;
-    }
-    
-    .leader-image-container {
-        width: 140px !important;
-        height: 140px !important;
-        margin: 0 auto 1.25rem !important;
-    }
-    
-    .leader-name {
-        font-size: 1.25rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    .leader-title {
-        font-size: 1rem !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .leader-bio {
-        font-size: 0.9375rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 1.25rem !important;
-    }
-    
-    .leader-details {
-        padding: 1.5rem 1rem !important;
-    }
-}
-
-@media (min-width: 641px) and (max-width: 768px) {
-    .leaders-container {
-        grid-template-columns: repeat(2, 1fr) !important;
-        gap: 1.5rem !important;
-        max-width: 600px !important;
-        margin: 0 auto !important;
-    }
-    
-    .leader-card {
-        padding: 1.5rem !important;
-    }
-    
-    .leader-image-container {
-        width: 150px !important;
-        height: 150px !important;
-        margin: 0 auto 1.25rem !important;
-    }
-    
-    .leader-name {
+    .max-w-3xl p {
         font-size: 1.25rem !important;
     }
-    
-    .leader-title {
-        font-size: 1rem !important;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .glitch-text {
+        font-size: 3.5rem !important;
+        letter-spacing: 3px !important;
     }
     
-    .leader-bio {
-        font-size: 0.9375rem !important;
-        line-height: 1.5 !important;
+    .max-w-3xl p {
+        font-size: 1.375rem !important;
     }
 }
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .leaders-container {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1.75rem !important;
-        max-width: 900px !important;
-        margin: 0 auto !important;
+@media (min-width: 1024px) {
+    .glitch-text {
+        font-size: 4rem !important;
+        letter-spacing: 4px !important;
     }
     
-    .leader-image-container {
-        width: 160px !important;
-        height: 160px !important;
+    .max-w-3xl p {
+        font-size: 1.5rem !important;
     }
 }
 
-@media (min-width: 1025px) {
-    .leaders-container {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 2rem !important;
-        max-width: 1200px !important;
-        margin: 0 auto !important;
-    }
-    
-    .leader-image-container {
-        width: 180px !important;
-        height: 180px !important;
-    }
-}
-
-/* Mobile Landscape Orientation */
+/* Mobile Landscape for About */
 @media (max-height: 500px) and (orientation: landscape) and (max-width: 896px) {
-    .leaders-container {
-        grid-template-columns: repeat(3, 1fr) !important;
-        gap: 1rem !important;
-        max-width: 800px !important;
-        margin: 0 auto !important;
+    .glitch-text {
+        font-size: 2rem !important;
+        letter-spacing: 2px !important;
+        margin-bottom: 1rem !important;
     }
     
-    .leader-card {
-        padding: 1rem !important;
-    }
-    
-    .leader-image-container {
-        width: 100px !important;
-        height: 100px !important;
-        margin: 0 auto 0.75rem !important;
-    }
-    
-    .leader-name {
-        font-size: 1rem !important;
-        margin-bottom: 0.25rem !important;
-    }
-    
-    .leader-title {
+    .max-w-3xl p {
         font-size: 0.875rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    .leader-bio {
-        font-size: 0.8rem !important;
-        line-height: 1.3 !important;
-        margin-bottom: 0.75rem !important;
-    }
-    
-    .leader-details {
-        padding: 1rem 0.5rem !important;
-    }
-    
-    .leader-socials {
-        gap: 0.5rem !important;
-        margin-top: 0.75rem !important;
+        margin-bottom: 2rem !important;
     }
 }
 
-/* General Mobile Improvements */
-@media (max-width: 768px) {
-    .py-20 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-    
+/* Container padding adjustments for About */
+@media (max-width: 640px) {
     .container {
         padding-left: 1rem !important;
         padding-right: 1rem !important;
     }
     
-    .text-center.mb-16 {
-        margin-bottom: 2rem !important;
-    }
-    
-    .text-3xl.md\:text-4xl {
-        font-size: 1.75rem !important;
-    }
-    
-    .w-24.h-1 {
-        width: 3rem !important;
-        height: 2px !important;
-    }
-}
-
-/* Extra responsive adjustments */
-@media (max-width: 360px) {
-    .leader-socials {
-        gap: 0.75rem !important;
-        margin-top: 1rem !important;
-    }
-    
-    .social-link {
-        width: 30px !important;
-        height: 30px !important;
-    }
-    
-    .social-link svg {
-        width: 14px !important;
-        height: 14px !important;
+    .py-20 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
     }
 }
 ';
 
-// Add this line to include about.css via <link> tag in the head
+/* Add this line to include about.css via <link> tag in the head */
 $additionalHead = '<link rel="stylesheet" href="assets/css/about.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">';
 
@@ -1031,26 +639,6 @@ require_once('components/navbar.php');
                 <div class="leader-details">
                     <h3 class="leader-name">S. Charanjit Singh Channi</h3>
                     <p class="leader-title">Chairman</p>
-                    <p class="leader-bio">
-                        Leading with vision and integrity, guiding our institution toward excellence in technology
-                        education.
-                    </p>
-                    <div class="leader-socials">
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
             </div>
 
@@ -1062,26 +650,6 @@ require_once('components/navbar.php');
                 <div class="leader-details">
                     <h3 class="leader-name">Mr. Harpreet Singh</h3>
                     <p class="leader-title">Vice Chairman</p>
-                    <p class="leader-bio">
-                        Bringing strategic insight and educational expertise to foster growth and innovation across
-                        campus.
-                    </p>
-                    <div class="leader-socials">
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
             </div>
 
@@ -1093,26 +661,6 @@ require_once('components/navbar.php');
                 <div class="leader-details">
                     <h3 class="leader-name">Dr. Manbir Singh</h3>
                     <p class="leader-title">Managing Director</p>
-                    <p class="leader-bio">
-                        Driving operational excellence and ensuring our institution remains at the forefront of
-                        educational innovation.
-                    </p>
-                    <div class="leader-socials">
-                        <a href="#" class="social-link instagram" aria-label="Instagram">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1120,30 +668,7 @@ require_once('components/navbar.php');
 </section>
 
 <!-- CTA Section -->
-<section class="py-20 relative">
-    <div class="container mx-auto px-4">
-        <div class="cta-section">
-            <div class="cta-bg"></div>
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to join the <span class="text-cyan-400">ByteVerse</span>?</h2>
-                <p class="cta-text">
-                    Whether you are a coding wizard or just starting out, ByteVerse has a place for you.
-                    Join hundreds of passionate innovators for a weekend of creation, learning, and fun.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                    <a href="register.php" class="cyber-button primary">
-                        <span>Register Now</span>
-                        <i></i>
-                    </a>
-                    <a href="sponsor.php" class="cyber-button secondary">
-                        <span>Become a Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <!-- Include terminal and footer -->
 <?php 
