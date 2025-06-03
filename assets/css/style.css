@@ -189,6 +189,43 @@ body {
     }
 }
 
+@media (max-width: 320px) {
+    .glitch-text {
+        font-size: 1.75rem !important;
+        line-height: 1.1;
+    }
+    
+    .hero-subtitle span {
+        font-size: 0.8rem !important;
+        letter-spacing: 0.02em;
+    }
+}
+
+@media (min-width: 321px) and (max-width: 374px) {
+    .glitch-text {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle span {
+        font-size: 0.875rem !important;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+    .mb-8 { margin-bottom: 1rem !important; }
+    .sm\:mb-12 { margin-bottom: 1.5rem !important; }
+    .md\:mb-16 { margin-bottom: 2rem !important; }
+    
+    .glitch-text {
+        font-size: 2rem !important;
+    }
+    
+    .hero-subtitle span {
+        font-size: 0.875rem !important;
+    }
+}
+
 @keyframes glitch-anim-1 {
     0% { clip: rect(22px, 9999px, 39px, 0); }
     5% { clip: rect(40px, 9999px, 72px, 0); }

@@ -33,6 +33,7 @@
     <!-- Tailwind CSS -->
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/minfied.min.css">
+
     <!-- Animation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
