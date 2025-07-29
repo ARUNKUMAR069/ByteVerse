@@ -192,6 +192,9 @@
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .section-subtitle {

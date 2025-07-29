@@ -3,7 +3,8 @@
     <div class="cyber-grid-bg"></div>
     
     <div class="container mx-auto px-4">
-        <h2 class="section-title text-center mb-5">Challenge Domains</h2>
+        <h2 class="section-title text-center mb-5" style="text-align: center;
+">Challenge Domains</h2>
         <p class="section-subtitle text-center mb-16 text-gray-300 max-w-3xl mx-auto">
             Solve real-world problems in these cutting-edge domains and build innovative solutions that matter.
         </p>

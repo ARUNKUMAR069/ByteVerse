@@ -21,7 +21,7 @@ require_once('components/navbar.php');
 
         <div class="mb-3 inline-block mx-auto">
             <span class="date-badge">
-                August 22-23, 2025
+                September 27-28, 2025
             </span>
         </div>
 
@@ -57,9 +57,7 @@ require_once('components/navbar.php');
 
         <div class="max-w-2xl mx-auto">
             <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
-                Enter the ultimate <span class="text-cyan-400">coding universe</span> where technology meets innovation.
-                Join brilliant minds in a <span class="text-cyan-400">48-hour</span> journey to build
-                groundbreaking solutions and redefine the digital frontier.
+                Step into ByteVerse 1.0 — a   <span class="text-cyan-400">24-hour coding hackathon</span> where innovation meets execution. Solve real-world challenges in AI, Web, Blockchain & more with your team, and build solutions that matter.
             </p>
         </div>
 

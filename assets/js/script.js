@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Progress bar animation
     gsap.to(progressBar, {
         width: "100%",
-        duration: 10,
+        duration: 2,
         ease: "power1.inOut"
     });
     
@@ -85,12 +85,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (messageIndex < statusMessages.length) {
             gsap.to(statusText, {
                 opacity: 0,
-                duration: 0.5,
+                duration: 0.2,
                 onComplete: () => {
                     statusText.textContent = statusMessages[messageIndex];
                     gsap.to(statusText, {
                         opacity: 1,
-                        duration: 0.5
+                        duration: 0.2
                     });
                 }
             });
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             clearInterval(statusInterval);
         }
-    }, 2000);
+    }, 500);
     
     // Function to animate through Indian languages
     function startLanguageAnimation() {
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 clearInterval(langInterval);
                 setTimeout(completeLoading, 1000);
             }
-        }, 800);
+        }, 300);
     }
     
     // Complete loading and show content
@@ -439,10 +439,10 @@ function initCountdown() {
     if (!daysElement || !hoursElement || !minutesElement || !secondsElement) {
         return;
     }
-    
-    // Hackathon date: August 22, 2025
-    const hackathonDate = new Date('August 22, 2025 09:00:00').getTime();
-    
+
+    // Hackathon date: September 27, 2025
+    const hackathonDate = new Date('September 27, 2025 09:00:00').getTime();
+
     // Update countdown every second
     const countdownInterval = setInterval(function() {
         // Get current date and time
