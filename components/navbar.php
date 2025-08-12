@@ -77,7 +77,7 @@
             </div>
         </div>
         
-        <!-- Mobile navigation links -->
+        <!-- Mobile navigation links
         <div class="flex flex-col space-y-6 items-start">
             <a href="about.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'about' ? 'text-cyan-400' : ''; ?>">ABOUT</a>
             <a href="challenges.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'challenges' ? 'text-cyan-400' : ''; ?>">CHALLENGES</a>
@@ -87,13 +87,13 @@
             <a href="contact.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'contact' ? 'text-cyan-400' : ''; ?>">CONTACT</a>
         </div>
         
-        <!-- Register button (mobile version) -->
+        Register button (mobile version) 
         <div class="mt-auto pt-8">
             <a href="registration.php" class="cyber-button primary w-full text-center">
                 <span>REGISTER NOW</span>
                 <i></i>
             </a>
-        </div>
+        </div> -->
     </div>
 </div>
 

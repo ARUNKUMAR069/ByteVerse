@@ -132,8 +132,8 @@ require_once('components/navbar.php');
                     </ul>
                 </div>
                 
-                <div class="mt-6">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
+                <div class="mt-6 flex items-center justify-center">
+                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary" >
                         <span>Become Title Sponsor</span>
                         <i></i>
                     </a>
@@ -177,7 +177,7 @@ require_once('components/navbar.php');
                     </ul>
                 </div>
                 
-                <div class="mt-6">
+                <div class="mt-6 flex items-center justify-center">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
                         <span>Become Gold Sponsor</span>
                         <i></i>
@@ -215,8 +215,8 @@ require_once('components/navbar.php');
                         </li>
                     </ul>
                 </div>
-                
-                <div class="mt-6">
+
+                <div class="mt-6 flex items-center justify-center">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
                         <span>Become Silver Sponsor</span>
                         <i></i>
@@ -245,20 +245,20 @@ require_once('components/navbar.php');
                         <div class="w-12 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto"></div>
                     </div>
                     
-                    <ul class="mt-4 space-y-2 text-gray-300 text-sm">
-                        <li class="flex items-start">
+                    <ul class="mt-4 space-y-2 text-gray-300 text-sm ">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Name/logo on digital flyers and website
                         </li>
-                        <li class="flex items-start">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Mention in post-event thank-you posts
                         </li>
-                        <li class="flex items-start">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -267,7 +267,7 @@ require_once('components/navbar.php');
                     </ul>
                 </div>
                 
-                <div class="mt-6">
+                <div class="mt-6 flex items-center justify-center">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
                         <span>Become Supporter</span>
                         <i></i>
@@ -286,19 +286,19 @@ require_once('components/navbar.php');
                     </div>
                     
                     <ul class="mt-4 space-y-2 text-gray-300 text-sm">
-                        <li class="flex items-start">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Contribution to our tree plantation initiative
                         </li>
-                        <li class="flex items-start">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
                             Name/logo featured on "Go Green" banner
                         </li>
-                        <li class="flex items-start">
+                        <li class="flex items-center justify-center">
                             <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
@@ -306,8 +306,8 @@ require_once('components/navbar.php');
                         </li>
                     </ul>
                 </div>
-                
-                <div class="mt-6">
+
+                <div class="mt-6 flex items-center justify-center">
                     <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
                         <span>Become Green Sponsor</span>
                         <i></i>
@@ -325,8 +325,8 @@ require_once('components/navbar.php');
                     <h4 class="text-xl font-chakra font-bold mb-3 text-rose-400">Title Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24 bg-gray-800 rounded"></div>
-                        <div class="h-10 w-24 bg-gray-800 rounded"></div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
                     </div>
                 </div>
                 
@@ -334,8 +334,8 @@ require_once('components/navbar.php');
                     <h4 class="text-xl font-chakra font-bold mb-3 text-yellow-400">Gold Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24 bg-gray-800 rounded"></div>
-                        <div class="h-10 w-24 bg-gray-800 rounded"></div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
                     </div>
                 </div>
                 
@@ -343,7 +343,12 @@ require_once('components/navbar.php');
                     <h4 class="text-xl font-chakra font-bold mb-3 text-gray-300">Silver Sponsors</h4>
                     <div class="flex flex-wrap gap-4">
                         <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24 bg-gray-800 rounded"></div>
+                        <div class="h-10 w-24  rounded">
+                            <img src="assets/images/sponsors/idfc.png" alt="Sponsor 3" class="max-h-10">
+                        </div>
+                        <div class="h-10 w-12 rounded">
+                            <img src="assets/images/sponsors/chinar_forge_limited_logo.png" alt="Sponsor 4" class="max-h-5">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -352,15 +357,15 @@ require_once('components/navbar.php');
                 <div class="p-3 border-t-2 border-indigo-500">
                     <h4 class="text-lg font-chakra font-bold mb-2 text-indigo-400">Supporters</h4>
                     <div class="flex flex-wrap gap-3">
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
                     </div>
                 </div>
                 
                 <div class="p-3 border-t-2 border-green-500">
                     <h4 class="text-lg font-chakra font-bold mb-2 text-green-400">Mission Go Green Sponsors</h4>
                     <div class="flex flex-wrap gap-3">
-                        <div class="h-8 w-20 bg-gray-800 rounded"></div>
+                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
                     </div>
                 </div>
             </div>
@@ -383,31 +388,31 @@ require_once('components/navbar.php');
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
             <!-- Replace with actual sponsor logos - this is a placeholder structure -->
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor1.png" alt="Sponsor 1" class="sponsor-logo max-h-16">
+                <img src="assets/Images/sponsors/chinar_forge_limited_logo.png" alt="Sponsor 1" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor2.png" alt="Sponsor 2" class="sponsor-logo max-h-16">
+                <img src="assets/Images/sponsors/idfc.png" alt="Sponsor 2" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor3.png" alt="Sponsor 3" class="sponsor-logo max-h-16">
+                <img src="assets/images/sponsors/sponsor3.png" alt="COMING SOON" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor4.png" alt="Sponsor 4" class="sponsor-logo max-h-16">
+                <img src="assets/images/sponsors/sponsor4.png" alt="COMING SOON" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor5.png" alt="Sponsor 5" class="sponsor-logo max-h-16">
+                <img src="assets/images/sponsors/sponsor5.png" alt="COMING SOON" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor6.png" alt="Sponsor 6" class="sponsor-logo max-h-16">
+                <img src="assets/images/sponsors/sponsor6.png" alt="COMING SOON" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor7.png" alt="Sponsor 7" class="sponsor-logo max-h-16">
+                <img src="assets/images/sponsors/sponsor7.png" alt="COMING SOON" class="sponsor-logo max-h-16">
             </div>
             
             <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-purple-400 p-6 rounded-lg flex items-center justify-center group transition-all duration-300">
@@ -452,7 +457,7 @@ require_once('components/navbar.php');
                 
                 <div class="payment-info-note bg-gray-800/40 p-3 rounded-md text-center text-xs md:text-sm">
                     <p class="mb-2">Please mention <span class="text-cyan-400 font-medium">"ByteVerse Sponsorship"</span> and your company name in the payment reference.</p>
-                    <p>After making the payment, please notify us at <a href="mailto:sponsors@byteverse.net.in" class="text-cyan-400 hover:underline break-words">sponsors@byteverse.net.in</a> with your transaction details.</p>
+                    <p>After making the payment, please notify us at <a href="mailto:info_byteverse@ctgroup.in" class="text-cyan-400 hover:underline break-words">info_byteverse@ctgroup.in</a> with your transaction details.</p>
                 </div>
             </div>
             
@@ -509,7 +514,7 @@ require_once('components/navbar.php');
                     <textarea id="message" name="message" rows="4" class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Tell us about your sponsorship goals and any specific requirements"></textarea>
                 </div>
                 
-                <div class="form-group md:col-span-2 text-center mt-2 md:mt-4">
+                <div class="form-group md:col-span-2 text-center mt-2 md:mt-4 flex items-center justify-center">
                     <button type="submit" class="cyber-button primary w-full md:w-auto py-3 md:py-2 px-3 md:px-6 text-base">
                         <span>Submit</span>
                         <i></i>

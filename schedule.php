@@ -473,7 +473,7 @@ $additionalStyles = '
 /* Interactive Controls */
 .event-navigation {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-bottom: 2rem;
 }
 
@@ -1071,11 +1071,11 @@ require_once('components/navbar.php');
         <!-- Schedule Finder -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
             <a href="#day1" class="cyber-button secondary-sm">
-                <span>August 23 - Day 1</span>
+                <span>September 27 - Day 1</span>
                 <i></i>
             </a>
             <a href="#day2" class="cyber-button secondary-sm">
-                <span>August 24 - Day 2</span>
+                <span>September 28 - Day 2</span>
                 <i></i>
             </a>
         </div>
@@ -1124,7 +1124,7 @@ require_once('components/navbar.php');
             <div id="day1" class="schedule-day" data-day="day1">
                 <div class="day-header">
                     <div class="day-title">
-                        <div class="day-date">August 23 - Day 1</div>
+                        <div class="day-date">September 27 - Day 1</div>
                         <div class="day-name">Registration, Inauguration & Ideation Pitch</div>
                     </div>
                     <div class="scanner-line"></div>
@@ -1292,7 +1292,7 @@ require_once('components/navbar.php');
             <div id="day2" class="schedule-day" data-day="day2">
                 <div class="day-header">
                     <div class="day-title">
-                        <div class="day-date">August 24 - Day 2</div>
+                        <div class="day-date">September 28 - Day 2</div>
                         <div class="day-name">Finals & Showcase</div>
                     </div>
                     <div class="scanner-line"></div>

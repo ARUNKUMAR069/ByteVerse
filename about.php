@@ -579,7 +579,7 @@ require_once('components/navbar.php');
                     <div class="circuit-bg"></div>
                     <h3 class="gradient-text-small mb-4">Innovation Hub</h3>
                     <p class="tech-text">
-                        ByteVerse is where innovation meets opportunity. We are a high-energy, 48-hour coding sprint
+                        ByteVerse is where innovation meets opportunity. We are a high-energy, 24-hour coding sprint
                         that transforms bold ideas into reality. Our mission? To spark creativity and empower students
                         from all disciplines—computer science, design, business, and beyond—to collaborate and build
                         tech-based solutions for real-world challenges.
