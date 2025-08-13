@@ -1,4 +1,3 @@
-
 <section id="domain-showcase" class="domain-showcase-section py-20 relative overflow-hidden">
     <div class="cyber-grid-bg"></div>
     
@@ -9,6 +8,13 @@
             Solve real-world problems in these cutting-edge domains and build innovative solutions that matter.
         </p>
         
+        <!-- Highlighted Note -->
+        <div class="mb-10 max-w-2xl mx-auto">
+            <div style="background:rgba(34,197,94,0.12);border:1.5px solid #22c55e;padding:1rem 1.5rem;border-radius:0.75rem;text-align:center;font-weight:600;color:#22c55e;">
+                <span>Note:</span> Problem statements will be released one week before the hackathon.
+            </div>
+        </div>
+        
         <div class="domains-container">
             <!-- Domain Cards -->
             <div class="domain-card" data-domain="agriculture">
@@ -17,7 +23,7 @@
                 </div>
                 <h3 class="domain-title">Agriculture</h3>
                 <p class="domain-preview">Revolutionize farming with sustainable technology solutions</p>
-                <div class="domain-hover-content">
+                <!-- <div class="domain-hover-content">
                     <h4 class="problem-title">Problem Statements</h4>
                     <ul class="problem-list">
                         <li>Precision farming with IoT sensors for resource optimization</li>
@@ -25,7 +31,7 @@
                         <li>Blockchain for transparent agricultural supply chains</li>
                     </ul>
                     <a href="challenges.php?domain=agriculture" class="domain-link">View Challenges</a>
-                </div>
+                </div> -->
                 <div class="domain-tag">Sustainable</div>
             </div>
             
@@ -35,7 +41,7 @@
                 </div>
                 <h3 class="domain-title">Healthcare</h3>
                 <p class="domain-preview">Build tech innovations to improve healthcare accessibility</p>
-                <div class="domain-hover-content">
+                <!-- <div class="domain-hover-content">
                     <h4 class="problem-title">Problem Statements</h4>
                     <ul class="problem-list">
                         <li>Remote patient monitoring and telemedicine platforms</li>
@@ -43,7 +49,7 @@
                         <li>Healthcare data security and privacy solutions</li>
                     </ul>
                     <a href="challenges.php?domain=healthcare" class="domain-link">View Challenges</a>
-                </div>
+                </div> -->
                 <div class="domain-tag">Critical</div>
             </div>
             
@@ -53,7 +59,7 @@
                 </div>
                 <h3 class="domain-title">IoT & XR Tech</h3>
                 <p class="domain-preview">Connect digital and physical worlds through immersive technology</p>
-                <div class="domain-hover-content">
+                <!-- <div class="domain-hover-content">
                     <h4 class="problem-title">Problem Statements</h4>
                     <ul class="problem-list">
                         <li>Smart city infrastructure optimization with IoT</li>
@@ -61,7 +67,7 @@
                         <li>Mixed reality interfaces for industrial applications</li>
                     </ul>
                     <a href="challenges.php?domain=iot-xr" class="domain-link">View Challenges</a>
-                </div>
+                </div> -->
                 <div class="domain-tag">Immersive</div>
             </div>
             
@@ -71,7 +77,7 @@
                 </div>
                 <h3 class="domain-title">Cyber Security</h3>
                 <p class="domain-preview">Build the next generation of digital defense systems</p>
-                <div class="domain-hover-content">
+                <!-- <div class="domain-hover-content">
                     <h4 class="problem-title">Problem Statements</h4>
                     <ul class="problem-list">
                         <li>AI-powered threat detection and response</li>
@@ -79,7 +85,7 @@
                         <li>Secure authentication for decentralized applications</li>
                     </ul>
                     <a href="challenges.php?domain=cybersecurity" class="domain-link">View Challenges</a>
-                </div>
+                </div> -->
                 <div class="domain-tag">Critical</div>
             </div>
             
@@ -89,7 +95,7 @@
                 </div>
                 <h3 class="domain-title">Open Innovation</h3>
                 <p class="domain-preview">Push technological boundaries with your unique ideas</p>
-                <div class="domain-hover-content">
+                <!-- <div class="domain-hover-content">
                     <h4 class="problem-title">Problem Statements</h4>
                     <ul class="problem-list">
                         <li>Sustainable energy innovations</li>
@@ -97,7 +103,7 @@
                         <li>Novel applications of emerging technologies</li>
                     </ul>
                     <a href="challenges.php?domain=open" class="domain-link">View Challenges</a>
-                </div>
+                </div> -->
                 <div class="domain-tag">Freestyle</div>
             </div>
         </div>
