@@ -1,20 +1,27 @@
-
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
-  // Get the base URL for API requests - more reliable approach
+  // Get the correct API URL for both local and production environments
   const getApiUrl = () => {
     // Get the current base URL (protocol + host)
     const baseUrl = window.location.protocol + '//' + window.location.host;
     
-    // Check if we're in the /new2/ path context
-    const pathName = window.location.pathname;
-    const inNew2Context = pathName.includes('/new2/');
+    // Check if we're in production (byteverse.net.in) or local
+    const isProduction = window.location.hostname.includes('byteverse.net.in');
     
-    // Build the complete path
-    if (inNew2Context) {
-      return baseUrl + '/new2/backend/api/registration.php';
+    // For production, use the URL without .php extension (due to URL rewriting)
+    if (isProduction) {
+      return baseUrl + '/backend/api/registration';
     } else {
-      return baseUrl + '/backend/api/registration.php';
+      // For local development, use .php extension
+      // Check if we're in the /new2/ path context
+      const pathName = window.location.pathname;
+      const inNew2Context = pathName.includes('/new2/');
+      
+      if (inNew2Context) {
+        return baseUrl + '/new2/backend/api/registration.php';
+      } else {
+        return baseUrl + '/backend/api/registration.php';
+      }
     }
   };
 
@@ -61,19 +68,16 @@
       console.log(`Sending request to: ${API_URL}`);
       console.log('Form data being sent:', Object.fromEntries(fd.entries()));
       
-      // Use XMLHttpRequest instead of fetch for better error handling
+      // Use XMLHttpRequest with proper content type and error handling
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
         
         xhr.open('POST', API_URL, true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        // Add this line to ensure it's properly recognized as POST
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         
-        // Add debug listener to track redirects
         xhr.onreadystatechange = function() {
           if (xhr.readyState > 2) {
-            console.log(`XHR state ${xhr.readyState}, status: ${xhr.status}, response URL: ${xhr.responseURL || 'N/A'}`);
+            console.log(`XHR state ${xhr.readyState}, status: ${xhr.status}`);
             if (xhr.responseURL && xhr.responseURL !== API_URL) {
               console.warn(`Request redirected from ${API_URL} to ${xhr.responseURL}`);
             }
@@ -109,9 +113,8 @@
         
         xhr.timeout = 30000; // 30 seconds timeout
         
-        // Convert FormData to URL encoded string for proper POST transmission
-        const urlEncodedData = new URLSearchParams(fd).toString();
-        xhr.send(urlEncodedData);
+        // Send the form data directly - DO NOT modify it
+        xhr.send(fd);
       });
     } catch (e) {
       console.error('Form submission error:', e);
