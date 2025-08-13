@@ -2,9 +2,22 @@
 define('SECURE_ACCESS', true);
 require_once('index.php');
 
-// Allow only POST requests
+// Debug information - log the request details
+error_log('Registration API accessed - Method: ' . $_SERVER['REQUEST_METHOD'] . ', Content-Type: ' . (isset($_SERVER['CONTENT_TYPE']) ? $_SERVER['CONTENT_TYPE'] : 'not set'));
+error_log('POST data: ' . print_r($_POST, true));
+
+// Allow only POST requests - with better detection
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    sendResponse(false, 'Invalid request method');
+    // If the request was forwarded from another URL, check the original method
+    $originalMethod = isset($_SERVER['HTTP_X_HTTP_METHOD_OVERRIDE']) ? $_SERVER['HTTP_X_HTTP_METHOD_OVERRIDE'] : '';
+    if ($originalMethod === 'POST') {
+        // Allow POST requests that were forwarded
+        error_log('Accepting forwarded POST request');
+    } else {
+        error_log('Invalid method: ' . $_SERVER['REQUEST_METHOD']);
+        sendResponse(false, 'Invalid request method');
+        exit;
+    }
 }
 
 // Get step number and session ID

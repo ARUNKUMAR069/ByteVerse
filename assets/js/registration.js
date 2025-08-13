@@ -10,11 +10,28 @@
     const pathName = window.location.pathname;
     const inNew2Context = pathName.includes('/new2/');
     
+<<<<<<< Updated upstream
     // Build the complete path
     if (inNew2Context) {
       return baseUrl + '/new2/backend/api/registration.php';
     } else {
       return baseUrl + '/backend/api/registration.php';
+=======
+    // For production, use the URL without .php extension
+    if (isProduction) {
+      console.log("Production environment detected");
+      return baseUrl + '/backend/api/registration';
+    } else {
+      console.log("Development environment detected");
+      // For local development
+      const pathName = window.location.pathname;
+      const inNew2Context = pathName.includes('/new2/');
+      
+      // For local development, include the .php extension
+      return inNew2Context 
+        ? baseUrl + '/new2/backend/api/registration.php' 
+        : baseUrl + '/backend/api/registration.php';
+>>>>>>> Stashed changes
     }
   };
 
