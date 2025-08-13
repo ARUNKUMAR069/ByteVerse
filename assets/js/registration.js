@@ -28,8 +28,9 @@
   const clearErrors = () => form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
 
   const postFormData = async (fd) => {
-    // Use the API_URL constant instead of hardcoding the URL
+    console.log(`Sending request to: ${API_URL}`);
     const res = await fetch(API_URL, { method: 'POST', body: fd });
+    console.log(`Response status: ${res.status}`);
     let data;
     try {
       data = await res.json();
