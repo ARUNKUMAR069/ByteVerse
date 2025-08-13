@@ -1,22 +1,19 @@
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
-  // Dynamic path detection based on current URL
+  // Get the base URL for API requests - more reliable approach
   const getApiUrl = () => {
-    // Check if we're in a development environment or production
-    const isLocalhost = window.location.hostname === 'localhost' || 
-                         window.location.hostname === '127.0.0.1';
+    // Get the current base URL (protocol + host)
+    const baseUrl = window.location.protocol + '//' + window.location.host;
     
-    // Get the path segments for dynamic path building
-    const pathSegments = window.location.pathname.split('/');
-    const isInNew2 = pathSegments.includes('new2');
+    // Check if we're in the /new2/ path context
+    const pathName = window.location.pathname;
+    const inNew2Context = pathName.includes('/new2/');
     
-    // Construct the appropriate path
-    if (isLocalhost) {
-      return isInNew2 ? '/new2/backend/api/registration.php' : '/backend/api/registration.php';
+    // Build the complete path
+    if (inNew2Context) {
+      return baseUrl + '/new2/backend/api/registration.php';
     } else {
-      // Assuming your production domain has a similar structure
-      // Adjust this logic based on your production URL structure
-      return '/backend/api/registration.php';
+      return baseUrl + '/backend/api/registration.php';
     }
   };
 
@@ -69,6 +66,16 @@
         
         xhr.open('POST', API_URL, true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        
+        // Add debug listener to track redirects
+        xhr.onreadystatechange = function() {
+          if (xhr.readyState > 2) {
+            console.log(`XHR state ${xhr.readyState}, status: ${xhr.status}, response URL: ${xhr.responseURL || 'N/A'}`);
+            if (xhr.responseURL && xhr.responseURL !== API_URL) {
+              console.warn(`Request redirected from ${API_URL} to ${xhr.responseURL}`);
+            }
+          }
+        };
         
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
