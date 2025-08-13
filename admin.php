@@ -18,7 +18,7 @@ require_once('components/navbar.php');
         <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-cyan-400 mb-4"></div>
         <p class="text-cyan-400 text-xl">Verifying admin credentials...</p>
     </div>
-</div>
+</div> 
 
 <!-- Admin Dashboard with Sidebar -->
 <div id="admin-content" class="hidden flex min-h-screen pt-24">
