@@ -28,7 +28,7 @@
   const clearErrors = () => form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
 
   const postFormData = async (fd) => {
-    const res = await fetch(API_URL, { method: 'POST', body: fd });
+    const res = await fetch('backend/api/registration.php', { method: 'POST', body: fd });
     let data;
     try {
       data = await res.json();
