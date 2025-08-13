@@ -1,22 +1,13 @@
-
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
-  // Get the base URL for API requests - more reliable approach
+  // Get the correct API URL for both local and production environments
   const getApiUrl = () => {
     // Get the current base URL (protocol + host)
     const baseUrl = window.location.protocol + '//' + window.location.host;
     
-    // Check if we're in the /new2/ path context
-    const pathName = window.location.pathname;
-    const inNew2Context = pathName.includes('/new2/');
+    // Check if we're in production (byteverse.net.in) or local
+    const isProduction = window.location.hostname.includes('byteverse.net.in');
     
-<<<<<<< Updated upstream
-    // Build the complete path
-    if (inNew2Context) {
-      return baseUrl + '/new2/backend/api/registration.php';
-    } else {
-      return baseUrl + '/backend/api/registration.php';
-=======
     // For production, use the URL without .php extension
     if (isProduction) {
       console.log("Production environment detected");
@@ -31,7 +22,6 @@
       return inNew2Context 
         ? baseUrl + '/new2/backend/api/registration.php' 
         : baseUrl + '/backend/api/registration.php';
->>>>>>> Stashed changes
     }
   };
 
