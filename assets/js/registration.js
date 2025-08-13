@@ -1,14 +1,40 @@
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
-  // Use a path that starts from the document root
-  const API_URL = '/new2/backend/api/registration.php';
+  // Dynamic path detection based on current URL
+  const getApiUrl = () => {
+    // Check if we're in a development environment or production
+    const isLocalhost = window.location.hostname === 'localhost' || 
+                         window.location.hostname === '127.0.0.1';
+    
+    // Get the path segments for dynamic path building
+    const pathSegments = window.location.pathname.split('/');
+    const isInNew2 = pathSegments.includes('new2');
+    
+    // Construct the appropriate path
+    if (isLocalhost) {
+      return isInNew2 ? '/new2/backend/api/registration.php' : '/backend/api/registration.php';
+    } else {
+      // Assuming your production domain has a similar structure
+      // Adjust this logic based on your production URL structure
+      return '/backend/api/registration.php';
+    }
+  };
 
-  // Alternatively, use a dynamic base path approach
-  // const BASE_URL = window.location.pathname.includes('/new2') ? '/new2' : '';
-  // const API_URL = `${BASE_URL}/backend/api/registration.php`;
+  const API_URL = getApiUrl();
+  console.log('Using API URL:', API_URL);
 
   const form = document.getElementById('registration-form');
   const successBox = document.getElementById('registration-success');
+
+  // Check if elements exist to prevent null reference errors
+  if (!form) {
+    console.error('Registration form not found');
+    return;
+  }
+  
+  if (!successBox) {
+    console.error('Success box not found');
+  }
 
   const stepField = document.getElementById('step');
   const sessionField = document.getElementById('session_id');
@@ -26,7 +52,7 @@
     stepItems.forEach((el, idx) => {
       if (idx < n) el.classList.add('active'); else el.classList.remove('active');
     });
-    stepField.value = String(n);
+    if (stepField) stepField.value = String(n);
   };
 
   const showError = (input) => input.classList.add('input-error');
@@ -35,38 +61,63 @@
   const postFormData = async (fd) => {
     try {
       console.log(`Sending request to: ${API_URL}`);
-      const res = await fetch(API_URL, { 
-        method: 'POST', 
-        body: fd,
-        // Add headers to help with troubleshooting
-        headers: {
-          'X-Requested-With': 'XMLHttpRequest'
-        }
+      console.log('Form data being sent:', Object.fromEntries(fd.entries()));
+      
+      // Use XMLHttpRequest instead of fetch for better error handling
+      return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        
+        xhr.open('POST', API_URL, true);
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        
+        xhr.onload = function() {
+          if (this.status >= 200 && this.status < 300) {
+            try {
+              const data = JSON.parse(this.responseText);
+              console.log('Server response:', data);
+              resolve(data);
+            } catch (e) {
+              console.error('Error parsing response:', e);
+              console.log('Raw response:', this.responseText);
+              reject({ success: false, message: 'Server returned an invalid response.' });
+            }
+          } else {
+            console.error('Server error response:', this.status, this.statusText);
+            reject({ success: false, message: `Server error: ${this.status} ${this.statusText}` });
+          }
+        };
+        
+        xhr.onerror = function() {
+          console.error('Network error occurred');
+          reject({ success: false, message: 'Network error. Please check your connection and try again.' });
+        };
+        
+        xhr.ontimeout = function() {
+          console.error('Request timed out');
+          reject({ success: false, message: 'Request timed out. Please try again.' });
+        };
+        
+        xhr.timeout = 30000; // 30 seconds timeout
+        xhr.send(fd);
       });
-      console.log(`Response status: ${res.status}`);
-      let data;
-      try {
-        data = await res.json();
-      } catch (e) {
-        console.error('Error parsing JSON response:', e);
-        return { success: false, message: 'Server returned an invalid response.' };
-      }
-      return data;
     } catch (e) {
-      console.error('Fetch error:', e);
+      console.error('Form submission error:', e);
       return { success: false, message: 'Network connection error. Please check your internet connection and try again.' };
     }
   };
 
   const getTeamSize = () => {
-    const v = document.getElementById('team_size').value;
-    return v ? parseInt(v, 10) : 0;
+    const sizeEl = document.getElementById('team_size');
+    return sizeEl && sizeEl.value ? parseInt(sizeEl.value, 10) : 0;
   };
 
   const genAdditionalMembers = (size) => {
     const wrap = document.getElementById('additional-members');
+    if (!wrap) return;
+    
     wrap.innerHTML = '';
     if (!size || size < 2) return;
+    
     for (let i = 2; i <= size; i++) {
       const idx = i;
       const block = document.createElement('div');
@@ -119,61 +170,90 @@
       clearErrors();
 
       const goTo = parseInt(btn.dataset.next, 10);
-
-      if (currentStep === 1) {
-        // Validate step 1
-        const team_name = document.getElementById('team_name');
-        const team_size = document.getElementById('team_size');
-        const institution = document.getElementById('institution');
-        const challenge_track = document.getElementById('challenge_track');
-
-        let ok = true;
-        [team_name, team_size, institution, challenge_track].forEach(inp => {
-          if (!inp.value) { showError(inp); ok = false; }
-        });
-        if (!ok) return;
-
-        // Save step 1
-        const fd = new FormData();
-        fd.set('step', '1');
-        fd.set('team_name', team_name.value.trim());
-        fd.set('team_size', team_size.value);
-        fd.set('institution', institution.value.trim());
-        fd.set('challenge_track', challenge_track.value);
-
-        const resp = await postFormData(fd);
-        if (!resp.success) { alert(resp.message || 'Failed to save team info'); return; }
-
-        sessionId = resp.data?.session_id || '';
-        sessionField.value = sessionId;
-
-        // Generate members UI and move next
-        genAdditionalMembers(getTeamSize());
-        setStep(goTo);
+      if (isNaN(goTo)) {
+        console.error('Invalid next step value');
+        return;
       }
 
-      else if (currentStep === 2) {
-        // Validate leader fields
-        const leader_name = document.getElementById('leader_name');
-        const leader_email = document.getElementById('leader_email');
-        const leader_phone = document.getElementById('leader_phone');
-        const leader_role = document.getElementById('leader_role');
+      try {
+        if (currentStep === 1) {
+          // Validate step 1
+          const team_name = document.getElementById('team_name');
+          const team_size = document.getElementById('team_size');
+          const institution = document.getElementById('institution');
+          const challenge_track = document.getElementById('challenge_track');
 
-        let ok = true;
-        [leader_name, leader_email, leader_phone, leader_role].forEach(inp => {
-          if (!inp.value) { showError(inp); ok = false; }
-        });
-        if (!ok) return;
+          let ok = true;
+          [team_name, team_size, institution, challenge_track].forEach(inp => {
+            if (!inp || !inp.value) { 
+              if (inp) showError(inp);
+              ok = false; 
+            }
+          });
+          if (!ok) return;
 
-        // Save step 2
-        const fd = new FormData(form);
-        fd.set('step', '2');
-        fd.set('session_id', sessionId);
+          // Save step 1
+          const fd = new FormData();
+          fd.append('step', '1');
+          fd.append('team_name', team_name.value.trim());
+          fd.append('team_size', team_size.value);
+          fd.append('institution', institution.value.trim());
+          fd.append('challenge_track', challenge_track.value);
 
-        const resp = await postFormData(fd);
-        if (!resp.success) { alert(resp.message || 'Failed to save team members'); return; }
+          try {
+            const resp = await postFormData(fd);
+            if (!resp || !resp.success) { 
+              alert(resp?.message || 'Failed to save team information. Please try again.');
+              return; 
+            }
 
-        setStep(goTo);
+            sessionId = resp.data?.session_id || '';
+            if (sessionField) sessionField.value = sessionId;
+
+            // Generate members UI and move next
+            genAdditionalMembers(getTeamSize());
+            setStep(goTo);
+          } catch (err) {
+            console.error('Step 1 error:', err);
+            alert(err.message || 'An error occurred. Please try again.');
+          }
+        }
+        else if (currentStep === 2) {
+          // Validate leader fields
+          const leader_name = document.getElementById('leader_name');
+          const leader_email = document.getElementById('leader_email');
+          const leader_phone = document.getElementById('leader_phone');
+          const leader_role = document.getElementById('leader_role');
+
+          let ok = true;
+          [leader_name, leader_email, leader_phone, leader_role].forEach(inp => {
+            if (!inp || !inp.value) { 
+              if (inp) showError(inp);
+              ok = false; 
+            }
+          });
+          if (!ok) return;
+
+          // Save step 2
+          const fd = new FormData(form);
+          fd.set('step', '2');
+          fd.set('session_id', sessionId);
+
+          try {
+            const resp = await postFormData(fd);
+            if (!resp || !resp.success) { 
+              alert(resp?.message || 'Failed to save team members. Please try again.');
+              return; 
+            }
+            setStep(goTo);
+          } catch (err) {
+            console.error('Step 2 error:', err);
+            alert(err.message || 'An error occurred. Please try again.');
+          }
+        }
+      } catch (e) {
+        console.error('Next step error:', e);
+        alert('An unexpected error occurred. Please try again.');
       }
     });
   });
@@ -182,67 +262,102 @@
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const backTo = parseInt(btn.dataset.prev, 10);
-      setStep(backTo);
+      if (!isNaN(backTo)) {
+        setStep(backTo);
+      }
     });
   });
 
   // Final submit
-  const submitBtn = document.getElementById('submit-registration');
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     clearErrors();
 
-    // Validate step 3
-    const title = document.getElementById('project_title');
-    const desc = document.getElementById('project_description');
-    const techs = [...document.querySelectorAll('input[name="technologies[]"]:checked')];
-    const terms = document.getElementById('terms_agree');
+    try {
+      // Validate step 3
+      const title = document.getElementById('project_title');
+      const desc = document.getElementById('project_description');
+      const techs = [...document.querySelectorAll('input[name="technologies[]"]:checked')];
+      const terms = document.getElementById('terms_agree');
 
-    let ok = true;
-    if (!title.value.trim()) { showError(title); ok = false; }
-    if (!desc.value.trim()) { showError(desc); ok = false; }
-    if (techs.length === 0) {
-      const g = document.querySelector('.group-error');
-      if (g) g.style.display = 'block';
-      ok = false;
-    } else {
-      const g = document.querySelector('.group-error');
-      if (g) g.style.display = 'none';
+      let ok = true;
+      if (!title || !title.value.trim()) { 
+        if (title) showError(title); 
+        ok = false; 
+      }
+      if (!desc || !desc.value.trim()) { 
+        if (desc) showError(desc); 
+        ok = false; 
+      }
+      
+      if (!techs || techs.length === 0) {
+        const g = document.querySelector('.group-error');
+        if (g) g.style.display = 'block';
+        ok = false;
+      } else {
+        const g = document.querySelector('.group-error');
+        if (g) g.style.display = 'none';
+      }
+      
+      if (!terms || !terms.checked) { 
+        ok = false; 
+        alert('Please agree to the Terms & Conditions and Code of Conduct.'); 
+      }
+
+      if (!ok) return;
+
+      // Save step 3
+      const fd3 = new FormData(form);
+      fd3.set('step', '3');
+      fd3.set('session_id', sessionId);
+
+      try {
+        let resp = await postFormData(fd3);
+        if (!resp || !resp.success) { 
+          alert(resp?.message || 'Failed to save project details. Please try again.');
+          return; 
+        }
+
+        // Finalize (step 4)
+        const fd4 = new FormData();
+        fd4.append('step', '4');
+        fd4.append('session_id', sessionId);
+
+        resp = await postFormData(fd4);
+        if (!resp || !resp.success) { 
+          alert(resp?.message || 'Failed to complete registration. Please try again.');
+          return; 
+        }
+
+        // Success UI
+        form.style.display = 'none';
+        if (successBox) successBox.style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } catch (err) {
+        console.error('Final submission error:', err);
+        alert(err.message || 'An error occurred during final submission. Please try again.');
+      }
+    } catch (e) {
+      console.error('Form submission error:', e);
+      alert('An unexpected error occurred during form submission. Please try again.');
     }
-    if (!terms.checked) { ok = false; alert('Please agree to the Terms & Conditions and Code of Conduct.'); }
-
-    if (!ok) return;
-
-    // Save step 3
-    const fd3 = new FormData(form);
-    fd3.set('step', '3');
-    fd3.set('session_id', sessionId);
-
-    let resp = await postFormData(fd3);
-    if (!resp.success) { alert(resp.message || 'Failed to save project details'); return; }
-
-    // Finalize (step 4)
-    const fd4 = new FormData();
-    fd4.set('step', '4');
-    fd4.set('session_id', sessionId);
-
-    resp = await postFormData(fd4);
-    if (!resp.success) { alert(resp.message || 'Failed to complete registration'); return; }
-
-    // Success UI
-    form.style.display = 'none';
-    successBox.style.display = 'block';
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // If user changes team size after saving step 1 (before moving next)
   const teamSizeSelect = document.getElementById('team_size');
-  teamSizeSelect?.addEventListener('change', () => {
-    if (currentStep === 2) {
-      genAdditionalMembers(getTeamSize());
-    }
-  });
+  if (teamSizeSelect) {
+    teamSizeSelect.addEventListener('change', () => {
+      if (currentStep === 2) {
+        genAdditionalMembers(getTeamSize());
+      }
+    });
+  }
 
   // Initialize
   setStep(1);
+  
+  // Debug info
+  console.log('ByteVerse Registration Form initialized');
+  console.log('Current environment:', window.location.hostname);
+  console.log('Current pathname:', window.location.pathname);
 })();
