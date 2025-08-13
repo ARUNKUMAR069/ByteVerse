@@ -1,6 +1,11 @@
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
-  const API_URL = 'backend/api/registration.php';
+  // Use a path that starts from the document root
+  const API_URL = '/new2/backend/api/registration.php';
+
+  // Alternatively, use a dynamic base path approach
+  // const BASE_URL = window.location.pathname.includes('/new2') ? '/new2' : '';
+  // const API_URL = `${BASE_URL}/backend/api/registration.php`;
 
   const form = document.getElementById('registration-form');
   const successBox = document.getElementById('registration-success');
@@ -28,16 +33,29 @@
   const clearErrors = () => form.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
 
   const postFormData = async (fd) => {
-    console.log(`Sending request to: ${API_URL}`);
-    const res = await fetch(API_URL, { method: 'POST', body: fd });
-    console.log(`Response status: ${res.status}`);
-    let data;
     try {
-      data = await res.json();
+      console.log(`Sending request to: ${API_URL}`);
+      const res = await fetch(API_URL, { 
+        method: 'POST', 
+        body: fd,
+        // Add headers to help with troubleshooting
+        headers: {
+          'X-Requested-With': 'XMLHttpRequest'
+        }
+      });
+      console.log(`Response status: ${res.status}`);
+      let data;
+      try {
+        data = await res.json();
+      } catch (e) {
+        console.error('Error parsing JSON response:', e);
+        return { success: false, message: 'Server returned an invalid response.' };
+      }
+      return data;
     } catch (e) {
-      return { success: false, message: 'Server returned an invalid response.' };
+      console.error('Fetch error:', e);
+      return { success: false, message: 'Network connection error. Please check your internet connection and try again.' };
     }
-    return data;
   };
 
   const getTeamSize = () => {
