@@ -1,3 +1,4 @@
+
 // Minimal, payment-free multi-step controller for ByteVerse registration
 (function () {
   // Get the base URL for API requests - more reliable approach
@@ -66,6 +67,8 @@
         
         xhr.open('POST', API_URL, true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        // Add this line to ensure it's properly recognized as POST
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         
         // Add debug listener to track redirects
         xhr.onreadystatechange = function() {
@@ -105,7 +108,10 @@
         };
         
         xhr.timeout = 30000; // 30 seconds timeout
-        xhr.send(fd);
+        
+        // Convert FormData to URL encoded string for proper POST transmission
+        const urlEncodedData = new URLSearchParams(fd).toString();
+        xhr.send(urlEncodedData);
       });
     } catch (e) {
       console.error('Form submission error:', e);
