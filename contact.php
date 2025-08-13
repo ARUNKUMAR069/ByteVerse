@@ -12,39 +12,33 @@ require_once('components/header.php');
 require_once('components/navbar.php');
 ?>
 
-<!-- Contact Hero Section with Animated Background -->
+<!-- Contact Hero Section (No animated icons/text in background) -->
 <section class="contact-hero relative overflow-hidden">
-    <div class="hero-bg-animation"></div>
-    <div class="neural-network"></div>
-    
     <div class="container mx-auto px-4 relative z-10">
-        <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-icon">📡</span>
-                <span>Communication Portal</span>
+        <div class="hero-content flex flex-col items-center text-center max-w-3xl mx-auto py-16">
+            <div class="hero-badge flex items-center gap-2 mb-4">
+                <span class="badge-icon text-2xl">📡</span>
+                <span class="font-semibold uppercase tracking-wider text-sm">Communication Portal</span>
             </div>
-            
-            <h1 class="hero-title">
-                <span class="title-line">GET IN</span>
-                <span class="title-line gradient-text">TOUCH</span>
+            <h1 class="hero-title text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                <span class="block">GET IN</span>
+                <span class="block gradient-text">TOUCH</span>
             </h1>
-            
-            <p class="hero-subtitle">
+            <p class="hero-subtitle text-lg text-gray-300 mb-10">
                 Ready to join the ByteVerse revolution? Let's connect and build the future together.
             </p>
-            
-            <div class="hero-stats">
-                <div class="stat-item">
-                    <span class="stat-number">24/7</span>
-                    <span class="stat-label">Support</span>
+            <div class="hero-stats flex flex-col md:flex-row gap-6 justify-center items-center w-full mt-4">
+                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
+                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">24/7</span>
+                    <span class="stat-label text-sm text-gray-300 tracking-wide">SUPPORT</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">< 1hr</span>
-                    <span class="stat-label">Response</span>
+                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
+                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">&lt; 1hr</span>
+                    <span class="stat-label text-sm text-gray-300 tracking-wide">RESPONSE</span>
                 </div>
-                <div class="stat-item">
-                    <span class="stat-number">500+</span>
-                    <span class="stat-label">Hackers</span>
+                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
+                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">500+</span>
+                    <span class="stat-label text-sm text-gray-300 tracking-wide">HACKERS</span>
                 </div>
             </div>
         </div>
@@ -73,7 +67,7 @@ require_once('components/navbar.php');
                         <div class="card-content">
                             <h3>Quick Chat</h3>
                             <p>Get instant answers to your questions</p>
-                            <button class="card-action" onclick="openChat()">
+                            <button class="card-action" onclick="window.open('https://wa.me/919877275894?text=Hello%20ByteVerse%20Team%2C%20I%20have%20an%20enquiry.', '_blank')">
                                 <span>Start Chat</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
@@ -96,8 +90,8 @@ require_once('components/navbar.php');
                         </div>
                         <div class="card-content">
                             <h3>Email Us</h3>
-                            <p>madhav.2201660@stu.ctgroup.in</p>
-                            <a href="mailto:madhav.2201660@stu.ctgroup.in" class="card-action">
+                            <p>enquiry_byteverse@ctgroup.in</p>
+                            <a href="mailto:enquiry_byteverse@ctgroup.in" class="card-action">
                                 <span>Send Email</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
@@ -136,18 +130,18 @@ require_once('components/navbar.php');
                         <div class="card-content">
                             <h3>Visit Us</h3>
                             <p>CT Group of Institutions, Shahpur Campus</p>
-                            <button class="card-action" onclick="openMap()">
+                            <a href="https://maps.google.com/?q=CT+Group+of+Institutions,+Shahpur+Campus" target="_blank" class="card-action">
                                 <span>Get Directions</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
                                 </svg>
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
                 
                 <!-- Social Links -->
-                <div class="social-section">
+                <!-- <div class="social-section">
                     <h3>Follow Our Journey</h3>
                     <div class="social-links">
                         <a href="#" class="social-link instagram">
@@ -175,7 +169,7 @@ require_once('components/navbar.php');
                             <span>Twitter</span>
                         </a>
                     </div>
-                </div>
+                </div> -->
             </div>
             
             <!-- Contact Form -->
@@ -270,7 +264,7 @@ require_once('components/navbar.php');
 </section>
 
 <!-- FAQ Section -->
-<section class="faq-section">
+<!-- <section class="faq-section">
     <div class="container mx-auto px-4">
         <div class="faq-header">
             <h2>Frequently Asked Questions</h2>
@@ -327,13 +321,36 @@ require_once('components/navbar.php');
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <style>
 <?php include 'assets/css/contact-new.css'; ?>
+/* Remove background revolving icons/text if any custom CSS exists */
+.hero-bg-animation, .neural-network {
+    display: none !important;
+}
 </style>
 
 <script src="assets/js/contact-new.js"></script>
+<script>
+function toggleFAQ(element) {
+    const answer = element.nextElementSibling;
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        element.classList.remove("open");
+    } else {
+        answer.style.display = "block";
+        element.classList.add("open");
+    }
+}
+
+// Optional: Hide all answers by default on page load
+document.addEventListener("DOMContentLoaded", function() {
+    document.querySelectorAll('.faq-answer').forEach(function(ans) {
+        ans.style.display = "none";
+    });
+});
+</script>
 
 <?php 
 require_once('components/terminal.php');
