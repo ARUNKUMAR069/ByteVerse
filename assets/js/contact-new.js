@@ -18,18 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const value = field.value;
             let isValid = true;
             
-            // Check if field is required
             if (field.hasAttribute('required') && !validateRequired(value)) {
                 showFieldError(field, 'This field is required');
                 isValid = false;
             } 
-            // Check email format if it's an email field
             else if (field.type === 'email' && value && !validateEmail(value)) {
                 showFieldError(field, 'Please enter a valid email address');
                 isValid = false;
             }
             
-            // If valid, remove error state
             if (isValid) {
                 removeFieldError(field);
             }
@@ -39,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         
         const showFieldError = (field, message) => {
             field.classList.add('error');
-            // Create error message element if it doesn't exist
             let errorMsg = field.parentElement.querySelector('.field-error-msg');
             if (!errorMsg) {
                 errorMsg = document.createElement('div');
@@ -55,9 +51,9 @@ document.addEventListener("DOMContentLoaded", function() {
             if (errorMsg) errorMsg.remove();
         };
         
-        // Form submission handler
+        // IMPORTANT: Prevent default form submission and handle with AJAX
         contactForm.addEventListener("submit", function(e) {
-            e.preventDefault();
+            e.preventDefault(); // This prevents the form from submitting normally
             
             // Validate all fields before submission
             let formValid = true;
@@ -68,7 +64,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 }
             });
             
-            // Stop submission if form is invalid
             if (!formValid) {
                 showStatus("Please fill all required fields correctly", "error");
                 return;
@@ -83,10 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
             // Add loading state to form
             contactForm.classList.add('loading');
             
-            // Add timestamp to avoid caching
-            formData.append('timestamp', new Date().getTime());
-            
-            // Send data to the server - updated path to backend folder
+            // Send data to the server via fetch
             fetch('backend/api/contact', {
                 method: 'POST',
                 body: formData
@@ -101,8 +93,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (data.success) {
                     showStatus(data.message, "success");
                     contactForm.reset();
-                    // Scroll to the form status message
-                    formStatus.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 } else {
                     showStatus(data.message, "error");
                 }
@@ -124,7 +114,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (field.value) validateField(field);
             });
             
-            // Clear error when user starts typing
             field.addEventListener('input', () => {
                 if (field.classList.contains('error')) {
                     removeFieldError(field);
@@ -145,7 +134,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (type) {
             formStatus.classList.add(type);
             
-            // Add icon based on message type
             const icon = document.createElement('span');
             icon.className = 'status-icon';
             
@@ -174,5 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 }, 500);
             }, 5000);
         }
+        
+        // Scroll to status message
+        formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 });

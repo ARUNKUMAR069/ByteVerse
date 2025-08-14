@@ -13,37 +13,6 @@ require_once('components/navbar.php');
 ?>
 
 <!-- Contact Hero Section (No animated icons/text in background) -->
-<section class="contact-hero relative overflow-hidden">
-    <div class="container mx-auto px-4 relative z-10">
-        <div class="hero-content flex flex-col items-center text-center max-w-3xl mx-auto py-16">
-            <div class="hero-badge flex items-center gap-2 mb-4">
-                <span class="badge-icon text-2xl">📡</span>
-                <span class="font-semibold uppercase tracking-wider text-sm">Communication Portal</span>
-            </div>
-            <h1 class="hero-title text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-                <span class="block">GET IN</span>
-                <span class="block gradient-text">TOUCH</span>
-            </h1>
-            <p class="hero-subtitle text-lg text-gray-300 mb-10">
-                Ready to join the ByteVerse revolution? Let's connect and build the future together.
-            </p>
-            <div class="hero-stats flex flex-col md:flex-row gap-6 justify-center items-center w-full mt-4">
-                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
-                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">24/7</span>
-                    <span class="stat-label text-sm text-gray-300 tracking-wide">SUPPORT</span>
-                </div>
-                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
-                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">&lt; 1hr</span>
-                    <span class="stat-label text-sm text-gray-300 tracking-wide">RESPONSE</span>
-                </div>
-                <div class="stat-item bg-black/30 border border-cyan-500 rounded-xl px-8 py-6 flex flex-col items-center min-w-[160px]">
-                    <span class="stat-number text-3xl font-bold text-cyan-400 mb-1">500+</span>
-                    <span class="stat-label text-sm text-gray-300 tracking-wide">HACKERS</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Main Contact Section -->
 <section class="contact-main">
@@ -57,31 +26,8 @@ require_once('components/navbar.php');
                 </div>
                 
                 <div class="cards-grid">
-                    <!-- Quick Chat Card -->
-                    <div class="contact-card primary">
-                        <div class="card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 12h8m-8 4h6m2 5l-1-1h-2.5A6.5 6.5 0 1 1 19 13.5V20z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </div>
-                        <div class="card-content">
-                            <h3>Quick Chat</h3>
-                            <p>Get instant answers to your questions</p>
-                            <button class="card-action" onclick="window.open('https://wa.me/919877275894?text=Hello%20ByteVerse%20Team%2C%20I%20have%20an%20enquiry.', '_blank')">
-                                <span>Start Chat</span>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="m9 18 6-6-6-6"/>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="card-status">
-                            <div class="status-dot active"></div>
-                            <span>Online Now</span>
-                        </div>
-                    </div>
-                    
                     <!-- Email Card -->
-                    <div class="contact-card">
+                    <div class="contact-card primary">
                         <div class="card-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -139,37 +85,6 @@ require_once('components/navbar.php');
                         </div>
                     </div>
                 </div>
-                
-                <!-- Social Links -->
-                <!-- <div class="social-section">
-                    <h3>Follow Our Journey</h3>
-                    <div class="social-links">
-                        <a href="#" class="social-link instagram">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                            </svg>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="#" class="social-link linkedin">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
-                            </svg>
-                            <span>LinkedIn</span>
-                        </a>
-                        <a href="#" class="social-link github">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                            </svg>
-                            <span>GitHub</span>
-                        </a>
-                        <a href="#" class="social-link twitter">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
-                            </svg>
-                            <span>Twitter</span>
-                        </a>
-                    </div>
-                </div> -->
             </div>
             
             <!-- Contact Form -->
@@ -179,22 +94,23 @@ require_once('components/navbar.php');
                     <p>Tell us about your project or just say hello</p>
                 </div>
                 
-                <form id="contactForm" class="modern-form">
+                <!-- FIXED: Added method="POST" and action attribute -->
+                <form id="contactForm" class="modern-form" method="POST" action="backend/api/contact">
                     <div class="form-row">
                         <div class="form-field">
-                            <label for="firstName">First Name</label>
+                            <label for="firstName">First Name *</label>
                             <input type="text" id="firstName" name="firstName" required>
                             <div class="field-line"></div>
                         </div>
                         <div class="form-field">
-                            <label for="lastName">Last Name</label>
+                            <label for="lastName">Last Name *</label>
                             <input type="text" id="lastName" name="lastName" required>
                             <div class="field-line"></div>
                         </div>
                     </div>
                     
                     <div class="form-field">
-                        <label for="email">Email Address</label>
+                        <label for="email">Email Address *</label>
                         <input type="email" id="email" name="email" required>
                         <div class="field-line"></div>
                     </div>
@@ -206,8 +122,8 @@ require_once('components/navbar.php');
                     </div>
                     
                     <div class="form-field">
-                        <label for="subject">Subject</label>
-                        <select id="subject" name="subject" required>
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required class="cyber-select">
                             <option value="">Select a topic</option>
                             <option value="general">General Inquiry</option>
                             <option value="sponsorship">Sponsorship</option>
@@ -220,7 +136,7 @@ require_once('components/navbar.php');
                     </div>
                     
                     <div class="form-field">
-                        <label for="message">Message</label>
+                        <label for="message">Message *</label>
                         <textarea id="message" name="message" rows="6" placeholder="Tell us about your project, ideas, or questions..." required></textarea>
                         <div class="field-line"></div>
                     </div>
@@ -256,78 +172,140 @@ require_once('components/navbar.php');
                         </button>
                     </div>
                     
-                    <div class="form-status" id="formStatus"></div>
+                    <div class="form-status hidden" id="formStatus"></div>
                 </form>
             </div>
         </div>
     </div>
 </section>
 
-<!-- FAQ Section -->
-<!-- <section class="faq-section">
-    <div class="container mx-auto px-4">
-        <div class="faq-header">
-            <h2>Frequently Asked Questions</h2>
-            <p>Quick answers to common questions about ByteVerse</p>
-        </div>
-        
-        <div class="faq-grid">
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3>When is ByteVerse happening?</h3>
-                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
-                </div>
-                <div class="faq-answer">
-                    <p>ByteVerse 1.0 is scheduled for [Date]. Stay tuned for exact dates and registration details.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3>Who can participate?</h3>
-                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
-                </div>
-                <div class="faq-answer">
-                    <p>Students, professionals, and coding enthusiasts of all skill levels are welcome to join ByteVerse.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3>What are the prizes?</h3>
-                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
-                </div>
-                <div class="faq-answer">
-                    <p>We have exciting prizes including cash rewards, internship opportunities, and exclusive ByteVerse merchandise.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <h3>How do I register?</h3>
-                    <svg class="faq-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M6 9l6 6 6-6"/>
-                    </svg>
-                </div>
-                <div class="faq-answer">
-                    <p>Registration will open soon! Follow our social media or contact us to get notified when registration begins.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
-
 <style>
 <?php include 'assets/css/contact-new.css'; ?>
 /* Remove background revolving icons/text if any custom CSS exists */
 .hero-bg-animation, .neural-network {
     display: none !important;
+}
+
+/* Fix for dropdown visibility */
+.form-field select {
+    background-color: #111827;
+    color: #f3f4f6;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.25em;
+    padding-right: 2.5rem;
+}
+
+.form-field select:focus {
+    outline: 2px solid rgba(6, 182, 212, 0.5);
+    border-color: rgba(6, 182, 212, 0.7);
+}
+
+/* Make sure option text is visible */
+.form-field select option {
+    background-color: #1f2937; /* Darker background */
+    color: #f3f4f6; /* Light text */
+    padding: 10px;
+}
+
+/* Better dropdown styling for select on hover */
+.form-field select:hover {
+    border-color: rgba(6, 182, 212, 0.6);
+}
+
+/* Improve responsive card grid after removing one card */
+@media (min-width: 768px) {
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    /* Make email card stand out on mobile */
+    .contact-card.primary {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Improve contact-grid layout */
+@media (max-width: 991px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .form-section {
+        margin-top: 1rem;
+    }
+}
+
+/* Fix for iOS select appearance */
+@supports (-webkit-touch-callout: none) {
+    .form-field select {
+        font-size: 16px;
+        /* Force custom dropdown arrow on iOS */
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2306b6d4' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;
+    }
+}
+
+/* Add to your existing CSS in contact.php or contact-new.css */
+.form-field.error input,
+.form-field.error select,
+.form-field.error textarea {
+    border-color: #ff5252 !important;
+    background-color: rgba(255, 82, 82, 0.05);
+}
+
+.field-error-msg {
+    color: #ff5252;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    font-family: inherit;
+}
+
+/* Loading state */
+.modern-form.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Form status message */
+.form-status {
+    padding: 12px 16px;
+    margin-top: 20px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.form-status.success {
+    background-color: rgba(34, 197, 94, 0.1);
+    color: #22c55e;
+}
+
+.form-status.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.form-status.pending {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #3b82f6;
+}
+
+.form-status .status-icon {
+    margin-right: 8px;
 }
 </style>
 
