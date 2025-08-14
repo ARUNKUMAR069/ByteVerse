@@ -35,6 +35,14 @@ require_once('components/navbar.php');
   <div class="container mx-auto px-4">
     <div class="circuit-dots"></div>
     <div class="registration-container">
+
+      <!-- Early Bird Note -->
+      <div class="mb-6 max-w-xl mx-auto">
+        <div style="background:rgba(34,197,94,0.12);border:1.5px solid #22c55e;padding:1rem 1.5rem;border-radius:0.75rem;text-align:center;font-weight:600;color:#22c55e;">
+          <span>Early Bird is live! Hurry up 🚀</span>
+        </div>
+      </div>
+
       <!-- Registration Info Box -->
       <div class="registration-info">
         <h3>Registration Information</h3>

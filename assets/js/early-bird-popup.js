@@ -35,9 +35,19 @@ class EarlyBirdPopup {
     }
     
     shouldShowPopup() {
-        // Check sessionStorage to see if popup was shown in this session
-        const shownThisSession = sessionStorage.getItem('earlyBirdPopupShown');
-        return !shownThisSession;
+        // Check localStorage to see if popup was shown recently
+        const lastShown = localStorage.getItem('earlyBirdPopupLastShown');
+        const now = new Date().getTime();
+        
+        // Show popup only once per day (24 hours = 24 * 60 * 60 * 1000 ms)
+        const oneDayInMs = 24 * 60 * 60 * 1000;
+        
+        if (!lastShown) {
+            return true; // Never shown before
+        }
+        
+        const timeSinceLastShown = now - parseInt(lastShown);
+        return timeSinceLastShown > oneDayInMs; // Show if more than 24 hours have passed
     }
     
     createPopup() {
@@ -132,8 +142,8 @@ class EarlyBirdPopup {
             this.popup.classList.add('show');
             this.startCountdown();
             
-            // Mark as shown for this session
-            sessionStorage.setItem('earlyBirdPopupShown', 'true');
+            // Mark as shown with current timestamp
+            localStorage.setItem('earlyBirdPopupLastShown', new Date().getTime().toString());
             
             // Track popup shown
             this.trackEvent('early_bird_popup_shown');
@@ -297,6 +307,12 @@ class EarlyBirdPopup {
     // Public method to manually close popup
     forceClose() {
         this.closePopup();
+    }
+    
+    // Public method to reset popup storage (for testing)
+    resetPopupStorage() {
+        localStorage.removeItem('earlyBirdPopupLastShown');
+        console.log('Early Bird Popup storage cleared. Popup will show on next page load.');
     }
 }
 
