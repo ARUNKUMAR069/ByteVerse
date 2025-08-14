@@ -18,11 +18,34 @@ require_once('components/navbar.php');
     <div class="container mx-auto px-4 py-20 relative z-10 text-center">
         <div class="grid-lines"></div>
         
-        <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="Challenge Domains">Challenge Domains</h1>
-        <div class="max-w-3xl mx-auto">
-            <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
-                Discover the innovative domains where you can make an impact. Choose your battleground and create solutions that can change the future.
+        <h1 class="glitch-text text-4xl md:text-6xl mb-6" data-text="Innovation Domains">Innovation Domains</h1>
+        <div class="max-w-4xl mx-auto">
+            <p class="text-lg md:text-xl mb-6 text-gray-300 leading-relaxed">
+                Explore five cutting-edge domains where technology meets real-world challenges. Each domain represents a unique opportunity to create meaningful impact through innovation.
             </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 rounded-lg p-4 backdrop-blur-sm">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></div>
+                        <span class="text-cyan-400 font-semibold text-sm">Technology Freedom</span>
+                    </div>
+                    <p class="text-gray-300 text-xs">Use any tech stack of your choice</p>
+                </div>
+                <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-lg p-4 backdrop-blur-sm">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div class="w-2 h-2 bg-purple-400 rounded-full animate-pulse"></div>
+                        <span class="text-purple-400 font-semibold text-sm">Real Impact</span>
+                    </div>
+                    <p class="text-gray-300 text-xs">Solve meaningful real-world problems</p>
+                </div>
+                <div class="bg-gradient-to-r from-green-500/10 to-emerald-500/10 border border-green-500/20 rounded-lg p-4 backdrop-blur-sm">
+                    <div class="flex items-center space-x-2 mb-2">
+                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                        <span class="text-green-400 font-semibold text-sm">Innovation Focus</span>
+                    </div>
+                    <p class="text-gray-300 text-xs">Push boundaries with creative solutions</p>
+                </div>
+            </div>
         </div>
         
         <div class="flex flex-col sm:flex-row gap-6 justify-center items-center mt-8">
@@ -50,271 +73,107 @@ require_once('components/navbar.php');
 <section id="domains" class="py-16 relative bg-gradient-to-b from-transparent to-gray-900/30">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Challenge <span class="text-cyan-400">Domains</span></h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-8"></div>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-4">
-                Each domain represents a critical area where technology can drive meaningful change. Select the one that aligns with your team's expertise and passion.
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Innovation <span class="text-cyan-400">Domains</span></h2>
+            <div class="w-32 h-1 bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 mx-auto mb-8 rounded-full"></div>
+            <p class="text-lg text-gray-300 max-w-4xl mx-auto mb-6">
+                Five specialized domains where cutting-edge technology meets real-world impact. Each domain offers unique opportunities to showcase your innovation and creativity.
             </p>
-            <div class="bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-4 max-w-3xl mx-auto">
-                <p class="text-cyan-400 font-semibold">Technology Freedom</p>
-                <p class="text-gray-300">You are free to use any technologies, frameworks, or platforms of your choice to solve problems in your selected domain.</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto mb-8">
+                <div class="bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-md border border-cyan-400/30 rounded-lg p-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        <p class="text-cyan-400 font-semibold">Complete Technology Freedom</p>
+                    </div>
+                    <p class="text-gray-300 text-sm">Choose any programming languages, frameworks, or platforms that best suit your solution.</p>
+                </div>
+                <div class="bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-md border border-purple-400/30 rounded-lg p-4">
+                    <div class="flex items-center space-x-3 mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                        </svg>
+                        <p class="text-purple-400 font-semibold">Innovation-Driven Approach</p>
+                    </div>
+                    <p class="text-gray-300 text-sm">Focus on creative problem-solving and breakthrough solutions that make a real difference.</p>
+                </div>
             </div>
         </div>
         
-        <!-- Bento Grid Layout -->
-        <div class="domain-bento-grid max-w-7xl mx-auto">
-            <!-- Grid Container -->
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-auto">
+        <!-- Clean Domain Cards Grid -->
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
-                <!-- Agriculture Domain (2x2) -->
-                <div class="md:col-span-2 md:row-span-2 domain-card theme-green">
-                    <!-- Background elements -->
-                    <div class="absolute inset-0 bg-circuit-pattern opacity-5"></div>
-                    <div class="circuit-line" style="top: 25%; transform: rotate(25deg);"></div>
-                    <div class="circuit-line" style="top: 65%; transform: rotate(-15deg);"></div>
-                    <div class="circuit-dot" style="top: 15%; left: 25%; width: 4px; height: 4px;"></div>
-                    <div class="circuit-dot" style="top: 75%; left: 80%; width: 6px; height: 6px;"></div>
-                    
-                    <!-- Domain Content -->
-                    <div class="domain-content p-6 md:p-8">
-                        <!-- Domain Header -->
-                        <div class="domain-header mb-6">
-                            <div class="flex items-center space-x-4">
-                                <div class="domain-icon w-16 h-16 rounded-full bg-green-900/50 flex items-center justify-center border border-green-500/40 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
-                                    </svg>
-                                </div>
-                                <h3 class="domain-title text-2xl font-orbitron font-bold text-green-400">Agriculture</h3>
-                            </div>
-                            <div class="absolute top-0 right-0 px-3 py-1 bg-green-500/30 rounded-full text-xs text-green-300 font-medium border border-green-400/20">
-                                Featured Domain
-                            </div>
-                        </div>
-                        
-                        <!-- Domain Description -->
-                        <p class="text-gray-300 mb-6 text-sm md:text-base leading-relaxed">Develop innovative solutions to address challenges in farming, supply chain, crop optimization, and sustainable agriculture.</p>
-                        
-                        <!-- Tech Stack Freedom Note -->
-                        <div class="bg-green-900/20 backdrop-blur-sm border border-green-500/20 rounded-lg p-3 mb-6 relative overflow-hidden text-xs">
-                            <div class="absolute top-0 right-0 w-24 h-24 bg-green-500/5 rounded-full blur-xl"></div>
-                            <p class="font-medium text-green-300"><span class="font-bold">Tech Freedom:</span> Use any technology stack to solve problems in this domain.</p>
-                        </div>
-                        
-                        <!-- Domain Focus Areas -->
-                        <div class="mb-6">
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="tech-tag px-2 py-1 bg-green-900/30 text-green-400 text-xs rounded-md border border-green-500/30">IoT</span>
-                                <span class="tech-tag px-2 py-1 bg-green-900/30 text-green-400 text-xs rounded-md border border-green-500/30">AI/ML</span>
-                                <span class="tech-tag px-2 py-1 bg-green-900/30 text-green-400 text-xs rounded-md border border-green-500/30">Blockchain</span>
-                            </div>
-                            <div class="focus-areas rounded-lg p-3 border border-green-500/10">
-                                <ul class="space-y-1 list-disc list-inside text-xs text-gray-400 md:columns-2 gap-4">
-                                    <li>Smart farming solutions</li>
-                                    <li>Farm-to-fork traceability</li>
-                                    <li>Crop disease detection</li>
-                                    <li>Sustainable farming technologies</li>
-                                    <li>Water conservation systems</li>
-                                    <li>Agricultural supply chain</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Domain CTA -->
-                        <div class="mt-auto">
-                            <button class="w-full cyber-button secondary-sm">
-                                <span>Choose Problem Statement</span>
-                                <i></i>
-                            </button>
-                        </div>
+                <!-- Agriculture Domain -->
+                <div class="clean-domain-card">
+                    <div class="absolute top-4 right-4">
+                        <span class="domain-tag sustainable">SUSTAINABLE</span>
                     </div>
-                </div>
-                
-                <!-- Healthcare Domain (2x1) -->
-                <div class="md:col-span-2 domain-card theme-red">
-                    <!-- Background elements -->
-                    <div class="absolute inset-0 bg-circuit-pattern opacity-5"></div>
-                    <div class="circuit-line" style="top: 45%; transform: rotate(15deg);"></div>
-                    <div class="circuit-dot" style="top: 30%; left: 65%; width: 5px; height: 5px;"></div>
-                    
-                    <!-- Domain Content -->
-                    <div class="domain-content p-6">
-                        <!-- Domain Header -->
-                        <div class="domain-header mb-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="domain-icon w-12 h-12 rounded-lg bg-red-900/50 flex items-center justify-center border border-red-500/40 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                                    </svg>
-                                </div>
-                                <h3 class="domain-title text-xl font-orbitron font-bold text-red-400">Healthcare</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Two-column layout for description and tags -->
-                        <div class="flex flex-col sm:flex-row gap-4 flex-grow">
-                            <div class="sm:w-1/2">
-                                <p class="text-gray-300 mb-4 text-sm leading-relaxed">Create solutions that revolutionize healthcare delivery, patient monitoring, and medical management.</p>
-                                
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag px-2 py-1 bg-red-900/30 text-red-400 text-xs rounded-md border border-red-500/30">ML</span>
-                                    <span class="tech-tag px-2 py-1 bg-red-900/30 text-red-400 text-xs rounded-md border border-red-500/30">IoT</span>
-                                    <span class="tech-tag px-2 py-1 bg-red-900/30 text-red-400 text-xs rounded-md border border-red-500/30">Mobile</span>
-                                </div>
-                            </div>
-                            
-                            <div class="sm:w-1/2">
-                                <div class="focus-areas bg-red-900/20 border border-red-500/20 rounded-lg p-3 mb-4 relative overflow-hidden text-xs h-full">
-                                    <ul class="space-y-1 list-disc list-inside text-xs text-gray-400">
-                                        <li>Remote patient monitoring</li>
-                                        <li>AI-powered diagnostics</li>
-                                        <li>Mental health solutions</li>
-                                        <li>Secure medical records</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Domain CTA -->
-                        <div class="mt-4">
-                            <button class="w-full cyber-button secondary-sm">
-                                <span>Choose Problem Statement</span>
-                                <i></i>
-                            </button>
-                        </div>
+                    <div class="domain-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg>
                     </div>
+                    <h3 class="domain-title">Agriculture</h3>
+                    <p class="domain-description">Revolutionize farming with sustainable technology solutions</p>
                 </div>
-                
-                <!-- IoT & XR Domain (1x1) -->
-                <div class="domain-card theme-cyan">
-                    <!-- Background elements -->
-                    <div class="absolute inset-0 bg-circuit-pattern opacity-5"></div>
-                    <div class="circuit-dot" style="top: 20%; left: 30%; width: 3px; height: 3px;"></div>
-                    
-                    <!-- Domain Content with compact design -->
-                    <div class="domain-content p-5">
-                        <!-- Domain Icon & Title -->
-                        <div class="domain-header mb-3">
-                            <div class="flex items-center space-x-3">
-                                <div class="domain-icon w-10 h-10 rounded-lg bg-cyan-900/50 flex items-center justify-center border border-cyan-500/40 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                </div>
-                                <h3 class="domain-title text-lg font-orbitron font-bold text-cyan-400">IoT & XR Tech</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Compact content -->
-                        <div class="flex flex-wrap gap-1 mb-3">
-                            <span class="tech-tag px-2 py-1 bg-cyan-900/30 text-cyan-400 text-xs rounded-md border border-cyan-500/30">IoT</span>
-                            <span class="tech-tag px-2 py-1 bg-cyan-900/30 text-cyan-400 text-xs rounded-md border border-cyan-500/30">AR/VR</span>
-                        </div>
-                        
-                        <div class="focus-areas bg-cyan-900/10 border-l-2 border-cyan-500/50 p-2 mb-3">
-                            <p class="text-gray-300 text-xs">Build innovative applications with IoT and XR technologies.</p>
-                        </div>
-                        
-                        <!-- Domain CTA -->
-                        <button class="w-full cyber-button secondary-xs">
-                            <span>Choose Problem</span>
-                            <i></i>
-                        </button>
+
+                <!-- Healthcare Domain -->
+                <div class="clean-domain-card">
+                    <div class="absolute top-4 right-4">
+                        <span class="domain-tag critical">CRITICAL</span>
                     </div>
-                </div>
-                
-                <!-- Cyber Security Domain (1x1) -->
-                <div class="domain-card theme-purple">
-                    <!-- Background elements -->
-                    <div class="absolute inset-0 bg-circuit-pattern opacity-5"></div>
-                    <div class="circuit-dot" style="top: 70%; left: 40%; width: 3px; height: 3px;"></div>
-                    
-                    <!-- Domain Content with compact design -->
-                    <div class="domain-content p-5">
-                        <!-- Domain Icon & Title -->
-                        <div class="domain-header mb-3">
-                            <div class="flex items-center space-x-3">
-                                <div class="domain-icon w-10 h-10 rounded-lg bg-purple-900/50 flex items-center justify-center border border-purple-500/40 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-purple-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                                    </svg>
-                                </div>
-                                <h3 class="domain-title text-lg font-orbitron font-bold text-purple-400">Cyber Security</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Compact content -->
-                        <div class="flex flex-wrap gap-1 mb-3">
-                            <span class="tech-tag px-2 py-1 bg-purple-900/30 text-purple-400 text-xs rounded-md border border-purple-500/30">Security</span>
-                            <span class="tech-tag px-2 py-1 bg-purple-900/30 text-purple-400 text-xs rounded-md border border-purple-500/30">AI</span>
-                        </div>
-                        
-                        <div class="focus-areas bg-purple-900/10 border-l-2 border-purple-500/50 p-2 mb-3">
-                            <p class="text-gray-300 text-xs">Protect digital assets and enhance security infrastructure.</p>
-                        </div>
-                        
-                        <!-- Domain CTA -->
-                        <button class="w-full cyber-button secondary-xs">
-                            <span>Choose Problem</span>
-                            <i></i>
-                        </button>
+                    <div class="domain-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                        </svg>
                     </div>
+                    <h3 class="domain-title">Healthcare</h3>
+                    <p class="domain-description">Build tech innovations to improve healthcare accessibility</p>
                 </div>
-                
-                <!-- Open Innovation Domain (2x1) -->
-                <div class="md:col-span-2 domain-card theme-amber">
-                    <!-- Background elements -->
-                    <div class="absolute inset-0 bg-circuit-pattern opacity-5"></div>
-                    <div class="circuit-line" style="top: 60%; transform: rotate(-10deg);"></div>
-                    <div class="circuit-dot" style="top: 25%; left: 75%; width: 4px; height: 4px;"></div>
-                    
-                    <!-- Domain Content -->
-                    <div class="domain-content p-6">
-                        <!-- Domain Header -->
-                        <div class="domain-header mb-4">
-                            <div class="flex items-center space-x-4">
-                                <div class="domain-icon w-12 h-12 rounded-lg bg-amber-900/50 flex items-center justify-center border border-amber-500/40 shadow-lg">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                                    </svg>
-                                </div>
-                                <h3 class="domain-title text-xl font-orbitron font-bold text-amber-400">Open Innovation</h3>
-                            </div>
-                        </div>
-                        
-                        <!-- Two-column layout for description and tags -->
-                        <div class="flex flex-col sm:flex-row gap-4 flex-grow">
-                            <div class="sm:w-1/2">
-                                <p class="text-gray-300 mb-4 text-sm leading-relaxed">Unleash your creativity with no boundaries. Develop solutions for any problem space that drives positive change.</p>
-                                
-                                <div class="flex flex-wrap gap-2 mb-4">
-                                    <span class="tech-tag px-2 py-1 bg-amber-900/30 text-amber-400 text-xs rounded-md border border-amber-500/30">Open Stack</span>
-                                    <span class="tech-tag px-2 py-1 bg-amber-900/30 text-amber-400 text-xs rounded-md border border-amber-500/30">Any Tech</span>
-                                </div>
-                            </div>
-                            
-                            <div class="sm:w-1/2">
-                                <div class="focus-areas bg-amber-900/20 border border-amber-500/20 rounded-lg p-3 mb-4 relative overflow-hidden text-xs h-full">
-                                    <ul class="space-y-1 list-disc list-inside text-xs text-gray-400">
-                                        <li>Education technology</li>
-                                        <li>Climate tech & sustainability</li>
-                                        <li>Financial innovations</li>
-                                        <li>Social impact platforms</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Domain CTA -->
-                        <div class="mt-4">
-                            <button class="w-full cyber-button secondary-sm">
-                                <span>Choose Problem Statement</span>
-                                <i></i>
-                            </button>
-                        </div>
+
+                <!-- IoT & XR Tech Domain -->
+                <div class="clean-domain-card">
+                    <div class="absolute top-4 right-4">
+                        <span class="domain-tag immersive">IMMERSIVE</span>
                     </div>
+                    <div class="domain-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">IoT & XR Tech</h3>
+                    <p class="domain-description">Connect digital and physical worlds through immersive technology</p>
                 </div>
-                
+
+                <!-- Cyber Security Domain -->
+                <div class="clean-domain-card">
+                    <div class="absolute top-4 right-4">
+                        <span class="domain-tag secure">SECURE</span>
+                    </div>
+                    <div class="domain-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5-6a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">Cyber Security</h3>
+                    <p class="domain-description">Build the next generation of digital defense systems</p>
+                </div>
+
+                <!-- Open Innovation Domain -->
+                <div class="clean-domain-card md:col-span-2 lg:col-span-1">
+                    <div class="absolute top-4 right-4">
+                        <span class="domain-tag freestyle">FREESTYLE</span>
+                    </div>
+                    <div class="domain-icon-wrapper">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                    </div>
+                    <h3 class="domain-title">Open Innovation</h3>
+                    <p class="domain-description">Push technological boundaries with your unique ideas</p>
+                </div>
+
             </div>
         </div>
     </div>
@@ -351,7 +210,7 @@ require_once('components/navbar.php');
             <div class="process-step bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 relative" data-aos="fade-up" data-aos-delay="200">
                 <div class="step-number absolute -top-3 -left-3 sm:-top-5 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base">3</div>
                 <h3 class="text-xl font-chakra font-bold mb-4 text-white pt-2">Build Solution</h3>
-                <p class="text-gray-300">Develop your innovative solution during the 48-hour hackathon with support from our mentors.</p>
+                <p class="text-gray-300">Develop your innovative solution during the 24-hour hackathon with support from our mentors.</p>
             </div>
             
             <!-- Step 4 -->
@@ -478,7 +337,192 @@ require_once('components/navbar.php');
     </div>
 </section>
 
+<!-- Early Bird Popup -->
+<div id="earlyBirdPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-cyan-400/30 rounded-xl p-8 max-w-md mx-4 relative overflow-hidden">
+        <!-- Close button -->
+        <button id="closePopup" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        
+        <!-- Background glow effect -->
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/10 to-purple-600/10 z-0"></div>
+        
+        <div class="relative z-10 text-center">
+            <!-- Early Bird Badge -->
+            <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-bold text-sm mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+                EARLY BIRD SPECIAL
+            </div>
+            
+            <!-- Main heading -->
+            <h2 class="text-2xl font-orbitron font-bold text-white mb-4">
+                🎉 Early Bird Registration is <span class="text-cyan-400">LIVE!</span>
+            </h2>
+            
+            <!-- Offer details -->
+            <div class="bg-cyan-900/20 border border-cyan-500/30 rounded-lg p-4 mb-6">
+                <p class="text-cyan-300 font-semibold text-lg mb-2">FREE Registration</p>
+                <p class="text-gray-300 text-sm mb-3">Limited time offer - Only for the first 2 days!</p>
+                
+                <!-- Countdown timer -->
+                <div class="flex justify-center space-x-4 mb-4">
+                    <div class="text-center">
+                        <div id="days" class="text-2xl font-bold text-cyan-400">01</div>
+                        <div class="text-xs text-gray-400">DAYS</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="hours" class="text-2xl font-bold text-cyan-400">23</div>
+                        <div class="text-xs text-gray-400">HOURS</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="minutes" class="text-2xl font-bold text-cyan-400">45</div>
+                        <div class="text-xs text-gray-400">MINS</div>
+                    </div>
+                    <div class="text-center">
+                        <div id="seconds" class="text-2xl font-bold text-cyan-400">30</div>
+                        <div class="text-xs text-gray-400">SECS</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row gap-3">
+                <a href="registration.php" class="cyber-button primary flex-1">
+                    <span>Register Now - FREE!</span>
+                    <i></i>
+                </a>
+                <button id="remindLater" class="cyber-button secondary flex-1">
+                    <span>Remind Me Later</span>
+                    <i></i>
+                </button>
+            </div>
+            
+            <p class="text-xs text-gray-400 mt-4">*After early bird period, regular registration fees apply</p>
+        </div>
+    </div>
+</div>
+
 <style>
+/* Clean Domain Card Styles */
+.clean-domain-card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.8);
+    border: 1px solid rgba(51, 65, 85, 0.3);
+    border-radius: 12px;
+    padding: 2rem;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.clean-domain-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(6, 182, 212, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.domain-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.domain-tag.sustainable {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.domain-tag.critical {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.domain-tag.immersive {
+    background: rgba(6, 182, 212, 0.2);
+    color: #06b6d4;
+    border: 1px solid rgba(6, 182, 212, 0.3);
+}
+
+.domain-tag.secure {
+    background: rgba(147, 51, 234, 0.2);
+    color: #9333ea;
+    border: 1px solid rgba(147, 51, 234, 0.3);
+}
+
+.domain-tag.freestyle {
+    background: rgba(245, 158, 11, 0.2);
+    color: #f59e0b;
+    border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.domain-icon-wrapper {
+    margin: 2rem 0 1.5rem 0;
+}
+
+.domain-icon {
+    width: 48px;
+    height: 48px;
+    color: #06b6d4;
+    stroke-width: 1.5;
+}
+
+.clean-domain-card:hover .domain-icon {
+    color: #0891b2;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+
+.domain-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+    line-height: 1.2;
+}
+
+.domain-description {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-top: auto;
+}
+
+/* Responsive adjustments for clean cards */
+@media (max-width: 768px) {
+    .clean-domain-card {
+        padding: 1.5rem;
+        min-height: 240px;
+    }
+    
+    .domain-icon {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .domain-title {
+        font-size: 1.25rem;
+    }
+    
+    .domain-description {
+        font-size: 0.875rem;
+    }
+}
+
 /* Base styles for domain cards */
 .domain-card {
     max-width: 100%;
@@ -673,15 +717,58 @@ require_once('components/navbar.php');
     height: 100%;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1rem;
-    background: linear-gradient(145deg, rgba(17, 24, 39, 0.8), rgba(10, 15, 25, 0.95));
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 
-                inset 0 1px 2px rgba(255, 255, 255, 0.1);
+    border-radius: 1.25rem;
+    background: linear-gradient(145deg, rgba(17, 24, 39, 0.85), rgba(10, 15, 25, 0.95));
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 2px rgba(255, 255, 255, 0.1),
+                0 0 0 1px rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
     transform-style: preserve-3d;
     perspective: 1000px;
     isolation: isolate;
+}
+
+/* Add subtle animation to domain cards */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-5px); }
+}
+
+.domain-card:nth-child(odd) {
+    animation: float 6s ease-in-out infinite;
+}
+
+.domain-card:nth-child(even) {
+    animation: float 6s ease-in-out infinite reverse;
+}
+
+.domain-card:hover {
+    animation-play-state: paused;
+}
+
+/* Enhanced gradient overlays for better visual hierarchy */
+.domain-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        transparent 50%,
+        rgba(0, 0, 0, 0.1) 100%
+    );
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.domain-card:hover::after {
+    opacity: 1;
 }
 
 /* Custom themed borders based on domain color */
@@ -1019,6 +1106,66 @@ require_once('components/navbar.php');
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Early Bird Popup functionality
+    const popup = document.getElementById('earlyBirdPopup');
+    const closeBtn = document.getElementById('closePopup');
+    const remindBtn = document.getElementById('remindLater');
+    
+    // Show popup after 3 seconds if not dismissed before
+    setTimeout(() => {
+        if (!localStorage.getItem('earlyBirdDismissed')) {
+            popup.classList.remove('hidden');
+        }
+    }, 3000);
+    
+    // Close popup functionality
+    function closePopup() {
+        popup.classList.add('hidden');
+        localStorage.setItem('earlyBirdDismissed', 'true');
+    }
+    
+    closeBtn.addEventListener('click', closePopup);
+    remindBtn.addEventListener('click', closePopup);
+    
+    // Close popup when clicking outside
+    popup.addEventListener('click', function(e) {
+        if (e.target === popup) {
+            closePopup();
+        }
+    });
+    
+    // Countdown Timer
+    function updateCountdown() {
+        // Set end date (2 days from now for demo - adjust as needed)
+        const endDate = new Date();
+        endDate.setDate(endDate.getDate() + 2);
+        
+        const now = new Date().getTime();
+        const distance = endDate.getTime() - now;
+        
+        if (distance > 0) {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = days.toString().padStart(2, '0');
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+        } else {
+            // Timer expired
+            document.getElementById('days').textContent = '00';
+            document.getElementById('hours').textContent = '00';
+            document.getElementById('minutes').textContent = '00';
+            document.getElementById('seconds').textContent = '00';
+        }
+    }
+    
+    // Update countdown every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
     // FAQ Accordion functionality
     const faqQuestions = document.querySelectorAll('.faq-question');
     
@@ -1118,7 +1265,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 dot.style.left = `${Math.random() * 100}%`;
                 dot.style.width = `${Math.random() * 3 + 2}px`;
                 dot.style.height = `${Math.random() * 3 + 2}px`;
-                card.appendChild(dot); arguments
+                card.appendChild(dot);
                 
             }
         }

@@ -34,6 +34,7 @@
     <link href="./src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/minfied.min.css">
     <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="assets/css/early-bird-popup.css">
 
     <!-- Animation Libraries -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
@@ -170,6 +171,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.2/vanilla-tilt.min.js"></script>
     <script src="assets/js/domain-showcase.js"></script>
     <script src="assets/js/sponsors-showcase.js"></script>
+    <script src="assets/js/early-bird-popup.js"></script>
 </head>
 
 <body>

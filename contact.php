@@ -109,8 +109,8 @@ require_once('components/navbar.php');
                         </div>
                         <div class="card-content">
                             <h3>Call Us</h3>
-                            <p>+91 9478529300</p>
-                            <a href="tel:+919478529300" class="card-action">
+                            <p>+91 9877275894</p>
+                            <a href="tel:+919877275894" class="card-action">
                                 <span>Call Now</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
