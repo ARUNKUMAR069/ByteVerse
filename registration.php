@@ -46,14 +46,14 @@ require_once('components/navbar.php');
       <!-- Registration Info Box -->
       <div class="registration-info">
         <h3>Registration Information</h3>
-        <p>ByteVerse 1.0 will take place from April 28–30, 2025. Before registering, please note:</p>
+        <p>ByteVerse 1.0 will take place from September 27–28, 2025. Before registering, please note:</p>
         <ul class="info-list">
           <li>Team size must be between 3–5 members</li>
-          <li><strong>Registration is 100% free — no payment required</strong></li>
+          <li><strong>Registration is 100% free only for two days</strong></li>
           <li>Each team must have a unique team name</li>
-          <li>All participants must be 18+ or have guardian consent</li>
+          <!-- <li>All participants must be 18+ or have guardian consent</li> -->
           <li>Each participant must bring their own laptop</li>
-          <li>Registration closes on April 15, 2025 or when capacity is reached</li>
+          <li>Registration closes on September 20, 2025 or when capacity is reached</li>
         </ul>
         <p class="mt-3">Fields marked with an asterisk (*) are required.</p>
       </div>
