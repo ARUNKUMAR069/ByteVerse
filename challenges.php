@@ -338,74 +338,7 @@ require_once('components/navbar.php');
 </section>
 
 <!-- Early Bird Popup -->
-<div id="earlyBirdPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-    <div class="bg-gradient-to-br from-gray-900 to-gray-800 border border-cyan-400/30 rounded-xl p-8 max-w-md mx-4 relative overflow-hidden">
-        <!-- Close button -->
-        <button id="closePopup" class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-            </svg>
-        </button>
-        
-        <!-- Background glow effect -->
-        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-cyan-500/10 to-purple-600/10 z-0"></div>
-        
-        <div class="relative z-10 text-center">
-            <!-- Early Bird Badge -->
-            <div class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full text-white font-bold text-sm mb-4">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-                EARLY BIRD SPECIAL
-            </div>
-            
-            <!-- Main heading -->
-            <h2 class="text-2xl font-orbitron font-bold text-white mb-4">
-                🎉 Early Bird Registration is <span class="text-cyan-400">LIVE!</span>
-            </h2>
-            
-            <!-- Offer details -->
-            <div class="bg-cyan-900/20 border border-cyan-500/30 rounded-lg p-4 mb-6">
-                <p class="text-cyan-300 font-semibold text-lg mb-2">FREE Registration</p>
-                <p class="text-gray-300 text-sm mb-3">Limited time offer - Only for the first 2 days!</p>
-                
-                <!-- Countdown timer -->
-                <div class="flex justify-center space-x-4 mb-4">
-                    <div class="text-center">
-                        <div id="days" class="text-2xl font-bold text-cyan-400">01</div>
-                        <div class="text-xs text-gray-400">DAYS</div>
-                    </div>
-                    <div class="text-center">
-                        <div id="hours" class="text-2xl font-bold text-cyan-400">23</div>
-                        <div class="text-xs text-gray-400">HOURS</div>
-                    </div>
-                    <div class="text-center">
-                        <div id="minutes" class="text-2xl font-bold text-cyan-400">45</div>
-                        <div class="text-xs text-gray-400">MINS</div>
-                    </div>
-                    <div class="text-center">
-                        <div id="seconds" class="text-2xl font-bold text-cyan-400">30</div>
-                        <div class="text-xs text-gray-400">SECS</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- CTA Buttons -->
-            <div class="flex flex-col sm:flex-row gap-3">
-                <a href="registration.php" class="cyber-button primary flex-1">
-                    <span>Register Now - FREE!</span>
-                    <i></i>
-                </a>
-                <button id="remindLater" class="cyber-button secondary flex-1">
-                    <span>Remind Me Later</span>
-                    <i></i>
-                </button>
-            </div>
-            
-            <p class="text-xs text-gray-400 mt-4">*After early bird period, regular registration fees apply</p>
-        </div>
-    </div>
-</div>
+<!--  -->
 
 <style>
 /* Clean Domain Card Styles */
