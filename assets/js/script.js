@@ -357,22 +357,22 @@ function initTerminal() {
             
             case 'about':
                 appendToTerminal('ByteVerse 1.0 is the ultimate coding hackathon where technology meets innovation.', 'normal');
-                appendToTerminal('Join brilliant minds in a 48-hour journey to build groundbreaking solutions.', 'normal');
+                appendToTerminal('Join brilliant minds in a 24-hour journey to build groundbreaking solutions.', 'normal');
                 appendToTerminal('Track domains include: Agriculture, Healthcare, IoT & XR Tech, Cybersecurity, and Open Innovation.', 'normal');
                 break;
             
             case 'register':
-                appendToTerminal('Registration is now open! Participation fee: ₹500 per team.', 'normal');
+                appendToTerminal('Early Bird Registration is now open for 2 days! Participation fee: ₹0 per team.', 'normal');
                 appendToTerminal('Team size: Minimum 3, Maximum 5 members.', 'normal');
                 appendToTerminal('To register, visit the <a href="registration.php" class="text-cyan-400 underline">registration page</a>.', 'normal');
                 break;
             
             case 'schedule':
-                appendToTerminal('August 22, 2025:', 'success');
+                appendToTerminal('September 27, 2025:', 'success');
                 appendToTerminal('- 09:00 AM: Registration & Check-in', 'normal');
                 appendToTerminal('- 10:30 AM: Opening Ceremony', 'normal');
                 appendToTerminal('- 12:00 PM: Hackathon Begins', 'normal');
-                appendToTerminal('August 23, 2025:', 'success');
+                appendToTerminal('September 28, 2025:', 'success');
                 appendToTerminal('- 12:00 PM: Hackathon Ends', 'normal');
                 appendToTerminal('- 02:00 PM: Project Presentations', 'normal');
                 appendToTerminal('- 05:00 PM: Awards Ceremony', 'normal');

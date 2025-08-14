@@ -7,9 +7,6 @@ $currentPage = 'contact';
 
 // Include header
 require_once('components/header.php');
-
-// Include navbar
-require_once('components/navbar.php');
 ?>
 
 <!-- Contact Hero Section (No animated icons/text in background) -->
@@ -26,8 +23,8 @@ require_once('components/navbar.php');
                 </div>
                 
                 <div class="cards-grid">
-                    <!-- Email Card -->
-                    <div class="contact-card primary">
+                    <!-- Email Card: Make the whole card clickable -->
+                    <a href="mailto:enquiry_byteverse@ctgroup.in" class="contact-card primary" style="text-decoration:none;color:inherit;">
                         <div class="card-icon">
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor" stroke-width="2"/>
@@ -37,14 +34,14 @@ require_once('components/navbar.php');
                         <div class="card-content">
                             <h3>Email Us</h3>
                             <p>enquiry_byteverse@ctgroup.in</p>
-                            <a href="mailto:enquiry_byteverse@ctgroup.in" class="card-action">
-                                <span>Send Email</span>
+                            <!-- <span class="card-action">
+                                Send Email
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
                                 </svg>
-                            </a>
+                            </span> -->
                         </div>
-                    </div>
+                    </a>
                     
                     <!-- Phone Card -->
                     <div class="contact-card">
@@ -56,12 +53,12 @@ require_once('components/navbar.php');
                         <div class="card-content">
                             <h3>Call Us</h3>
                             <p>+91 9877275894</p>
-                            <a href="tel:+919877275894" class="card-action">
+                            <!-- <a href="tel:+919877275894" class="card-action">
                                 <span>Call Now</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
                                 </svg>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                     
@@ -76,12 +73,12 @@ require_once('components/navbar.php');
                         <div class="card-content">
                             <h3>Visit Us</h3>
                             <p>CT Group of Institutions, Shahpur Campus</p>
-                            <a href="https://maps.google.com/?q=CT+Group+of+Institutions,+Shahpur+Campus" target="_blank" class="card-action">
+                            <!-- <a href="https://maps.google.com/?q=CT+Group+of+Institutions,+Shahpur+Campus" target="_blank" class="card-action">
                                 <span>Get Directions</span>
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                     <path d="m9 18 6-6-6-6"/>
                                 </svg>
-                            </a>
+                            </a> -->
                         </div>
                     </div>
                 </div>
