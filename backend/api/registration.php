@@ -177,17 +177,25 @@ function saveTeamMembers($conn, $session_id) {
 
 // Step 3: Save Project Details
 function saveProjectDetails($conn, $session_id) {
+    // These fields are optional
     $project_title = filter_input(INPUT_POST, 'project_title', FILTER_SANITIZE_STRING);
     $project_description = filter_input(INPUT_POST, 'project_description', FILTER_SANITIZE_STRING);
+    
+    // These fields are required
     $terms_agree = isset($_POST['terms_agree']) ? 1 : 0;
-
     $technologies = [];
+    
     if (isset($_POST['technologies']) && is_array($_POST['technologies'])) {
         $technologies = $_POST['technologies'];
     }
 
-    if (empty($project_title) || empty($project_description) || empty($technologies) || !$terms_agree) {
-        sendResponse(false, 'Please fill in all required fields and agree to terms');
+    // Only validate the required fields
+    if (empty($technologies)) {
+        sendResponse(false, 'Please select at least one technology');
+    }
+    
+    if (!$terms_agree) {
+        sendResponse(false, 'You must agree to the terms and conditions');
     }
 
     $stmt = $conn->prepare("SELECT id FROM registration_temp WHERE session_id = :session_id");
@@ -198,7 +206,12 @@ function saveProjectDetails($conn, $session_id) {
         sendResponse(false, 'Invalid session. Please start from the beginning.');
     }
 
+    // Set empty values to empty strings (not null) for consistency
+    $project_title = empty($project_title) ? '' : $project_title;
+    $project_description = empty($project_description) ? '' : $project_description;
+    
     $technologies_json = json_encode($technologies);
+    
     $stmt = $conn->prepare("UPDATE registration_temp SET 
                            project_title = :project_title,
                            project_description = :project_description,

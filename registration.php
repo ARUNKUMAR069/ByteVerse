@@ -212,15 +212,15 @@ require_once('components/navbar.php');
 
           <div class="form-grid">
             <div class="form-group full-width">
-              <label for="project_title" class="input-label field-required">Project Title</label>
-              <input type="text" class="cyber-input" id="project_title" name="project_title" placeholder="Working title for your project idea" required>
-              <span class="form-help">You can change this later</span>
+              <label for="project_title" class="input-label">Project Title (Optional)</label>
+              <input type="text" class="cyber-input" id="project_title" name="project_title" placeholder="Working title for your project idea">
+              <span class="form-help">Optional - You can change this later or add it after registration</span>
             </div>
 
             <div class="form-group full-width">
-              <label for="project_description" class="input-label field-required">Brief Project Description</label>
-              <textarea class="cyber-input h-32" id="project_description" name="project_description" placeholder="Describe your project idea in a few sentences" required></textarea>
-              <span class="form-help">Outline the problem you're trying to solve and your approach (100–500 characters)</span>
+              <label for="project_description" class="input-label">Brief Project Description (Optional)</label>
+              <textarea class="cyber-input h-32" id="project_description" name="project_description" placeholder="Describe your project idea in a few sentences"></textarea>
+              <span class="form-help">Optional - outline the problem you're trying to solve (100–500 characters)</span>
             </div>
 
             <div class="form-group full-width">

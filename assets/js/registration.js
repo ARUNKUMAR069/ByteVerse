@@ -293,73 +293,59 @@
     e.preventDefault();
     clearErrors();
 
-    try {
-      // Validate step 3
-      const title = document.getElementById('project_title');
-      const desc = document.getElementById('project_description');
-      const techs = [...document.querySelectorAll('input[name="technologies[]"]:checked')];
-      const terms = document.getElementById('terms_agree');
+    // Validate step 3 - modified to make project fields optional
+    const techs = [...document.querySelectorAll('input[name="technologies[]"]:checked')];
+    const terms = document.getElementById('terms_agree');
 
-      let ok = true;
-      if (!title || !title.value.trim()) { 
-        if (title) showError(title); 
-        ok = false; 
-      }
-      if (!desc || !desc.value.trim()) { 
-        if (desc) showError(desc); 
-        ok = false; 
-      }
-      
-      if (!techs || techs.length === 0) {
-        const g = document.querySelector('.group-error');
-        if (g) g.style.display = 'block';
-        ok = false;
-      } else {
-        const g = document.querySelector('.group-error');
-        if (g) g.style.display = 'none';
-      }
-      
-      if (!terms || !terms.checked) { 
-        ok = false; 
+    let isValid = true;
+    
+    // Only validate required fields
+    if (!techs || techs.length === 0) {
+        const groupError = document.querySelector('.group-error');
+        if (groupError) groupError.style.display = 'block';
+        isValid = false;
+    } else {
+        const groupError = document.querySelector('.group-error');
+        if (groupError) groupError.style.display = 'none';
+    }
+    
+    if (!terms || !terms.checked) { 
+        isValid = false; 
         alert('Please agree to the Terms & Conditions and Code of Conduct.'); 
+    }
+
+    if (!isValid) return;
+
+    // Save step 3
+    const fd3 = new FormData(form);
+    fd3.set('step', '3');
+    fd3.set('session_id', sessionId);
+
+    try {
+      let resp = await postFormData(fd3);
+      if (!resp || !resp.success) { 
+        alert(resp?.message || 'Failed to save project details. Please try again.');
+        return; 
       }
 
-      if (!ok) return;
+      // Finalize (step 4)
+      const fd4 = new FormData();
+      fd4.append('step', '4');
+      fd4.append('session_id', sessionId);
 
-      // Save step 3
-      const fd3 = new FormData(form);
-      fd3.set('step', '3');
-      fd3.set('session_id', sessionId);
-
-      try {
-        let resp = await postFormData(fd3);
-        if (!resp || !resp.success) { 
-          alert(resp?.message || 'Failed to save project details. Please try again.');
-          return; 
-        }
-
-        // Finalize (step 4)
-        const fd4 = new FormData();
-        fd4.append('step', '4');
-        fd4.append('session_id', sessionId);
-
-        resp = await postFormData(fd4);
-        if (!resp || !resp.success) { 
-          alert(resp?.message || 'Failed to complete registration. Please try again.');
-          return; 
-        }
-
-        // Success UI
-        form.style.display = 'none';
-        if (successBox) successBox.style.display = 'block';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      } catch (err) {
-        console.error('Final submission error:', err);
-        alert(err.message || 'An error occurred during final submission. Please try again.');
+      resp = await postFormData(fd4);
+      if (!resp || !resp.success) { 
+        alert(resp?.message || 'Failed to complete registration. Please try again.');
+        return; 
       }
-    } catch (e) {
-      console.error('Form submission error:', e);
-      alert('An unexpected error occurred during form submission. Please try again.');
+
+      // Success UI
+      form.style.display = 'none';
+      if (successBox) successBox.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } catch (err) {
+      console.error('Final submission error:', err);
+      alert(err.message || 'An error occurred during final submission. Please try again.');
     }
   });
 
