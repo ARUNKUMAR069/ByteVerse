@@ -409,7 +409,7 @@ require_once('components/navbar.php');
                     <div class="faq-question">What is ByteVerse 1.0?</div>
                     <div class="faq-answer">
                         <p>ByteVerse 1.0 is a <span class="highlight">24-hour National Level Hackathon</span> designed exclusively for students. It's an intensive coding experience where participants collaborate to solve real-world problems through technology.</p>
-                        <p>The event will be held on <span class="highlight">August 23-24, 2023</span> with continuous coding, mentorship sessions, and exciting activities throughout.</p>
+                        <p>The event will be held on <span class="highlight">September 27-28, 2025</span> with continuous coding, mentorship sessions, and exciting activities throughout.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">About</span>
                             <span class="faq-tag">Event</span>
@@ -420,7 +420,7 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">When and where is ByteVerse 1.0 taking place?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 will take place from <span class="highlight">August 23-24, 2023</span>. The event will run for a full 24 hours, starting with registration at 9:00 AM on August 23rd and concluding with the announcement of winners at 2:00 PM on August 24th. Check our <a href="schedule.php">complete schedule</a> for more details.</p>
+                        <p>ByteVerse 1.0 will take place from <span class="highlight">September 27-28, 2025</span>. The event will run for a full 24 hours, starting with registration at 9:00 AM on September 27th and concluding with the announcement of winners at 2:00 PM on September 28th. Check our <a href="schedule.php">complete schedule</a> for more details.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Location</span>
                             <span class="faq-tag">Date</span>
