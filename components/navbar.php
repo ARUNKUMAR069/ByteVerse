@@ -14,7 +14,7 @@
             <a href="about.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'about' ? 'text-cyan-400' : ''; ?>">ABOUT</a>
             <a href="challenges.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'challenges' ? 'text-cyan-400' : ''; ?>">CHALLENGES</a>
             <a href="schedule.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'schedule' ? 'text-cyan-400' : ''; ?>">SCHEDULE</a>
-            <a href="realtime-timer-demo.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'timer' ? 'text-cyan-400' : ''; ?>">TIMER</a>
+
             <a href="sponsor.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'sponsor' ? 'text-cyan-400' : ''; ?>">SPONSORS</a>
             <a href="faq.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'faq' ? 'text-cyan-400' : ''; ?>">FAQ</a>
             <a href="contact.php" class="nav-link text-sm lg:text-base text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'contact' ? 'text-cyan-400' : ''; ?>">CONTACT</a>
@@ -83,7 +83,7 @@
             <a href="about.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'about' ? 'text-cyan-400' : ''; ?>">ABOUT</a>
             <a href="challenges.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'challenges' ? 'text-cyan-400' : ''; ?>">CHALLENGES</a>
             <a href="schedule.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'schedule' ? 'text-cyan-400' : ''; ?>">SCHEDULE</a>
-            <a href="realtime-timer-demo.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'timer' ? 'text-cyan-400' : ''; ?>">TIMER</a>
+            
             <a href="sponsor.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'sponsor' ? 'text-cyan-400' : ''; ?>">SPONSORS</a>
             <a href="faq.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'faq' ? 'text-cyan-400' : ''; ?>">FAQ</a>
             <a href="contact.php" class="text-xl w-full py-2 border-b border-gray-800 text-white hover:text-cyan-400 transition-colors font-medium <?php echo $currentPage == 'contact' ? 'text-cyan-400' : ''; ?>">CONTACT</a>

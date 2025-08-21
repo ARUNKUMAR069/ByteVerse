@@ -246,6 +246,14 @@ if ($pending_sponsor_result && $pending_sponsor_result->num_rows > 0) {
                         </a>
                     </li>
                     
+                    <!-- Add this for User Data access -->
+                    <li class="<?php echo $current_page === 'user_data' ? 'active' : ''; ?>">
+                        <a href="user_data.php">
+                            <i class="fas fa-users"></i>
+                            <span>User Data</span>
+                        </a>
+                    </li>
+
                     <li class="nav-dropdown <?php echo in_array($current_page, ['registrations', 'registration-view', 'edit-registration', 'add-registration']) ? 'active' : ''; ?>">
                         <a href="#" class="dropdown-toggle">
                             <i class="fas fa-user-plus"></i>
@@ -343,6 +351,8 @@ if ($pending_sponsor_result && $pending_sponsor_result->num_rows > 0) {
                             'reply-message' => '<i class="fas fa-reply"></i> Reply to Message',
                             'activity-logs' => '<i class="fas fa-history"></i> Activity Logs',
                             'settings' => '<i class="fas fa-cog"></i> Settings',
+                            // Add this line for User Data:
+                            'user_data' => '<i class="fas fa-users"></i> User Data',
                         ];
                         echo $title_map[$current_page] ?? 'ByteVerse Admin';
                         ?>
