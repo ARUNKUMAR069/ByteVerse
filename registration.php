@@ -119,10 +119,10 @@ require_once('components/navbar.php');
               <div class="select-wrapper">
                 <select class="cyber-input" id="challenge_track" name="challenge_track" required>
                   <option value="" disabled selected>Choose your challenge track</option>
-                  <option value="ai_ml">AI/ML Solutions</option>
-                  <option value="blockchain">Blockchain Innovation</option>
-                  <option value="ar_vr">AR/VR Experiences</option>
-                  <option value="iot">IoT & Hardware</option>
+                  <option value="agriculture">Agriculture</option>
+                  <option value="cyber_security">Cyber Security</option>
+                  <option value="iot_xr">IOT & XR</option>
+                  <option value="healthcare">Healthcare</option>
                   <option value="open_innovation">Open Innovation</option>
                 </select>
               </div>
