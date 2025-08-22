@@ -9,11 +9,11 @@
         </p>
         
         <!-- Highlighted Note -->
-        <div class="mb-10 max-w-2xl mx-auto">
+        <!-- <div class="mb-10 max-w-2xl mx-auto">
             <div style="background:rgba(34,197,94,0.12);border:1.5px solid #22c55e;padding:1rem 1.5rem;border-radius:0.75rem;text-align:center;font-weight:600;color:#22c55e;">
                 <span>Note:</span> Problem statements will be released one week before the hackathon.
             </div>
-        </div>
+        </div> -->
         
         <div class="domains-container">
             <!-- Domain Cards -->

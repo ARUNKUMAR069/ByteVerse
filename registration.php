@@ -36,12 +36,12 @@ require_once('components/navbar.php');
     <div class="circuit-dots"></div>
     <div class="registration-container">
 
-      <!-- Early Bird Note -->
+      <!-- Early Bird Note
       <div class="mb-6 max-w-xl mx-auto">
         <div style="background:rgba(34,197,94,0.12);border:1.5px solid #22c55e;padding:1rem 1.5rem;border-radius:0.75rem;text-align:center;font-weight:600;color:#22c55e;">
           <span>Early Bird is live! Hurry up 🚀</span>
         </div>
-      </div>
+      </div> -->
 
       <!-- Registration Info Box -->
       <div class="registration-info">
@@ -49,7 +49,7 @@ require_once('components/navbar.php');
         <p>ByteVerse 1.0 will take place from September 27–28, 2025. Before registering, please note:</p>
         <ul class="info-list">
           <li>Team size must be between 3–5 members</li>
-          <li><strong>Registration is 100% free only for two days</strong></li>
+          <li><strong>We are charging 500 rupees for registration, games and 3 time meals per team.</strong></li>
           <li>Each team must have a unique team name</li>
           <!-- <li>All participants must be 18+ or have guardian consent</li> -->
           <li>Each participant must bring their own laptop</li>
