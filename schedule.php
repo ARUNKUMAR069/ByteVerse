@@ -1125,21 +1125,21 @@ require_once('components/navbar.php');
                 <div class="day-header">
                     <div class="day-title">
                         <div class="day-date">September 27 - Day 1</div>
-                        <div class="day-name">Registration, Inauguration & Ideation Pitch</div>
+                        <div class="day-name">Registration, Inauguration & Development</div>
                     </div>
                     <div class="scanner-line"></div>
                 </div>
                 
                 <div class="events-grid">
                     <!-- Event 1 -->
-                    <div class="event-time">09:00 - 12:00</div>
+                    <div class="event-time">09:00 - 11:00</div>
                     <div id="event-registration" class="event-content">
                         <h3 class="event-title">Registration + Attendance & ID Card Distribution</h3>
                         <p class="event-description">Teams arrive, collect their ByteVerse badges, ID cards, and register for the hackathon. Volunteers will be available at counters to assist with the registration process.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
                             Main Lobby/Hall
                         </div>
@@ -1149,14 +1149,14 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="event-time">12:00 - 14:00</div>
+                    <div class="event-time">11:00 - 13:00</div>
                     <div id="event-inauguration" class="event-content featured">
                         <h3 class="event-title">Inauguration Ceremony</h3>
                         <p class="event-description">Official opening of ByteVerse 1.0 with chief guests, dignitaries, and all teams seated. Introduction to the hackathon, rules explanation, and motivational keynotes.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
                             Auditorium
                         </div>
@@ -1167,48 +1167,31 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 3 -->
-                    <div class="event-time">14:00 - 17:00</div>
-                    <div id="event-round1" class="event-content">
-                        <h3 class="event-title">Round 1: Ideation Pitch & Tech Stack Evaluation (PPT)</h3>
-                        <p class="event-description">Teams present their project ideas and planned technology stack through PowerPoint presentations. Judges will evaluate based on innovation, feasibility, and technical merit.</p>
+                    <div class="event-time">13:00 - 14:00</div>
+                    <div id="event-lunch" class="event-content">
+                        <h3 class="event-title">Lunch</h3>
+                        <p class="event-description">Nutritious lunch break for all participants to fuel up before the coding rounds begin.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
-                            Labs/Classrooms
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag" data-category="round">Competition</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 4 -->
-                    <div class="event-time">17:00 - 17:30</div>
-                    <div id="event-tea-break" class="event-content">
-                        <h3 class="event-title">Tea Break</h3>
-                        <p class="event-description">Refresh with light snacks and beverages before moving into the prototype development phase.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Cafeteria Area
+                            Cafeteria/Dining Hall
                         </div>
                         <div class="event-tags">
                             <span class="event-tag food" data-category="food">Food</span>
                         </div>
                     </div>
                     
-                    <!-- Event 5 -->
-                    <div class="event-time">17:30 - 21:00</div>
-                    <div id="event-round2-1" class="event-content">
-                        <h3 class="event-title">Round 2 - Phase 1: Prototype Development (Coding Begins)</h3>
-                        <p class="event-description">Coding begins! Teams start developing their prototypes with development environments set up and technical volunteers available to assist with any issues.</p>
+                    <!-- Event 4 -->
+                    <div class="event-time">14:00 - 18:00</div>
+                    <div id="event-round1-coding" class="event-content">
+                        <h3 class="event-title">Round 1 - Begin Coding</h3>
+                        <p class="event-description">Coding round begins! Teams start developing their prototypes with development environments set up and technical volunteers available to assist with any issues.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
                             Labs/Coding Rooms
                         </div>
@@ -1217,34 +1200,53 @@ require_once('components/navbar.php');
                         </div>
                     </div>
                     
-                    <!-- Event 6 -->
-                    <div class="event-time">21:00 - 22:00</div>
-                    <div id="event-dinner1" class="event-content">
-                        <h3 class="event-title">Dinner</h3>
-                        <p class="event-description">Organized batch-wise for smooth flow. Nutritious meal to sustain participants through the late-night coding session.</p>
+                    <!-- Event 5 -->
+                    <div class="event-time">18:00 - 19:00</div>
+                    <div id="event-round1-mentorship" class="event-content">
+                        <h3 class="event-title">Round 1 - Mentorship & Evaluation</h3>
+                        <p class="event-description">Mentors provide guidance to teams and initial evaluation of progress. Teams receive feedback and suggestions for improvement.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
-                            Mess/Cafeteria
+                            Same venues
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag workshop" data-category="activity">Mentorship</span>
+                            <span class="event-tag important" data-category="important">Evaluation</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 6 -->
+                    <div class="event-time">19:00 - 21:00</div>
+                    <div id="event-dj-dinner" class="event-content">
+                        <h3 class="event-title">DJ + Dinner</h3>
+                        <p class="event-description">Entertainment and dinner time with DJ music to keep the energy high. Participants can enjoy their meal while listening to music and networking.</p>
+                        <div class="event-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
+                            </svg>
+                            Open Lawn/Cafeteria
                         </div>
                         <div class="event-tags">
                             <span class="event-tag food" data-category="food">Food</span>
+                            <span class="event-tag" data-category="activity">Entertainment</span>
                         </div>
                     </div>
                     
                     <!-- Event 7 -->
-                    <div class="event-time">22:00 - 01:00</div>
-                    <div id="event-round2-2" class="event-content">
-                        <h3 class="event-title">Round 2 - Phase 2: Continued Development</h3>
-                        <p class="event-description">Late-night development continues with energy drinks and snacks available. Teams push forward with their prototype implementation.</p>
+                    <div class="event-time">21:00 - 00:00</div>
+                    <div id="event-round2-begins" class="event-content">
+                        <h3 class="event-title">Round 2 - Begins</h3>
+                        <p class="event-description">Second round of development begins. Teams continue working on their prototypes with enhanced features and improvements.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
-                            Same venues
+                            Labs/Coding Rooms
                         </div>
                         <div class="event-tags">
                             <span class="event-tag" data-category="round">Competition</span>
@@ -1252,37 +1254,20 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 8 -->
-                    <div class="event-time">01:00 - 02:00</div>
-                    <div id="event-round2-judging" class="event-content">
-                        <h3 class="event-title">Round 2 Judgement By Jury Panel</h3>
-                        <p class="event-description">Evaluation based on working prototype/code and progress. The jury panel will assess the current state of development.</p>
+                    <div class="event-time">00:00 - 02:00</div>
+                    <div id="event-round2-fun" class="event-content">
+                        <h3 class="event-title">Round 2 with Fun Activities & Sleeping Time</h3>
+                        <p class="event-description">Continued development with fun activities integrated. Sleeping areas available for participants who need rest. Energy drinks and snacks provided.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
-                            Jury Rooms
+                            Labs & Rest Areas
                         </div>
                         <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Judging</span>
                             <span class="event-tag" data-category="round">Competition</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 9 -->
-                    <div class="event-time">02:00 - 03:00</div>
-                    <div id="event-fun" class="event-content">
-                        <h3 class="event-title">Fun Activities (DJ Night) OR Bedtime for participants</h3>
-                        <p class="event-description">Participants can choose to join DJ night and other fun activities, or they can rest in the chill zone and sleeping area.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Open Lawn/Recreation Hall
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag" data-category="activity">Activity</span>
+                            <span class="event-tag" data-category="activity">Fun Activities</span>
                         </div>
                     </div>
                 </div>
@@ -1300,16 +1285,16 @@ require_once('components/navbar.php');
                 
                 <div class="events-grid">
                     <!-- Event 1 -->
-                    <div class="event-time">03:00 - 07:00</div>
-                    <div id="event-round3-1" class="event-content">
-                        <h3 class="event-title">Round 3 - Phase 1: Final Dev & PPT Prep</h3>
-                        <p class="event-description">Teams finalize their product and start building their pitch deck for the final presentation.</p>
+                    <div class="event-time">02:00 - 04:00</div>
+                    <div id="event-final-round" class="event-content">
+                        <h3 class="event-title">Final Round</h3>
+                        <p class="event-description">Final coding round where teams put finishing touches to their projects and prepare for evaluation.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
-                            Same labs
+                            Labs/Coding Rooms
                         </div>
                         <div class="event-tags">
                             <span class="event-tag" data-category="round">Competition</span>
@@ -1317,14 +1302,49 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="event-time">07:00 - 08:00</div>
-                    <div id="event-breakfast" class="event-content">
-                        <h3 class="event-title">Breakfast</h3>
-                        <p class="event-description">Healthy breakfast options and hydration to energize participants for the final stretch.</p>
+                    <div class="event-time">04:00 - 05:00</div>
+                    <div id="event-final-mentorship" class="event-content">
+                        <h3 class="event-title">Final Mentorship</h3>
+                        <p class="event-description">Final mentorship session where teams receive last-minute guidance and feedback from mentors before presentation.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
+                            </svg>
+                            Same venues
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag workshop" data-category="activity">Mentorship</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 3 -->
+                    <div class="event-time">05:00 - 07:00</div>
+                    <div id="event-compile-prepare" class="event-content">
+                        <h3 class="event-title">Compile & Prepare PPT, GitHub Upload and Demo Video</h3>
+                        <p class="event-description">Teams finalize their projects, prepare presentation slides, upload code to GitHub, and create demo videos for final presentation.</p>
+                        <div class="event-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
+                            </svg>
+                            Labs/Presentation Rooms
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag important" data-category="important">Preparation</span>
+                            <span class="event-tag" data-category="round">Competition</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 4 -->
+                    <div class="event-time">07:00 - 08:00</div>
+                    <div id="event-breakfast" class="event-content">
+                        <h3 class="event-title">Breakfast</h3>
+                        <p class="event-description">Healthy breakfast options and hydration to energize participants for the final presentations.</p>
+                        <div class="event-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
                             Cafeteria
                         </div>
@@ -1333,56 +1353,39 @@ require_once('components/navbar.php');
                         </div>
                     </div>
                     
-                    <!-- Event 3 -->
-                    <div class="event-time">08:00 - 11:00</div>
-                    <div id="event-round3-2" class="event-content">
-                        <h3 class="event-title">Round 3 - Phase 2: Final Dev Touches + PPT Finishing</h3>
-                        <p class="event-description">Teams polish their tech solution and refine their presentation for the final evaluation.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Same venues
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag" data-category="round">Competition</span>
-                        </div>
-                    </div>
-                    
-                    <!-- Event 4 -->
-                    <div class="event-time">11:00 - 12:00</div>
-                    <div class="event-content featured">
-                        <h3 class="event-title">Final Evaluation by Panel (Shortlisting Top 20 Teams)</h3>
-                        <p class="event-description">Expert judges select the top 20 teams from 100 participants based on their completed solutions and presentations.</p>
-                        <div class="event-location">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
-                            Jury Rooms
-                        </div>
-                        <div class="event-tags">
-                            <span class="event-tag important" data-category="important">Judging</span>
-                            <span class="event-tag" data-category="round">Competition</span>
-                        </div>
-                    </div>
-                    
                     <!-- Event 5 -->
-                    <div class="event-time">12:00 - 14:00</div>
-                    <div id="event-final" class="event-content featured">
-                        <h3 class="event-title">Final Presentations by Top 20 Teams + Result Declaration</h3>
-                        <p class="event-description">The shortlisted teams present their solutions to all participants and judges. Each team gets 3-4 minutes to showcase their work, followed by the announcement of winners by 1 PM.</p>
+                    <div class="event-time">08:00 - 10:00</div>
+                    <div id="event-shortlisted-presentations" class="event-content featured">
+                        <h3 class="event-title">Shortlisted Teams Final Presentation Round</h3>
+                        <p class="event-description">Shortlisted teams present their solutions to judges and audience. Each team showcases their project, demo, and explains their technical approach.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
                             </svg>
                             Auditorium
                         </div>
                         <div class="event-tags">
                             <span class="event-tag important" data-category="important">Main Event</span>
                             <span class="event-tag" data-category="round">Finals</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Event 6 -->
+                    <div class="event-time">10:00 - 11:00</div>
+                    <div id="event-closing-ceremony" class="event-content featured">
+                        <h3 class="event-title">Closing Ceremony & Prize Distribution</h3>
+                        <p class="event-description">Official closing of ByteVerse 1.0 with result announcement, prize distribution to winners, and appreciation for all participants.</p>
+                        <div class="event-location">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 616 0z" />
+                            </svg>
+                            Auditorium
+                        </div>
+                        <div class="event-tags">
+                            <span class="event-tag important" data-category="important">Main Event</span>
+                            <span class="event-tag" data-category="activity">Ceremony</span>
                         </div>
                     </div>
                 </div>
