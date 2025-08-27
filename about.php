@@ -194,10 +194,10 @@ $additionalStyles = '
     padding: 0 1rem;
 }
 
-/* Desktop - 3 columns */
+/* Desktop - 4 columns */
 @media (min-width: 1025px) {
     .leaders-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
     }
 }
@@ -642,6 +642,17 @@ require_once('components/navbar.php');
                 </div>
             </div>
 
+            
+            <!-- Managing Director -->
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/about/MD.webp" alt="Managing Director" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Dr. Manbir Singh</h3>
+                    <p class="leader-title">Managing Director</p>
+                </div>
+            </div>
             <!-- Vice Chairman -->
             <div class="leader-card">
                 <div class="leader-image-container">
@@ -653,16 +664,17 @@ require_once('components/navbar.php');
                 </div>
             </div>
 
-            <!-- Managing Director -->
             <div class="leader-card">
                 <div class="leader-image-container">
-                    <img src="assets/Images/about/MD.webp" alt="Managing Director" class="leader-image" loading="lazy">
+                    <img src="assets/Images/about/ed.png" alt="Chairman" class="leader-image" loading="lazy">
                 </div>
                 <div class="leader-details">
-                    <h3 class="leader-name">Dr. Manbir Singh</h3>
-                    <p class="leader-title">Managing Director</p>
+                    <h3 class="leader-name">Dr. Nitin Tandon</h3>
+                    <p class="leader-title">Executive Director</p>
                 </div>
             </div>
+
+
         </div>
     </div>
 </section>

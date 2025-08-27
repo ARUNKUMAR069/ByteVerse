@@ -4,7 +4,7 @@
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="mb-6 md:mb-0">
                         <div class="text-xl md:text-2xl font-bold tracking-wider font-orbitron text-white text-center md:text-left">
-                            <span class="text-cyan-400">Byte</span>Verse<span class="text-cyan-400">.</span>
+                            <span class="text-cyan-400">Byte</span>Verse<class="text-cyan-400">.</span>
                         </div>
                         <p class="text-white mt-2 text-center md:text-left">The Ultimate Coding Universe</p>
                     </div>
