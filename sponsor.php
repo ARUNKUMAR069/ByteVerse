@@ -475,25 +475,59 @@ require_once('components/navbar.php');
                 <div class="w-16 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
             </div>
             
-            <form class="sponsor-form grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+            <!-- Added security attributes: novalidate for custom validation, autocomplete off -->
+            <form id="sponsor-form" class="sponsor-form grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" novalidate autocomplete="off">
+                <!-- CSRF protection token -->
+                <input type="hidden" name="csrf_token" value="<?php echo isset($_SESSION['csrf_token']) ? htmlspecialchars($_SESSION['csrf_token']) : ''; ?>">
+                
+                <!-- Honeypot field to catch bots - hidden from real users -->
+                <div class="form-group" style="display:none; position: absolute; left: -9999px;">
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                </div>
+                
                 <div class="form-group md:col-span-1">
                     <label for="company" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Company Name *</label>
-                    <input type="text" id="company" name="company" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Your company name">
+                    <input type="text" id="company" name="company" 
+                           required 
+                           class="w-full p-2 md:p-3 rounded-lg text-base" 
+                           placeholder="Your company name"
+                           maxlength="100"
+                           pattern="^[A-Za-z0-9\s\.,'-]{2,100}$">
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-1">
                     <label for="name" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Contact Person *</label>
-                    <input type="text" id="name" name="name" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Full name">
+                    <input type="text" id="name" name="name" 
+                           required 
+                           class="w-full p-2 md:p-3 rounded-lg text-base" 
+                           placeholder="Full name"
+                           maxlength="50"
+                           pattern="^[A-Za-z\s.-]{2,50}$">
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-1">
                     <label for="email" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Email Address *</label>
-                    <input type="email" id="email" name="email" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="email@company.com">
+                    <input type="email" id="email" name="email" 
+                           required 
+                           class="w-full p-2 md:p-3 rounded-lg text-base" 
+                           placeholder="email@company.com"
+                           maxlength="100"
+                           pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-1">
                     <label for="phone" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Your contact number">
+                    <input type="tel" id="phone" name="phone" 
+                           required 
+                           class="w-full p-2 md:p-3 rounded-lg text-base" 
+                           placeholder="Your contact number"
+                           maxlength="20"
+                           pattern="^[0-9+\-\s()]{10,20}$">
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-2">
@@ -507,15 +541,22 @@ require_once('components/navbar.php');
                         <option value="green_soul">Mission Go Green Sponsor</option>
                         <option value="custom">Custom Package</option>
                     </select>
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-2">
                     <label for="message" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Additional Information or Requirements</label>
-                    <textarea id="message" name="message" rows="4" class="w-full p-2 md:p-3 rounded-lg text-base" placeholder="Tell us about your sponsorship goals and any specific requirements"></textarea>
+                    <textarea id="message" name="message" 
+                              rows="4" 
+                              class="w-full p-2 md:p-3 rounded-lg text-base" 
+                              placeholder="Tell us about your sponsorship goals and any specific requirements"
+                              maxlength="1000"></textarea>
+                    <div class="char-count text-xs text-gray-400 mt-1 text-right"><span id="messageChars">0</span>/1000</div>
+                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
                 </div>
                 
                 <div class="form-group md:col-span-2 text-center mt-2 md:mt-4 flex items-center justify-center">
-                    <button type="submit" class="cyber-button primary w-full md:w-auto py-3 md:py-2 px-3 md:px-6 text-base">
+                    <button type="submit" id="submitBtn" class="cyber-button primary w-full md:w-auto py-3 md:py-2 px-3 md:px-6 text-base">
                         <span>Submit</span>
                         <i></i>
                     </button>
@@ -535,60 +576,313 @@ require_once('components/navbar.php');
 <!-- Add form submission script -->
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    const sponsorForm = document.querySelector('.sponsor-form');
+    const sponsorForm = document.getElementById('sponsor-form');
     const formStatus = document.getElementById('formStatus');
+    const submitBtn = document.getElementById('submitBtn');
+    const messageField = document.getElementById('message');
+    const messageChars = document.getElementById('messageChars');
     
+    // Character counter for message field
+    if (messageField && messageChars) {
+        updateCharCount();
+        
+        messageField.addEventListener("input", function() {
+            updateCharCount();
+        });
+    }
+    
+    function updateCharCount() {
+        const length = messageField.value.length;
+        messageChars.textContent = length;
+        
+        // Visual feedback for character limit
+        if (length > 900) {
+            messageChars.style.color = length >= 1000 ? "#ef4444" : "#f59e0b";
+        } else {
+            messageChars.style.color = "";
+        }
+    }
+    
+    // Validation functions with security checks
+    const validators = {
+        company: (value) => {
+            const regex = /^[A-Za-z0-9\s\.,'-]{2,100}$/;
+            return {
+                valid: regex.test(value),
+                message: "Company name should only contain letters, numbers, spaces, and basic punctuation"
+            };
+        },
+        name: (value) => {
+            const regex = /^[A-Za-z\s.-]{2,50}$/;
+            return {
+                valid: regex.test(value),
+                message: "Please enter a valid name (letters, spaces, dots, and hyphens only)"
+            };
+        },
+        email: (value) => {
+            const regex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
+            return {
+                valid: regex.test(value),
+                message: "Please enter a valid email address"
+            };
+        },
+        phone: (value) => {
+            const regex = /^[0-9+\-\s()]{10,20}$/;
+            return {
+                valid: regex.test(value),
+                message: "Please enter a valid phone number (10-20 digits)"
+            };
+        },
+        sponsorship_tier: (value) => {
+            return {
+                valid: value !== "",
+                message: "Please select a sponsorship tier"
+            };
+        },
+        message: (value) => {
+            if (value.length > 1000) {
+                return {
+                    valid: false,
+                    message: "Message is too long (maximum 1000 characters)"
+                };
+            }
+            
+            // Check for potentially malicious content
+            const dangerousPatterns = [
+                /<script/i, 
+                /<\/script>/i, 
+                /<iframe/i, 
+                /javascript:/i, 
+                /onerror=/i, 
+                /onload=/i, 
+                /onclick=/i,
+                /eval\(/i
+            ];
+            
+            const hasDangerousPattern = dangerousPatterns.some(pattern => pattern.test(value));
+            
+            return {
+                valid: !hasDangerousPattern,
+                message: hasDangerousPattern ? "Message contains disallowed content" : ""
+            };
+        }
+    };
+    
+    // Sanitize input to prevent XSS
+    function sanitizeInput(input) {
+        if (!input) return '';
+        
+        return input
+            .replace(/&/g, '&amp;')
+            .replace(/</g, '&lt;')
+            .replace(/>/g, '&gt;')
+            .replace(/"/g, '&quot;')
+            .replace(/'/g, '&#039;');
+    }
+    
+    // Validate individual field
+    function validateField(field) {
+        const value = field.value.trim();
+        const fieldName = field.name;
+        const errorElement = field.nextElementSibling;
+        
+        // Skip validation for non-required empty fields
+        if (!field.required && !value) {
+            hideError(field);
+            return true;
+        }
+        
+        // Required field check
+        if (field.required && !value) {
+            showError(field, "This field is required");
+            return false;
+        }
+        
+        // Field-specific validation
+        if (validators[fieldName]) {
+            const validation = validators[fieldName](value);
+            if (!validation.valid) {
+                showError(field, validation.message);
+                return false;
+            }
+        }
+        
+        hideError(field);
+        return true;
+    }
+    
+    function showError(field, message) {
+        field.classList.add('error-input');
+        const errorElement = field.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('error-message')) {
+            errorElement.textContent = message;
+            errorElement.classList.remove('hidden');
+        }
+    }
+    
+    function hideError(field) {
+        field.classList.remove('error-input');
+        const errorElement = field.nextElementSibling;
+        if (errorElement && errorElement.classList.contains('error-message')) {
+            errorElement.classList.add('hidden');
+        }
+    }
+    
+    // Set up form submission with security
     if (sponsorForm) {
+        // Validate fields on blur
+        const formInputs = sponsorForm.querySelectorAll('input:not([type="hidden"]), select, textarea');
+        formInputs.forEach(input => {
+            if (input.id === 'website') return; // Skip honeypot field
+            
+            input.addEventListener('blur', () => {
+                if (input.value.trim()) {
+                    validateField(input);
+                }
+            });
+            
+            input.addEventListener('input', () => {
+                // Clear error when user starts typing
+                hideError(input);
+            });
+        });
+        
+        // Form submission handler with security checks
         sponsorForm.addEventListener("submit", function(e) {
             e.preventDefault();
             
-            // Get form data
-            const formData = new FormData(sponsorForm);
+            // Disable button to prevent double submission
+            submitBtn.disabled = true;
+            
+            // Check honeypot field (bot detection)
+            const honeypot = document.getElementById('website');
+            if (honeypot && honeypot.value) {
+                console.log('Bot submission detected');
+                // Pretend the form submitted successfully to fool the bot
+                setTimeout(() => {
+                    showStatus("Thank you for your interest! Our team will contact you soon.", "success");
+                    sponsorForm.reset();
+                    submitBtn.disabled = false;
+                }, 1500);
+                return;
+            }
+            
+            // Validate all form fields
+            let formValid = true;
+            
+            formInputs.forEach(input => {
+                if (input.id === 'website') return; // Skip honeypot field
+                
+                if (!validateField(input)) {
+                    formValid = false;
+                }
+            });
+            
+            if (!formValid) {
+                showStatus("Please correct the errors in the form", "error");
+                submitBtn.disabled = false;
+                return;
+            }
             
             // Show sending status
             showStatus("Sending your inquiry...", "pending");
             
-            // Send data to the server - updated path to backend folder
+            // Create FormData with sanitized inputs
+            const formData = new FormData();
+            
+            // Sanitize and add all input values
+            formData.append('company', sanitizeInput(document.getElementById('company').value.trim()));
+            formData.append('name', sanitizeInput(document.getElementById('name').value.trim()));
+            formData.append('email', sanitizeInput(document.getElementById('email').value.trim()));
+            formData.append('phone', sanitizeInput(document.getElementById('phone').value.trim()));
+            formData.append('sponsorship_tier', document.getElementById('sponsorship_tier').value);
+            
+            const messageValue = document.getElementById('message').value.trim();
+            formData.append('message', sanitizeInput(messageValue));
+            
+            // Add timestamp to prevent caching
+            formData.append('timestamp', new Date().getTime());
+            
+            // Send data to the server with security headers
             fetch('backend/api/sponsor.php', {
                 method: 'POST',
-                body: formData
+                body: formData,
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                }
             })
-            .then(response => response.json())
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Network error: ${response.status}`);
+                }
+                return response.json();
+            })
             .then(data => {
                 if (data.success) {
                     showStatus(data.message, "success");
                     sponsorForm.reset();
+                    
+                    // Reset character counter
+                    if (messageChars) {
+                        messageChars.textContent = '0';
+                        messageChars.style.color = '';
+                    }
                 } else {
-                    showStatus(data.message, "error");
+                    showStatus(data.message || "An error occurred", "error");
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
                 showStatus("An error occurred. Please try again later.", "error");
+            })
+            .finally(() => {
+                // Re-enable the submit button
+                submitBtn.disabled = false;
             });
         });
     }
     
-    // Display status message
+    // Display status message with enhanced styling
     function showStatus(message, type) {
+        if (!formStatus) return;
+        
         formStatus.textContent = message;
-        formStatus.className = "form-status mt-6";
+        formStatus.className = "form-status mt-6 p-4 rounded-lg";
         formStatus.classList.remove("hidden");
         
-        if (type) {
-            formStatus.classList.add(type);
+        switch(type) {
+            case 'success':
+                formStatus.classList.add('bg-green-900/30', 'text-green-400', 'border', 'border-green-400/30');
+                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
+                break;
+            case 'error':
+                formStatus.classList.add('bg-red-900/30', 'text-red-400', 'border', 'border-red-400/30');
+                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> ${message}`;
+                break;
+            case 'pending':
+                formStatus.classList.add('bg-blue-900/30', 'text-blue-400', 'border', 'border-blue-400/30');
+                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> ${message}`;
+                break;
         }
         
-        // Clear success messages after 5 seconds
+        // Scroll to the status message
+        formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        
+        // Auto-hide success messages after 5 seconds
         if (type === "success") {
             setTimeout(() => {
-                formStatus.classList.add("hidden");
+                formStatus.style.opacity = '0';
+                formStatus.style.transition = 'opacity 0.5s ease';
+                
+                setTimeout(() => {
+                    formStatus.classList.add("hidden");
+                    formStatus.style.opacity = '1';
+                }, 500);
             }, 5000);
         }
     }
 });
 </script>
-
 <style>
 /* Sponsorship H1 Responsive - IMPORTANT */
 @media (max-width: 320px) {
@@ -695,6 +989,54 @@ document.addEventListener("DOMContentLoaded", function() {
         padding-top: 3rem !important;
         padding-bottom: 3rem !important;
     }
+}
+
+/* Form validation styles */
+.sponsor-form input.error-input,
+.sponsor-form select.error-input,
+.sponsor-form textarea.error-input {
+    border-color: #ef4444 !important;
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.sponsor-form input:focus,
+.sponsor-form select:focus,
+.sponsor-form textarea:focus {
+    outline: none;
+    border-color: #06b6d4;
+}
+
+.error-message {
+    font-size: 0.75rem;
+    margin-top: 0.25rem;
+    color: #ef4444;
+}
+
+/* Status message styles */
+.form-status {
+    transition: all 0.3s ease;
+}
+
+/* Character counter */
+.char-count {
+    text-align: right;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    transition: color 0.3s ease;
+}
+
+/* Disabled button state */
+.cyber-button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+    to {transform: rotate(360deg);}
+}
+.animate-spin {
+    animation: spin 1s linear infinite;
 }
 </style>
 
