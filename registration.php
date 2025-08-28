@@ -36,13 +36,6 @@ require_once('components/navbar.php');
     <div class="circuit-dots"></div>
     <div class="registration-container">
 
-      <!-- Early Bird Note
-      <div class="mb-6 max-w-xl mx-auto">
-        <div style="background:rgba(34,197,94,0.12);border:1.5px solid #22c55e;padding:1rem 1.5rem;border-radius:0.75rem;text-align:center;font-weight:600;color:#22c55e;">
-          <span>Early Bird is live! Hurry up 🚀</span>
-        </div>
-      </div> -->
-
       <!-- Registration Info Box -->
       <div class="registration-info">
         <h3>Registration Information</h3>
@@ -51,7 +44,6 @@ require_once('components/navbar.php');
           <li>Team size must be between 3–5 members</li>
           <li><strong>We are charging 500 rupees for registration, games and 3 time meals per team.</strong></li>
           <li>Each team must have a unique team name</li>
-          <!-- <li>All participants must be 18+ or have guardian consent</li> -->
           <li>Each participant must bring their own laptop</li>
           <li>Registration closes on September 20, 2025 or when capacity is reached</li>
         </ul>
@@ -164,7 +156,18 @@ require_once('components/navbar.php');
 
               <div class="form-group">
                 <label for="leader_phone" class="input-label field-required">Phone Number</label>
-                <input type="tel" class="cyber-input" id="leader_phone" name="leader_phone" placeholder="Your phone number" required>
+                <input
+                  type="tel"
+                  class="cyber-input"
+                  id="leader_phone"
+                  name="leader_phone"
+                  placeholder="Your phone number"
+                  inputmode="numeric"
+                  pattern="^\d{10}$"
+                  minlength="10"
+                  maxlength="10"
+                  required
+                >
               </div>
 
               <div class="form-group">

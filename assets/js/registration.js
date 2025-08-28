@@ -2,25 +2,18 @@
 (function () {
   // Get the correct API URL for both local and production environments
   const getApiUrl = () => {
-    // Get the current base URL (protocol + host)
     const baseUrl = window.location.protocol + '//' + window.location.host;
-    
-    // Check if we're in production (byteverse.net.in) or local
     const isProduction = window.location.hostname.includes('byteverse.net.in');
-    
-    // For production, use the URL without .php extension
+
     if (isProduction) {
       console.log("Production environment detected");
       return baseUrl + '/backend/api/registration';
     } else {
       console.log("Development environment detected");
-      // For local development
       const pathName = window.location.pathname;
       const inNew2Context = pathName.includes('/new2/');
-      
-      // For local development, include the .php extension
-      return inNew2Context 
-        ? baseUrl + '/new2/backend/api/registration.php' 
+      return inNew2Context
+        ? baseUrl + '/new2/backend/api/registration.php'
         : baseUrl + '/backend/api/registration.php';
     }
   };
@@ -31,15 +24,8 @@
   const form = document.getElementById('registration-form');
   const successBox = document.getElementById('registration-success');
 
-  // Check if elements exist to prevent null reference errors
-  if (!form) {
-    console.error('Registration form not found');
-    return;
-  }
-  
-  if (!successBox) {
-    console.error('Success box not found');
-  }
+  if (!form) { console.error('Registration form not found'); return; }
+  if (!successBox) { console.error('Success box not found'); }
 
   const stepField = document.getElementById('step');
   const sessionField = document.getElementById('session_id');
@@ -49,6 +35,49 @@
 
   let currentStep = 1;
   let sessionId = '';
+
+  // ---------- Validation helpers ----------
+  const cleanText = (s) => (s ?? '').toString().trim();
+  const cleanPhone = (s) => cleanText(s).replace(/[^\d]/g, '');
+  const isValidEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(cleanText(s));
+  const isValidPhone10 = (s) => /^\d{10}$/.test(cleanPhone(s));
+  const inRange = (n, min, max) => Number.isInteger(n) && n >= min && n <= max;
+
+  const markErr = (el) => { if (el) el.classList.add('input-error'); };
+  const unmarkErr = (el) => { if (el) el.classList.remove('input-error'); };
+
+  const validateMemberByIndex = (idx, required = true) => {
+    const name = document.getElementById(idx === 1 ? 'leader_name'  : `member${idx}_name`);
+    const email= document.getElementById(idx === 1 ? 'leader_email' : `member${idx}_email`);
+    const phone= document.getElementById(idx === 1 ? 'leader_phone' : `member${idx}_phone`);
+    const role = document.getElementById(idx === 1 ? 'leader_role'  : `member${idx}_role`);
+
+    let ok = true;
+
+    const nm = cleanText(name?.value);
+    const em = cleanText(email?.value);
+    const ph = cleanPhone(phone?.value);
+    const rl = cleanText(role?.value);
+
+    if (required) {
+      if (!nm) { markErr(name); ok = false; } else unmarkErr(name);
+      if (!isValidEmail(em)) { markErr(email); ok = false; } else unmarkErr(email);
+      if (!isValidPhone10(ph)) { markErr(phone); ok = false; } else unmarkErr(phone);
+      if (!rl) { markErr(role); ok = false; } else unmarkErr(role);
+    } else {
+      const any = nm || em || ph || rl;
+      if (any) {
+        if (!nm) { markErr(name); ok = false; } else unmarkErr(name);
+        if (!isValidEmail(em)) { markErr(email); ok = false; } else unmarkErr(email);
+        if (!isValidPhone10(ph)) { markErr(phone); ok = false; } else unmarkErr(phone);
+        if (!rl) { markErr(role); ok = false; } else unmarkErr(role);
+      } else {
+        [name, email, phone, role].forEach(unmarkErr);
+      }
+    }
+    if (phone && ph) phone.value = ph;
+    return ok;
+  };
 
   // Helpers
   const setStep = (n) => {
@@ -65,63 +94,40 @@
 
   const postFormData = async (fd) => {
     try {
-      console.log(`Sending request to: ${API_URL}`);
-      console.log('Form data being sent:', Object.fromEntries(fd.entries()));
-      
-      // Use XMLHttpRequest instead of fetch for better error handling
       return new Promise((resolve, reject) => {
         const xhr = new XMLHttpRequest();
-        
         xhr.open('POST', API_URL, true);
         xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-        // Add this line to ensure it's properly recognized as POST
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        
-        // Add debug listener to track redirects
+
         xhr.onreadystatechange = function() {
           if (xhr.readyState > 2) {
-            console.log(`XHR state ${xhr.readyState}, status: ${xhr.status}, response URL: ${xhr.responseURL || 'N/A'}`);
             if (xhr.responseURL && xhr.responseURL !== API_URL) {
               console.warn(`Request redirected from ${API_URL} to ${xhr.responseURL}`);
             }
           }
         };
-        
+
         xhr.onload = function() {
           if (this.status >= 200 && this.status < 300) {
             try {
               const data = JSON.parse(this.responseText);
-              console.log('Server response:', data);
               resolve(data);
             } catch (e) {
-              console.error('Error parsing response:', e);
-              console.log('Raw response:', this.responseText);
               reject({ success: false, message: 'Server returned an invalid response.' });
             }
           } else {
-            console.error('Server error response:', this.status, this.statusText);
             reject({ success: false, message: `Server error: ${this.status} ${this.statusText}` });
           }
         };
-        
-        xhr.onerror = function() {
-          console.error('Network error occurred');
-          reject({ success: false, message: 'Network error. Please check your connection and try again.' });
-        };
-        
-        xhr.ontimeout = function() {
-          console.error('Request timed out');
-          reject({ success: false, message: 'Request timed out. Please try again.' });
-        };
-        
-        xhr.timeout = 30000; // 30 seconds timeout
-        
-        // Convert FormData to URL encoded string for proper POST transmission
+        xhr.onerror = function() { reject({ success: false, message: 'Network error. Please check your connection and try again.' }); };
+        xhr.ontimeout = function() { reject({ success: false, message: 'Request timed out. Please try again.' }); };
+        xhr.timeout = 30000;
+
         const urlEncodedData = new URLSearchParams(fd).toString();
         xhr.send(urlEncodedData);
       });
     } catch (e) {
-      console.error('Form submission error:', e);
       return { success: false, message: 'Network connection error. Please check your internet connection and try again.' };
     }
   };
@@ -131,13 +137,14 @@
     return sizeEl && sizeEl.value ? parseInt(sizeEl.value, 10) : 0;
   };
 
+  // STRICT generator: members 2..size are required (UI text unchanged)
   const genAdditionalMembers = (size) => {
     const wrap = document.getElementById('additional-members');
     if (!wrap) return;
-    
+
     wrap.innerHTML = '';
     if (!size || size < 2) return;
-    
+
     for (let i = 2; i <= size; i++) {
       const idx = i;
       const block = document.createElement('div');
@@ -150,21 +157,22 @@
         <div class="form-grid">
           <div class="form-group">
             <label class="input-label" for="member${idx}_name">Full Name</label>
-            <input type="text" class="cyber-input" id="member${idx}_name" name="member${idx}_name" placeholder="Full name">
+            <input type="text" class="cyber-input" id="member${idx}_name" name="member${idx}_name" placeholder="Full name" required>
           </div>
           <div class="form-group">
             <label class="input-label" for="member${idx}_email">Email</label>
-            <input type="email" class="cyber-input" id="member${idx}_email" name="member${idx}_email" placeholder="Email address">
+            <input type="email" class="cyber-input" id="member${idx}_email" name="member${idx}_email" placeholder="Email address" required>
           </div>
           <div class="form-group">
             <label class="input-label" for="member${idx}_phone">Phone</label>
-            <input type="tel" class="cyber-input" id="member${idx}_phone" name="member${idx}_phone" placeholder="Phone number">
+            <input type="tel" class="cyber-input" id="member${idx}_phone" name="member${idx}_phone"
+                   placeholder="Phone number" inputmode="numeric" pattern="^\\d{10}$" minlength="10" maxlength="10" required>
           </div>
           <div class="form-group">
             <label class="input-label" for="member${idx}_role">Role</label>
             <div class="select-wrapper">
-              <select class="cyber-input" id="member${idx}_role" name="member${idx}_role">
-                <option value="" selected>Choose role (optional)</option>
+              <select class="cyber-input" id="member${idx}_role" name="member${idx}_role" required>
+                <option value="" selected>Choose role</option>
                 <option value="frontend">Frontend Developer</option>
                 <option value="backend">Backend Developer</option>
                 <option value="fullstack">Full Stack Developer</option>
@@ -190,10 +198,7 @@
       clearErrors();
 
       const goTo = parseInt(btn.dataset.next, 10);
-      if (isNaN(goTo)) {
-        console.error('Invalid next step value');
-        return;
-      }
+      if (isNaN(goTo)) return;
 
       try {
         if (currentStep === 1) {
@@ -205,11 +210,15 @@
 
           let ok = true;
           [team_name, team_size, institution, challenge_track].forEach(inp => {
-            if (!inp || !inp.value) { 
-              if (inp) showError(inp);
-              ok = false; 
-            }
+            if (!inp || !inp.value) { if (inp) showError(inp); ok = false; }
           });
+
+          // Enforce 3..5 team size and whitelist track
+          const sizeVal = parseInt(team_size.value, 10);
+          if (!(Number.isInteger(sizeVal) && sizeVal >= 3 && sizeVal <= 5)) { showError(team_size); ok = false; }
+          const allowedTracks = ['agriculture','cyber_security','iot_xr','healthcare','open_innovation'];
+          if (!allowedTracks.includes(challenge_track.value)) { showError(challenge_track); ok = false; }
+
           if (!ok) return;
 
           // Save step 1
@@ -222,10 +231,7 @@
 
           try {
             const resp = await postFormData(fd);
-            if (!resp || !resp.success) { 
-              alert(resp?.message || 'Failed to save team information. Please try again.');
-              return; 
-            }
+            if (!resp || !resp.success) { alert(resp?.message || 'Failed to save team information. Please try again.'); return; }
 
             sessionId = resp.data?.session_id || '';
             if (sessionField) sessionField.value = sessionId;
@@ -234,25 +240,28 @@
             genAdditionalMembers(getTeamSize());
             setStep(goTo);
           } catch (err) {
-            console.error('Step 1 error:', err);
             alert(err.message || 'An error occurred. Please try again.');
           }
         }
         else if (currentStep === 2) {
-          // Validate leader fields
-          const leader_name = document.getElementById('leader_name');
-          const leader_email = document.getElementById('leader_email');
-          const leader_phone = document.getElementById('leader_phone');
-          const leader_role = document.getElementById('leader_role');
+          const sizeVal = getTeamSize();
+          if (!inRange(sizeVal, 3, 5)) { alert('Team size must be between 3 and 5.'); return; }
 
-          let ok = true;
-          [leader_name, leader_email, leader_phone, leader_role].forEach(inp => {
-            if (!inp || !inp.value) { 
-              if (inp) showError(inp);
-              ok = false; 
-            }
-          });
+          // leader required
+          let ok = validateMemberByIndex(1, true);
+          // members 2..team_size required
+          for (let i = 2; i <= sizeVal; i++) {
+            ok = validateMemberByIndex(i, true) && ok;
+          }
           if (!ok) return;
+
+          // normalize phones into the form before submit
+          const leaderPhone = document.getElementById('leader_phone');
+          if (leaderPhone) leaderPhone.value = cleanPhone(leaderPhone.value);
+          for (let i = 2; i <= sizeVal; i++) {
+            const ph = document.getElementById(`member${i}_phone`);
+            if (ph) ph.value = cleanPhone(ph.value);
+          }
 
           // Save step 2
           const fd = new FormData(form);
@@ -261,18 +270,13 @@
 
           try {
             const resp = await postFormData(fd);
-            if (!resp || !resp.success) { 
-              alert(resp?.message || 'Failed to save team members. Please try again.');
-              return; 
-            }
+            if (!resp || !resp.success) { alert(resp?.message || 'Failed to save team members. Please try again.'); return; }
             setStep(goTo);
           } catch (err) {
-            console.error('Step 2 error:', err);
             alert(err.message || 'An error occurred. Please try again.');
           }
         }
       } catch (e) {
-        console.error('Next step error:', e);
         alert('An unexpected error occurred. Please try again.');
       }
     });
@@ -282,9 +286,7 @@
     btn.addEventListener('click', (e) => {
       e.preventDefault();
       const backTo = parseInt(btn.dataset.prev, 10);
-      if (!isNaN(backTo)) {
-        setStep(backTo);
-      }
+      if (!isNaN(backTo)) setStep(backTo);
     });
   });
 
@@ -293,25 +295,22 @@
     e.preventDefault();
     clearErrors();
 
-    // Validate step 3 - modified to make project fields optional
     const techs = [...document.querySelectorAll('input[name="technologies[]"]:checked')];
     const terms = document.getElementById('terms_agree');
 
     let isValid = true;
-    
-    // Only validate required fields
     if (!techs || techs.length === 0) {
-        const groupError = document.querySelector('.group-error');
-        if (groupError) groupError.style.display = 'block';
-        isValid = false;
+      const groupError = document.querySelector('.group-error');
+      if (groupError) groupError.style.display = 'block';
+      isValid = false;
     } else {
-        const groupError = document.querySelector('.group-error');
-        if (groupError) groupError.style.display = 'none';
+      const groupError = document.querySelector('.group-error');
+      if (groupError) groupError.style.display = 'none';
     }
-    
-    if (!terms || !terms.checked) { 
-        isValid = false; 
-        alert('Please agree to the Terms & Conditions and Code of Conduct.'); 
+
+    if (!terms || !terms.checked) {
+      isValid = false;
+      alert('Please agree to the Terms & Conditions and Code of Conduct.');
     }
 
     if (!isValid) return;
@@ -323,10 +322,7 @@
 
     try {
       let resp = await postFormData(fd3);
-      if (!resp || !resp.success) { 
-        alert(resp?.message || 'Failed to save project details. Please try again.');
-        return; 
-      }
+      if (!resp || !resp.success) { alert(resp?.message || 'Failed to save project details. Please try again.'); return; }
 
       // Finalize (step 4)
       const fd4 = new FormData();
@@ -334,17 +330,13 @@
       fd4.append('session_id', sessionId);
 
       resp = await postFormData(fd4);
-      if (!resp || !resp.success) { 
-        alert(resp?.message || 'Failed to complete registration. Please try again.');
-        return; 
-      }
+      if (!resp || !resp.success) { alert(resp?.message || 'Failed to complete registration. Please try again.'); return; }
 
       // Success UI
       form.style.display = 'none';
       if (successBox) successBox.style.display = 'block';
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } catch (err) {
-      console.error('Final submission error:', err);
       alert(err.message || 'An error occurred during final submission. Please try again.');
     }
   });
@@ -361,9 +353,4 @@
 
   // Initialize
   setStep(1);
-  
-  // Debug info
-  console.log('ByteVerse Registration Form initialized');
-  console.log('Current environment:', window.location.hostname);
-  console.log('Current pathname:', window.location.pathname);
 })();

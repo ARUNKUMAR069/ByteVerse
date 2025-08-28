@@ -50,7 +50,8 @@ require_once('components/navbar.php');
             </h1>
             <div class="hero-subtitle">
                 <span class="block text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-rajdhani text-cyan-400 opacity-80 mt-2 leading-tight">
-                    Decode · Develop · Disrupt
+                    The Ultimate Hackathon Experience <br>
+                    Where Ideas Meet Execution!
                 </span>
             </div>
         </div>
