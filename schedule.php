@@ -1132,7 +1132,7 @@ require_once('components/navbar.php');
                 
                 <div class="events-grid">
                     <!-- Event 1 -->
-                    <div class="event-time">09:00 - 11:00</div>
+                    <div class="event-time">09:00 - 10:30</div>
                     <div id="event-registration" class="event-content">
                         <h3 class="event-title">Registration + Attendance & ID Card Distribution</h3>
                         <p class="event-description">Teams arrive, collect their ByteVerse badges, ID cards, and register for the hackathon. Volunteers will be available at counters to assist with the registration process.</p>
@@ -1149,7 +1149,7 @@ require_once('components/navbar.php');
                     </div>
                     
                     <!-- Event 2 -->
-                    <div class="event-time">11:00 - 13:00</div>
+                    <div class="event-time">10:30 - 13:00</div>
                     <div id="event-inauguration" class="event-content featured">
                         <h3 class="event-title">Inauguration Ceremony</h3>
                         <p class="event-description">Official opening of ByteVerse 1.0 with chief guests, dignitaries, and all teams seated. Introduction to the hackathon, rules explanation, and motivational keynotes.</p>
