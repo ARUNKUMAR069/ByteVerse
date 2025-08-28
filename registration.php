@@ -301,15 +301,41 @@ require_once('components/navbar.php');
           </svg>
         </div>
         <h3>Registration Complete!</h3>
-        <p>Your team has been successfully registered for ByteVerse 1.0.</p>
+        <p class="mb-4">Your team has been successfully registered for ByteVerse 1.0.</p>
 
-        <div class="mt-6 mb-8 p-5 bg-gray-900/50 border border-cyan-900/30 rounded-lg">
-          <h4 class="text-xl text-cyan-400 mb-3">Next Steps:</h4>
-          <ol class="list-decimal list-inside text-left space-y-2">
-            <li>Check your email for the registration confirmation (with your team’s registration code)</li>
-            <li>Join our community Discord to stay updated</li>
-            <li>Watch for schedule and check-in instructions closer to the event</li>
+        <div class="notice-box mb-6">
+          <h4 class="text-cyan-400 font-semibold mb-2">Important</h4>
+          <p class="text-sm leading-relaxed">
+            You will receive a confirmation email from <strong>info_byteverse@ctgroup.in</strong> shortly (check Spam/Promotions if not in Inbox).
+          </p>
+        </div>
+
+        <div class="payment-box mb-8">
+          <h4 class="text-lg font-semibold text-cyan-400 mb-3">Pay Registration Fee (₹500 per Team)</h4>
+          <ol class="list-decimal list-inside space-y-2 text-sm text-gray-300 mb-4">
+            <li>Scan the QR code below (or use any UPI app) to pay ₹500 (team fee).</li>
+            <li>Enter your Team Name in the payment note for faster verification.</li>
+            <li>After successful payment, take a screenshot.</li>
+            <li>Send the screenshot + Team Name to <strong>WhatsApp: 8707773540</strong>.</li>
           </ol>
+
+          <div class="qr-wrapper">
+            <!-- Replace src with your real QR image path -->
+            <img src="assets/Scanner.jpg" alt="Payment QR Code" class="qr-image">
+          </div>
+
+          <div class="mt-4 text-xs text-gray-400">
+            If the QR does not load, contact support or request UPI ID.
+          </div>
+        </div>
+
+        <div class="after-box mb-8">
+          <h5 class="text-cyan-400 font-medium mb-2">After Sending Screenshot</h5>
+          <ul class="list-disc list-inside space-y-1 text-sm text-gray-300">
+            <li>Verification may take up to 24 hours.</li>
+            <li>You will get a payment confirmation message.</li>
+            <li>Keep the confirmation email + payment proof safe.</li>
+          </ul>
         </div>
 
         <a href="index.php" class="cyber-button">
@@ -374,4 +400,39 @@ require_once('components/footer.php');
 .cyber-input.input-error { outline: 1px solid #ef4444; }
 .form-error { color: #f87171; font-size: .9rem; }
 .step-circle.active { background: #06b6d4; color: #0b1220; }
+
+.payment-box, .notice-box, .after-box {
+  background: rgba(12,25,40,0.6);
+  border: 1px solid rgba(6,182,212,0.25);
+  padding: 18px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+.payment-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 15% 20%, rgba(6,182,212,0.15), transparent 60%);
+  pointer-events: none;
+}
+.qr-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+  background: rgba(255,255,255,0.03);
+  border: 1px dashed rgba(6,182,212,0.35);
+  border-radius: 8px;
+}
+.qr-image {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  image-rendering: crisp-edges;
+  filter: drop-shadow(0 0 6px rgba(6,182,212,0.3));
+}
+@media (max-width: 480px) {
+  .qr-image { width: 150px; height: 150px; }
+  .payment-box ol { font-size: 0.8rem; }
+}
 </style>
