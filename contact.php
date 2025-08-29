@@ -7,6 +7,7 @@ $currentPage = 'contact';
 
 // Include header
 require_once('components/header.php');
+require_once('components/navbar.php'); // ADDED to include the navigation bar
 ?>
 
 <!-- Contact Hero Section (No animated icons/text in background) -->
@@ -685,5 +686,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <?php 
 require_once('components/terminal.php');
-require_once('components/footer.php');
+require_once('components/footer.php'); // Footer already correctly included
 ?>
