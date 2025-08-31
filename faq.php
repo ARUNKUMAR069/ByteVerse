@@ -483,7 +483,7 @@ require_once('components/navbar.php');
                     </h2>
                 </div>
                 
-                <div class="faq-item">
+                <!-- <div class="faq-item">
                     <div class="faq-question">What is the format of ByteVerse 1.0?</div>
                     <div class="faq-answer">
                         <p>ByteVerse 1.0 is structured as a 24-hour continuous hackathon divided into several rounds:</p>
@@ -499,7 +499,7 @@ require_once('components/navbar.php');
                             <span class="faq-tag">Structure</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <div class="faq-item">
                     <div class="faq-question">What's the maximum team size?</div>
@@ -540,9 +540,9 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">What prizes can we win?</div>
                     <div class="faq-answer">
-                        <p>ByteVerse 1.0 offers prizes worth up to <span class="highlight">₹100,000</span>, distributed among the top-performing teams:</p>
+                        <p>ByteVerse 1.0 offers prizes worth up to <span class="highlight">₹50,000</span>, distributed among the top-performing teams:</p>
                         <ul>
-                            <li><span class="highlight">1st Place:</span> Cash prizes, internship opportunities, and gadgets</li>
+                            <li><span class="highlight">1st Place:</span> Cash prizes</li>
                             <li><span class="highlight">2nd Place:</span> Cash prizes and sponsored goodies</li>
                             <li><span class="highlight">3rd Place:</span> Cash prizes and sponsored goodies</li>
                             <li>Special recognition for innovation, design, and technical implementation</li>
@@ -577,7 +577,7 @@ require_once('components/navbar.php');
                 <div class="faq-item">
                     <div class="faq-question">When will winners be announced?</div>
                     <div class="faq-answer">
-                        <p>Winners will be announced on <span class="highlight">August 24th at 2:00 PM</span> during the closing ceremony. All participants are expected to attend the final presentations and closing ceremony where prizes will be distributed.</p>
+                        <p>Winners will be announced on <span class="highlight">September 28th at 2:00 PM</span> during the closing ceremony. All participants are expected to attend the final presentations and closing ceremony where prizes will be distributed.</p>
                         <div class="faq-tags">
                             <span class="faq-tag">Schedule</span>
                             <span class="faq-tag">Prizes</span>
