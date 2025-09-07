@@ -107,7 +107,7 @@ require_once('components/navbar.php');
                 <!-- Agriculture Domain -->
                 <div class="clean-domain-card">
                     <div class="absolute top-4 right-4">
-                        <span class="domain-tag sustainable">SUSTAINABLE</span>
+                        <!-- <span class="domain-tag sustainable">SUSTAINABLE</span> -->
                     </div>
                     <div class="domain-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -121,7 +121,7 @@ require_once('components/navbar.php');
                 <!-- Healthcare Domain -->
                 <div class="clean-domain-card">
                     <div class="absolute top-4 right-4">
-                        <span class="domain-tag critical">CRITICAL</span>
+                        <!-- <span class="domain-tag critical">CRITICAL</span> -->
                     </div>
                     <div class="domain-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -135,7 +135,7 @@ require_once('components/navbar.php');
                 <!-- IoT & XR Tech Domain -->
                 <div class="clean-domain-card">
                     <div class="absolute top-4 right-4">
-                        <span class="domain-tag immersive">IMMERSIVE</span>
+                        <!-- <span class="domain-tag immersive">IMMERSIVE</span> -->
                     </div>
                     <div class="domain-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -149,7 +149,7 @@ require_once('components/navbar.php');
                 <!-- Cyber Security Domain -->
                 <div class="clean-domain-card">
                     <div class="absolute top-4 right-4">
-                        <span class="domain-tag secure">SECURE</span>
+                        <!-- <span class="domain-tag secure">SECURE</span> -->
                     </div>
                     <div class="domain-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -163,7 +163,7 @@ require_once('components/navbar.php');
                 <!-- Open Innovation Domain -->
                 <div class="clean-domain-card md:col-span-2 lg:col-span-1">
                     <div class="absolute top-4 right-4">
-                        <span class="domain-tag freestyle">FREESTYLE</span>
+                        <!-- <span class="domain-tag freestyle">FREESTYLE</span> -->
                     </div>
                     <div class="domain-icon-wrapper">
                         <svg xmlns="http://www.w3.org/2000/svg" class="domain-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -229,7 +229,7 @@ require_once('components/navbar.php');
         <div class="text-center mb-12">
             <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Challenge <span class="text-cyan-400">Prizes</span></h2>
             <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-8"></div>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-6">
                 Exciting rewards await the most innovative solutions in each domain.
             </p>
         </div>
@@ -240,38 +240,38 @@ require_once('components/navbar.php');
             
             <div class="relative z-10 text-center">
                 <div class="mb-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 mx-auto text-cyan-400 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 mx-auto text-cyan-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                     </svg>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-white glitch-text" data-text="Coming Soon">Coming Soon</h2>
+                <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-white glitch-text" data-text="Prize Pool">Prize Pool</h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    We're finalizing our exciting prize pool for ByteVerse 1.0! Stay tuned for announcements about cash prizes, internship opportunities, tech gadgets, and special category awards.
+                    ByteVerse 1.0 features a total prize pool of ₹50,000, with cash prizes for winning teams and special category awards for exceptional innovation.
                 </p>
                 <div class="cyber-button-border w-full sm:w-auto inline-block text-sm sm:text-base">
                     <div class="cyber-button-glitch"></div>
-                    <div class="cyber-button-tag px-4 sm:px-8 py-2 sm:py-3">Prize Announcements Coming Soon</div>
+                    <div class="cyber-button-tag px-4 sm:px-8 py-2 sm:py-3">₹50,000 Prize Pool</div>
                 </div>
                 
                 <div class="mt-6 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 sm:gap-6 max-w-6xl mx-auto">
                     <div class="prize-placeholder bg-opacity-10 backdrop-blur-md bg-gray-800 border border-gray-700/30 rounded-lg p-4">
                         <h4 class="text-lg font-chakra text-amber-400 mb-2">1st Place</h4>
-                        <p class="text-gray-400 text-sm">Details coming soon</p>
+                        <p class="text-gray-400 text-sm">₹21,000 + Certificate</p>
                     </div>
                     
                     <div class="prize-placeholder bg-opacity-10 backdrop-blur-md bg-gray-800 border border-gray-700/30 rounded-lg p-4">
                         <h4 class="text-lg font-chakra text-gray-400 mb-2">2nd Place</h4>
-                        <p class="text-gray-400 text-sm">Details coming soon</p>
+                        <p class="text-gray-400 text-sm">₹11,000 + Certificate</p>
                     </div>
                     
                     <div class="prize-placeholder bg-opacity-10 backdrop-blur-md bg-gray-800 border border-gray-700/30 rounded-lg p-4">
                         <h4 class="text-lg font-chakra text-amber-700 mb-2">3rd Place</h4>
-                        <p class="text-gray-400 text-sm">Details coming soon</p>
+                        <p class="text-gray-400 text-sm">₹7,000 + Certificate</p>
                     </div>
                     
                     <div class="prize-placeholder bg-opacity-10 backdrop-blur-md bg-gray-800 border border-gray-700/30 rounded-lg p-4">
-                        <h4 class="text-lg font-chakra text-cyan-400 mb-2">Domain Prizes</h4>
-                        <p class="text-gray-400 text-sm">Details coming soon</p>
+                        <h4 class="text-lg font-chakra text-cyan-400 mb-2">Recognition</h4>
+                        <p class="text-gray-400 text-sm">Certificates</p>
                     </div>
                 </div>
             </div>
@@ -281,28 +281,28 @@ require_once('components/navbar.php');
         <div class="mt-12 text-center">
             <h3 class="text-2xl font-orbitron font-bold mb-4">Special Category Prizes</h3>
             <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-8">
-                We'll also announce special prizes for excellence in specific areas
+                Additional awards for excellence in these specialized areas
             </p>
             
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
                 <div class="special-prize bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-4">
                     <h4 class="text-lg font-chakra text-cyan-400 mb-2">Best UI/UX Design</h4>
-                    <p class="text-gray-400 text-sm">Coming soon</p>
+                    <p class="text-gray-400 text-sm">Certificate</p>
                 </div>
                 
                 <div class="special-prize bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-4">
                     <h4 class="text-lg font-chakra text-cyan-400 mb-2">Most Innovative Solution</h4>
-                    <p class="text-gray-400 text-sm">Coming soon</p>
+                    <p class="text-gray-400 text-sm">Certificate</p>
                 </div>
                 
                 <div class="special-prize bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-4">
                     <h4 class="text-lg font-chakra text-cyan-400 mb-2">Best Use of AI/ML</h4>
-                    <p class="text-gray-400 text-sm">Coming soon</p>
+                    <p class="text-gray-400 text-sm">Certificate</p>
                 </div>
                 
                 <div class="special-prize bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-4">
                     <h4 class="text-lg font-chakra text-cyan-400 mb-2">Social Impact Award</h4>
-                    <p class="text-gray-400 text-sm">Coming soon</p>
+                    <p class="text-gray-400 text-sm">Certificate</p>
                 </div>
             </div>
         </div>
