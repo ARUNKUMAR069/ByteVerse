@@ -679,7 +679,7 @@ require_once('components/navbar.php');
     </div>
 </section>
 
-<!-- CTA Section -->
+
 
 
 <!-- Include terminal and footer -->

@@ -108,6 +108,38 @@ require_once('components/navbar.php');
 <?php
 require_once('components/domain-showcase.php');
 require_once('components/sponsors-showcase.php');
+
+// Our Partners Section
+?>
+<section class="py-16 bg-gradient-to-b from-gray-900/50 to-transparent relative">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-4">Our <span class="text-cyan-400">Partners</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-6"></div>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Proud to collaborate with these organizations to make ByteVerse 1.0 a success.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+            <!-- Partner 1: Google Student Ambassador -->
+            <div class="flex justify-center items-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                <div class="w-full h-48 flex items-center justify-center p-4">
+                    <img src="assets/Images/sponsors/Google.jpg" alt="Google Student Ambassador" class="max-h-full object-contain">
+                </div>
+            </div>
+            
+            <!-- Partner 2: CU Updates -->
+            <div class="flex justify-center items-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
+                <div class="w-full h-48 flex items-center justify-center p-4">
+                    <img src="assets/Images/sponsors/CU.png" alt="CU Updates" class="max-h-full object-contain">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php
 // Include terminal
 require_once('components/terminal.php');
 

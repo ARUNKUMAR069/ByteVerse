@@ -89,954 +89,991 @@ require_once('components/navbar.php');
             <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Sponsorship <span class="text-cyan-400">Packages</span></h2>
             <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-12"></div>
             <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-10">
-                Join ByteVerse as a sponsor and connect with the brightest tech talent. Choose a tier that aligns with your goals.
+                Join ByteVerse as a sponsor and connect with the brightest tech talent. Compare tiers to find the perfect match for your goals.
             </p>
         </div>
         
-        <!-- Sponsor tiers grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <!-- Title Sponsor Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-red-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-rose-400">Title Sponsor</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹50,000+</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-rose-400 to-red-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-6 space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Highest level of visibility and branding
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on T-shirts, certificates, banners, posters
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Stall space + speaking opportunity
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-rose-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Featured on social media, website & event stage mentions
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mt-6 flex items-center justify-center">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary" >
-                        <span>Become Title Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
+        <!-- Sponsorship Tiers Comparison Table -->
+        <div class="relative max-w-7xl mx-auto px-4">
+            <!-- Mobile scroll indicator -->
+            <div class="md:hidden text-center mb-4 text-gray-400 text-sm flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                </svg>
+                Scroll horizontally to view all tiers
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 animate-pulse" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+                </svg>
             </div>
             
-            <!-- Gold Sponsor Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-yellow-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-yellow-400">Gold Sponsor</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹25,000+</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-yellow-400 to-amber-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-6 space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on website, flyers, banners, and certificates
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Social media recognition
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Medium-size logo on T-shirts
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-yellow-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Option to provide goodies or branded merchandise
-                        </li>
-                    </ul>
-                </div>
+            <div class="overflow-x-auto scrollbar-thin scrollbar-thumb-cyan-500 scrollbar-track-gray-800 rounded-lg shadow-lg border border-gray-700">
+                <!-- Scroll fade indicators -->
+                <div class="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-gray-900 to-transparent pointer-events-none z-10 md:hidden"></div>
+                <div class="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-gray-900 to-transparent pointer-events-none z-10 md:hidden"></div>
                 
-                <div class="mt-6 flex items-center justify-center">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
-                        <span>Become Gold Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Silver Sponsor Tier -->
-            <div class="sponsor-tier p-6 rounded-lg border border-gray-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-2xl font-orbitron font-bold text-gray-300">Silver Sponsor</h3>
-                        <div class="text-xl mt-2 mb-4 font-chakra">₹10,000+</div>
-                        <div class="w-16 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto"></div>
-                    </div>
+                <table class="w-full min-w-[900px] border-collapse">
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <!-- Benefits Column Header -->
+                            <th class="w-1/3 p-4 bg-gray-800/80 border border-gray-600 rounded-tl-lg text-left">
+                                <h3 class="text-xl font-orbitron text-white">Benefits</h3>
+                            </th>
+                            
+                            <!-- Title Sponsor Column Header -->
+                            <th class="w-1/6 p-4 bg-rose-900/20 border border-rose-500/30 relative overflow-hidden text-center">
+                                <div class="absolute -top-2 -right-12 w-24 h-6 bg-rose-500 rotate-45 flex items-center justify-center">
+                                    <span class="text-xs font-bold text-gray-900">PREMIER</span>
+                                </div>
+                                <h3 class="text-lg font-orbitron text-rose-400">Title Sponsor</h3>
+                                <p class="text-xl font-chakra mt-1 font-bold">₹50,000+</p>
+                            </th>
+                            
+                            <!-- Gold Sponsor Column Header -->
+                            <th class="w-1/6 p-4 bg-amber-900/20 border border-amber-500/30 text-center">
+                                <h3 class="text-lg font-orbitron text-amber-400">Gold</h3>
+                                <p class="text-xl font-chakra mt-1 font-bold">₹30,000+</p>
+                            </th>
+                            
+                            <!-- Silver Sponsor Column Header -->
+                            <th class="w-1/6 p-4 bg-gray-700/20 border border-gray-500/30 text-center">
+                                <h3 class="text-lg font-orbitron text-gray-300">Silver</h3>
+                                <p class="text-xl font-chakra mt-1 font-bold">₹20,000+</p>
+                            </th>
+                            
+                            <!-- Support Tier Column Header -->
+                            <th class="w-1/6 p-4 bg-indigo-900/20 border border-indigo-500/30 rounded-tr-lg text-center">
+                                <h3 class="text-lg font-orbitron text-indigo-400">Support</h3>
+                                <p class="text-xl font-chakra mt-1 font-bold">₹10,000+</p>
+                            </th>
+                        </tr>
+                    </thead>
                     
-                    <ul class="mt-6 space-y-3 text-gray-300">
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Logo on selected promotional material (flyers, banners)
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Small-size logo inclusion
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-gray-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Verbal mention during event + digital certificate of appreciation
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="mt-6 flex items-center justify-center">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button primary">
-                        <span>Become Silver Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
+                    <tbody>
+                        <!-- Table Row Group - Branding Benefits -->
+                        <tr>
+                            <td colspan="5" class="p-2 bg-gray-900 border-x border-gray-600 text-center">
+                                <span class="text-cyan-400 font-orbitron text-sm tracking-wider">BRANDING BENEFITS</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Logo on Event Website -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Logo on Event Website</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-indigo-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Logo on Event T-shirts -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Logo on Event T-shirts</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500 font-medium">Premium</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500 font-medium">Standard</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300 font-medium">Small</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Logo on Banners & Posters -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Logo on Banners & Posters</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500 font-medium">Premium</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Logo on Certificates -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Logo on Certificates</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row Group - Event Benefits -->
+                        <tr>
+                            <td colspan="5" class="p-2 bg-gray-900 border-x border-gray-600 text-center">
+                                <span class="text-purple-400 font-orbitron text-sm tracking-wider">EVENT BENEFITS</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Branding -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Branding</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-indigo-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Speaking Right -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Speaking Right</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Product Showcasing -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Product Showcasing</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Judging Role -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Judging Role</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Workshops -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Workshops</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Social Media Collab -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-purple-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Social Media Collab</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-indigo-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row Group - Additional Benefits -->
+                        <tr>
+                            <td colspan="5" class="p-2 bg-gray-900 border-x border-gray-600 text-center">
+                                <span class="text-cyan-400 font-orbitron text-sm tracking-wider">ADDITIONAL BENEFITS</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - AfterMovie -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">AfterMovie</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Inauguration -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Inauguration</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Creative Assets -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Creative Assets</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Special Installation -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Special Installation</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Recognition -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Recognition</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-indigo-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Memorandums -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Memorandums</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-indigo-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Verbal Mention -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Verbal Mention</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Problem Statement -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Problem Statement</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Logo Placement -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Logo Placement</span>
+                            </td>
+                            <td class="bg-rose-900/10 p-4 border border-rose-500/20 text-center">
+                                <span class="text-rose-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-amber-900/10 p-4 border border-amber-500/20 text-center">
+                                <span class="text-amber-500">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-gray-700/10 p-4 border border-gray-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-indigo-900/10 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Row - Marketing Collateral -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/30 border border-gray-600 flex items-center">
+                                <div class="w-2 h-2 bg-cyan-500 mr-2"></div>
+                                <span class="font-chakra font-medium text-white">Marketing Collateral</span>
+                            </td>
+                            <td class="bg-rose-900/5 p-4 border border-rose-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-amber-900/5 p-4 border border-amber-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                            <td class="bg-gray-700/5 p-4 border border-gray-500/20 text-center">
+                                <span class="text-gray-300">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">Yes</span>
+                            </td>
+                            <td class="bg-indigo-900/5 p-4 border border-indigo-500/20 text-center">
+                                <span class="text-red-400">
+                                    <svg class="h-6 w-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </span>
+                                <span class="sr-only">No</span>
+                            </td>
+                        </tr>
+                        
+                        <!-- Table Footer - Action Buttons -->
+                        <tr>
+                            <td class="p-4 bg-gray-800/60 border border-gray-600 rounded-bl-lg"></td>
+                            <td class="p-4 bg-rose-900/10 border border-rose-500/20 text-center">
+                                <a href="#contact-form" class="inline-block w-full text-center py-2 px-4 bg-rose-500/80 hover:bg-rose-600 text-white font-bold rounded-md transition-colors">
+                                    Select Tier
+                                </a>
+                            </td>
+                            <td class="p-4 bg-amber-900/10 border border-amber-500/20 text-center">
+                                <a href="#contact-form" class="inline-block w-full text-center py-2 px-4 bg-amber-500/80 hover:bg-amber-600 text-white font-bold rounded-md transition-colors">
+                                    Select Tier
+                                </a>
+                            </td>
+                            <td class="p-4 bg-gray-700/10 border border-gray-500/20 text-center">
+                                <a href="#contact-form" class="inline-block w-full text-center py-2 px-4 bg-gray-500/80 hover:bg-gray-600 text-white font-bold rounded-md transition-colors">
+                                    Select Tier
+                                </a>
+                            </td>
+                            <td class="p-4 bg-indigo-900/10 border border-indigo-500/20 rounded-br-lg text-center">
+                                <a href="#contact-form" class="inline-block w-full text-center py-2 px-4 bg-indigo-500/80 hover:bg-indigo-600 text-white font-bold rounded-md transition-colors">
+                                    Select Tier
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
-
-        <!-- Secondary Tiers Header -->
-        <div class="text-center mt-16 mb-10">
-            <h3 class="text-2xl font-orbitron font-bold">Additional <span class="text-cyan-400">Sponsorship</span> Options</h3>
-            <p class="text-gray-300 mt-4 max-w-3xl mx-auto">
-                We offer a variety of affordable sponsorship options to suit different goals and budgets.
-            </p>
-        </div>
-
-        <!-- Secondary Tier Packages -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            <!-- Supporter Tier -->
-            <div class="sponsor-tier p-5 rounded-lg border border-indigo-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-xl font-orbitron font-bold text-indigo-400">Supporter</h3>
-                        <div class="text-sm text-gray-400 mt-1">(Community Tier)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">Under ₹10,000</div>
-                        <div class="w-12 h-1 bg-gradient-to-r from-indigo-400 to-indigo-600 mx-auto"></div>
+        
+        <!-- Mission Go Green Special Section -->
+        <!-- <div class="mt-16 max-w-3xl mx-auto bg-gray-800/30 border border-green-500/20 rounded-lg p-6">
+            <div class="flex flex-col md:flex-row items-center gap-6">
+                <div class="w-full md:w-1/3">
+                    <div class="bg-green-900/20 rounded-full h-40 w-40 mx-auto flex items-center justify-center border-2 border-green-500/40">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-20 w-20 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                        </svg>
                     </div>
+                </div>
+                
+                <div class="w-full md:w-2/3 text-center md:text-left">
+                    <h3 class="text-2xl font-orbitron font-bold text-green-400 mb-3">Mission Go Green</h3>
+                    <p class="text-gray-300 mb-4">Support our environmental initiatives and showcase your company's commitment to sustainability. This special sponsorship tier helps fund our tree planting efforts.</p>
                     
-                    <ul class="mt-4 space-y-2 text-gray-300 text-sm ">
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div class="grid grid-cols-2 gap-4 mb-4">
+                        <div class="bg-gray-800/60 p-3 rounded flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
                             </svg>
-                            Name/logo on digital flyers and website
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Mention in post-event thank-you posts
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-indigo-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Recognition in the closing ceremony
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="mt-6 flex items-center justify-center">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Become Supporter</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Mission Go Green Sponsor Tier -->
-            <div class="sponsor-tier p-5 rounded-lg border border-green-500 bg-opacity-20 backdrop-blur-sm bg-gray-800 flex flex-col justify-between">
-                <div>
-                    <div class="text-center mb-4">
-                        <h3 class="text-xl font-orbitron font-bold text-green-400">Mission Go Green</h3>
-                        <div class="text-sm text-gray-400 mt-1">(Eco Tier)</div>
-                        <div class="text-lg mt-2 mb-3 font-chakra">Custom</div>
-                        <div class="w-12 h-1 bg-gradient-to-r from-green-400 to-green-600 mx-auto"></div>
-                    </div>
-                    
-                    <ul class="mt-4 space-y-2 text-gray-300 text-sm">
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Contribution to our tree plantation initiative
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Name/logo featured on "Go Green" banner
-                        </li>
-                        <li class="flex items-center justify-center">
-                            <svg class="h-4 w-4 text-green-400 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            Certificate of appreciation + shout out
-                        </li>
-                    </ul>
-                </div>
-
-                <div class="mt-6 flex items-center justify-center">
-                    <a href="#contact-form" class="block w-full py-2 px-4 text-center rounded cyber-button secondary-sm">
-                        <span>Become Green Sponsor</span>
-                        <i></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sponsor categories -->
-        <div class="mt-20 max-w-5xl mx-auto">
-            <h3 class="text-2xl font-orbitron font-bold mb-10 text-center">Sponsor <span class="text-cyan-400">Categories</span></h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="p-4 border-t-2 border-rose-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-rose-400">Title Sponsors</h4>
-                    <div class="flex flex-wrap gap-4">
-                        <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                    </div>
-                </div>
-                
-                <div class="p-4 border-t-2 border-yellow-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-yellow-400">Gold Sponsors</h4>
-                    <div class="flex flex-wrap gap-4">
-                        <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                    </div>
-                </div>
-                
-                <div class="p-4 border-t-2 border-gray-500">
-                    <h4 class="text-xl font-chakra font-bold mb-3 text-gray-300">Silver Sponsors</h4>
-                    <div class="flex flex-wrap gap-4">
-                        <!-- Add real sponsor logos here -->
-                        <div class="h-10 w-24  rounded">
-                            <img src="assets/images/sponsors/idfc.png" alt="Sponsor 3" class="max-h-10">
+                            <span class="text-white text-sm">Green Banner Recognition</span>
                         </div>
-                        <div class="h-10 w-12 rounded">
-                            <img src="assets/images/sponsors/chinar_forge_limited_logo.png" alt="Sponsor 4" class="max-h-5">
+                        <div class="bg-gray-800/60 p-3 rounded flex items-center">
+                            <svg class="h-5 w-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span class="text-white text-sm">Environmental Shoutout</span>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                <div class="p-3 border-t-2 border-indigo-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-indigo-400">Supporters</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                    </div>
-                </div>
-                
-                <div class="p-3 border-t-2 border-green-500">
-                    <h4 class="text-lg font-chakra font-bold mb-2 text-green-400">Mission Go Green Sponsors</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <div class="h-10 w-24 bg-gray-800 rounded flex items-center justify-center">COMING SOON</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Current Sponsors Section -->
-<section class="py-20 relative">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Our <span class="text-cyan-400">Partners</span></h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-12"></div>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto mb-10">
-                We're proud to partner with these innovative organizations that make ByteVerse 1.0 possible.
-            </p>
-        </div>
-        
-        <!-- Sponsors grid -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
-            <!-- Replace with actual sponsor logos - this is a placeholder structure -->
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/Images/sponsors/chinar_forge_limited_logo.png" alt="Sponsor 1" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/Images/sponsors/idfc.png" alt="Sponsor 2" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor3.png" alt="COMING SOON" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor4.png" alt="COMING SOON" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor5.png" alt="COMING SOON" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor6.png" alt="COMING SOON" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-cyan-400 p-6 rounded-lg flex items-center justify-center transition-all duration-300">
-                <img src="assets/images/sponsors/sponsor7.png" alt="COMING SOON" class="sponsor-logo max-h-16">
-            </div>
-            
-            <div class="sponsor-logo-container bg-gray-900/50 border border-gray-700 hover:border-purple-400 p-6 rounded-lg flex items-center justify-center group transition-all duration-300">
-                <div class="text-center">
-                    <div class="text-xl font-chakra text-cyan-400 mb-2">Your Logo Here</div>
-                    <a href="#contact-form" class="text-sm text-white hover:text-cyan-400 transition-colors">Become a sponsor</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Payment Details Section -->
-<section class="py-8 md:py-12 relative">
-    <div class="container mx-auto px-3 md:px-4">
-        <div class="max-w-4xl mx-auto bg-gray-900/50 border border-cyan-400/20 rounded-xl p-4 md:p-6 backdrop-blur-sm payment-details-container">
-            <div class="text-center mb-4 md:mb-8">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold mb-3 md:mb-4">Payment <span class="text-cyan-400">Details</span></h2>
-                <div class="w-16 md:w-20 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-3 md:mb-4"></div>
-                <p class="text-sm md:text-base text-gray-300 max-w-3xl mx-auto mb-4 md:mb-6">
-                    Secure your sponsorship by making a direct bank transfer using the details below.
-                </p>
-            </div>
-            
-            <div class="payment-info-box bg-gray-800/40 rounded-lg p-3 md:p-5 border border-gray-700 hover:border-cyan-400/30 transition-all duration-300">
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700">
-                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">Account Name</div>
-                        <div class="payment-info-value text-white text-sm md:text-base font-medium">CT Educational Society (CTES)</div>
-                    </div>
                     
-                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700">
-                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">Account Number</div>
-                        <div class="payment-info-value text-white text-sm md:text-base font-medium select-all">6916000100000225</div>
+                    <div class="text-center md:text-left">
+                        <a href="#contact-form" class="inline-block py-2 px-6 bg-green-500/80 hover:bg-green-600 text-white font-bold rounded-md transition-colors">
+                            Become a Green Sponsor
+                        </a>
                     </div>
-                    
-                    <div class="payment-info-item p-2 md:p-3 bg-gray-800/70 rounded-md border border-gray-700 sm:col-span-2">
-                        <div class="payment-info-label text-xs md:text-sm text-cyan-400 mb-1 font-chakra">IFSC Code</div>
-                        <div class="payment-info-value text-white text-sm md:text-base font-medium select-all">PUNB0691600</div>
-                    </div>
-                </div>
-                
-                <div class="payment-info-note bg-gray-800/40 p-3 rounded-md text-center text-xs md:text-sm">
-                    <p class="mb-2">Please mention <span class="text-cyan-400 font-medium">"ByteVerse Sponsorship"</span> and your company name in the payment reference.</p>
-                    <p>After making the payment, please notify us at <a href="mailto:info_byteverse@ctgroup.in" class="text-cyan-400 hover:underline break-words">info_byteverse@ctgroup.in</a> with your transaction details.</p>
                 </div>
             </div>
-            
-          
-        </div>
+        </div> -->
+        
+
     </div>
 </section>
 
-<!-- Sponsor Contact Form -->
-<section id="contact-form" class="py-12 md:py-20 relative">
-    <div class="container mx-auto px-3 md:px-4">
-        <div class="max-w-4xl mx-auto bg-gray-900/50 border border-cyan-400/20 rounded-xl p-4 md:p-6 lg:p-8 backdrop-blur-sm">
-            <div class="text-center mb-6 md:mb-10">
-                <h2 class="text-2xl md:text-3xl lg:text-4xl font-orbitron font-bold mb-4 md:mb-6">Become a <span class="text-cyan-400">Sponsor</span></h2>
-                <div class="w-16 md:w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
-            </div>
-            
-            <!-- Added security attributes: novalidate for custom validation, autocomplete off -->
-            <form id="sponsor-form" class="sponsor-form grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6" novalidate autocomplete="off">
-                <!-- CSRF protection token -->
-                <input type="hidden" name="csrf_token" value="<?php echo isset($_SESSION['csrf_token']) ? htmlspecialchars($_SESSION['csrf_token']) : ''; ?>">
-                
-                <!-- Honeypot field to catch bots - hidden from real users -->
-                <div class="form-group" style="display:none; position: absolute; left: -9999px;">
-                    <label for="website">Website</label>
-                    <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
-                </div>
-                
-                <div class="form-group md:col-span-1">
-                    <label for="company" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Company Name *</label>
-                    <input type="text" id="company" name="company" 
-                           required 
-                           class="w-full p-2 md:p-3 rounded-lg text-base" 
-                           placeholder="Your company name"
-                           maxlength="100"
-                           pattern="^[A-Za-z0-9\s\.,'-]{2,100}$">
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-1">
-                    <label for="name" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Contact Person *</label>
-                    <input type="text" id="name" name="name" 
-                           required 
-                           class="w-full p-2 md:p-3 rounded-lg text-base" 
-                           placeholder="Full name"
-                           maxlength="50"
-                           pattern="^[A-Za-z\s.-]{2,50}$">
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-1">
-                    <label for="email" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Email Address *</label>
-                    <input type="email" id="email" name="email" 
-                           required 
-                           class="w-full p-2 md:p-3 rounded-lg text-base" 
-                           placeholder="email@company.com"
-                           maxlength="100"
-                           pattern="^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$">
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-1">
-                    <label for="phone" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" 
-                           required 
-                           class="w-full p-2 md:p-3 rounded-lg text-base" 
-                           placeholder="Your contact number"
-                           maxlength="20"
-                           pattern="^[0-9+\-\s()]{10,20}$">
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-2">
-                    <label for="sponsorship_tier" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Interested Sponsorship Tier *</label>
-                    <select id="sponsorship_tier" name="sponsorship_tier" required class="w-full p-2 md:p-3 rounded-lg text-base">
-                        <option value="">Select a tier</option>
-                        <option value="title_sponsor">Title Sponsor (₹50,000+)</option>
-                        <option value="gold_sponsor">Gold Sponsor (₹25,000+)</option>
-                        <option value="silver_sponsor">Silver Sponsor (₹10,000+)</option>
-                        <option value="supporter">Supporter (Under ₹10,000)</option>
-                        <option value="green_soul">Mission Go Green Sponsor</option>
-                        <option value="custom">Custom Package</option>
-                    </select>
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-2">
-                    <label for="message" class="block text-sm font-chakra mb-1 md:mb-2 text-cyan-400">Additional Information or Requirements</label>
-                    <textarea id="message" name="message" 
-                              rows="4" 
-                              class="w-full p-2 md:p-3 rounded-lg text-base" 
-                              placeholder="Tell us about your sponsorship goals and any specific requirements"
-                              maxlength="1000"></textarea>
-                    <div class="char-count text-xs text-gray-400 mt-1 text-right"><span id="messageChars">0</span>/1000</div>
-                    <div class="error-message text-red-500 text-xs mt-1 hidden"></div>
-                </div>
-                
-                <div class="form-group md:col-span-2 text-center mt-2 md:mt-4 flex items-center justify-center">
-                    <button type="submit" id="submitBtn" class="cyber-button primary w-full md:w-auto py-3 md:py-2 px-3 md:px-6 text-base">
-                        <span>Submit</span>
-                        <i></i>
-                    </button>
-                </div>
-            </form>
-            
-            <div class="mt-6 md:mt-8 text-center text-xs md:text-sm text-gray-400">
-                <p>Our sponsorship team will get back to you within 48 hours to discuss your sponsorship opportunity.</p>
-            </div>
-
-            <!-- Form status message -->
-            <div id="formStatus" class="form-status mt-4 md:mt-6 hidden"></div>
-        </div>
-    </div>
-</section>
-
-<!-- Add form submission script -->
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const sponsorForm = document.getElementById('sponsor-form');
-    const formStatus = document.getElementById('formStatus');
-    const submitBtn = document.getElementById('submitBtn');
-    const messageField = document.getElementById('message');
-    const messageChars = document.getElementById('messageChars');
-    
-    // Character counter for message field
-    if (messageField && messageChars) {
-        updateCharCount();
-        
-        messageField.addEventListener("input", function() {
-            updateCharCount();
-        });
-    }
-    
-    function updateCharCount() {
-        const length = messageField.value.length;
-        messageChars.textContent = length;
-        
-        // Visual feedback for character limit
-        if (length > 900) {
-            messageChars.style.color = length >= 1000 ? "#ef4444" : "#f59e0b";
-        } else {
-            messageChars.style.color = "";
-        }
-    }
-    
-    // Validation functions with security checks
-    const validators = {
-        company: (value) => {
-            const regex = /^[A-Za-z0-9\s\.,'-]{2,100}$/;
-            return {
-                valid: regex.test(value),
-                message: "Company name should only contain letters, numbers, spaces, and basic punctuation"
-            };
-        },
-        name: (value) => {
-            const regex = /^[A-Za-z\s.-]{2,50}$/;
-            return {
-                valid: regex.test(value),
-                message: "Please enter a valid name (letters, spaces, dots, and hyphens only)"
-            };
-        },
-        email: (value) => {
-            const regex = /^[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}$/;
-            return {
-                valid: regex.test(value),
-                message: "Please enter a valid email address"
-            };
-        },
-        phone: (value) => {
-            const regex = /^[0-9+\-\s()]{10,20}$/;
-            return {
-                valid: regex.test(value),
-                message: "Please enter a valid phone number (10-20 digits)"
-            };
-        },
-        sponsorship_tier: (value) => {
-            return {
-                valid: value !== "",
-                message: "Please select a sponsorship tier"
-            };
-        },
-        message: (value) => {
-            if (value.length > 1000) {
-                return {
-                    valid: false,
-                    message: "Message is too long (maximum 1000 characters)"
-                };
-            }
-            
-            // Check for potentially malicious content
-            const dangerousPatterns = [
-                /<script/i, 
-                /<\/script>/i, 
-                /<iframe/i, 
-                /javascript:/i, 
-                /onerror=/i, 
-                /onload=/i, 
-                /onclick=/i,
-                /eval\(/i
-            ];
-            
-            const hasDangerousPattern = dangerousPatterns.some(pattern => pattern.test(value));
-            
-            return {
-                valid: !hasDangerousPattern,
-                message: hasDangerousPattern ? "Message contains disallowed content" : ""
-            };
-        }
-    };
-    
-    // Sanitize input to prevent XSS
-    function sanitizeInput(input) {
-        if (!input) return '';
-        
-        return input
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
-    }
-    
-    // Validate individual field
-    function validateField(field) {
-        const value = field.value.trim();
-        const fieldName = field.name;
-        const errorElement = field.nextElementSibling;
-        
-        // Skip validation for non-required empty fields
-        if (!field.required && !value) {
-            hideError(field);
-            return true;
-        }
-        
-        // Required field check
-        if (field.required && !value) {
-            showError(field, "This field is required");
-            return false;
-        }
-        
-        // Field-specific validation
-        if (validators[fieldName]) {
-            const validation = validators[fieldName](value);
-            if (!validation.valid) {
-                showError(field, validation.message);
-                return false;
-            }
-        }
-        
-        hideError(field);
-        return true;
-    }
-    
-    function showError(field, message) {
-        field.classList.add('error-input');
-        const errorElement = field.nextElementSibling;
-        if (errorElement && errorElement.classList.contains('error-message')) {
-            errorElement.textContent = message;
-            errorElement.classList.remove('hidden');
-        }
-    }
-    
-    function hideError(field) {
-        field.classList.remove('error-input');
-        const errorElement = field.nextElementSibling;
-        if (errorElement && errorElement.classList.contains('error-message')) {
-            errorElement.classList.add('hidden');
-        }
-    }
-    
-    // Set up form submission with security
-    if (sponsorForm) {
-        // Validate fields on blur
-        const formInputs = sponsorForm.querySelectorAll('input:not([type="hidden"]), select, textarea');
-        formInputs.forEach(input => {
-            if (input.id === 'website') return; // Skip honeypot field
-            
-            input.addEventListener('blur', () => {
-                if (input.value.trim()) {
-                    validateField(input);
-                }
-            });
-            
-            input.addEventListener('input', () => {
-                // Clear error when user starts typing
-                hideError(input);
-            });
-        });
-        
-        // Form submission handler with security checks
-        sponsorForm.addEventListener("submit", function(e) {
-            e.preventDefault();
-            
-            // Disable button to prevent double submission
-            submitBtn.disabled = true;
-            
-            // Check honeypot field (bot detection)
-            const honeypot = document.getElementById('website');
-            if (honeypot && honeypot.value) {
-                console.log('Bot submission detected');
-                // Pretend the form submitted successfully to fool the bot
-                setTimeout(() => {
-                    showStatus("Thank you for your interest! Our team will contact you soon.", "success");
-                    sponsorForm.reset();
-                    submitBtn.disabled = false;
-                }, 1500);
-                return;
-            }
-            
-            // Validate all form fields
-            let formValid = true;
-            
-            formInputs.forEach(input => {
-                if (input.id === 'website') return; // Skip honeypot field
-                
-                if (!validateField(input)) {
-                    formValid = false;
-                }
-            });
-            
-            if (!formValid) {
-                showStatus("Please correct the errors in the form", "error");
-                submitBtn.disabled = false;
-                return;
-            }
-            
-            // Show sending status
-            showStatus("Sending your inquiry...", "pending");
-            
-            // Create FormData with sanitized inputs
-            const formData = new FormData();
-            
-            // Sanitize and add all input values
-            formData.append('company', sanitizeInput(document.getElementById('company').value.trim()));
-            formData.append('name', sanitizeInput(document.getElementById('name').value.trim()));
-            formData.append('email', sanitizeInput(document.getElementById('email').value.trim()));
-            formData.append('phone', sanitizeInput(document.getElementById('phone').value.trim()));
-            formData.append('sponsorship_tier', document.getElementById('sponsorship_tier').value);
-            
-            const messageValue = document.getElementById('message').value.trim();
-            formData.append('message', sanitizeInput(messageValue));
-            
-            // Add timestamp to prevent caching
-            formData.append('timestamp', new Date().getTime());
-            
-            // Send data to the server with security headers
-            fetch('backend/api/sponsor.php', {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'X-Requested-With': 'XMLHttpRequest'
-                }
-            })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`Network error: ${response.status}`);
-                }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    showStatus(data.message, "success");
-                    sponsorForm.reset();
-                    
-                    // Reset character counter
-                    if (messageChars) {
-                        messageChars.textContent = '0';
-                        messageChars.style.color = '';
-                    }
-                } else {
-                    showStatus(data.message || "An error occurred", "error");
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                showStatus("An error occurred. Please try again later.", "error");
-            })
-            .finally(() => {
-                // Re-enable the submit button
-                submitBtn.disabled = false;
-            });
-        });
-    }
-    
-    // Display status message with enhanced styling
-    function showStatus(message, type) {
-        if (!formStatus) return;
-        
-        formStatus.textContent = message;
-        formStatus.className = "form-status mt-6 p-4 rounded-lg";
-        formStatus.classList.remove("hidden");
-        
-        switch(type) {
-            case 'success':
-                formStatus.classList.add('bg-green-900/30', 'text-green-400', 'border', 'border-green-400/30');
-                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> ${message}`;
-                break;
-            case 'error':
-                formStatus.classList.add('bg-red-900/30', 'text-red-400', 'border', 'border-red-400/30');
-                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg> ${message}`;
-                break;
-            case 'pending':
-                formStatus.classList.add('bg-blue-900/30', 'text-blue-400', 'border', 'border-blue-400/30');
-                formStatus.innerHTML = `<svg class="inline w-5 h-5 mr-2 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> ${message}`;
-                break;
-        }
-        
-        // Scroll to the status message
-        formStatus.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        
-        // Auto-hide success messages after 5 seconds
-        if (type === "success") {
-            setTimeout(() => {
-                formStatus.style.opacity = '0';
-                formStatus.style.transition = 'opacity 0.5s ease';
-                
-                setTimeout(() => {
-                    formStatus.classList.add("hidden");
-                    formStatus.style.opacity = '1';
-                }, 500);
-            }, 5000);
-        }
-    }
-});
-</script>
 <style>
-/* Sponsorship H1 Responsive - IMPORTANT */
-@media (max-width: 320px) {
-    .glitch-text {
-        font-size: 1.75rem !important;
-        letter-spacing: 1px !important;
-        line-height: 1.1 !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 0.875rem !important;
-        line-height: 1.4 !important;
-    }
+.scrollbar-thin::-webkit-scrollbar {
+    height: 8px;
 }
 
-@media (min-width: 321px) and (max-width: 374px) {
-    .glitch-text {
-        font-size: 2rem !important;
-        letter-spacing: 1px !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 0.9375rem !important;
-    }
+.scrollbar-thin::-webkit-scrollbar-track {
+    background-color: rgba(31, 41, 55, 0.3);
+    border-radius: 4px;
 }
 
-@media (min-width: 375px) and (max-width: 424px) {
-    .glitch-text {
-        font-size: 2.25rem !important;
-        letter-spacing: 2px !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 1rem !important;
-    }
+.scrollbar-thin::-webkit-scrollbar-thumb {
+    background-color: rgba(6, 182, 212, 0.5);
+    border-radius: 4px;
 }
 
-@media (min-width: 425px) and (max-width: 639px) {
-    .glitch-text {
-        font-size: 2.5rem !important;
-        letter-spacing: 2px !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 1.125rem !important;
-    }
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(6, 182, 212, 0.7);
 }
 
-@media (min-width: 640px) and (max-width: 767px) {
-    .glitch-text {
-        font-size: 3rem !important;
-        letter-spacing: 3px !important;
+/* Custom animation for scroll indicator */
+@keyframes gentle-pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.animate-pulse {
+    animation: gentle-pulse 1.5s infinite ease-in-out;
+}
+
+/* Make sure the table is always centered */
+table {
+    margin: 0 auto;
+    border-spacing: 0;
+}
+
+/* Ensure borders connect properly */
+td, th {
+    position: relative;
+    border-collapse: collapse;
+}
+
+/* Add glow effect to borders on hover */
+table:hover {
+    box-shadow: 0 0 15px rgba(6, 182, 212, 0.3);
+}
+
+@media (max-width: 768px) {
+    .scrollbar-thin {
+        padding-bottom: 12px;
     }
-    
-    .max-w-3xl p {
-        font-size: 1.25rem !important;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023px) {
-    .glitch-text {
-        font-size: 3.5rem !important;
-        letter-spacing: 3px !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 1.375rem !important;
-    }
-}
-
-@media (min-width: 1024px) {
-    .glitch-text {
-        font-size: 4rem !important;
-        letter-spacing: 4px !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 1.5rem !important;
-    }
-}
-
-/* Mobile Landscape for Sponsorship */
-@media (max-height: 500px) and (orientation: landscape) and (max-width: 896px) {
-    .glitch-text {
-        font-size: 2rem !important;
-        letter-spacing: 2px !important;
-        margin-bottom: 1rem !important;
-    }
-    
-    .max-w-3xl p {
-        font-size: 0.875rem !important;
-        margin-bottom: 2rem !important;
-    }
-}
-
-/* Container padding adjustments for Sponsorship */
-@media (max-width: 640px) {
-    .container {
-        padding-left: 1rem !important;
-        padding-right: 1rem !important;
-    }
-    
-    .py-20 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-}
-
-/* Form validation styles */
-.sponsor-form input.error-input,
-.sponsor-form select.error-input,
-.sponsor-form textarea.error-input {
-    border-color: #ef4444 !important;
-    background-color: rgba(239, 68, 68, 0.05);
-}
-
-.sponsor-form input:focus,
-.sponsor-form select:focus,
-.sponsor-form textarea:focus {
-    outline: none;
-    border-color: #06b6d4;
-}
-
-.error-message {
-    font-size: 0.75rem;
-    margin-top: 0.25rem;
-    color: #ef4444;
-}
-
-/* Status message styles */
-.form-status {
-    transition: all 0.3s ease;
-}
-
-/* Character counter */
-.char-count {
-    text-align: right;
-    font-size: 0.75rem;
-    color: #94a3b8;
-    transition: color 0.3s ease;
-}
-
-/* Disabled button state */
-.cyber-button[disabled] {
-    opacity: 0.7;
-    cursor: not-allowed;
-}
-
-/* Loading spinner animation */
-@keyframes spin {
-    to {transform: rotate(360deg);}
-}
-.animate-spin {
-    animation: spin 1s linear infinite;
 }
 </style>
 
