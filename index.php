@@ -125,14 +125,14 @@ require_once('components/sponsors-showcase.php');
             <!-- Partner 1: Google Student Ambassador -->
             <div class="flex justify-center items-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                 <div class="w-full h-48 flex items-center justify-center p-4">
-                    <img src="assets/Images/sponsors/Google.jpg" alt="Google Student Ambassador" class="max-h-full object-contain">
+                    <img  loading="lazy" src="assets/Images/sponsors/Google.jpg" alt="Google Student Ambassador" class="max-h-full object-contain">
                 </div>
             </div>
             
             <!-- Partner 2: CU Updates -->
             <div class="flex justify-center items-center p-6 bg-white/5 backdrop-blur-sm rounded-lg border border-gray-700 hover:border-cyan-400 transition-all duration-300">
                 <div class="w-full h-48 flex items-center justify-center p-4">
-                    <img src="assets/Images/sponsors/CU.png" alt="CU Updates" class="max-h-full object-contain">
+                    <img  loading="lazy" src="assets/Images/sponsors/CU.png" alt="CU Updates" class="max-h-full object-contain">
                 </div>
             </div>
         </div>
