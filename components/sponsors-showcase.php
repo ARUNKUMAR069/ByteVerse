@@ -61,7 +61,7 @@
                 
                 <!-- Logo Container - Larger -->
                 <div class="flex justify-center items-center bg-white rounded-lg p-6 h-56">
-                    <img src="assets/Images/sponsors/gtb.jpg" alt="GTB Computer Education & Infotech" class="max-h-44 max-w-full object-contain">
+                    <img src="assets/Images/sponsors/GTB.jpg" alt="GTB Computer Education & Infotech" class="max-h-44 max-w-full object-contain">
                 </div>
                 
                 <!-- Name Only -->
@@ -80,7 +80,7 @@
                 
                 <!-- Logo Container - Larger -->
                 <div class="flex justify-center items-center bg-white rounded-lg p-6 h-56">
-                    <img src="assets/Images/sponsors/pearson.png" alt="Pearson English" class="max-h-44 max-w-full object-contain">
+                    <img src="assets/Images/sponsors/Pearson.png" alt="Pearson English" class="max-h-44 max-w-full object-contain">
                 </div>
                 
                 <!-- Name Only -->
