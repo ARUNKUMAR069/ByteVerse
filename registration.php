@@ -312,20 +312,46 @@ require_once('components/navbar.php');
 
         <div class="payment-box mb-8">
           <h4 class="text-lg font-semibold text-cyan-400 mb-3">Pay Registration Fee (₹500 per Team)</h4>
+          
+          <!-- Bank Transfer Instructions -->
+          <div class="bank-details-card mb-6">
+            <h5 class="text-cyan-400 font-medium mb-4">Bank Transfer Details</h5>
+            <div class="bank-info-grid">
+              <div class="bank-detail-item">
+                <span class="detail-label">Account Number:</span>
+                <span class="detail-value">6916000100000225</span>
+              </div>
+              <div class="bank-detail-item">
+                <span class="detail-label">Account Name:</span>
+                <span class="detail-value">CT Educational Society (CTES)</span>
+              </div>
+              <div class="bank-detail-item">
+                <span class="detail-label">IFSC Code:</span>
+                <span class="detail-value">PUNB0691600</span>
+              </div>
+              <div class="bank-detail-item">
+                <span class="detail-label">Bank Name:</span>
+                <span class="detail-value">Punjab National Bank</span>
+              </div>
+            </div>
+          </div>
+
           <ol class="list-decimal list-inside space-y-2 text-sm text-gray-300 mb-4">
-            <li>Scan the QR code below (or use any UPI app) to pay ₹500 (team fee).</li>
-            <li>Enter your Team Name in the payment note for faster verification.</li>
-            <li>After successful payment, take a screenshot.</li>
+            <li>Transfer ₹500 to the above bank account (team registration fee).</li>
+            <li>Use your Team Name as the payment reference/remark.</li>
+            <li>After successful payment, take a screenshot of the transaction.</li>
             <li>Send the screenshot + Team Name to <strong>WhatsApp: 8707773540</strong>.</li>
           </ol>
 
+          <!-- Commented out QR Scanner section -->
+          <!--
           <div class="qr-wrapper">
-            <!-- Replace src with your real QR image path -->
             <img src="assets/Scanner.jpg" alt="Payment QR Code" class="qr-image">
           </div>
+          -->
 
           <div class="mt-4 text-xs text-gray-400">
-            If the QR does not load, contact support or request UPI ID.
+            For any payment issues, contact support at WhatsApp: 8707773540
           </div>
         </div>
 
@@ -401,6 +427,67 @@ require_once('components/footer.php');
 .form-error { color: #f87171; font-size: .9rem; }
 .step-circle.active { background: #06b6d4; color: #0b1220; }
 
+/* Bank Details Styling */
+.bank-details-card {
+  background: rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.bank-info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .bank-info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bank-detail-item {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(6, 182, 212, 0.1);
+  border-radius: 6px;
+}
+
+.detail-label {
+  font-size: 0.75rem;
+  color: #94a3b8;
+  font-weight: 500;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  letter-spacing: 0.5px;
+}
+
+@media (max-width: 480px) {
+  .bank-details-card {
+    padding: 12px;
+  }
+  
+  .bank-detail-item {
+    padding: 6px 10px;
+  }
+  
+  .detail-value {
+    font-size: 0.85rem;
+  }
+}
+
 .payment-box, .notice-box, .after-box {
   background: rgba(12,25,40,0.6);
   border: 1px solid rgba(6,182,212,0.25);
@@ -416,6 +503,9 @@ require_once('components/footer.php');
   background: radial-gradient(circle at 15% 20%, rgba(6,182,212,0.15), transparent 60%);
   pointer-events: none;
 }
+
+/* Commented out QR styles - keeping for reference */
+/*
 .qr-wrapper {
   display: flex;
   justify-content: center;
@@ -431,6 +521,7 @@ require_once('components/footer.php');
   image-rendering: crisp-edges;
   filter: drop-shadow(0 0 6px rgba(6,182,212,0.3));
 }
+*/
 @media (max-width: 480px) {
   .qr-image { width: 150px; height: 150px; }
   .payment-box ol { font-size: 0.8rem; }
