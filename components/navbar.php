@@ -23,10 +23,7 @@
         <!-- Right side actions -->
         <div class="flex items-center gap-2 sm:gap-4">
             <!-- Register button - hidden on mobile, visible from sm upward -->
-            <a href="registration.php" class="hidden sm:inline-flex cyber-button primary text-sm lg:text-base">
-                <span>REGISTER NOW</span>
-                <i></i>
-            </a>
+          
             
             <!-- Theme Switcher - hidden on mobile/tablet, visible from lg upward -->
             <div class="theme-switcher hidden lg:flex items-center">
