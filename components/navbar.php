@@ -90,13 +90,7 @@
         </div>
         
         <!-- Register button (mobile version) -->
-        <div class="mt-auto pt-8">
-            <!-- <a href="https://unstop.com/o/TcOPzJX?lb=pvE5fx9g" class="cyber-button primary w-full text-center"> -->
-            <a href="registration.php" class="cyber-button primary w-full text-center">
-                <span>REGISTER NOW</span>
-                <i></i>
-            </a>
-        </div>
+       
     </div>
 </div>
 
