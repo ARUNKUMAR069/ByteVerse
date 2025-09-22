@@ -1257,7 +1257,7 @@ require_once('components/navbar.php');
                     <div class="event-time">00:00 - 02:00</div>
                     <div id="event-round2-fun" class="event-content">
                         <h3 class="event-title">Round 2 with Fun Activities & Sleeping Time</h3>
-                        <p class="event-description">Continued development with fun activities integrated. Sleeping areas available for participants who need rest. Energy drinks and snacks provided.</p>
+                        <p class="event-description">Continued development with fun activities integrated. Sleeping areas available for participants who need rest.</p>
                         <div class="event-location">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />

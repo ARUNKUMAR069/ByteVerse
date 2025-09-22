@@ -53,10 +53,6 @@ require_once('components/navbar.php');
                 <span>Explore Domains</span>
                 <i></i>
             </a>
-            <a href="registration.php" class="cyber-button secondary">
-                <span>Register Team</span>
-                <i></i>
-            </a>
         </div>
     </div>
     
@@ -180,48 +176,6 @@ require_once('components/navbar.php');
 </section>
 
 <!-- Challenge Process Section -->
-<section class="py-16 relative">
-    <div class="container mx-auto px-4">
-        <div class="text-center mb-12">
-            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6">Challenge <span class="text-cyan-400">Process</span></h2>
-            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto mb-8"></div>
-            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
-                How the ByteVerse hackathon challenges work, from selection to submission.
-            </p>
-        </div>
-        
-        <!-- Process Steps -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto">
-            <!-- Step 1 -->
-            <div class="process-step bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 relative" data-aos="fade-up">
-                <div class="step-number absolute -top-3 -left-3 sm:-top-5 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base">1</div>
-                <h3 class="text-xl font-chakra font-bold mb-4 text-white pt-2">Select Domain</h3>
-                <p class="text-gray-300">Choose from one of our five challenge domains based on your team's interests and expertise.</p>
-            </div>
-            
-            <!-- Step 2 -->
-            <div class="process-step bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 relative" data-aos="fade-up" data-aos-delay="100">
-                <div class="step-number absolute -top-3 -left-3 sm:-top-5 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base">2</div>
-                <h3 class="text-xl font-chakra font-bold mb-4 text-white pt-2">Form Team</h3>
-                <p class="text-gray-300">Gather a team of 3-5 members with complementary skills to tackle the challenge effectively.</p>
-            </div>
-            
-            <!-- Step 3 -->
-            <div class="process-step bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 relative" data-aos="fade-up" data-aos-delay="200">
-                <div class="step-number absolute -top-3 -left-3 sm:-top-5 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base">3</div>
-                <h3 class="text-xl font-chakra font-bold mb-4 text-white pt-2">Build Solution</h3>
-                <p class="text-gray-300">Develop your innovative solution during the 24-hour hackathon with support from our mentors.</p>
-            </div>
-            
-            <!-- Step 4 -->
-            <div class="process-step bg-opacity-10 backdrop-blur-md bg-gray-800 border border-cyan-900/30 rounded-lg p-6 relative" data-aos="fade-up" data-aos-delay="300">
-                <div class="step-number absolute -top-3 -left-3 sm:-top-5 sm:-left-5 w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-cyan-400 flex items-center justify-center text-gray-900 font-bold text-sm sm:text-base">4</div>
-                <h3 class="text-xl font-chakra font-bold mb-4 text-white pt-2">Present & Win</h3>
-                <p class="text-gray-300">Showcase your solution to our panel of expert judges and compete for exciting prizes and recognition.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Prizes Section -->
 <section class="py-16 relative bg-gradient-to-b from-transparent to-gray-900/30">
@@ -320,13 +274,9 @@ require_once('components/navbar.php');
             <div class="relative z-10 text-center">
                 <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-white">Ready to Take on the Challenge?</h2>
                 <p class="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                    Join ByteVerse 1.0 and be part of a community of innovators building solutions for a better future. Register your team today!
+                    Join ByteVerse 1.0 and be part of a community of innovators building solutions for a better future. Explore the event schedule and stay tuned!
                 </p>
                 <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 justify-center items-center">
-                    <a href="registration.php" class="cyber-button primary w-full sm:w-auto">
-                        <span>Register Now</span>
-                        <i></i>
-                    </a>
                     <a href="schedule.php" class="cyber-button secondary w-full sm:w-auto">
                         <span>View Schedule</span>
                         <i></i>

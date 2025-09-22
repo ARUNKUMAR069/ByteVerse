@@ -149,6 +149,12 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initMobileMenu();
     initSoundEffects();
+    
+    // Initialize stats animation - try multiple methods for reliability
+    setTimeout(() => {
+        initStatsAnimation();
+        initStatsWithObserver();
+    }, 500); // Small delay to ensure DOM is fully ready
 });
 
 // Main content animations
@@ -213,6 +219,86 @@ function initializeMainAnimations() {
             delay: 1
         });
     });
+}
+
+// Stats animation function (separate from main animations)
+function initStatsAnimation() {
+    // Animate stat counters
+    const statValues = document.querySelectorAll('.stat-value');
+    console.log('Stats elements found:', statValues.length); // Debug log
+    
+    if (statValues.length > 0) {
+        statValues.forEach(stat => {
+            const targetValue = parseInt(stat.getAttribute('data-value'));
+            console.log('Animating stat to:', targetValue); // Debug log
+            
+            gsap.to(stat, {
+                innerText: targetValue,
+                duration: 2,
+                ease: "power2.out",
+                snap: { innerText: 1 },
+                delay: 1
+            });
+        });
+    }
+}
+
+// Alternative stats animation using Intersection Observer
+function initStatsWithObserver() {
+    const statsContainer = document.querySelector('.stats-container');
+    if (!statsContainer) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const statValues = entry.target.querySelectorAll('.stat-value');
+                statValues.forEach(stat => {
+                    const targetValue = parseInt(stat.getAttribute('data-value'));
+                    
+                    // Try GSAP first, fallback to vanilla JS
+                    if (typeof gsap !== 'undefined') {
+                        gsap.to(stat, {
+                            innerText: targetValue,
+                            duration: 2,
+                            ease: "power2.out",
+                            snap: { innerText: 1 },
+                            delay: 0.5
+                        });
+                    } else {
+                        // Vanilla JS fallback
+                        animateCounter(stat, 0, targetValue, 2000);
+                    }
+                });
+                observer.unobserve(entry.target); // Only animate once
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    observer.observe(statsContainer);
+}
+
+// Vanilla JS counter animation fallback
+function animateCounter(element, start, end, duration) {
+    const startTime = performance.now();
+    
+    function updateCounter(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        
+        // Easing function (ease out)
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        const current = Math.floor(start + (end - start) * easeOut);
+        
+        element.textContent = current;
+        
+        if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = end; // Ensure final value is exact
+        }
+    }
+    
+    requestAnimationFrame(updateCounter);
 }
 
 // Matrix rain effect
@@ -362,9 +448,9 @@ function initTerminal() {
                 break;
             
             case 'register':
-                appendToTerminal('Early Bird Registration is now open for 2 days! Participation fee: ₹0 per team.', 'normal');
+                appendToTerminal('Registration is currently closed.', 'normal');
                 appendToTerminal('Team size: Minimum 3, Maximum 5 members.', 'normal');
-                appendToTerminal('To register, visit the <a href="registration.php" class="text-cyan-400 underline">registration page</a>.', 'normal');
+                appendToTerminal('For more information, please check back later.', 'normal');
                 break;
             
             case 'schedule':
@@ -497,13 +583,9 @@ function initMobileMenu() {
         </svg>
     `;
     
-    // Add register button
-    const registerButton = document.querySelector('.cyber-button.primary').cloneNode(true);
-    
     // Append elements
     mobileMenu.appendChild(closeButton);
     mobileMenu.appendChild(navLinksMobile);
-    mobileMenu.appendChild(registerButton);
     
     // Add to document
     document.body.appendChild(mobileMenu);
