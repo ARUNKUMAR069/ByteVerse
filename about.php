@@ -1080,37 +1080,50 @@ require_once('components/navbar.php');
         <!-- Executive Team -->
         <div class="mb-16">
             <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-yellow-400">Executive Team</h3>
-            <div class="coordinators-grid executive-grid">
-                <!-- President -->
-                <div class="coordinator-card executive-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/President.jpg" alt="Madhav Arora - President" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Madhav Arora</h4>
-                        <p class="coordinator-title">President</p>
-                        <div class="coordinator-badge">Executive</div>
-                    </div>
+            <div class="coordinators-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin: 0 auto; gap: 2rem;">
+            <!-- President -->
+            <div class="coordinator-card executive-card">
+                <div class="coordinator-image-container">
+                <img src="assets/Images/students/President.jpg" alt="Madhav Arora - President" class="coordinator-image" loading="lazy">
+                <div class="image-overlay"></div>
                 </div>
+                <div class="coordinator-details">
+                <h4 class="coordinator-name">Madhav Arora</h4>
+                <p class="coordinator-title">President</p>
+                <div class="coordinator-badge">Executive</div>
+                </div>
+            </div>
 
-                <!-- Vice President -->
-                <div class="coordinator-card executive-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/VicePresident.webp" alt="Bhoomika - Vice President" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Bhoomika</h4>
-                        <p class="coordinator-title">Vice President</p>
-                        <div class="coordinator-badge">Executive</div>
-                    </div>
+            <!-- Vice President -->
+            <div class="coordinator-card executive-card">
+                <div class="coordinator-image-container">
+                <img src="assets/Images/students/VicePresident.webp" alt="Bhoomika - Vice President" class="coordinator-image" loading="lazy">
+                <div class="image-overlay"></div>
                 </div>
+                <div class="coordinator-details">
+                <h4 class="coordinator-name">Bhoomika</h4>
+                <p class="coordinator-title">Vice President</p>
+                <div class="coordinator-badge">Executive</div>
+                </div>
+            </div>
+            
+            <!-- Overall Coordinator -->
+            <div class="coordinator-card executive-card">
+                <div class="coordinator-image-container">
+                <img src="assets/Images/students/Overall1.jpg" alt="Harshdeep Mann - Overall Coordinator" class="coordinator-image" loading="lazy">
+                <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                <h4 class="coordinator-name">Harshdeep Mann</h4>
+                <p class="coordinator-title">Overall Coordinator</p>
+                <div class="coordinator-badge">Executive</div>
+                </div>
+            </div>
             </div>
         </div>
         <!-- technical Team  -->
         <div class="mb-16">
-            <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-yellow-400">Executive Team</h3>
+            <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-yellow-400">Website Team</h3>
             <div class="coordinators-grid executive-grid">
                 <!-- President -->
                 <div class="coordinator-card executive-card">
@@ -1121,7 +1134,7 @@ require_once('components/navbar.php');
                     <div class="coordinator-details">
                         <h4 class="coordinator-name">Arun Kumar</h4>
                         <p class="coordinator-title">Website Developer</p>
-                        <div class="coordinator-badge">Technical</div>
+                        <div class="coordinator-badge">Website Team</div>
                     </div>
                 </div>
 
@@ -1134,7 +1147,7 @@ require_once('components/navbar.php');
                     <div class="coordinator-details">
                         <h4 class="coordinator-name">Arshdeep Kaur</h4>
                         <p class="coordinator-title">Website Developer</p>
-                        <div class="coordinator-badge">Technical</div>
+                        <div class="coordinator-badge">Website Team</div>
                     </div>
                 </div>
             </div>
@@ -1183,6 +1196,18 @@ require_once('components/navbar.php');
                     </div>
                     <div class="coordinator-details">
                         <h4 class="coordinator-name">Rohan</h4>
+                        <p class="coordinator-title">Sponsor Relations</p>
+                        <div class="coordinator-badge">Sponsor Team</div>
+                    </div>
+                </div>
+
+                 <div class="coordinator-card sponsor-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Sponsor4.jpg" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Nitin Verma</h4>
                         <p class="coordinator-title">Sponsor Relations</p>
                         <div class="coordinator-badge">Sponsor Team</div>
                     </div>
@@ -1240,7 +1265,7 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Aditi</h4>
+                        <h4 class="coordinator-name">Aditi Yadav</h4>
                         <p class="coordinator-title">Registration Coordinator</p>
                         <div class="coordinator-badge">Registration</div>
                     </div>
@@ -1253,8 +1278,8 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Registration Coordinator</h4>
-                        <p class="coordinator-title">Registration Team</p>
+                        <h4 class="coordinator-name">Simranpreet Kaur</h4>
+                        <p class="coordinator-title">Registration Coordinator</p>
                         <div class="coordinator-badge">Registration</div>
                     </div>
                 </div>
@@ -1468,7 +1493,7 @@ require_once('components/navbar.php');
         <!-- Sponsor Team Member 1 -->
         <div class="coordinator-card sponsor-card">
             <div class="coordinator-image-container">
-                <img src="assets/Images/students/TechSupport1.JPG" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                <img src="assets/Images/students/TechSupport1.jpg" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
                 <div class="image-overlay"></div>
             </div>
             <div class="coordinator-details">
@@ -1505,17 +1530,7 @@ require_once('components/navbar.php');
         </div>
 
         <!-- Sponsor Team Member 4 -->
-        <!-- <div class="coordinator-card sponsor-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Sponsor4.HEIC" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Nitin Verma</h4>
-                        <p class="coordinator-title">Sponsor Relations</p>
-                        <div class="coordinator-badge">Sponsor Team</div>
-                    </div>
-                </div> -->
+       
     </div>
 </div>
 
