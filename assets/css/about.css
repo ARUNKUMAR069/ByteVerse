@@ -403,35 +403,56 @@
     color: white;
 }
 
-/* Responsive adjustments */
+/* Increased height for coordinator image containers */
+.coordinator-image-container {
+    height: 240px !important; /* Increased from 200px */
+}
+
+/* Adjust heights for special team members */
+.executive-card .coordinator-image-container {
+    height: 260px !important; /* Increased from 220px */
+}
+
+.technical-card .coordinator-image-container {
+    height: 280px !important; /* Increased from 240px */
+}
+
+/* Responsive adjustments for mobile */
 @media (max-width: 768px) {
-    .faculty-slide {
-        min-width: 100%;
+    .coordinator-image-container {
+        height: 240px !important; /* Increased from 220px */
     }
     
-    .faculty-card {
-        padding: 1.2rem;
+    .executive-card .coordinator-image-container,
+    .technical-card .coordinator-image-container {
+        height: 240px !important; /* Increased from 220px */
+    }
+}
+
+@media (max-width: 480px) {
+    .coordinator-image-container {
+        height: 230px !important; /* Increased from 200px */
     }
     
-    .faculty-image-wrapper {
-        width: 100px;
-        height: 100px;
+    .executive-card .coordinator-image-container,
+    .technical-card .coordinator-image-container {
+        height: 230px !important; /* Increased from 200px */
+    }
+}
+
+/* Extra small devices like older phones */
+@media (max-width: 360px) {
+    .coordinator-image-container {
+        height: 210px !important;
     }
     
-    .leader-card {
-        width: 280px;
-        height: 350px;
-        padding: 1.5rem;
+    .executive-card .coordinator-image-container,
+    .technical-card .coordinator-image-container {
+        height: 210px !important;
     }
     
-    .leader-image-inner {
-        width: 130px;
-        height: 130px;
-    }
-    
-    .social-link {
-        width: 30px;
-        height: 30px;
+    .coordinator-card {
+        min-height: 340px;
     }
 }
 

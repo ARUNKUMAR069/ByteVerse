@@ -54,7 +54,7 @@ require_once('components/navbar.php');
 
         <div class="max-w-2xl mx-auto">
             <p class="text-lg md:text-xl mb-10 text-gray-300 leading-relaxed">
-                Step into ByteVerse 1.0 — a   <span class="text-cyan-400">24-hour coding hackathon</span> where innovation meets execution. Solve real-world challenges in AI, Web, Blockchain & more with your team, and build solutions that matter.
+                Step into ByteVerse 1.0 — a <span class="text-cyan-400">24-hour coding hackathon</span> where innovation meets execution. Solve real-world challenges in AI, Web, Blockchain & more with your team, and build solutions that matter.
             </p>
         </div>
 
@@ -96,13 +96,10 @@ require_once('components/navbar.php');
     </div>
 </section>
 
-
 <?php
 require_once('components/domain-showcase.php');
-require_once('components/sponsors-showcase.php');
-
-// Premium Sponsor Showcase Section
 ?>
+
 
 
 <?php

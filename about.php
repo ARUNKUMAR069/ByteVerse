@@ -741,7 +741,7 @@ $additionalStyles = '
     }
     
     .coordinator-image-container {
-        height: 160px;
+        height: 300px;
     }
     
     .coordinator-details {
@@ -1081,44 +1081,44 @@ require_once('components/navbar.php');
         <div class="mb-16">
             <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-yellow-400">Executive Team</h3>
             <div class="coordinators-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 1200px; margin: 0 auto; gap: 2rem;">
-            <!-- President -->
-            <div class="coordinator-card executive-card">
-                <div class="coordinator-image-container">
-                <img src="assets/Images/students/President.jpg" alt="Madhav Arora - President" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
+                <!-- President -->
+                <div class="coordinator-card executive-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/President.jpg" alt="Madhav Arora - President" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Madhav Arora</h4>
+                        <p class="coordinator-title">President</p>
+                        <div class="coordinator-badge">Executive</div>
+                    </div>
                 </div>
-                <div class="coordinator-details">
-                <h4 class="coordinator-name">Madhav Arora</h4>
-                <p class="coordinator-title">President</p>
-                <div class="coordinator-badge">Executive</div>
-                </div>
-            </div>
 
-            <!-- Vice President -->
-            <div class="coordinator-card executive-card">
-                <div class="coordinator-image-container">
-                <img src="assets/Images/students/VicePresident.webp" alt="Bhoomika - Vice President" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
+                <!-- Vice President -->
+                <div class="coordinator-card executive-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/VicePresident.webp" alt="Bhoomika - Vice President" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Bhoomika</h4>
+                        <p class="coordinator-title">Vice President</p>
+                        <div class="coordinator-badge">Executive</div>
+                    </div>
                 </div>
-                <div class="coordinator-details">
-                <h4 class="coordinator-name">Bhoomika</h4>
-                <p class="coordinator-title">Vice President</p>
-                <div class="coordinator-badge">Executive</div>
+
+                <!-- Overall Coordinator -->
+                <div class="coordinator-card executive-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Overall1.jpg" alt="Harshdeep Maan - Overall Coordinator" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Harshdeep Maan</h4>
+                        <p class="coordinator-title">Overall Coordinator</p>
+                        <div class="coordinator-badge">Executive</div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- Overall Coordinator -->
-            <div class="coordinator-card executive-card">
-                <div class="coordinator-image-container">
-                <img src="assets/Images/students/Overall1.jpg" alt="Harshdeep Mann - Overall Coordinator" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-                </div>
-                <div class="coordinator-details">
-                <h4 class="coordinator-name">Harshdeep Mann</h4>
-                <p class="coordinator-title">Overall Coordinator</p>
-                <div class="coordinator-badge">Executive</div>
-                </div>
-            </div>
             </div>
         </div>
         <!-- technical Team  -->
@@ -1201,7 +1201,7 @@ require_once('components/navbar.php');
                     </div>
                 </div>
 
-                 <div class="coordinator-card sponsor-card">
+                <div class="coordinator-card sponsor-card">
                     <div class="coordinator-image-container">
                         <img src="assets/Images/students/Sponsor4.jpg" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
@@ -1232,6 +1232,29 @@ require_once('components/navbar.php');
         <div class="mb-16">
             <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-blue-400">Registration Team</h3>
             <div class="coordinators-grid registration-grid">
+
+                <div class="coordinator-card registration-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Registration2.jpg" alt="Kashish Singh - Registration Team" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Kashish Singh</h4>
+                        <p class="coordinator-title">Team Leader</p>
+                        <div class="coordinator-badge">Registration</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+
                 <!-- Registration Team Member 1 -->
                 <div class="coordinator-card registration-card">
                     <div class="coordinator-image-container">
@@ -1246,17 +1269,7 @@ require_once('components/navbar.php');
                 </div>
 
                 <!-- Registration Team Member 2 -->
-                <div class="coordinator-card registration-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Registration2.jpg" alt="Kashish Singh - Registration Team" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Kashish Singh</h4>
-                        <p class="coordinator-title">Registration Coordinator</p>
-                        <div class="coordinator-badge">Registration</div>
-                    </div>
-                </div>
+
 
                 <!-- Registration Team Member 3 -->
                 <div class="coordinator-card registration-card">
@@ -1291,17 +1304,6 @@ require_once('components/navbar.php');
             <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-pink-400">Marketing Team</h3>
             <div class="coordinators-grid marketing-grid">
                 <!-- Marketing Team Members 1-16 -->
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing1.jpg" alt="Marketing Team Member 1" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
 
                 <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
@@ -1309,15 +1311,121 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Manish</h4>
+                        <p class="coordinator-title">Team Leader</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing4.JPG" alt="Marketing Team Member 4" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Nisha</h4>
+                        <p class="coordinator-title">Shoot Management</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing3.jpg" alt="Marketing Team Member 3" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Hargun Kaur</h4>
+                        <p class="coordinator-title">Vice Coordinator</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing1.jpg" alt="Marketing Team Member 1" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Himanshu Sodhi</h4>
+                        <p class="coordinator-title">Social Media Handler</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing5.png" alt="Marketing Team Member 5" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Karan</h4>
+                        <p class="coordinator-title">Video Editor</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing5(1).jpg" alt="Marketing Team Member 6" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Tania</h4>
+                        <p class="coordinator-title">Content Creation</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing6.jpg" alt="Marketing Team Member 7" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Prem</h4>
+                        <p class="coordinator-title">Cameraman</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing7.png" alt="Marketing Team Member 8" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Lakshay</h4>
+                        <p class="coordinator-title">Video Editor</p>
+                        <div class="coordinator-badge">Marketing</div>
+                    </div>
+                </div>
+
+                <div class="coordinator-card marketing-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Marketing8.png" alt="Marketing Team Member 9" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Kashish</h4>
+                        <p class="coordinator-title">Graphic Designer</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
 
                 <!-- <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing3.Heic" alt="Marketing Team Member 3" class="coordinator-image" loading="lazy">
+                        <img src="assets/Images/students/Marketing9.png" alt="Marketing Team Member 10" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
@@ -1329,101 +1437,17 @@ require_once('components/navbar.php');
 
                 <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing4.JPG" alt="Marketing Team Member 4" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing5.jpg" alt="Marketing Team Member 5" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing5(1).jpg" alt="Marketing Team Member 6" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing6.jpg" alt="Marketing Team Member 7" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing7.png" alt="Marketing Team Member 8" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing8.png" alt="Marketing Team Member 9" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing9.png" alt="Marketing Team Member 10" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
-                        <div class="coordinator-badge">Marketing</div>
-                    </div>
-                </div>
-
-                <div class="coordinator-card marketing-card">
-                    <div class="coordinator-image-container">
                         <img src="assets/Images/students/Marketing10.jpg" alt="Marketing Team Member 11" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Ranveer</h4>
+                        <p class="coordinator-title">Video Editor</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
 
-                <div class="coordinator-card marketing-card">
+                <!-- <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
                         <img src="assets/Images/students/Marketing11.webp" alt="Marketing Team Member 12" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
@@ -1433,7 +1457,7 @@ require_once('components/navbar.php');
                         <p class="coordinator-title">Marketing Team</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
@@ -1441,8 +1465,8 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Harpreet</h4>
+                        <p class="coordinator-title">Team Member</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
@@ -1453,8 +1477,8 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Ahsaas</h4>
+                        <p class="coordinator-title">Team Member</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
@@ -1465,8 +1489,8 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Anjali Rana</h4>
+                        <p class="coordinator-title">Team Member</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
@@ -1477,8 +1501,8 @@ require_once('components/navbar.php');
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Akashdeep</h4>
+                        <p class="coordinator-title">Team Member</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
                 </div>
@@ -1530,7 +1554,7 @@ require_once('components/navbar.php');
         </div>
 
         <!-- Sponsor Team Member 4 -->
-       
+
     </div>
 </div>
 
