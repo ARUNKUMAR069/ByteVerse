@@ -1163,9 +1163,9 @@ require_once('components/navbar.php');
             <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Sponsor Relations Team</h3>
             <div class="coordinators-grid sponsor-grid">
                 <!-- Sponsor Team Member 1 -->
-                <!-- <div class="coordinator-card sponsor-card">
+                <div class="coordinator-card sponsor-card">
                     <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Sponsor1.JPG" alt="Rahul Sharma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                        <img src="assets/Images/students/Sponsor1.jpg" alt="Rahul Sharma - Sponsor Relations" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
@@ -1173,7 +1173,7 @@ require_once('components/navbar.php');
                         <p class="coordinator-title">Sponsor Relations</p>
                         <div class="coordinator-badge">Sponsor Team</div>
                     </div>
-                </div> -->
+                </div>
 
                 <!-- Sponsor Team Member 2 -->
                 <div class="coordinator-card sponsor-card">
