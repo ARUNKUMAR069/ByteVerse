@@ -186,7 +186,7 @@ require_once('components/navbar.php');
                         <div class="w-40 h-40 mx-auto bg-white rounded-md shadow-sm mb-3 flex items-center justify-center overflow-hidden p-2">
                             <img src="assets/Images/sponsors/Supporter6.png" alt="Pisoft" class="max-w-full max-h-full object-contain">
                         </div>
-                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">Pisoft</h4>
+                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">O7 Services</h4>
                     </div>
                 </div>
 
@@ -197,7 +197,7 @@ require_once('components/navbar.php');
                         <div class="w-40 h-40 mx-auto bg-white rounded-md shadow-sm mb-3 flex items-center justify-center overflow-hidden p-2">
                             <img src="assets/Images/sponsors/Supporter7.png" alt="Novem Control" class="max-w-full max-h-full object-contain">
                         </div>
-                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">Novem Control</h4>
+                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">Pisoft</h4>
                     </div>
                 </div>
 
@@ -208,7 +208,7 @@ require_once('components/navbar.php');
                         <div class="w-40 h-40 mx-auto bg-white rounded-md shadow-sm mb-3 flex items-center justify-center overflow-hidden p-2">
                             <img src="assets/Images/sponsors/Supporter8.png" alt="O7" class="max-w-full max-h-full object-contain">
                         </div>
-                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">O7</h4>
+                        <h4 class="text-sm font-bold text-gray-800 font-orbitron">Novem Control</h4>
                     </div>
                 </div>
             </div>
@@ -227,7 +227,7 @@ require_once('components/navbar.php');
                     <div class="absolute top-2 right-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-2 py-1 rounded-full">PARTNER</div>
                     <div class="text-center">
                         <div class="w-48 h-48 mx-auto bg-white rounded-md shadow-md mb-4 flex items-center justify-center overflow-hidden p-2">
-                            <img src="assets/Images/sponsors/InKind1.png" alt="IDP IELTS" class="max-w-full max-h-full object-contain">
+                            <img src="assets/Images/sponsors/Inkind1.png" alt="IDP IELTS" class="max-w-full max-h-full object-contain">
                         </div>
                         <h4 class="text-lg font-bold text-gray-800 font-orbitron">IDP IELTS</h4>
                         <p class="text-xs text-gray-600 mt-1">In Kind Partner</p>
@@ -239,7 +239,7 @@ require_once('components/navbar.php');
                     <div class="absolute top-2 right-2 bg-gradient-to-r from-purple-400 to-pink-400 text-white text-xs font-bold px-2 py-1 rounded-full">PARTNER</div>
                     <div class="text-center">
                         <div class="w-48 h-48 mx-auto bg-white rounded-md shadow-md mb-4 flex items-center justify-center overflow-hidden p-2">
-                            <img src="assets/Images/sponsors/InKind2.png" alt="Solitaire InfoTech" class="max-w-full max-h-full object-contain">
+                            <img src="assets/Images/sponsors/Inkind2.png" alt="Solitaire InfoTech" class="max-w-full max-h-full object-contain">
                         </div>
                         <h4 class="text-lg font-bold text-gray-800 font-orbitron">Solitaire InfoTech</h4>
                         <p class="text-xs text-gray-600 mt-1">In Kind Partner</p>
@@ -313,6 +313,30 @@ require_once('components/navbar.php');
                         <p class="text-xs text-gray-600 mt-1">Sponsor Partner</p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+
+         <div class="mb-16">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center px-6 py-2 bg-gradient-to-r from-blue-400 to-indigo-500 rounded-full">
+                    <h3 class="text-2xl font-bold font-orbitron text-white">Community Partners</h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Gem Pro Solutions -->
+                <div class="group relative bg-white/95 rounded-lg p-5 border-2 border-blue-400/30 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-400/20">
+                    <div class="absolute top-2 right-2 bg-gradient-to-r from-blue-400 to-indigo-500 text-white text-xs font-bold px-2 py-1 rounded-full">PARTNER</div>
+                    <div class="text-center">
+                        <div class="w-48 h-48 mx-auto bg-white rounded-md shadow-md mb-4 flex items-center justify-center overflow-hidden p-2">
+                            <img src="assets/Images/sponsors/cu1.png" alt="Gem Pro Solutions" class="max-w-full max-h-full object-contain">
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 font-orbitron">CU Updates</h4>
+                        <p class="text-xs text-gray-600 mt-1">Community Partner</p>
+                    </div>
+                </div>
+
+              
             </div>
         </div>
 
