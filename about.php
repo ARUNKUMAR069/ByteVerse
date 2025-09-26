@@ -1423,17 +1423,17 @@ require_once('components/navbar.php');
                     </div>
                 </div>
 
-                <!-- <div class="coordinator-card marketing-card">
+                <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Marketing9.png" alt="Marketing Team Member 10" class="coordinator-image" loading="lazy">
+                        <img src="assets/Images/students/Marketing18.jpg" alt="Marketing Team Member 10" class="coordinator-image" loading="lazy">
                         <div class="image-overlay"></div>
                     </div>
                     <div class="coordinator-details">
-                        <h4 class="coordinator-name">Marketing Coordinator</h4>
-                        <p class="coordinator-title">Marketing Team</p>
+                        <h4 class="coordinator-name">Parneet Kaur</h4>
+                        <p class="coordinator-title">Content Creation</p>
                         <div class="coordinator-badge">Marketing</div>
                     </div>
-                </div> -->
+                </div>
 
                 <div class="coordinator-card marketing-card">
                     <div class="coordinator-image-container">
@@ -1509,113 +1509,174 @@ require_once('components/navbar.php');
             </div>
         </div>
     </div>
+    <!-- Logistics Team -->
+    <div class="mb-16">
+        <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Tech Support & Logistics Team</h3>
+        <div class="coordinators-grid sponsor-grid">
+            <!-- Sponsor Team Member 1 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/TechSupport1.jpg" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Deepak</h4>
+                    <p class="coordinator-title">Team Leader</p>
+                    <div class="coordinator-badge">Tech Support & Logistics Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 2 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/TechSupport2.jpg" alt="Pratham - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Pratham</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Tech Support & Logistics Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 3 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/TechSupport3.jpg" alt="Suman Krishna - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Suman Krishna</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Tech Support & Logistics Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 4 -->
+
+        </div>
+    </div>
+
+    <!-- Decoration Team -->
+    <div class="mb-16">
+        <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Decoration Team </h3>
+        <div class="coordinators-grid sponsor-grid">
+            <!-- Sponsor Team Member 1 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor1.jpg" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Tania</h4>
+                    <p class="coordinator-title">Team Leader</p>
+                    <div class="coordinator-badge">Decoration Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 2 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor2.jpg" alt=" Pratham - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Sarup Das</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Decoration Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 3 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor3.jpg" alt="Suman Krishna - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Raj</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Decoration Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 4 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor4.jpg" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Shivansh </h4>
+                    <p class="coordinator-title">Sponsor Relations</p>
+                    <div class="coordinator-badge">Sponsor Team</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Fun Activity Team -->
+
+    <div class="mb-16">
+        <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Fun Activity Team </h3>
+        <div class="coordinators-grid sponsor-grid">
+            <!-- Sponsor Team Member 1 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Activity1.png" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Anmol</h4>
+                    <p class="coordinator-title">Team Leader</p>
+                    <div class="coordinator-badge">Fun Activity Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 2 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Activity2.png" alt=" Pratham - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Vicky</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Fun Activity Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 3 -->
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Activity3.png" alt="Suman Krishna - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Sahil</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Fun Activity Team</div>
+                </div>
+            </div>
+
+            <!-- Sponsor Team Member 4 -->
+            <!-- <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Sponsor4.HEIC" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Nitin Verma</h4>
+                    <p class="coordinator-title">Sponsor Relations</p>
+                    <div class="coordinator-badge">Sponsor Team</div>
+                </div>
+            </div> -->
+        </div>
+    </div>
 </section>
-<!-- Logistics Team -->
-<div class="mb-16">
-    <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Tech Support & Logistics Team</h3>
-    <div class="coordinators-grid sponsor-grid">
-        <!-- Sponsor Team Member 1 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/TechSupport1.jpg" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Deepak</h4>
-                <p class="coordinator-title">Team Leader</p>
-                <div class="coordinator-badge">Tech Support & Logistics Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 2 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/TechSupport2.jpg" alt="Pratham - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Pratham</h4>
-                <p class="coordinator-title">Team Member</p>
-                <div class="coordinator-badge">Tech Support & Logistics Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 3 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/TechSupport3.jpg" alt="Suman Krishna - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Suman Krishna</h4>
-                <p class="coordinator-title">Team Member</p>
-                <div class="coordinator-badge">Tech Support & Logistics Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 4 -->
-
-    </div>
-</div>
-
-<!-- Fun Activity Team -->
-
-<div class="mb-16">
-    <h3 class="text-2xl font-orbitron font-bold text-center mb-10 text-purple-400">Fun Activity Team </h3>
-    <div class="coordinators-grid sponsor-grid">
-        <!-- Sponsor Team Member 1 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/Activity1.png" alt="Deepak - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Anmol</h4>
-                <p class="coordinator-title">Team Leader</p>
-                <div class="coordinator-badge">Fun Activity Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 2 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/Activity2.png" alt=" Pratham - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Vicky</h4>
-                <p class="coordinator-title">Team Member</p>
-                <div class="coordinator-badge">Fun Activity Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 3 -->
-        <div class="coordinator-card sponsor-card">
-            <div class="coordinator-image-container">
-                <img src="assets/Images/students/Activity3.png" alt="Suman Krishna - Tech Support & Logistics Team" class="coordinator-image" loading="lazy">
-                <div class="image-overlay"></div>
-            </div>
-            <div class="coordinator-details">
-                <h4 class="coordinator-name">Sahil</h4>
-                <p class="coordinator-title">Team Member</p>
-                <div class="coordinator-badge">Fun Activity Team</div>
-            </div>
-        </div>
-
-        <!-- Sponsor Team Member 4 -->
-        <!-- <div class="coordinator-card sponsor-card">
-                    <div class="coordinator-image-container">
-                        <img src="assets/Images/students/Sponsor4.HEIC" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
-                        <div class="image-overlay"></div>
-                    </div>
-                    <div class="coordinator-details">
-                        <h4 class="coordinator-name">Nitin Verma</h4>
-                        <p class="coordinator-title">Sponsor Relations</p>
-                        <div class="coordinator-badge">Sponsor Team</div>
-                    </div>
-                </div> -->
-    </div>
-</div>
 
 
 
