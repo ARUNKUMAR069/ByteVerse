@@ -1066,6 +1066,93 @@ require_once('components/navbar.php');
     </div>
 </section>
 
+
+<!-- Faculty Coordinators Section -->
+<section class="py-20 relative bg-gradient-to-b from-transparent to-gray-900/30">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-orbitron font-bold mb-6 text-white">Faculty<span
+                    class="text-cyan-400">Coordinators</span></h2>
+            <div class="w-24 h-1 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto"></div>
+        </div>
+
+        <div class="leaders-container">
+            <!-- Chairman -->
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty1.jpg" alt="Chairman" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Dr. Ankita Gupta</h3>
+                    <!-- <p class="leader-title">Chairman</p> -->
+                </div>
+            </div>
+
+
+            <!-- Managing Director -->
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty2.jpg" alt="Managing Director" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Dr. Sandeep Ranjan</h3>
+                    <!-- <p class="leader-title">Managing Director</p> -->
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty3.jpg" alt="Managing Director" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Ms Monika Gharu</h3>
+                    <!-- <p class="leader-title">Managing Director</p> -->
+                </div>
+            </div>
+
+            <!-- Faculty 3 -->
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty4.jpg" alt="Faculty 3" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Dr. Shivani Bhardwaj</h3>
+                    <!-- <p class="leader-title">Faculty 3</p> -->
+                </div>
+            </div>
+
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty5.jpg" alt="Faculty 3" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Ms Jasmeet Kaur</h3>
+                    <!-- <p class="leader-title">Faculty 3</p> -->
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty6.jpg" alt="Faculty 3" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Ms Jasmeen</h3>
+                    <!-- <p class="leader-title">Faculty 3</p> -->
+                </div>
+            </div>
+            <div class="leader-card">
+                <div class="leader-image-container">
+                    <img src="assets/Images/students/Faculty7.jpg" alt="Faculty 3" class="leader-image" loading="lazy">
+                </div>
+                <div class="leader-details">
+                    <h3 class="leader-name">Mr Keshav</h3>
+                    <!-- <p class="leader-title">Faculty 3</p> -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
 <!-- Hackathon Coordinators Section -->
 <section class="py-20 relative bg-gradient-to-b from-gray-900/30 to-transparent">
     <div class="container mx-auto px-4">
@@ -1292,6 +1379,29 @@ require_once('components/navbar.php');
                     </div>
                     <div class="coordinator-details">
                         <h4 class="coordinator-name">Simranpreet Kaur</h4>
+                        <p class="coordinator-title">Registration Coordinator</p>
+                        <div class="coordinator-badge">Registration</div>
+                    </div>
+                </div>
+                <div class="coordinator-card registration-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Registration6.jpg" alt="Registration Team Member - Registration Team" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Inderpreet Kaur</h4>
+                        <p class="coordinator-title">Registration Coordinator</p>
+                        <div class="coordinator-badge">Registration</div>
+                    </div>
+                </div>
+
+                    <div class="coordinator-card registration-card">
+                    <div class="coordinator-image-container">
+                        <img src="assets/Images/students/Registrations5.jpg" alt="Registration Team Member - Registration Team" class="coordinator-image" loading="lazy">
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="coordinator-details">
+                        <h4 class="coordinator-name">Feroz Firdoos</h4>
                         <p class="coordinator-title">Registration Coordinator</p>
                         <div class="coordinator-badge">Registration</div>
                     </div>
@@ -1608,10 +1718,34 @@ require_once('components/navbar.php');
                 </div>
                 <div class="coordinator-details">
                     <h4 class="coordinator-name">Shivansh </h4>
-                    <p class="coordinator-title">Sponsor Relations</p>
-                    <div class="coordinator-badge">Sponsor Team</div>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Decoration Team</div>
                 </div>
             </div>
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor5.jpg" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Lovepreet</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Decoration Team</div>
+                </div>
+            </div>
+            <div class="coordinator-card sponsor-card">
+                <div class="coordinator-image-container">
+                    <img src="assets/Images/students/Decor6.jpg" alt="Nitin Verma - Sponsor Relations" class="coordinator-image" loading="lazy">
+                    <div class="image-overlay"></div>
+                </div>
+                <div class="coordinator-details">
+                    <h4 class="coordinator-name">Gurkiran Kaur</h4>
+                    <p class="coordinator-title">Team Member</p>
+                    <div class="coordinator-badge">Decoration Team</div>
+                </div>
+            </div>
+
+
         </div>
     </div>
 
